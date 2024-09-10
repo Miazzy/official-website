@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img src="http://www.ygwl.net/ms-mcms/templets/1/yuguang/images/logo.jpg" alt="">
+    <img src="../assets/images/logo.jpeg" alt="">
   </div>
 </template>
 <script setup>
