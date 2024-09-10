@@ -117,7 +117,6 @@
     height: 58px;
     background-color: rgba(255, 255, 255, 0.4);
     transition: background-color 0.3s, width 0.3s;
-
   }
   
   .segment:before{

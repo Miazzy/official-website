@@ -36,6 +36,14 @@
               <span class="icon">></span>
             </div>
           </div>
+          <div class="quota">
+            <Indicator :num="40" :unit="'个'" :descript="'在运城市'" style="top: calc(40vh - 12px); right: calc(20vw + 35px);"></Indicator>
+            <Indicator :num="40" :unit="'座'" :descript="'在运电站'" style="top: calc(40vh - 12px); right: calc(10vw - 5px);"></Indicator>
+            <Indicator :num="4.27" :unit="'Gw'" :descript="'在运维总容量'" style="top: calc(40vh + 98px); right: calc(20vw + 15px);"></Indicator>
+            <Indicator :num="3032" :unit="'天'" :descript="'安全生产天数'" style="top: calc(40vh + 98px); right: calc(10vw - 30px);"></Indicator>
+            <div class="segment"></div>
+            <div class="segment" style="top: calc(50vh + 50px)"></div>
+          </div>
           <div class="tooltip">
             <span>智能运营</span>
           </div>
@@ -82,6 +90,9 @@
         </div>
       </template>
     </Carousel>
+    <div class="copyright">
+      Copyright ©渔光物联(www.ygwl.net)   |   蜀ICP备16026089号
+    </div>
   </div>
 </template>
 
@@ -89,6 +100,7 @@
 import { ref, getCurrentInstance, onMounted } from "vue";
 import EventBus from '../../helper/EventBus';
 import Carousel from '../../components/Carousel.vue';
+import Indicator from '../../components/Indicator.vue';
 import { useRouter } from 'vue-router';
 
 const { proxy } = getCurrentInstance()
@@ -139,6 +151,19 @@ onMounted(() => {
     .title {
       font-size: @font-size-larger;
     }
+  }
+
+  .copyright {
+    position: fixed;
+    color: #fefefe;
+    bottom: 10px;
+    right: 140px;
+
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 52px;
   }
 }
 
@@ -223,6 +248,16 @@ onMounted(() => {
         font-family: monospace;
       }
     }
+  }
+
+  .segment {
+    position: absolute;
+    width: 2px;
+    height: 36px;
+    top: calc(40vh + 28px); 
+    right: calc(20vw - 5px);
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: background-color 0.3s, width 0.3s;
   }
 
   .tooltip {
