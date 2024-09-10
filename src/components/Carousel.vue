@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel-container" @wheel="handleScroll">
+    <div class="carousel-container" @wheel="handleScrollFn">
       <div class="carousel-slide" :class="{ active: activeIndex === 0 }" v-show="activeIndex === 0">
         <slot name="one"></slot>
       </div>
@@ -21,14 +21,18 @@
   
   <script lang="ts" setup>
   import { ref, onMounted, onBeforeUnmount } from 'vue';
+  import { throttle } from '../utils/common';
   
   const activeIndex = ref(0);
   const totalSlides = 4; // 总共4个轮播项
+  const isLock = ref(false);
   let timer: number | undefined;
   
   const startAutoScroll = () => {
     timer = setInterval(() => {
-      activeIndex.value = (activeIndex.value + 1) % totalSlides;
+      if (!isLock.value) {
+        activeIndex.value = (activeIndex.value + 1) % totalSlides;
+      }
     }, 3000);
   };
   
@@ -37,14 +41,22 @@
   };
   
   const handleScroll = (event: WheelEvent) => {
+    stopAutoScroll();
+    isLock.value = true;
     if (event.deltaY > 0) {
       // 向下滚动
       activeIndex.value = (activeIndex.value + 1) % totalSlides;
     } else {
       // 向上滚动
-      activeIndex.value = (activeIndex.value - 1 + totalSlides) % totalSlides;
+      activeIndex.value = (activeIndex.value + 3) % totalSlides;
     }
+    setTimeout(() => {
+      isLock.value = false;
+      startAutoScroll();
+    }, 3000);
   };
+
+  const handleScrollFn = throttle(handleScroll, 1000);
   
   onMounted(() => {
     startAutoScroll();
