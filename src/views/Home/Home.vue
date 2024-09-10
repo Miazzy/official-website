@@ -23,6 +23,10 @@
           <div class="bg-wrapper">
             <img src="../../assets/images/home02.jpeg" />
           </div>
+          <h1 class="banner-title" style="left: 215px;">
+            新能源电站智能运营方案
+            <div class="subTitle lang">专业化、智能化、一体化</div>
+          </h1>
           <div class="bg-button">
             <div class="content">
               <span class="text">了解更多</span>
@@ -36,6 +40,10 @@
           <div class="bg-wrapper">
             <img src="../../assets/images/home03.jpeg" />
           </div>
+          <h1 class="banner-title" style="left: 215px;">
+            智慧农业解决方案
+            <div class="subTitle lang">集约化、智能化、高效化</div>
+          </h1>
           <div class="bg-button">
             <div class="content">
               <span class="text">了解更多</span>
@@ -49,6 +57,10 @@
           <div class="bg-wrapper">
             <img src="../../assets/images/home04.jpeg" />
           </div>
+          <h1 class="banner-title" style="left: 215px;">
+            信息化解决方案
+            <div class="subTitle lang">平台化、多行业、一站式</div>
+          </h1>
           <div class="bg-button">
             <div class="content">
               <span class="text">了解更多</span>
@@ -162,6 +174,13 @@ onMounted(() => {
       left: -15px;
       top: 82px;
       letter-spacing: 0px;
+
+      &.lang {
+        left: -168px;
+        top: 112px;
+        font-weight: 400;
+        font-size: 24px;
+      }
     }
   }
 
@@ -172,6 +191,7 @@ onMounted(() => {
     height: 44px;
     left: 215px;
     top: calc(50vh + 72px);
+    cursor: pointer;
     opacity: 1;
 
     .content {

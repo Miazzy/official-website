@@ -1,4 +1,4 @@
-import {createStore} from "vuex";
+import { createStore } from "vuex";
 
 export default createStore({
     state: {
@@ -8,8 +8,8 @@ export default createStore({
         role: localStorage.getItem('role') || '',
     },
 
-     mutations: {
-        LOGIN(state, {userid, username, token, role}) {
+    mutations: {
+        LOGIN(state, { userid, username, token, role }) {
             state.userid = userid
             state.username = username
             state.token = token
@@ -21,17 +21,17 @@ export default createStore({
             localStorage.setItem('role', role)
         },
 
-         LOGOUT(state, context) {
-             state.userid = ''
-             state.username = ''
-             state.token = ''
-             state.role = ''
+        LOGOUT(state, context) {
+            state.userid = ''
+            state.username = ''
+            state.token = ''
+            state.role = ''
             localStorage.removeItem('userid')
             localStorage.removeItem('username')
             localStorage.removeItem('token')
             localStorage.removeItem('role')
-         }
-     },
+        }
+    },
 
     getters: {
 

@@ -14,7 +14,7 @@
       </div>
   
       <div class="indicator">
-        <div v-for="(segment, index) in 4" :key="index" :class="{ active: activeIndex === index }" class="segment"></div>
+        <div v-for="(segment, index) in 4" :key="index" :class="{ active: activeIndex === index }" class="segment" @click="handleClick(index)"></div>
       </div>
     </div>
   </template>
@@ -22,43 +22,50 @@
   <script lang="ts" setup>
   import { ref, onMounted, onBeforeUnmount } from 'vue';
   import { throttle } from '../utils/common';
+  import { TaskExecutor } from '../executor/executor';
   
   const activeIndex = ref(0);
   const totalSlides = 4; // 总共4个轮播项
   const isLock = ref(false);
-  let timer: number | undefined;
   
+  const task = () => {
+    if (!isLock.value) {
+      activeIndex.value = (activeIndex.value + 1) % totalSlides;
+    }
+  };
+
   const startAutoScroll = () => {
-    timer = setInterval(() => {
-      if (!isLock.value) {
-        activeIndex.value = (activeIndex.value + 1) % totalSlides;
-      }
-    }, 3000);
+    TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, 100000);
   };
   
   const stopAutoScroll = () => {
-    if (timer) clearInterval(timer);
+    TaskExecutor.getInstance().removeListTask('CAROUSEL_TASK');
   };
   
   const handleScroll = (event: WheelEvent) => {
-    stopAutoScroll();
     isLock.value = true;
-    if (event.deltaY > 0) {
-      // 向下滚动
+    stopAutoScroll();
+    if (event.deltaY > 0) { // 向下滚动
       activeIndex.value = (activeIndex.value + 1) % totalSlides;
-    } else {
-      // 向上滚动
-      activeIndex.value = (activeIndex.value + 3) % totalSlides;
+    } else { // 向上滚动
+      activeIndex.value = (activeIndex.value - 1 + totalSlides) % totalSlides;
     }
-    setTimeout(() => {
-      isLock.value = false;
-      startAutoScroll();
-    }, 3000);
+    startAutoScroll();
+    isLock.value = false;
   };
 
-  const handleScrollFn = throttle(handleScroll, 1000);
+  const handleClick = (index) => {
+    isLock.value = true;
+    stopAutoScroll();
+    activeIndex.value = index;
+    startAutoScroll();
+    isLock.value = false;
+  }
+
+  const handleScrollFn = throttle(handleScroll, 1500);
   
   onMounted(() => {
+    TaskExecutor.getInstance().start();
     startAutoScroll();
   });
   
@@ -67,7 +74,7 @@
   });
   </script>
   
-  <style scoped>
+  <style lang="less" scoped>
   .carousel-container {
     width: 100vw;
     height: 100vh;
@@ -101,6 +108,8 @@
     flex-direction: column;
     align-items: center;
     gap: 0px;
+    width: 5px;
+    background: transparent;
   }
   
   .segment {
@@ -108,11 +117,29 @@
     height: 58px;
     background-color: rgba(255, 255, 255, 0.4);
     transition: background-color 0.3s, width 0.3s;
+
   }
   
+  .segment:before{
+    width: 65px;
+    height: 58px;
+    content: '';
+    font-size: 12px;
+    margin-left: -30px;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+  }
+
   .segment.active {
     background-color: #fefefe;
     width: 2px;
+  }
+
+  .segment:hover {
+    background-color: #fefefe;
+    width: 2px;
+    opacity: 0.75;
   }
   </style>
   

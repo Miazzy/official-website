@@ -9,3 +9,11 @@ export const throttle = (func, limit) => {
         }
     };
 };
+
+/**
+ * sleep函数
+ * @param waitTime
+ */
+export const sleep = (waitTime: number) => {
+    return new Promise((resolve) => setTimeout(resolve, waitTime));
+};
