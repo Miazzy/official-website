@@ -1,18 +1,35 @@
 <template>
   <div class="footer">
     <div class="footer-content-column">
-      <logo :is-transparent="true"></logo>
-      <p class="title">© 2012-2020 北京字节跳动科技有限公司</p>
-      <p class="title">京公网安备 11000002002023号 I 京ICP备12025439号-3</p>
+      <div class="title type">友情链接</div>
+      <p class="title">通威集团</p>
+      <p class="title">通威新能源</p>
+      <p class="title">永祥股份</p>
     </div>
     <div class="footer-content-column">
-      <div class="title">联系我们</div>
-      <p>关于投递</p>
-      <p>关于投递</p>
+      <div class="title type">首页</div>
+      <p class="title"></p>
     </div>
     <div class="footer-content-column">
-      <div class="title">企业官网</div>
-      <p>字节跳动</p>
+      <div class="title type">解决方案</div>
+      <p class="title">渔光一体智能运营</p>
+      <p class="title">智慧农业</p>
+      <p class="title">信息化服务</p>
+    </div>
+    <div class="footer-content-column">
+      <div class="title type">项目案例</div>
+      <p class="title"></p>
+    </div>
+    <div class="footer-content-column">
+      <div class="title type">资讯中心</div>
+      <p class="title">行业动态</p>
+      <p class="title">公司动态</p>
+    </div>
+    <div class="footer-content-column">
+      <div class="title type">关于我们</div>
+      <p class="title">公司介绍</p>
+      <p class="title">荣誉资质</p>
+      <p class="title">联系我们</p>
     </div>
     <div class="footer-content-column">
       <div class="title">实时动态与招聘信息，请关注我们</div>
@@ -237,7 +254,13 @@
     padding: 0 40px;
     height: 100px;
     .title {
+      text-align: left;
       color: @secondary-text-color;
+
+      &.type {
+        margin: -10px 0 30px 0;
+        font-size: 20px;
+      }
     }
     &:last-child {
       width: 340px;
@@ -246,7 +269,7 @@
     & + & {
       text-align: center;
       flex: 1;
-      border-left: 1px solid @border-dark-color;
+      border-left: 0;
     }
 
     &__contact {

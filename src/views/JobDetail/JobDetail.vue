@@ -2,10 +2,8 @@
   <div class="job-detail">
     <h1 class="job-detail-title">{{ jobDetail.title }}</h1>
     <div class="job-detail-subTitle" v-if="jobDetail.id">
-      <span class="city_info">{{ jobDetail.city_info.name }}</span
-      >&nbsp;|
-      <span class="job_category">{{ jobDetail.job_category.name }}</span
-      >&nbsp;|
+      <span class="city_info">{{ jobDetail.city_info.name }}</span>&nbsp;|
+      <span class="job_category">{{ jobDetail.job_category.name }}</span>&nbsp;|
       <span class="recruit_type">{{ jobDetail.recruit_type.name }}</span>
     </div>
     <div class="job-detail-description job-detail-block">
@@ -22,12 +20,11 @@
   </div>
 </template>
 <script setup>
-import BytedanceButton from '../../components/Bytedance-Button.vue'
-import {reactive, getCurrentInstance, ref, onMounted} from "vue";
-import {useStore} from "vuex";
-import {useRoute} from "vue-router";
+import { reactive, getCurrentInstance, ref, onMounted } from "vue";
+import { useStore } from "vuex";
+import { useRoute } from "vue-router";
 
-const {proxy} = getCurrentInstance()
+const { proxy } = getCurrentInstance()
 
 // 加载动画（有问题）
 // let loading = proxy.$loading({ position: { top: 60 } })

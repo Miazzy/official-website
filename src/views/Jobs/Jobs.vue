@@ -4,11 +4,6 @@
 
     <!-- 搜索 -->
     <div ref="searchBar" :class="{ fixedTop: searchBarFixedTop }" class="search-wrapper">
-      <input-search
-          :size="searchBarFixedTop ? 'small' : 'medium'"
-          placeholder="搜索职位"
-          v-model="searchKeyword"
-      ></input-search>
     </div>
 
     <div class="main clearfix">
@@ -20,23 +15,11 @@
         </div>
         <div class="job-category job-filter-block">
           <div class="title"></div>
-          <checkbox-transfer
-              title="职位"
-              ref="jobCategory"
-              v-model="job_category_id_list"
-              :props="{ key: 'nid', label: 'name' }"
-              :data="jobCategories"
-          ></checkbox-transfer>
+          <checkbox-transfer title="职位" ref="jobCategory" v-model="job_category_id_list"
+            :props="{ key: 'nid', label: 'name' }" :data="jobCategories"></checkbox-transfer>
         </div>
         <div class="job-city job-filter-block">
           <div class="title"></div>
-          <checkbox-transfer
-              title="城市"
-              ref="location"
-              v-model="location_code_list"
-              :props="{ key: 'code', label: 'name' }"
-              :data="jobCities"
-          ></checkbox-transfer>
         </div>
       </div>
       <!-- 主体内容 -->
@@ -56,38 +39,26 @@
             </router-link>
           </li>
         </ul>
-        <!--        &lt;!&ndash; 分页器 &ndash;&gt;-->
-        <!--        <div v-show="!loading" class="pagination-wrapper">-->
-        <!--          <pagination :current-page.sync="currentPage" :total="results.count"></pagination>-->
-        <!--        </div>-->
-        <el-pagination
-            class="pager"
-            v-model:current-page="pageOperation.page"
-            v-model:page-size="pageOperation.limit"
-            :background="false"
-            layout="prev, pager, next, jumper"
-            :total="results.total || 10"
-            @current-change="handleCurrentChange"
-        />
+        <el-pagination class="pager" v-model:current-page="pageOperation.page" v-model:page-size="pageOperation.limit"
+          :background="false" layout="prev, pager, next, jumper" :total="results.total || 10"
+          @current-change="handleCurrentChange" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import {computed, getCurrentInstance, onMounted, ref, watch} from "vue";
-import {useRoute} from "vue-router";
-import {getOffsetTop} from "../../helper/utilities.js";
+import { computed, getCurrentInstance, onMounted, ref, watch } from "vue";
+import { useRoute } from "vue-router";
+import { getOffsetTop } from "../../helper/utilities.js";
 import EventBus from "../../helper/EventBus/index.js";
-import InputSearch from '../../components/Input-Search.vue'
-import CheckboxTransfer from "../../components/Checkbox-Transfer.vue";
 import Loading from "../../components/Loading/index.js";
 
 const route = useRoute()
-const {proxy} = getCurrentInstance()
+const { proxy } = getCurrentInstance()
 let positionY = 0;
 let searchBarClientHeight = 0
-const {keyword, job_category_id} = route.query
+const { keyword, job_category_id } = route.query
 const searchBarFixedTop = ref(false)
 // 工作种类数组
 const job_category_id_list = ref(job_category_id ? [Number(job_category_id)] : [])
@@ -138,7 +109,7 @@ const handleCurrentChange = () => {
 // 计算属性
 const clearable = computed(() => {
   return (
-      job_category_id_list.value.length !== 0 || location_code_list.value.length !== 0
+    job_category_id_list.value.length !== 0 || location_code_list.value.length !== 0
   )
 })
 
@@ -162,7 +133,7 @@ onMounted(() => {
 
   const onPageScroll = () => {
     searchBarFixedTop.value =
-        window.scrollY > positionY - searchBarClientHeight / 2;
+      window.scrollY > positionY - searchBarClientHeight / 2;
   }
 
   window.addEventListener("scroll", onPageScroll);
