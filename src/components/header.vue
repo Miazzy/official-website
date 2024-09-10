@@ -180,7 +180,7 @@ const {themeColor, fixedToTop} = toRefs(props)
       text-align: center;
 
       &.active {
-        border-bottom: 2px solid;
+        border-bottom: 3px solid #EF7D1B;
         color: @main-color;
       }
     }
