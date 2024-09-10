@@ -82,7 +82,7 @@
   
   .indicator {
     position: absolute;
-    right: 85px;
+    right: 86px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -92,7 +92,7 @@
   }
   
   .segment {
-    width: 2px;
+    width: 1px;
     height: 58px;
     background-color: rgba(255, 255, 255, 0.4);
     transition: background-color 0.3s, width 0.3s;
@@ -100,7 +100,7 @@
   
   .segment.active {
     background-color: #fefefe;
-    width: 4px;
+    width: 2px;
   }
   </style>
   

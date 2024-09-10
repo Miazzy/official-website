@@ -148,7 +148,6 @@ onMounted(() => {
 
   &-title {
     color: #fff;
-    display: none;
     font-size: 57.5px;
     text-align: center;
     position: absolute;
