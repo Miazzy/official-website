@@ -11,7 +11,7 @@
           <a :href="href" @click="navigate">首页</a>
         </li>
       </router-link>
-      <router-link exact to="/jobs" v-slot="{ href, navigate, isActive }">
+      <router-link exact to="/plans" v-slot="{ href, navigate, isActive }">
         <li class="navbar-item" :class="{ active: isActive }">
           <a :href="href" @click="navigate">解决方案</a>
         </li>

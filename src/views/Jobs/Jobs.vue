@@ -27,7 +27,7 @@
         <h2 class="content-title">开启新的职位 ({{ results.total }})</h2>
         <ul class="content-list">
           <li class="content-item" v-for="item in results.data" :key="item.nid">
-            <router-link :to="`/jobs/${item.nid}`" target="_blank">
+            <router-link :to="`/plans/${item.nid}`" target="_blank">
               <h3 class="title">{{ item.title }}</h3>
 
               <div class="subTitle">
