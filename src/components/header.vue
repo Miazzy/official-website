@@ -16,7 +16,7 @@
           <a :href="href" @click="navigate">解决方案</a>
         </li>
       </router-link>
-      <router-link exact to="/xxx" v-slot="{ href, navigate, isActive }">
+      <router-link exact to="/projectCases" v-slot="{ href, navigate, isActive }">
         <li class="navbar-item" :class="{ active: isActive }">
           <a :href="href" @click="navigate">项目案例</a>
         </li>
