@@ -26,7 +26,7 @@
           <a :href="href" @click="navigate">咨询中心</a>
         </li>
       </router-link>
-      <router-link to="/aaa" v-slot="{ href, navigate, isActive }">
+      <router-link to="/aboutus" v-slot="{ href, navigate, isActive }">
         <li class="navbar-item" :class="{ active: isActive }">
           <a :href="href" @click="navigate">关于我们</a>
         </li>
