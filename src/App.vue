@@ -74,7 +74,108 @@ const onAnimationStart = (e) => {
 }
 
 </script>
+<style lang="less">
+@media screen and (min-width: 1900px) and (max-width: 2000px) {
+  .header .navbar {
+    margin-left: calc(27vw + 15px) !important;
+    margin-top: calc(11.75vh + 12px) !important;
 
+    &-item {
+      width: 100px !important;
+      font-size: 24.5px !important;
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 120px !important;
+    top: calc(50% + 0px) !important;
+
+    .segment {
+      height: 64px !important;
+    }
+  }
+
+  .home .carousel-container .banner .bg-button{
+      width: 161px;
+      height: 49px;
+      left: 264px;
+      top: calc(50vh + 80px);
+
+      .content {
+        margin: 10px 22px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+  }
+
+  .home .carousel-container .banner .banner-title {
+    font-size: 64.5px;
+    left: 269px !important;
+    top: 395px !important;
+
+    .subTitle[data-v-e345e995] {
+        left: -33px;
+        top: 90px;
+        font-size: 22px;
+        width: 700px;
+        letter-spacing: 0px;
+    }
+  }
+
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .tooltip {
+        font-size: 11.5px !important;
+        right: 95px !important;
+        top: calc(50vh - 108px) !important;
+      }
+    }
+
+    &:nth-child(2) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh - 55.5px) !important;
+      }
+    }
+
+    &:nth-child(3) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 10px) !important;
+      }
+    }
+
+    &:nth-child(4) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 78px) !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1650px) and (max-width: 1680px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .tooltip {
+        top: calc(50vh - 96.5px) !important;
+      }
+    }
+
+    &:nth-child(3) {
+      .banner .tooltip {
+        top: calc(50vh + 6px) !important;
+      }
+    }
+
+    &:nth-child(4) {
+      .banner .tooltip {
+        top: calc(50vh + 68px) !important;
+      }
+    }
+  }
+}
+</style>
 <style scoped lang="scss">
 @keyframes slideInDown {
   from {

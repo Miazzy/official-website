@@ -16,7 +16,7 @@
               <span class="icon">></span>
             </div>
           </div>
-          <div class="tooltip" style="top: calc(50vh - 96.5px)">
+          <div class="tooltip">
             <span>首页</span>
           </div>
         </div>

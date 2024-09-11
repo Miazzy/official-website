@@ -146,9 +146,9 @@ const {themeColor, fixedToTop} = toRefs(props)
   }
 
   .navbar {
-    margin-left: 435px;
+    margin-left: calc(27vw - 10px);
     margin-right: 10px;
-    margin-top: 112px;
+    margin-top: calc(11.75vh);
 
     display: flex;
 

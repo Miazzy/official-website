@@ -32,12 +32,13 @@ const isRefresh = ref(true);
 
 const task = () => {
   if (!isLock.value) {
+    isRefresh.value = false;
     activeIndex.value = (activeIndex.value + 1) % totalSlides;
   }
 };
 
 const startAutoScroll = () => {
-  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND);
+  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND * 10);
 };
 
 const stopAutoScroll = () => {
