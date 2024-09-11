@@ -100,14 +100,12 @@ const onAnimationStart = (e) => {
   position: fixed;
   top: 0;
   transition: all 0.4s;
-  //animation: slideInDown 0.4s;
 }
 
 .slideOutUp {
   position: fixed;
   top: -64px;
   transition: all 0.4s;
-  //animation: slideOutUp 0.4s;
 }
 
 .jumpPage-leave-active {

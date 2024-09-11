@@ -97,34 +97,13 @@ const {themeColor, fixedToTop} = toRefs(props)
 
       &:hover {
         a {
-          color: @main-color;
+          color: @white-color;
         }
       }
 
       &.active {
         a {
-          color: @main-color;
-        }
-      }
-    }
-
-    .login {
-      .navbar-item {
-
-        .el-dropdown span {
-          color: #333;
-        }
-
-        &:hover {
-          a {
-            color: @main-color;
-          }
-        }
-
-        &.active {
-          a {
-            color: @main-color;
-          }
+          color: @white-color;
         }
       }
     }
