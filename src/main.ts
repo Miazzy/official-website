@@ -4,11 +4,9 @@ import router from './router/index'
 import store from "./store/index";
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import api from './api/api'
+import Loading from "./components/Loading/index";
 import "./assets/style/reset.css";
 import "./assets/style/global.css";
-
-
-import Loading from "./components/Loading/index";
 
 const app = createApp(App)
 app.use(router).use(store)

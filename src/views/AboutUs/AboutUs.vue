@@ -1,56 +1,16 @@
 <template>
-  <div class="product">
-    <ul class="product-fullpage-indicator">
-      <li
-          v-for="(item, index) in products"
-          :key="item.id"
-          class="product-fullpage-indicator-item"
-          :class="{ active: activeIndex === index }"
-          @click="activeIndex = index"
-      >
-        <img :src="item.logo" alt/>
-      </li>
-    </ul>
-    <transition :duration="duration" :name="transitionName">
-      <!-- ... the buttons ... -->
-      <div
-          :key="activeIndex"
-          class="view-wrapper"
-          v-if="!loading"
-          :style="`background-image:url(${item.cover})`"
-      >
-        <div class="content">
-          <div class="logo">
-            <img :src="item.logo" width="100%" height="100%" alt/>
-          </div>
-          <h2>{{ item.title }}</h2>
-          <div class="description">{{ item.description }}</div>
-          <div class="subDescription">{{ item.subDescription }}</div>
-          <div class="link">
-            更多信息，请访问：
-            <br/>
-            <span>{{ item.link }}</span>
-          </div>
-        </div>
-      </div>
-    </transition>
+  <div class="aboutus">
+
   </div>
 </template>
 
 <script setup>
-import {ref, watch, getCurrentInstance, onMounted, onUnmounted, computed} from "vue";
-import {useRoute} from "vue-router";
+import { ref, watch, getCurrentInstance, onMounted, onUnmounted, computed } from "vue";
+import { useRoute } from "vue-router";
 
 const route = useRoute()
-const {proxy} = getCurrentInstance()
-// 产品列表
-const products = ref([])
+const { proxy } = getCurrentInstance()
 
-const activeIndex = ref(0)
-const loading = ref(false)
-const scrolling = ref(false)
-const duration = ref(1000)
-const transitionName = ref("")
 
 // created生命周期钩子 --- vue3setup
 // loading.value = true
@@ -65,9 +25,9 @@ const mousewheelHandler = (e) => {
     transitionName.value = "move-down";
     console.log(transitionName.value)
     activeIndex.value =
-        activeIndex.value === 0
-            ? products.value.length - 1
-            : activeIndex.value - 1;
+      activeIndex.value === 0
+        ? products.value.length - 1
+        : activeIndex.value - 1;
   } else {
     transitionName.value = "move-up";
     console.log(transitionName.value)
@@ -126,6 +86,7 @@ const getProductList = async () => {
   transition: all 0.7s;
   transition-timing-function: cubic-bezier(0.66, 0, 0.34, 1);
 }
+
 .move-up-leave-to,
 .move-up-enter-from,
 .move-down-leave-to,
@@ -137,6 +98,7 @@ const getProductList = async () => {
 .move-down-enter-from {
   transform: translateY(-100%);
 }
+
 .move-down-leave-to,
 .move-up-enter-from {
   transform: translateY(100%);
@@ -151,6 +113,7 @@ const getProductList = async () => {
   bottom: 0;
   min-height: 500px;
   min-width: 700px;
+
   &-fullpage-indicator {
     position: absolute;
     z-index: 333;
@@ -175,6 +138,7 @@ const getProductList = async () => {
 
         box-shadow: 0 0 14px 0 @box-shadow-dark-color;
       }
+
       img {
         width: 100%;
         height: 100%;
@@ -197,21 +161,26 @@ const getProductList = async () => {
       transform: translateY(-50%);
       position: absolute;
       top: 50%;
+
       // text-align: center;
       .logo {
         width: 80px;
         height: 80px;
       }
+
       h2 {
         margin: 30px 0;
       }
+
       .description,
       .subDescription {
         color: #aaa;
         line-height: 1.4;
       }
+
       .link {
         margin-top: 40px;
+
         span {
           color: @main-color;
         }

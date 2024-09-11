@@ -1,18 +1,13 @@
 <template>
   <div id="container">
     <header>
-      <Header
-          @enter.enter="onAnimationStart"
-          :class="{ [animationName]: $route.name === 'home' }"
-          :fixedToTop="$route.path === '/'"
-          ref="header"
-          :theme-color="themeColor"
-      ></Header>
+      <Header @enter.enter="onAnimationStart" :class="{ [animationName]: $route.name === 'home' }"
+        :fixedToTop="$route.path === '/'" ref="header" :theme-color="themeColor"></Header>
     </header>
     <main>
       <router-view v-slot="{ Component }" :key="$route.path">
         <transition :name="animationName">
-          <component :is="Component"/>
+          <component :is="Component" />
         </transition>
       </router-view>
     </main>
@@ -26,12 +21,12 @@
 <script setup>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
-import {ref, reactive, getCurrentInstance, computed, watch, onMounted} from "vue";
-import {useRoute} from 'vue-router'
+import { ref, reactive, getCurrentInstance, computed, watch, onMounted } from "vue";
+import { useRoute } from 'vue-router'
 import EventBus from './helper/EventBus'
 
 const route = useRoute()
-const {proxy} = getCurrentInstance()
+const { proxy } = getCurrentInstance()
 
 const animationName = ref("slideInDown")
 const pageTransitionName = ref("")
@@ -66,8 +61,8 @@ const themeColor = computed(() => {
 
 watch(route, (newValue, oldValue) => {
   pageTransitionName.value = ["products", "home"].includes(newValue.name)
-      ? ""
-      : "jumpPage";
+    ? ""
+    : "jumpPage";
 })
 
 const onAnimationStart = (e) => {
@@ -85,6 +80,7 @@ const onAnimationStart = (e) => {
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -94,6 +90,7 @@ const onAnimationStart = (e) => {
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(-100%);
   }
@@ -101,14 +98,14 @@ const onAnimationStart = (e) => {
 
 .slideInDown {
   position: fixed;
-  top:0;
+  top: 0;
   transition: all 0.4s;
   //animation: slideInDown 0.4s;
 }
 
 .slideOutUp {
   position: fixed;
-  top:-64px;
+  top: -64px;
   transition: all 0.4s;
   //animation: slideOutUp 0.4s;
 }

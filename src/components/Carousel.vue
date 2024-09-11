@@ -1,15 +1,15 @@
 <template>
   <div class="carousel-container" @wheel="handleScrollFn">
-    <div class="carousel-slide" :class="{ active: activeIndex === 0 }" v-show="activeIndex === 0">
+    <div class="carousel-slide" :class="{ active: activeIndex === 0, disactive: activeIndex !== 0, restatus: isRefresh }">
       <slot name="one"></slot>
     </div>
-    <div class="carousel-slide" :class="{ active: activeIndex === 1 }" v-show="activeIndex === 1">
+    <div class="carousel-slide" :class="{ active: activeIndex === 1, disactive: activeIndex !== 1 }" v-show="!isRefresh">
       <slot name="two"></slot>
     </div>
-    <div class="carousel-slide" :class="{ active: activeIndex === 2 }" v-show="activeIndex === 2">
+    <div class="carousel-slide" :class="{ active: activeIndex === 2, disactive: activeIndex !== 2 }" v-show="!isRefresh">
       <slot name="three"></slot>
     </div>
-    <div class="carousel-slide" :class="{ active: activeIndex === 3 }" v-show="activeIndex === 3">
+    <div class="carousel-slide" :class="{ active: activeIndex === 3, disactive: activeIndex !== 3 }" v-show="!isRefresh">
       <slot name="four"></slot>
     </div>
     <div class="indicator">
@@ -20,13 +20,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import { throttle } from '../utils/common';
 import { TaskExecutor } from '../executor/executor';
+import { TimeInterval } from '../constant/constant';
 
 const activeIndex = ref(0);
 const totalSlides = 4; // 总共4个轮播项
 const isLock = ref(false);
+const isRefresh = ref(true);
 
 const task = () => {
   if (!isLock.value) {
@@ -35,7 +37,7 @@ const task = () => {
 };
 
 const startAutoScroll = () => {
-  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, 5000);
+  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND);
 };
 
 const stopAutoScroll = () => {
@@ -43,6 +45,7 @@ const stopAutoScroll = () => {
 };
 
 const handleScroll = (event: WheelEvent) => {
+  isRefresh.value = false;
   isLock.value = true;
   stopAutoScroll();
   if (event.deltaY > 0) { // 向下滚动
@@ -55,6 +58,7 @@ const handleScroll = (event: WheelEvent) => {
 };
 
 const handleClick = (index) => {
+  isRefresh.value = false;
   isLock.value = true;
   stopAutoScroll();
   activeIndex.value = index;
@@ -67,6 +71,9 @@ const handleScrollFn = throttle(handleScroll, 1500);
 onMounted(() => {
   TaskExecutor.getInstance().start();
   startAutoScroll();
+  setTimeout(() => {
+    isRefresh.value = false;
+  }, TimeInterval.TEN_SECOND);
 });
 
 onBeforeUnmount(() => {
@@ -75,6 +82,37 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="less" scoped>
+@keyframes slideInDown {
+  from {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes refreshShow {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes disactive {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.5;
+    transform: translateY(100%);
+  }
+}
+
 .carousel-container {
   width: 100vw;
   height: 100vh;
@@ -92,9 +130,20 @@ onBeforeUnmount(() => {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
+    animation: slideInDown 0.75s;
 
     &.active {
       opacity: 1;
+
+      &.restatus {
+        opacity: 1;
+        animation: refreshShow 0.75s;
+      }
+    }
+
+    &.disactive {
+      opacity: 0;
+      animation: disactive 0.75s;
     }
   }
 
