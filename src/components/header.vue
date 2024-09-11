@@ -73,7 +73,8 @@ const {themeColor, fixedToTop} = toRefs(props)
 </script>
 <style lang="less" scoped>
 .header {
-  color: #aaa;
+  position: fixed;
+  color: transparent;
   display: flex;
   height: 64px;
   align-items: center;
@@ -86,8 +87,8 @@ const {themeColor, fixedToTop} = toRefs(props)
   }
 
   &.main-color {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid #eff0f1;
+    background-color: transparent;
+    border-bottom: 0;
 
     a {
       color: #333;
