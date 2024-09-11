@@ -11,6 +11,9 @@ dependencies:
   axios:
     specifier: ^1.4.0
     version: 1.4.0
+  dayjs:
+    specifier: ^1.11.13
+    version: 1.11.13
   element-plus:
     specifier: ^2.3.4
     version: 2.3.4(vue@3.2.47)
@@ -740,8 +743,8 @@ packages:
   /csstype@2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
 
-  /dayjs@1.11.7:
-    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+  /dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
     dev: false
 
   /debug@3.2.7:
@@ -790,7 +793,7 @@ packages:
       '@types/lodash-es': 4.17.7
       '@vueuse/core': 9.13.0(vue@3.2.47)
       async-validator: 4.2.5
-      dayjs: 1.11.7
+      dayjs: 1.11.13
       escape-html: 1.0.3
       lodash: 4.17.21
       lodash-es: 4.17.21
