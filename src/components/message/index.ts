@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Message from "./main";
 import { defaults } from "./main";
-import { pick } from "@/helper/utilities.js";
+import { pick } from "@/helper/utilities";
 const MessageCtor = Vue.extend(Message);
 
 const queue = [];

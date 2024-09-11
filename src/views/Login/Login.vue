@@ -44,7 +44,7 @@
 import {reactive, ref, getCurrentInstance} from 'vue'
 import {useStore} from "vuex";
 import {useRouter} from "vue-router";
-import Loading from "../../components/Loading/index.js";
+import Loading from "../../components/Loading/index";
 
 const isLogin = ref(true)
 // 拿到proxy对象，相当于Vue2中的this

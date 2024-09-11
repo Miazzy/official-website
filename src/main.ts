@@ -1,14 +1,14 @@
 import {createApp} from 'vue'
 import App from './App.vue'
+import router from './router/index'
+import store from "./store/index";
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import api from './api/api'
 import "./assets/style/reset.css";
 import "./assets/style/global.css";
-import router from './router/index.js'
-import store from "./store/index.js";
-import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-import api from './api/api.js'
 
 
-import Loading from "./components/Loading/index.js";
+import Loading from "./components/Loading/index";
 
 const app = createApp(App)
 app.use(router).use(store)

@@ -50,9 +50,9 @@
 <script setup>
 import { computed, getCurrentInstance, onMounted, ref, watch } from "vue";
 import { useRoute } from "vue-router";
-import { getOffsetTop } from "../../helper/utilities.js";
-import EventBus from "../../helper/EventBus/index.js";
-import Loading from "../../components/Loading/index.js";
+import { getOffsetTop } from "../../helper/utilities";
+import EventBus from "../../helper/EventBus/index";
+import Loading from "../../components/Loading/index";
 
 const route = useRoute()
 const { proxy } = getCurrentInstance()

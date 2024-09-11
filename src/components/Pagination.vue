@@ -33,7 +33,7 @@
 </template>
 <script setup>
 import {ref, defineProps, toRefs, computed} from "vue";
-import EventBus from "../helper/EventBus/index.js";
+import EventBus from "../helper/EventBus/index";
 
 const props = defineProps({
   total: Number,

@@ -1,12 +1,12 @@
 import axios from "axios";
-import config from "./config/index.js";
+import config from "./config/index";
+import store from "../store/index";
 
 // 引入进度条
 // import nprogress from 'nprogress'
 
 // 引入nprogress的css样式
 // import 'nprogress/nprogress.css'
-import store from "../store/index.js";
 
 const NETWORK_ERROR = '网络请求异常，后端未开启，请稍后重试......'
 

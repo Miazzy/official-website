@@ -1,7 +1,7 @@
 /**
  * 项目总api管理
  */
-import request from "./request.js";
+import request from "./request";
 
 export default {
     // 登录
