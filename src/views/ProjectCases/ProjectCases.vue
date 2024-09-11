@@ -1,25 +1,255 @@
 <template>
   <div class="project-cases">
     <div class="banner-box">
-        <h1 class="banner-title-ch">项目案例</h1>
-        <h2 class="banner-title-en">PROJECT CASE</h2>
+      <h1 class="banner-title-ch">项目案例</h1>
+      <h2 class="banner-title-en">PROJECT CASE</h2>
+    </div>
+    <div class="content-box-1">
+      <div class="intelligent-operation-box">
+        <div class="title-box">
+          <span class="title-ch">智能运营</span>
+          <span class="title-en">INTELLIGENT OPERATION</span>
+        </div>
+        <div class="case-box">
+          <div
+            class="case-item-box"
+            v-for="(item, index) in intelligentOperationList"
+            :key="index"
+          >
+            <div class="img-box">
+              <img class="case-img" :src="item.img" />
+            </div>
+            <div class="case-desc-box">
+              <div class="case-title-text">{{ item.title }}</div>
+              <p class="case-desc-text">{{ item.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-box-2">
+      <div class="smart-agriculture-box">
+        <div class="title-box">
+          <span class="title-ch">智慧农业</span>
+          <span class="title-en">SMART AGRICULTURE</span>
+        </div>
+        <div class="case-box">
+          <div
+            class="case-item-box"
+            v-for="(item, index) in smartAgricultureList"
+            :key="index"
+          >
+            <div class="img-box">
+              <img class="case-img" :src="item.img" />
+            </div>
+            <div class="case-desc-box">
+              <div class="case-title-text">{{ item.title }}</div>
+              <p class="case-desc-text">{{ item.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
-const router = useRouter()
+const router = useRouter();
 
-onMounted(() => {
-  
-})
+const getImgUrl = (url) => {
+  const path = new URL(`../../assets/images/${url}`, import.meta.url);
+  return path.href;
+};
+
+const intelligentOperationList = ref([
+  {
+    img: getImgUrl('project-case-hbtm.jpg'),
+    title: '湖北天门',
+    desc: '通威天门500MW渔光一体光伏电站项目总投资20亿元，占水域面积11351亩。项目于2021年8月开工，2023年6月基本建成并并网发电。项目配套建设一座220KV的升压站、一条10公里的220KV的外送线路、一座80MW/160MWH的储能电站，全部建成后每年可生产清洁电力5亿多度，年产值可达2亿多元。',
+  },
+  {
+    img: getImgUrl('project-case-cqqj.jpg'),
+    title: '重庆黔江',
+    desc: '重庆黔江100MWp并网光伏电站位于重庆市黔江区麒麟村、青龙村、南溪村、石柱村，共使用约1831亩山地，工程总投资约6亿元。据测算，黔江项目年发电总量约7000万千瓦时，每年可节省标准煤2.7万吨，对促进重庆市节能减排、生态环境改善具有积极作用。',
+  },
+  {
+    img: getImgUrl('project-case-njlp.jpg'),
+    title: '南京龙袍',
+    desc: '南京龙袍“渔光一体”项目包括50MWp光伏发电和池塘养殖改造，年均发电5100万度，致力于打造“零污染、零排放”的现代智能精品渔业产业园。',
+  },
+  {
+    img: getImgUrl('project-case-jsyz.jpg'),
+    title: '江苏扬中',
+    desc: '江苏扬中基地一二期占地280亩为标准的渔光一体示范基地。上面产出清洁能源年发电1200万度以上，水下养鱼每年可产出各类水产品50万斤以上。',
+  },
+]);
+
+const smartAgricultureList = ref([
+  {
+    img: getImgUrl('project-case-ahhx.jpg'),
+    title: '安徽和县现代化渔业养殖',
+    desc: '公司全面打造建设完成的“渔光一体”项目基地，除了光伏发电设施外，还拥有一整套完善的渔业养殖设施，利用智能化的养殖手段，已实现“少人化”、“精细化”养殖，这里不仅是现代化水产养殖基地，更带动了当地观光农业的发展，是一个高效运转的“渔-光-旅”一体化基地。',
+  },
+  {
+    img: getImgUrl('project-case-tfnby.jpg'),
+    title: '中国天府农博园',
+    desc: '位于天府农博岛核心景区内，是土地综合利用，资源、环境保护，生态种养，智能化控制的精典案例。我司主导园区内物联网设施设备、渔业养殖生产管理平台、园区中央展示平台、智能光伏集中运维平台等，助力园区对现代化渔业养殖起到直观的引导和示范作用。',
+  },
+  {
+    img: getImgUrl('project-case-lsyylm.jpg'),
+    title: '芦山县鱼跃龙门智慧水产养殖',
+    desc: '该园区引入了我司智慧物联核心技术，全面数字管控、智能投喂，装配有先进的智能风送料塔、水质在线检测设备、高速增氧机、疫病防御系统和投饵机器人等设备设施，是四川地区冷水鱼养殖规模最大、信息化水平最高、智能化设施最全的冷水鱼繁育、养殖基地之一。对树立智慧生态渔业发展新标杆。',
+  },
+  {
+    img: getImgUrl('project-case-sddy.jpg'),
+    title: '山东东营智能化养殖',
+    desc: '该园区占地4226亩，总投资8亿元，已于2021年投生态渔业板块，规划养殖面积4000余亩，主要进行南美白对虾、海参等水产养殖，配套建设了1000平方米的智能化养殖育苗车间，引进先进的循环水处理、在线监测等智能化设备，为外塘养殖提供优质种苗。',
+  },
+]);
+
+onMounted(() => {});
 </script>
 
 <style scoped lang="less">
 .project-cases {
-    
+  .banner-box {
+    width: 100%;
+    height: 540px;
+    background: url('../../assets/images/project-case-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 1;
+    padding-top: 259px;
+    .banner-title-ch {
+      font-weight: bold;
+      font-size: 64px;
+      color: #ffffff;
+      text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      margin-bottom: 22px;
+    }
+    .banner-title-en {
+      font-weight: 400;
+      font-size: 24px;
+      color: #ffffff;
+      text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+      opacity: 0.77;
+    }
+  }
+  .content-box-1 {
+    width: 100%;
+    height: 914px;
+    .intelligent-operation-box {
+      width: 1716px;
+      height: 877px;
+      margin: -68px auto 0;
+      background: #f7f9fc;
+      .title-box {
+        padding: 103px;
+        & > span {
+          display: inline-block;
+          height: 46px;
+          line-height: 1;
+        }
+        .title-ch {
+          margin-right: 36px;
+          font-weight: 500;
+          font-size: 46px;
+          color: #333333;
+        }
+        .title-en {
+          padding-top: 12px;
+          font-weight: 400;
+          font-size: 34px;
+          color: #cccccc;
+          vertical-align: sub;
+        }
+      }
+      .case-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 96px;
+      }
+    }
+  }
+  .case-item-box {
+    width: 358px;
+    height: 564px;
+    background: #ffffff;
+    box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.11);
+    cursor: pointer;
+    &:hover {
+      background: #fefaf6;
+      box-shadow: -1px 7px 13px 0px rgba(221, 120, 22, 0.3);
+    }
+    .img-box {
+      width: 100%;
+      height: 335px;
+      font-size: 0;
+      .case-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .case-title-text {
+      padding: 19px 0 8px;
+      font-weight: 400;
+      font-size: 24px;
+      color: #333333;
+      line-height: 1;
+      text-align: center;
+    }
+    .case-desc-text {
+      margin: 0;
+      padding: 0 34px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #999999;
+      line-height: 24px;
+      word-break: break-all;
+    }
+  }
+  .content-box-2 {
+    width: 100%;
+    height: 1060px;
+    background: url('../../assets/images/project-case-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .smart-agriculture-box {
+      width: 1524px;
+      margin: 0 auto;
+      .title-box {
+        padding: 103px 0;
+        & > span {
+          display: inline-block;
+          height: 46px;
+          line-height: 1;
+        }
+        .title-ch {
+          margin-right: 36px;
+          font-weight: 500;
+          font-size: 46px;
+          color: #ffffff;
+        }
+        .title-en {
+          padding-top: 12px;
+          font-weight: 400;
+          font-size: 34px;
+          color: #ffffff;
+          vertical-align: sub;
+          opacity: 0.3;
+        }
+      }
+      .case-box {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
 }
 </style>
