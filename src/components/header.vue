@@ -91,11 +91,11 @@ const {themeColor, fixedToTop} = toRefs(props)
     border-bottom: 0;
 
     a {
-      color: #333;
+      color: @white-color;
     }
 
     .navbar-item {
-
+    
       &:hover {
         a {
           color: @white-color;

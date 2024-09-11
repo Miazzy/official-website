@@ -174,6 +174,16 @@ const onAnimationStart = (e) => {
       }
     }
   }
+
+  .plans .top-section .banner {
+    margin: 240px 0 0 0 !important;
+      .text {
+        font-size: 59px !important;
+        &.en {
+          font-size: 22px !important;
+        }
+      }
+  }
 }
 </style>
 <style scoped lang="scss">
