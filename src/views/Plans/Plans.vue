@@ -3,26 +3,34 @@
     <!-- 上部区域 -->
     <div class="top-section" :style="{ height: topHeight + 'px' }">
       <div class="banner">
-        <h1 class="text lang">专业化·智能化·一体化</h1>
-        <h2 class="text lang en">Specialization, intelligence and integration</h2>
+        <h1 class="text lang">{{ options.banner.title }}</h1>
+        <h2 class="text lang en">{{ options.banner.btmText }}</h2>
       </div>
     </div>
 
     <!-- 中部区域 -->
     <div class="middle-section" :style="{ height: middleHeight + 'px' }">
     </div>
-    <div class="content" :style="{ height: middleHeight * 1.02+ 'px' }">
+    <div class="middle-content" :style="{ height: middleHeight * 1.02+ 'px', top: topHeight + 'px' }">
       <div class="upper">
-        渔光一体智能运营专家
-        <div class="shadow-text">INTELLIGENT</div>
-        <div class="bottom-text">OPERATION</div>
+        {{ options.mainInfo.title }}
+        <div class="shadow-text">{{ options.mainInfo.shadowText }}</div>
+        <div class="bottom-text">{{ options.mainInfo.btmText }}</div>
       </div>
       <div class="description text">
-        <span>秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。</span>
-        <span>线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源.</span>
-        <span>形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。</span>
+        <span v-for="(text, index) in options.mainInfo.description" :key="index">{{ text }}</span>
       </div>
-      <div class="indexs"></div>
+      <div class="indexs index-container">
+        <div class="box"  v-for="(item, index) in options.indexs" :key="index">
+          <Indicator :num="item.num" 
+            :unit="item.unit"
+            :descript="item.descript" 
+            :color="item.color" 
+            :upcolor="item.upcolor"
+            style="margin: 25px 0 0 70px;">
+          </Indicator>
+        </div>
+      </div>
     </div>
 
     <!-- 下部区域 -->
@@ -31,7 +39,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, reactive } from 'vue';
+import Indicator from '../../components/Indicator.vue';
 
 const baseWidth = 1920; // 基准宽度
 const topBaseHeight = 540; // 上部初始高度
@@ -41,6 +50,31 @@ const bottomBaseHeight = 1060; // 下部初始高度
 const topHeight = ref(topBaseHeight);
 const middleHeight = ref(middleBaseHeight);
 const bottomHeight = ref(bottomBaseHeight);
+
+const options = reactive(
+  {
+    banner: {
+      title: '专业化·智能化·一体化',
+      btmText: 'Specialization, intelligence and integration',
+    },
+    mainInfo: {
+      title: '渔光一体智能运营专家',
+      shadowText: 'INTELLIGENT',
+      btmText: 'OPERATION',
+      description: [
+        '秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。',
+        '线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源.',
+        '形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。',
+      ]
+    },
+    indexs: [
+      { num: 40, unit: '个', descript: '在运城市', color: '#888888', upcolor: '#EF7D1B' },
+      { num: 50, unit: '座', descript: '在运电站', color: '#888888', upcolor: '#EF7D1B' },
+      { num: 4.27, unit: 'Gw', descript: '在运维总容量', color: '#888888', upcolor: '#EF7D1B' },
+      { num: 3170, unit: '天', descript: '安全生产天数', color: '#888888', upcolor: '#EF7D1B' },
+    ]
+  }
+);
 
 // 动态计算区域高度的函数
 const updateHeights = () => {
@@ -112,13 +146,13 @@ onBeforeUnmount(() => {
     transition: height 0.3s ease;
   }
   
-  .content {
+  .middle-content {
     position: absolute;
     top: 540px;
     width: 90%;
     margin: -50px 5% 0 5%;
-    background-color: #fefefe;
-    border: 1px solid #ccc;
+    background: #F7F9FC;
+    border: 1px solid #F7F9FCCE;
     border-radius: 4px;
     font-family: Source Han Sans CN;
 
@@ -163,6 +197,22 @@ onBeforeUnmount(() => {
 
       span {
         display: block;
+      }
+    }
+
+    .index-container {
+      display: flex;
+      margin: 80px 80px 0px 80px;
+
+      .box {
+        width: 350px;
+        height: 150px;
+        background: #FFFFFF;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
       }
     }
   }

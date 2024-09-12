@@ -1,6 +1,6 @@
 <template>
-    <div class="indicator-component">
-        <div class="upper">
+    <div class="indicator-component" :style="{ color: props.color }">
+        <div class="upper" :style="{ color: props.upcolor }">
             <span class="num">{{ props.num }}</span>
             <span class="unit">
                 <span class="sign">+</span>
@@ -24,6 +24,14 @@ const props = defineProps({
     descript: {
         type: String,
         default: ''
+    },
+    color: {
+        type: String,
+        default: '#fefefe'
+    },
+    upcolor: {
+        type: String,
+        default: '#fefefe'
     }
 })
 </script>

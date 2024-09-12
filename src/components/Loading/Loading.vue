@@ -4,7 +4,6 @@
 <template>
   <div id="loading" class="bytedanceLoading">
     <div class="bytedanceLoading__wrapper">
-      <!-- <div class="bytedanceLoading__background"></div> -->
       <div class="bytedanceLoading__inner">
         <div class="bytedanceLoading__inner-item"></div>
         <div class="bytedanceLoading__inner-item"></div>
