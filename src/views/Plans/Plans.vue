@@ -120,7 +120,6 @@ const updateHeights = () => {
 
 // 监听窗口大小变化
 onMounted(() => {
-  debugger;
   updateHeights();
   window.addEventListener('resize', updateHeights); // 监听窗口变化
   MsgManager.getInstance().listen('pagechange', (message) => {
