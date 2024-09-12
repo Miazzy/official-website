@@ -34,7 +34,28 @@
     </div>
 
     <!-- 下部区域 -->
-    <div class="bottom-section" :style="{ height: bottomHeight + 'px' }"></div>
+    <div class="bottom-section" :style="{ height: bottomHeight + 'px' }">
+      <div class="banner">
+        <h1 class="text lang">{{ options.btmInfo.title }}</h1>
+        <h2 class="text lang en">{{ options.btmInfo.btmText }}</h2>
+        <h3 class="text indicate">{{ options.btmInfo.indicate }}</h3>
+      </div>
+
+      <div class="business business-container">
+        <div class="box"  v-for="(item, index) in options.btmInfo.business" :key="index">
+          <span class="icon iconfont">&#xe607;</span>
+          <div class="text-content">
+            <span class="title">运行维护</span>
+            <span class="text">安全管理</span>
+            <span class="text">电站巡检</span>
+            <span class="text">设备运行监控</span>
+            <span class="text">维护消缺</span>
+            <span class="text">台账管理</span>
+            <span class="text">除草清洗</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -72,7 +93,17 @@ const options = reactive(
       { num: 50, unit: '座', descript: '在运电站', color: '#888888', upcolor: '#EF7D1B' },
       { num: 4.27, unit: 'Gw', descript: '在运维总容量', color: '#888888', upcolor: '#EF7D1B' },
       { num: 3170, unit: '天', descript: '安全生产天数', color: '#888888', upcolor: '#EF7D1B' },
-    ]
+    ],
+    btmInfo: {
+      title: '渔光一体智能运营',
+      btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
+      indicate: '业务范围 >>',
+      business: [
+        {},
+        {},
+        {}
+      ],
+    }
   }
 );
 
@@ -222,6 +253,80 @@ onBeforeUnmount(() => {
     background-size: cover;
     background-position: center;
     transition: height 0.3s ease;
+
+    .banner {
+      position: absolute;
+      text-align: left;
+      width: 100%;
+      margin: 80px 0 0 160px;
+      font-family: Source Han Sans CN;
+
+      .text {
+        font-weight: bold;
+        font-size: 30px;
+        color: #FFFFFF;
+        text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+
+        &.en {
+          font-weight: 400;
+          font-size: 24px;
+          color: #FFFFFF;
+          text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+          opacity: 0.3;
+        }
+
+        &.indicate {
+          margin: 20px 0 0 0;
+          font-size: 22px;
+          color: #FFFFFF;
+          text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .business-container {
+      display: flex;
+      margin: 320px 80px 0px 25vw;
+
+      .box {
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 360px;
+        height: 502px;
+        background: #FFFFFF;
+        box-shadow: -1px 7px 13px 0px rgba(24,24,24,0.3);
+
+        .icon {
+          display: block;
+          margin: 80px 0 10px 38%;
+          font-size: 60px;
+          height: 60px;
+        }
+
+        .text-content {
+          display: block;
+          height: 330px;
+          text-align: center;
+
+          .title {
+            display: block;
+            font-size: 26px;
+            font-weight: 600;
+            margin: 5px 0 10px 0;
+          }
+
+          .text {
+            display: block;
+            font-size: 18px;
+            font-weight: 300;
+            margin: 0 0 7.5px 0;
+          }
+        }
+      }
+    }
   }
 }
 </style>
