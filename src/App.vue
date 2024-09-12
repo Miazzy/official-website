@@ -149,6 +149,27 @@ onMounted(async () => {
       }
     }
   }
+
+  .plans.container .bottom-section .banner .text {
+    font-size: 35px !important;
+
+    &.en {
+      font-size: 26px !important;
+    }
+
+    &.indicate {
+      font-size: 24px !important;
+    }
+  }
+
+  .plans.container .bottom-section .business-container {
+      margin: 400px 80px 0px 26vw !important;
+
+      .box {
+        width: 400px !important;
+        height: 582px !important;
+      }
+  }
 }
 
 @media screen and (min-width: 1650px) and (max-width: 1680px) {

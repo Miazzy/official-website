@@ -43,15 +43,10 @@
 
       <div class="business business-container">
         <div class="box"  v-for="(item, index) in options.btmInfo.business" :key="index">
-          <span class="icon iconfont">&#xe607;</span>
+          <span class="icon iconfont" :class="item.icon"></span>
           <div class="text-content">
-            <span class="title">运行维护</span>
-            <span class="text">安全管理</span>
-            <span class="text">电站巡检</span>
-            <span class="text">设备运行监控</span>
-            <span class="text">维护消缺</span>
-            <span class="text">台账管理</span>
-            <span class="text">除草清洗</span>
+            <span class="title">{{ item.title }}</span>
+            <span class="text" v-for="(text, index) in item.text" :key="index">{{ text }}</span>
           </div>
         </div>
       </div>
@@ -99,9 +94,9 @@ const options = reactive(
       btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
       indicate: '业务范围 >>',
       business: [
-        {},
-        {},
-        {}
+        { title: '运行维护', icon:'iconyunyingfuwu', text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'] },
+        { title: '专项服务', icon:'icondashuju', text: ['设备抢检修技改','电气试验','设备专项排查与分析','技术监督','电站性能检测与质量评估','防雷检测','电力设备安装'] },
+        { title: '增值服务', icon:'iconlianghaoderuanyingjianjianrongxing', text: ['生产前准备','电费结算','关系协调','AI巡检'] }
       ],
     }
   }
@@ -249,6 +244,7 @@ onBeforeUnmount(() => {
   }
 
   .bottom-section {
+    width: 100vw;
     background-image: url('../../assets/images/plan_middle_yy.jpg');
     background-size: cover;
     background-position: center;

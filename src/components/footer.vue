@@ -44,7 +44,6 @@
       <div class="title text">E-mail: WEIH02@tongwei.com</div>
       <div class="title text">Addr: 四川省成都市高新区天府大道中段588号通威国际中心</div>
     </div>
-
   </div>
 </template>
 <script setup>
@@ -94,7 +93,6 @@
         width: 125px;
         height: 125px;
       }
-
     }
 
     .descript {
@@ -102,11 +100,6 @@
       font-size: 10px;
       text-align: center;
       color: #fefefe90;
-    }
-
-    &:last-child {
-      width: 340px;
-      padding: 0 80px;
     }
   }
 }
