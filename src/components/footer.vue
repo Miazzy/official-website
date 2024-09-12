@@ -64,6 +64,10 @@
   &-content-column {
     padding: 0 40px;
     height: 100px;
+
+    &:last-child {
+      margin: 0 0 0 30px;
+    }
     .title {
       cursor: pointer;
       text-align: left;

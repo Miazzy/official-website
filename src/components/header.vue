@@ -11,9 +11,21 @@
           <a :href="href" @click="navigate">首页</a>
         </li>
       </router-link>
-      <router-link exact to="/plans" v-slot="{ href, navigate, isActive }">
+      <router-link exact to="/plans" v-slot="{ href, navigate, isActive }" >
         <li class="navbar-item" :class="{ active: isActive }">
-          <a :href="href" @click="navigate">解决方案</a>
+          <ElTooltip
+              placement="bottom"
+              effect="light"
+            >
+            <a :href="href" @click="handleClick('yy')">解决方案</a>
+            <template #content>
+              <div class='tooltips-text'>
+                <span class='operation' @click="handleClick('yy')">智能运营</span>
+                <span class='agriculture' @click="handleClick('yz')">智慧农业</span>
+                <span class='information' @click="handleClick('xx')">信息化</span>
+              </div>
+            </template>
+          </ElTooltip>
         </li>
       </router-link>
       <router-link exact to="/projectCases" v-slot="{ href, navigate, isActive }">
@@ -35,13 +47,11 @@
   </div>
 </template>
 <script setup>
-import { useStore } from 'vuex'
-import { toRefs, getCurrentInstance, computed, ref } from "vue";
 import { useRouter } from "vue-router";
+import { ElTooltip } from "element-plus";
+import { MsgManager } from "../manager/MsgManager";
 
-const store = useStore()
-const router = useRouter()
-const { proxy } = getCurrentInstance()
+const router = useRouter();
 
 const props = defineProps({
   themeColor: {
@@ -52,23 +62,12 @@ const props = defineProps({
     type: Boolean,
     default: false
   }
-})
+});
 
-const logout = () => {
-  ElNotification({
-    title: 'Success',
-    message: '退出成功',
-    type: 'success',
-    offset: 100,
-  })
-  store.commit('LOGOUT')
-}
-
-const username = computed(() => {
-  return store.state.username
-})
-
-const {themeColor, fixedToTop} = toRefs(props)
+const handleClick = (type) => {
+  MsgManager.getInstance().sendMsg('pagechange', { route: 'plans', type });
+  router.push('/plans?type=' + type);
+};
 
 </script>
 <style lang="less" scoped>
@@ -91,19 +90,23 @@ const {themeColor, fixedToTop} = toRefs(props)
     border-bottom: 0;
 
     a {
+      cursor: pointer;
       color: @white-color;
     }
 
     .navbar-item {
-    
+      cursor: pointer;
+
       &:hover {
         a {
+          cursor: pointer;
           color: @white-color;
         }
       }
 
       &.active {
         a {
+          cursor: pointer;
           color: @white-color;
         }
       }
@@ -149,7 +152,7 @@ const {themeColor, fixedToTop} = toRefs(props)
     margin-left: calc(27vw - 10px);
     margin-right: 10px;
     margin-top: calc(11.75vh);
-
+    cursor: pointer;
     display: flex;
 
     &-item {
@@ -171,88 +174,5 @@ const {themeColor, fixedToTop} = toRefs(props)
       transition: color 0.3s;
       line-height: 30px;
     }
-  }
-
-  .user {
-    margin-left: 40px;
-    position: relative;
-
-    .el-dropdown {
-
-      span {
-        font-size: 16px;
-        transition: color 0.3s;
-        line-height: 30px;
-      }
-
-    }
-
-    .arrow {
-      display: inline-block;
-      border: 1px solid;
-      border-width: 1px 1px 0 0;
-      transform: rotate(135deg);
-      transform-origin: center;
-      vertical-align: 5px;
-      margin-left: 5px;
-      transition: all 0.3s;
-      width: 10px;
-      height: 10px;
-    }
-
-    &:hover {
-      .arrow {
-        transform: rotate(-45deg);
-        vertical-align: -3px;
-      }
-
-      .dropdown-menu__wrapper {
-        display: block;
-      }
-    }
-
-    .dropdown-menu {
-      position: relative;
-      z-index: 1000;
-
-      &__email {
-        line-height: 2;
-        cursor: pointer;
-      }
-
-      &__wrapper {
-        position: absolute;
-        display: none;
-        right: 0;
-        color: @regular-text-color;
-        padding: 9px 0;
-        width: 200px;
-        border-radius: 5px;
-        box-shadow: 0 0px 2px 1px #eee;
-        background: #fff;
-      }
-
-      &__item {
-        padding: 9px 12px;
-        cursor: pointer;
-
-        &:hover {
-          background: #efefef58;
-        }
-      }
-    }
-  }
-
-  .github-project {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .example-showcase .el-dropdown-link {
-    cursor: pointer;
-    color: #333;
-    display: flex;
-    align-items: center;
   }
 </style>

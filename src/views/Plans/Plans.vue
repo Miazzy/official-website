@@ -1,7 +1,7 @@
 <template>
   <div class="plans container">
     <!-- 上部区域 -->
-    <div class="top-section" :style="{ height: topHeight + 'px' }">
+    <div class="top-section" :style="{ height: topHeight + 'px', backgroundImage: `url(\'${hImage}\')` }">
       <div class="banner">
         <h1 class="text lang">{{ options.banner.title }}</h1>
         <h2 class="text lang en">{{ options.banner.btmText }}</h2>
@@ -26,15 +26,14 @@
             :unit="item.unit"
             :descript="item.descript" 
             :color="item.color" 
-            :upcolor="item.upcolor"
-            style="margin: 25px 0 0 70px;">
+            :upcolor="item.upcolor" >
           </Indicator>
         </div>
       </div>
     </div>
 
     <!-- 下部区域 -->
-    <div class="bottom-section" :style="{ height: bottomHeight + 'px' }">
+    <div class="bottom-section" :style="{ height: bottomHeight + 'px', backgroundImage: `url(\'${mImage}\')` }">
       <div class="banner">
         <h1 class="text lang">{{ options.btmInfo.title }}</h1>
         <h2 class="text lang en">{{ options.btmInfo.btmText }}</h2>
@@ -57,15 +56,21 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, reactive } from 'vue';
 import Indicator from '../../components/Indicator.vue';
+import { MsgManager } from "../../manager/MsgManager";
 
 const baseWidth = 1920; // 基准宽度
 const topBaseHeight = 540; // 上部初始高度
 const middleBaseHeight = 845; // 中部初始高度
 const bottomBaseHeight = 1060; // 下部初始高度
+const hType = "/src/assets/images/plan_header_{type}.jpg";
+const mType = "/src/assets/images/plan_middle_{type}.jpg";
 
 const topHeight = ref(topBaseHeight);
 const middleHeight = ref(middleBaseHeight);
 const bottomHeight = ref(bottomBaseHeight);
+const pageType = ref('yy');
+const hImage = ref(hType.replace('{type}', pageType.value));
+const mImage = ref(mType.replace('{type}', pageType.value));
 
 const options = reactive(
   {
@@ -115,8 +120,13 @@ const updateHeights = () => {
 
 // 监听窗口大小变化
 onMounted(() => {
+  debugger;
   updateHeights();
   window.addEventListener('resize', updateHeights); // 监听窗口变化
+  MsgManager.getInstance().listen('pagechange', (message) => {
+    hImage.value = hType.replace('{type}', message.type);
+    mImage.value = mType.replace('{type}', message.type);
+  });
 });
 
 onBeforeUnmount(() => {
@@ -129,9 +139,9 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  max-width: 100vw;
   height: auto;
   min-height: 100vh;
-  z-index: 0;
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -141,6 +151,7 @@ onBeforeUnmount(() => {
     background-position: center;
     transition: height 0.3s ease;
     position: relative;
+    overflow-x: hidden;
 
     .banner {
       position: absolute;
@@ -170,6 +181,7 @@ onBeforeUnmount(() => {
   .middle-section {
     background-color: #f0f0f0;
     transition: height 0.3s ease;
+    overflow-x: hidden;
   }
   
   .middle-content {
@@ -238,7 +250,6 @@ onBeforeUnmount(() => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
       }
     }
   }
@@ -249,6 +260,7 @@ onBeforeUnmount(() => {
     background-size: cover;
     background-position: center;
     transition: height 0.3s ease;
+    overflow-x: hidden;
 
     .banner {
       position: absolute;
@@ -284,6 +296,7 @@ onBeforeUnmount(() => {
     .business-container {
       display: flex;
       margin: 320px 80px 0px 25vw;
+      overflow-x: hidden;
 
       .box {
         margin-right: 50px;

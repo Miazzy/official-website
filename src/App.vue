@@ -1,9 +1,9 @@
 <template>
   <div id="container">
     <header>
-      <Header ref="headerRef" v-show="isHeaderShow" @enter.enter="onAnimationStart" 
-        :class="{ [animationName]: $route.name !== 'home' }"
-        :fixedToTop="$route.path === '/'" :theme-color="themeColor">
+      <Header ref="headerRef" v-show="isHeaderShow" @enter.enter="onAnimationStart"
+        :class="{ [animationName]: $route.name !== 'home' }" :fixedToTop="$route.path === '/'"
+        :theme-color="themeColor">
       </Header>
     </header>
     <main>
@@ -72,6 +72,30 @@ onMounted(async () => {
 
 </script>
 <style lang="less">
+html,
+body,
+div#app,
+div.plans {
+  overflow-x: hidden;
+}
+
+.tooltips-text {
+  margin: 10px 0 0 0;
+  color: #fefefe;
+  background: #0f0f0f90;
+  padding: 10px 25px;
+  border-radius: 4px;
+
+  span {
+    margin: 0 15px 0 0;
+    cursor: pointer;
+
+    &:hover {
+      color: #EF7D1B;
+    }
+  }
+}
+
 @media screen and (min-width: 1900px) and (max-width: 2000px) {
   .header .navbar {
     margin-left: calc(27vw + 15px) !important;
@@ -92,16 +116,16 @@ onMounted(async () => {
     }
   }
 
-  .home .carousel-container .banner .bg-button{
-      width: 161px;
-      height: 49px;
-      left: 264px;
-      top: calc(50vh + 80px);
+  .home .carousel-container .banner .bg-button {
+    width: 161px;
+    height: 49px;
+    left: 264px;
+    top: calc(50vh + 80px);
 
-      .content {
-        margin: 10px 22px;
-        font-size: 20px;
-        font-weight: 600;
+    .content {
+      margin: 10px 22px;
+      font-size: 20px;
+      font-weight: 600;
     }
   }
 
@@ -111,11 +135,11 @@ onMounted(async () => {
     top: 395px !important;
 
     .subTitle[data-v-e345e995] {
-        left: -33px;
-        top: 90px;
-        font-size: 22px;
-        width: 700px;
-        letter-spacing: 0px;
+      left: -33px;
+      top: 90px;
+      font-size: 22px;
+      width: 700px;
+      letter-spacing: 0px;
     }
   }
 
@@ -151,7 +175,8 @@ onMounted(async () => {
   }
 
   .plans.container .bottom-section .banner .text {
-    font-size: 35px !important;
+    padding: 2px 0 0 0 !important;
+    font-size: 46px !important;
 
     &.en {
       font-size: 26px !important;
@@ -162,13 +187,82 @@ onMounted(async () => {
     }
   }
 
-  .plans.container .bottom-section .business-container {
-      margin: 400px 80px 0px 26vw !important;
+  .plans.container .middle-content {
+
+    .upper {
+      font-size: 50px !important;
+
+      .shadow-text {
+        font-size: 135px !important;
+      }
+
+      .bottom-text {
+        font-size: 28px !important;
+      }
+    }
+
+    .description {
+      margin: 135px 0 53.5px 87.5px !important;
+      font-size: 30px !important;
+      line-height: 60px !important;
+    }
+
+    .index-container {
+      margin: 100px 0 0 120px !important;
 
       .box {
-        width: 400px !important;
-        height: 582px !important;
+        width: 330px !important;
+        height: 190px !important;
+        margin-right: 50.5px !important;
+
+        .indicator-component {
+          margin: 25px 0 0 90px !important;
+        }
+
+        .upper {
+          span.num {
+            font-size: 62px !important;
+          }
+
+          span.unit {
+            font-size: 30px !important;
+          }
+        }
+
+        .descript {
+          font-size: 22px !important;
+        }
       }
+    }
+  }
+
+  .plans.container .bottom-section .business-container {
+    margin: 390px 80px 0px 26vw !important;
+
+    .box {
+      width: 400px !important;
+      height: 625px !important;
+
+      .icon {
+        margin: 80px 0 10px 35% !important;
+        font-size: 90px !important;
+        height: 90px !important;
+      }
+
+      .text-content {
+        height: 415px !important;
+
+        .title {
+          font-size: 30px !important;
+          margin: 7.5px 0 12.5px 0 !important;
+        }
+
+        .text {
+          font-size: 22px !important;
+          margin: 0 0 10px 0 !important;
+        }
+      }
+    }
   }
 }
 
@@ -195,12 +289,22 @@ onMounted(async () => {
 
   .plans .top-section .banner {
     margin: 240px 0 0 0 !important;
-      .text {
-        font-size: 59px !important;
-        &.en {
-          font-size: 22px !important;
-        }
+
+    .text {
+      font-size: 59px !important;
+
+      &.en {
+        font-size: 22px !important;
       }
+    }
+  }
+
+  .plans.container .middle-content .index-container {
+    .box {
+      .indicator-component {
+        margin: 25px 0 0 70px !important;
+      }
+    }
   }
 }
 </style>
