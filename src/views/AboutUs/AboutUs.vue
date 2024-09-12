@@ -171,7 +171,7 @@ onBeforeUnmount(() => {
     display: flex;
     overflow-x: hidden;
     transition: height 0.3s ease;
-    margin: 65px 200px 0 200px;
+    margin: 80px 200px 0 200px;
     background-color: transparent;
 
     .banner {
