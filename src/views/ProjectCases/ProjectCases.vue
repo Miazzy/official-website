@@ -124,7 +124,7 @@ onMounted(() => {});
     background-repeat: no-repeat;
     text-align: center;
     line-height: 1;
-    padding-top: 259px;
+    padding-top: 260px;
     .banner-title-ch {
       font-weight: bold;
       font-size: 64px;
