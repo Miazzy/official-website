@@ -32,16 +32,42 @@
 
     <!-- 中部区域 -->
     <div class="submid-section" :style="{ height: submidHeight + 'px' }">
+      <div class="banner">
+        <div class="title-box">
+          <div class="title-ch">资质荣誉</div>
+          <div class="title-en">QUALIFICATION HONOR</div>
+        </div>
+        <div class="content-container">
+          <div class="horizontal-scroll-box">
+            <div class="honor-item" v-for="i in 14" :key="i">
+              <img class="honor-img" :src="getImgUrl(`honor-${i}.png`)">
+            </div>
+            <div class="honor-item" v-for="i in 14" :key="`copy${i}`">
+              <img class="honor-img" :src="getImgUrl(`honor-${i}.png`)">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 下部区域 -->
     <div class="bottom-section" :style="{ height: bottomHeight + 'px' }">
       <div class="banner banner-container">
-        <h1 class="text lang">{{ options.contact.title }}</h1>
-        <h2 class="text lang en">{{ options.contact.btmText }}</h2>
-      </div>
-      <div class="map map-container">
-
+        <div class="left-content">
+          <div class="title-box">
+            <div class="title-ch">{{ options.contact.title }}</div>
+            <div class="title-en">{{ options.contact.btmText }}</div>
+          </div>
+          <div class="business-container">
+            <div class="business-item" v-for="(item, index) in options.contact.business" :key="index">
+              <i class="iconfont" :class="item.icon"></i>
+              <span class="business-text">{{item.title}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="map map-container"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -88,9 +114,9 @@ const options = reactive(
       title: '联系我们',
       btmText: 'CONTACT US',
       business: [
-        { title: 'Tel：028-86168758', icon: 'iconyunyingfuwu' },
-        { title: 'E-mail：WEIH02@tongwei.com', icon: 'icondashuju' },
-        { title: 'Addr：四川省成都市高新区天府大道中段588号通威国际中心', icon: 'iconlianghaoderuanyingjianjianrongxing' }
+        { title: 'Tel：028-86168758', icon: 'icondianhua' },
+        { title: 'E-mail：WEIH02@tongwei.com', icon: 'iconyouxiang' },
+        { title: 'Addr：四川省成都市高新区天府大道中段588号通威国际中心', icon: 'iconzhengqimenhu_dizhixinxi1' }
       ],
     }
   }
@@ -112,6 +138,11 @@ const updateHeights = () => {
   scaleRatio.value = scaleFactor;
 };
 
+const getImgUrl = (url) => {
+  const path = new URL(`../../assets/images/${url}`, import.meta.url);
+  return path.href;
+};
+
 // 监听窗口大小变化
 onMounted(() => {
   updateHeights();
@@ -123,7 +154,7 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .container {
   display: flex;
   flex-direction: column;
@@ -241,6 +272,45 @@ onBeforeUnmount(() => {
     background-position: center;
     transition: height 0.3s ease;
     overflow-x: hidden;
+    .banner {
+      width: 1520px;
+      margin: 70px auto 0;
+    }
+    .title-box {
+      display: flex;
+      align-items: flex-end;
+      line-height: 1;
+      margin-bottom: 80px;
+      .title-ch {
+        font-weight: 600;
+        font-size: 46px;
+        color: #333333;
+        margin-right: 30px;
+      }
+      .title-en {
+        font-weight: 400;
+        font-size: 34px;
+        color: #CCCCCC;
+      }
+    }
+    .content-container {
+      width: 100%;
+      height: 474px;
+      overflow: hidden;
+      .horizontal-scroll-box {
+        display: flex;
+        align-items: flex-end;
+        width: max-content;
+        animation: scroll-x 50s linear infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
+
+        .honor-item + .honor-item {
+          margin-left: 18px;
+        }
+      }
+    }
   }
 
   .bottom-section {
@@ -250,78 +320,65 @@ onBeforeUnmount(() => {
     overflow-x: hidden;
 
     .banner {
-      position: absolute;
-      text-align: left;
-      width: 100%;
-      margin: 80px 0 0 160px;
-      font-family: Source Han Sans CN;
+      width: 1520px;
+      margin: 110px auto 0;
+      display: flex;
+      .left-content {
+        width: 45%;
+      }
+      .right-content {
+        width: 55%;
+      }
+    }
 
-      .text {
-        font-weight: bold;
-        font-size: 30px;
-        color: #FFFFFF;
-        text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
-
-        &.en {
-          font-weight: 400;
-          font-size: 24px;
-          color: #FFFFFF;
-          text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
-          opacity: 0.3;
-        }
-
-        &.indicate {
-          margin: 20px 0 0 0;
-          font-size: 22px;
-          color: #FFFFFF;
-          text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
-          opacity: 0.8;
-        }
+    .title-box {
+      display: flex;
+      align-items: flex-end;
+      line-height: 1;
+      margin-bottom: 194px;
+      .title-ch {
+        font-weight: 600;
+        font-size: 46px;
+        color: #333333;
+        margin-right: 30px;
+      }
+      .title-en {
+        font-weight: 400;
+        font-size: 34px;
+        color: #CCCCCC;
       }
     }
 
     .business-container {
-      display: flex;
-      margin: 320px 80px 0px 25vw;
-      overflow-x: hidden;
-
-      .box {
-        margin-right: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 360px;
-        height: 502px;
-        background: #FFFFFF;
-        box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.3);
-
-        .icon {
-          display: block;
-          margin: 80px 0 10px 38%;
-          font-size: 60px;
-          height: 60px;
+      .business-item {
+        .iconfont {
+          font-size: 20px;
+          color: #2fa9e5;
+          margin-right: 10px;
+          line-height: 57px;
         }
-
-        .text-content {
-          display: block;
-          height: 330px;
-          text-align: center;
-
-          .title {
-            display: block;
-            font-size: 26px;
-            font-weight: 600;
-            margin: 5px 0 10px 0;
-          }
-
-          .text {
-            display: block;
-            font-size: 18px;
-            font-weight: 300;
-            margin: 0 0 7.5px 0;
-          }
+        .business-text {
+          font-weight: 400;
+          font-size: 20px;
+          color: #1F2124;
+          line-height: 57px;
         }
       }
+    }
+
+    .map-container {
+      float: right;
+      width: 834px;
+      height: 532px;
+      background-color: #E9E9E9;
+    }
+  }
+  @keyframes scroll-x {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
     }
   }
 }
