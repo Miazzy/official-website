@@ -4,13 +4,13 @@
       <template #one>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home01.jpeg" />
+            <img src="../../assets/images/home01.jpg" />
           </div>
           <h1 class="banner-title">
             渔光一体智能运营专家
             <div class="subTitle">YU GUANG INTEGRATED INTELLIGENT OPERATION EXPORT</div>
           </h1>
-          <div class="bg-button">
+          <div class="bg-button" @click="handleToAboutUs('/aboutus')">
             <div class="content">
               <span class="text">了解更多</span>
               <span class="icon">></span>
@@ -30,7 +30,7 @@
             新能源电站智能运营方案
             <div class="subTitle lang">专业化、智能化、一体化</div>
           </h1>
-          <div class="bg-button">
+          <div class="bg-button" @click="handleToPlan('yy')">
             <div class="content">
               <span class="text">了解更多</span>
               <span class="icon">></span>
@@ -62,7 +62,7 @@
             智慧农业解决方案
             <div class="subTitle lang">集约化、智能化、高效化</div>
           </h1>
-          <div class="bg-button">
+          <div class="bg-button" @click="handleToPlan('yz')">
             <div class="content">
               <span class="text">了解更多</span>
               <span class="icon">></span>
@@ -82,7 +82,7 @@
             信息化解决方案
             <div class="subTitle lang">平台化、多行业、一站式</div>
           </h1>
-          <div class="bg-button">
+          <div class="bg-button" @click="handleToPlan('xx')">
             <div class="content">
               <span class="text">了解更多</span>
               <span class="icon">></span>
@@ -106,10 +106,20 @@ import { useRouter } from 'vue-router';
 import EventBus from '../../helper/EventBus';
 import Carousel from '../../components/Carousel.vue';
 import Indicator from '../../components/Indicator.vue';
+import { MsgManager } from "../../manager/MsgManager";
 
 const { proxy } = getCurrentInstance()
 const router = useRouter()
 const banner = ref();
+
+// 了解更多跳转
+const handleToAboutUs = (routePath) => {
+  router.push(routePath);
+}
+const handleToPlan = (type) => {
+  MsgManager.getInstance().sendMsg('pagechange', { route: 'plans', type });
+  router.push('/plans?type=' + type);
+}
 
 onMounted(() => {
   EventBus.emit("home-scrolling",
@@ -154,6 +164,12 @@ onMounted(() => {
   .content-item-block {
     .title {
       font-size: @font-size-larger;
+    }
+  }
+
+  /deep/ .carousel-slide.active {
+    .bg-button {
+      z-index: 1;
     }
   }
 
@@ -319,4 +335,5 @@ onMounted(() => {
     }
   }
 }
+
 </style>
