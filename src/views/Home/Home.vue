@@ -24,7 +24,7 @@
       <template #two>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home02.jpeg" />
+            <img src="../../assets/images/home02.jpg" />
           </div>
           <h1 class="banner-title" style="left: 215px;">
             新能源电站智能运营方案
@@ -56,7 +56,7 @@
       <template #three>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home03.jpeg" />
+            <img src="../../assets/images/home03.jpg" />
           </div>
           <h1 class="banner-title" style="left: 215px;">
             智慧农业解决方案
@@ -76,7 +76,7 @@
       <template #four>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home04.jpeg" />
+            <img src="../../assets/images/home04.jpg" />
           </div>
           <h1 class="banner-title" style="left: 215px;">
             信息化解决方案
@@ -167,7 +167,7 @@ onMounted(() => {
     }
   }
 
-  /deep/ .carousel-slide.active {
+  :deep(.carousel-slide.active) {
     .bg-button {
       z-index: 1;
     }

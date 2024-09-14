@@ -202,7 +202,7 @@ div.plans {
     }
 
     .description {
-      margin: 135px 0 53.5px 87.5px !important;
+      margin: 135px 87.5px 53.5px 87.5px !important;
       font-size: 30px !important;
       line-height: 60px !important;
     }
@@ -258,7 +258,7 @@ div.plans {
         }
 
         .text {
-          font-size: 22px !important;
+          font-size: 16px !important;
           margin: 0 0 10px 0 !important;
         }
       }

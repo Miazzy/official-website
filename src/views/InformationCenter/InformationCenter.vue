@@ -5,7 +5,7 @@
       <h2 class="banner-title-en">INFORMATION CENTER</h2>
     </div>
     <div class="content-box">
-      <ul class="tab-bar-box">
+      <!-- <ul class="tab-bar-box">
         <li
           class="tab-bar-item"
           :class="{ active: curTab === index }"
@@ -60,7 +60,8 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+      <iframe style="width: 100%; height: 1260px;" src="http://10.8.111.231:8080/ms-mcms/html/1//150/151/index.html" frameborder="0"></iframe>
     </div>
   </div>
 </template>

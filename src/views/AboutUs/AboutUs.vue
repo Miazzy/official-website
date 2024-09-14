@@ -66,7 +66,7 @@
           </div>
         </div>
         <div class="right-content">
-          <div class="map map-container"></div>
+          <div id="map-container" class="map-container"></div>
         </div>
       </div>
     </div>
@@ -93,6 +93,7 @@ const imageWidth = ref(imageBaseWidth);
 const imageHeight = ref(imageBaseHeight);
 const bnrWidth = ref(bnrBaseWidth);
 const scaleRatio = ref(1);
+const mapObject = ref(null);
 
 const options = reactive(
   {
@@ -129,7 +130,7 @@ const updateHeights = () => {
 
   // 根据比例缩放高度
   topHeight.value = parseInt(topBaseHeight * scaleFactor);
-  middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
+  // middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
   submidHeight.value = parseInt(submidBaseHeight * scaleFactor);
   bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
   imageWidth.value = parseInt(imageBaseWidth * scaleFactor);
@@ -143,10 +144,21 @@ const getImgUrl = (url) => {
   return path.href;
 };
 
+// 初始化地图
+const initMap = () => {
+  mapObject.value = new BMapGL.Map('map-container'); // 创建Map实例
+  mapObject.value.setMapType(BMAP_NORMAL_MAP); // 设置地图类型为地球模式
+  mapObject.value.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+  mapObject.value.centerAndZoom(new BMapGL.Point(104.074384,30.556542), 16); // 初始化地图,设置中心点坐标和地图级别
+  let marker = new BMapGL.Marker(new BMapGL.Point(104.074384,30.556542));
+  mapObject.value.addOverlay(marker);
+};
+
 // 监听窗口大小变化
 onMounted(() => {
   updateHeights();
   window.addEventListener('resize', updateHeights); // 监听窗口变化
+  initMap();
 });
 
 onBeforeUnmount(() => {

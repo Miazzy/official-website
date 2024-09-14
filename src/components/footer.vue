@@ -52,7 +52,7 @@
 .footer {
   height: 220px;
   min-width: @main-width;
-  background: rgba(0, 0, 0, 1);
+  background: #232429;
   color: #fff;
   display: flex;
   font-size: @font-size-small;
