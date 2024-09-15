@@ -2,34 +2,34 @@
   <div class="footer">
     <div class="footer-content-column">
       <div class="title type">友情链接</div>
-      <p class="title">通威集团</p>
-      <p class="title">通威新能源</p>
-      <p class="title">永祥股份</p>
+      <p class="title"><a href="https://www.tongwei.com/" target="_blank">通威集团</a></p>
+      <p class="title"><a href="https://www.tw-newenergy.com/index" target="_blank">通威新能源</a></p>
+      <p class="title"><a href="https://www.scyxgf.com/" target="_blank">永祥股份</a></p>
     </div>
     <div class="footer-content-column">
-      <div class="title type"><a href="/">首页</a></div>
+      <div class="title type"><a @click="handleRoute('/')">首页</a></div>
       <p class="title"></p>
     </div>
     <div class="footer-content-column">
-      <div class="title type">解决方案</div>
-      <p class="title">渔光一体智能运营</p>
-      <p class="title">智慧农业</p>
-      <p class="title">信息化服务</p>
+      <div class="title type"><a @click="handleClick('yy')" target="_self">解决方案</a></div>
+      <p class="title"><a @click="handleClick('yy')" target="_self">渔光一体智能运营</a></p>
+      <p class="title"><a @click="handleClick('yz')" target="_self">智慧农业</a></p>
+      <p class="title"><a @click="handleClick('xx')" target="_self">信息化服务</a></p>
     </div>
     <div class="footer-content-column">
-      <div class="title type">项目案例</div>
+      <div class="title type"><a @click="handleRoute('/projectCases')">项目案例</a></div>
       <p class="title"></p>
     </div>
     <div class="footer-content-column">
-      <div class="title type">资讯中心</div>
-      <p class="title">行业动态</p>
-      <p class="title">公司动态</p>
+      <div class="title type"><a @click="handleRoute('/informationCenter')">资讯中心</a></div>
+      <p class="title"><a @click="handleRoute('/informationCenter', 600)">行业动态</a></p>
+      <p class="title"><a @click="handleRoute('/informationCenter', 600)">公司动态</a></p>
     </div>
     <div class="footer-content-column">
-      <div class="title type">关于我们</div>
-      <p class="title">公司介绍</p>
-      <p class="title">荣誉资质</p>
-      <p class="title">联系我们</p>
+      <div class="title type"><a @click="handleRoute('/aboutus')">关于我们</a></div>
+      <p class="title"><a @click="handleRoute('/aboutus', 500)">公司介绍</a></p>
+      <p class="title"><a @click="handleRoute('/aboutus', 1390)">荣誉资质</a></p>
+      <p class="title"><a @click="handleRoute('/aboutus', 3000)">联系我们</a></p>
     </div>
     <div class="footer-content-column">
       <div class="image">
@@ -47,6 +47,26 @@
   </div>
 </template>
 <script setup>
+import { nextTick } from "vue";
+import { useRouter } from "vue-router";
+import { MsgManager } from "../manager/MsgManager";
+import { setTimexec } from "../utils/common";
+
+const router = useRouter();
+
+const handleClick = (type) => {
+  window.scrollTo(0, 0);
+  MsgManager.getInstance().sendMsg('pagechange', { route: 'plans', type });
+  router.push('/plans?type=' + type);
+};
+
+const handleRoute = (path = '/', y = 0) => {
+  window.scrollTo(0, y);
+  router.push(path);
+  setTimexec(() => {
+    window.scrollTo(0, y);
+  }, [0, 50, 100]);
+};
 </script>
 <style lang="less" scoped>
 .footer {

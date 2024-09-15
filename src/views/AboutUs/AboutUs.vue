@@ -79,7 +79,7 @@ import { ref, onMounted, onBeforeUnmount, reactive } from 'vue';
 const baseWidth = 1920; // 基准宽度
 const topBaseHeight = 540; // 上部初始高度
 const middleBaseHeight = 802; // 中部初始高度
-const submidBaseHeight = 738; // 中部初始高度
+const submidBaseHeight = 788; // 中部初始高度
 const bottomBaseHeight = 738; // 下部初始高度
 const imageBaseWidth = 603; //
 const imageBaseHeight = 454; //
@@ -284,10 +284,13 @@ onBeforeUnmount(() => {
     background-position: center;
     transition: height 0.3s ease;
     overflow-x: hidden;
+    overflow-y: hidden;
+
     .banner {
       width: 1520px;
       margin: 70px auto 0;
     }
+
     .title-box {
       display: flex;
       align-items: flex-end;
@@ -305,6 +308,7 @@ onBeforeUnmount(() => {
         color: #CCCCCC;
       }
     }
+  
     .content-container {
       width: 100%;
       height: 474px;
