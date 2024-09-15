@@ -1,5 +1,5 @@
 <template>
-  <div class="plans container">
+  <div class="plans container" :class="pageType">
     <!-- 上部区域 -->
     <div class="top-section" :style="{ height: topHeight + 'px', backgroundImage: `url(\'${hImage}\')` }">
       <div class="banner">
@@ -11,7 +11,7 @@
     <!-- 中部区域 -->
     <div class="middle-section" :style="{ height: middleHeight + 'px' }">
     </div>
-    <div class="middle-content" :style="{ height: middleHeight * 1.02+ 'px', top: topHeight + 'px' }">
+    <div class="middle-content" :style="{ height: middleHeight * 1.02 + 'px', top: topHeight + 'px' }">
       <div class="upper">
         {{ options[pageType].mainInfo.title }}
         <div class="shadow-text">{{ options[pageType].mainInfo.shadowText }}</div>
@@ -21,15 +21,14 @@
         <span v-for="(text, index) in options[pageType].mainInfo.description" :key="index">{{ text }}</span>
       </div>
       <div class="indexs index-container">
-          <div :class="pageType==='yy'?'box':'three-box-layout'" v-for="(item, index) in options[pageType].indexs" :key="index">
-            <Indicator v-if="pageType==='yy'" :num="item.num" 
-            :unit="item.unit"
-            :descript="item.descript" 
-            :color="item.color" 
-            :upcolor="item.upcolor" >
-            </Indicator>
-            <Card v-else :icon="item.icon" :iconColor="item.iconColor" :labelCh="item.labelCh" :labelEn="item.labelEn" :labelColor="item.labelColor"></Card>
-          </div>
+        <div :class="pageType === 'yy' ? 'box' : 'three-box-layout'" v-for="(item, index) in options[pageType].indexs"
+          :key="index">
+          <Indicator v-if="pageType === 'yy'" :num="item.num" :unit="item.unit" :descript="item.descript"
+            :color="item.color" :upcolor="item.upcolor">
+          </Indicator>
+          <Card v-else :icon="item.icon" :iconColor="item.iconColor" :labelCh="item.labelCh" :labelEn="item.labelEn"
+            :labelColor="item.labelColor"></Card>
+        </div>
       </div>
     </div>
 
@@ -42,11 +41,12 @@
       </div>
 
       <div class="business business-container">
-        <div class="box"  v-for="(item, index) in options[pageType].btmInfo.business" :key="index">
+        <div class="box" v-for="(item, index) in options[pageType].btmInfo.business" :key="index">
           <span class="icon iconfont" :class="item.icon"></span>
           <div class="text-content">
             <span class="title" v-for="(text, index) in item.title" :key="index">{{ text }}</span>
-            <span class="text" v-for="(text, index) in item.text" :key="index" :style="{ lineHeight: item.line }">{{ text }}</span>
+            <span class="text" v-for="(text, index) in item.text" :key="index" :style="{ lineHeight: item.line }">{{
+              text }}</span>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ const hImage = ref(hType.replace('{type}', pageType.value));
 const mImage = ref(mType.replace('{type}', pageType.value));
 
 const options = reactive({
-  yy:{
+  yy: {
     banner: {
       title: '专业化·智能化·一体化',
       btmText: 'Specialization, intelligence and integration'.toUpperCase(),
@@ -104,13 +104,13 @@ const options = reactive({
       btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
       indicate: '业务范围 >>',
       business: [
-        { title: ['运行维护'], icon:'iconyunyingfuwu', line: 1.3, text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'] },
-        { title: ['专项服务'], icon:'icondashuju', line: 1.3, text: ['设备抢检修技改','电气试验','设备专项排查与分析','技术监督','电站性能检测与质量评估','防雷检测','电力设备安装'] },
-        { title: ['增值服务'], icon:'iconlianghaoderuanyingjianjianrongxing', line: 1.3, text: ['生产前准备','电费结算','关系协调','AI巡检'] }
+        { title: ['运行维护'], icon: 'iconyunyingfuwu operation', line: 1.3, text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'] },
+        { title: ['专项服务'], icon: 'icondashuju operation', line: 1.3, text: ['设备抢检修技改', '电气试验', '设备专项排查与分析', '技术监督', '电站性能检测与质量评估', '防雷检测', '电力设备安装'] },
+        { title: ['增值服务'], icon: 'iconlianghaoderuanyingjianjianrongxing operation', line: 1.3, text: ['生产前准备', '电费结算', '关系协调', 'AI巡检'] }
       ],
     }
   },
-  yz:{
+  yz: {
     banner: {
       title: '集约化·智能化·高效化',
       btmText: 'Intensive, intelligent and efficient'.toUpperCase(),
@@ -133,13 +133,13 @@ const options = reactive({
       btmText: 'Smart agriculture'.toUpperCase(),
       indicate: '业务范围 >>',
       business: [
-        { title: ['现代化农业园区', '整体解决方案'], icon:'iconzhiwuzhongzhi', line: 1.3, text: ['现代化水产产业园规划建设', '光伏农业园区规划建设', '园区智能化运营服务', '渔光一体整体解决方案'] },
-        { title: ['多元化养殖设施设备'], icon:'iconyangzhishebei', line: 1.3, text: ['工厂化恒温养殖车间','智能推水流水槽','智能底排污系统','智能投喂机器人'] },
-        { title: ['智能化软件系统'], icon:'iconzhinengyangzhi', line: 1.3, text: ['智能投喂系统','慧养鱼水质监测与管理','水产物联网平台','养殖过程管理系统'] }
+        { title: ['现代化农业园区', '整体解决方案'], icon: 'iconzhiwuzhongzhi agriculture', line: 1.3, text: ['现代化水产产业园规划建设', '光伏农业园区规划建设', '园区智能化运营服务', '渔光一体整体解决方案'] },
+        { title: ['多元化养殖设施设备'], icon: 'iconyangzhishebei agriculture', line: 1.3, text: ['工厂化恒温养殖车间', '智能推水流水槽', '智能底排污系统', '智能投喂机器人'] },
+        { title: ['智能化软件系统'], icon: 'iconzhinengyangzhi agriculture', line: 1.3, text: ['智能投喂系统', '慧养鱼水质监测与管理', '水产物联网平台', '养殖过程管理系统'] }
       ],
     }
   },
-  xx:{
+  xx: {
     banner: {
       title: '平台化、多行业、一站式',
       btmText: 'Platform, multi-industry, one-stop'.toUpperCase(),
@@ -162,9 +162,9 @@ const options = reactive({
       btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
       indicate: '业务范围 >>',
       business: [
-        { title: ['企业信息化解决方案'], icon:'iconhulianwang', line: 2.2, text: ['依托自主研发的业务架构平台，高效的开发团队，为企业建立业务分析模型，发现潜在问题，进行针对性地改善和规范，助力 管理升级，支撑。'] },
-        { title: ['物联网应用解决方案'], icon:'iconxinxihua1', line: 2.2, text: ['基于自主研发的数据采集器和通信平台，实现物联网与信息化的融合，提升生产过程的质量管控能力，实现质量安全的可追溯性，提高智能化水。'] },
-        { title: ['智慧电站运维解决方案'], icon:'iconzhinengguangfu', line: 2.2, text: ['利用大数据、AI、5G等技术，通过智能IOT设备，实现对电站设备的统一监控，为电站管理业务建设全面、智能、高效的运维管理平台。'] }
+        { title: ['企业信息化解决方案'], icon: 'iconhulianwang inform', line: 2.2, text: ['依托自主研发的业务架构平台，高效的开发团队，为企业建立业务分析模型，发现潜在问题，进行针对性地改善和规范，助力 管理升级，支撑。'] },
+        { title: ['物联网应用解决方案'], icon: 'iconxinxihua1 inform', line: 2.2, text: ['基于自主研发的数据采集器和通信平台，实现物联网与信息化的融合，提升生产过程的质量管控能力，实现质量安全的可追溯性，提高智能化水。'] },
+        { title: ['智慧电站运维解决方案'], icon: 'iconzhinengguangfu inform', line: 2.2, text: ['利用大数据、AI、5G等技术，通过智能IOT设备，实现对电站设备的统一监控，为电站管理业务建设全面、智能、高效的运维管理平台。'] }
       ],
     }
   },
@@ -251,7 +251,7 @@ onBeforeUnmount(() => {
     transition: height 0.3s ease;
     overflow-x: hidden;
   }
-  
+
   .middle-content {
     position: absolute;
     top: 540px;
@@ -319,15 +319,26 @@ onBeforeUnmount(() => {
         flex-direction: column;
         justify-content: space-between;
         box-shadow: 0px 3px 3px 0px #3e3e3e15;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0px 5px 5px 0px #3e3e3e30;
+        }
       }
 
-      .three-box-layout  {
-        & + .three-box-layout {
+      .three-box-layout {
+
+        &+.three-box-layout {
           margin-left: 49px;
         }
 
         :deep(.card-component) {
           box-shadow: 0px 3px 3px 0px #3e3e3e15;
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: 0px 5px 5px 0px #3e3e3e30;
+          }
         }
       }
     }
@@ -385,7 +396,24 @@ onBeforeUnmount(() => {
         width: 360px;
         height: 502px;
         background: #FFFFFF;
-        box-shadow: -1px 7px 13px 0px rgba(24,24,24,0.3);
+        box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.3);
+
+        &:hover {
+          background: #fefefef0;
+          cursor: pointer;
+
+          .icon {
+            &.operation {
+              color: #EF7D1B;
+            }
+            &.agriculture {
+              color: #318A36;
+            }
+            &.inform {
+              color: #30A8E6;
+            }
+          }
+        }
 
         .icon {
           display: block;
