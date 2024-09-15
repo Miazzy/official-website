@@ -268,6 +268,14 @@ div.plans {
   .plans.container .middle-content .index-container .three-box-layout .card-component {
     width: 460px;
   }
+
+  .aboutus.container .submid-section {
+    padding: 0px 220px 0 220px !important;
+  }
+
+  .aboutus.container .bottom-section {
+    padding: 0px 220px 0 220px !important;
+  }
 }
 
 @media screen and (min-width: 1650px) and (max-width: 1680px) {
@@ -313,6 +321,61 @@ div.plans {
 
   .plans.container .middle-content .index-container .three-box-layout .card-component {
     width: 415px;
+  }
+
+  .aboutus.container .middle-section{
+    margin: 30px 80px 0 120px !important;
+    overflow: hidden !important;
+
+    .banner {
+      padding: 8px !important;
+      margin: 0px 30px 0 0 !important;
+
+      .upper {
+        margin: 40px 0 10px 10px !important;
+        font-size: 42px !important;
+        line-height: 39px !important;
+
+        .shadow-text {
+          top: -20px !important;
+          font-size: 90px !important;
+        }
+
+        .bottom-text {
+          top: 50px !important;
+          font-size: 24px !important;
+          line-height: 39px !important;
+        }
+      }
+
+      .content {
+        position: absolute;
+        left: 35px;
+        top: 150px !important;
+
+        p {
+          line-height: 1.8 !important;
+          text-indent: 1.8em !important;
+          font-size: 18px !important;
+        }
+      }
+    }
+
+    .image {
+      padding: 8px !important;
+
+      img {
+        margin: 168px 0 0 30px !important;
+      }
+    }
+  }
+
+  .aboutus.container .submid-section {
+    padding: 0px 140px 0 140px !important;
+  }
+
+  .aboutus.container .bottom-section {
+    padding: 0px 140px 0 140px !important;
   }
 }
 </style>

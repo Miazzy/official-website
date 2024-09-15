@@ -9,7 +9,7 @@
     </div>
 
     <!-- 中部区域 -->
-    <div class="middle-section" :style="{ height: middleHeight + 'px', transform: `scale(${scaleRatio})` }">
+    <div class="middle-section" :style="{ height: middleHeight + 'px', }">
       <div class="banner" :style="{ width: bnrWidth + 'px' }">
         <div class="upper">
           {{ options.company.title }}
@@ -66,7 +66,7 @@
           </div>
         </div>
         <div class="right-content">
-          <div id="map-container" class="map-container"></div>
+          <div id="map-container" class="map-container" :style="{ width: bnrWidth + 'px', height: parseInt(bnrWidth * 0.638) + 'px' }"></div>
         </div>
       </div>
     </div>
@@ -130,11 +130,9 @@ const updateHeights = () => {
 
   // 根据比例缩放高度
   topHeight.value = parseInt(topBaseHeight * scaleFactor);
-  // middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
+  middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
   submidHeight.value = parseInt(submidBaseHeight * scaleFactor);
   bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
-  imageWidth.value = parseInt(imageBaseWidth * scaleFactor);
-  imageHeight.value = parseInt(imageBaseHeight * scaleFactor);
   bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor);
   scaleRatio.value = scaleFactor;
 };
@@ -271,7 +269,7 @@ onBeforeUnmount(() => {
       padding: 10px;
 
       img {
-        margin: 195px 0 0 0;
+        margin: 195px 0 0 20px;
         object-fit: cover;
       }
     }
@@ -287,7 +285,7 @@ onBeforeUnmount(() => {
     overflow-y: hidden;
 
     .banner {
-      width: 1520px;
+      width: 100%;
       margin: 70px auto 0;
     }
 
@@ -295,7 +293,7 @@ onBeforeUnmount(() => {
       display: flex;
       align-items: flex-end;
       line-height: 1;
-      margin-bottom: 80px;
+      margin-bottom: 90px;
       .title-ch {
         font-weight: 600;
         font-size: 46px;
@@ -313,11 +311,13 @@ onBeforeUnmount(() => {
       width: 100%;
       height: 474px;
       overflow: hidden;
+
       .horizontal-scroll-box {
         display: flex;
         align-items: flex-end;
         width: max-content;
         animation: scroll-x 50s linear infinite;
+
         &:hover {
           animation-play-state: paused;
         }
@@ -336,7 +336,7 @@ onBeforeUnmount(() => {
     overflow-x: hidden;
 
     .banner {
-      width: 1520px;
+      width: 100%;
       margin: 110px auto 0;
       display: flex;
       .left-content {
@@ -389,6 +389,7 @@ onBeforeUnmount(() => {
       background-color: #E9E9E9;
     }
   }
+
   @keyframes scroll-x {
     0% {
       transform: translateX(0);
