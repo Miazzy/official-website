@@ -372,6 +372,23 @@ div.plans {
 
   .aboutus.container .submid-section {
     padding: 0px 140px 0 140px !important;
+
+    .title-box {
+      margin-bottom: 50px !important;
+    }
+
+    .content-container {
+      height: 415px !important;
+      .horizontal-scroll-box {
+        img {
+          max-height: 415px !important;
+        }
+
+        .honor-item + .honor-item {
+          margin-left: 12px;
+        }
+      }
+    }
   }
 
   .aboutus.container .bottom-section {
