@@ -1,15 +1,32 @@
 <template>
   <div class="carousel-container" @wheel="handleScrollFn">
-    <div class="carousel-slide" :class="{ active: activeIndex === 0, disactive: activeIndex !== 0, restatus: isRefresh }">
+    <div class="carousel-slide" :class="{ 
+          active: activeIndex === 0 && direct, 
+          disactive: activeIndex !== 0 && direct, 
+          activeUp: activeIndex === 0 && !direct,
+          disactiveUp: activeIndex !== 0 && !direct, 
+          restatus: isRefresh }">
       <slot name="one"></slot>
     </div>
-    <div class="carousel-slide" :class="{ active: activeIndex === 1, disactive: activeIndex !== 1 }" v-show="!isRefresh">
+    <div class="carousel-slide" :class="{ 
+          active: activeIndex === 1 && direct, 
+          disactive: activeIndex !== 1 && direct,
+          activeUp: activeIndex === 1 && !direct,
+          disactiveUp: activeIndex !== 1 && !direct }" v-show="!isRefresh">
       <slot name="two"></slot>
     </div>
-    <div class="carousel-slide" :class="{ active: activeIndex === 2, disactive: activeIndex !== 2 }" v-show="!isRefresh">
+    <div class="carousel-slide" :class="{ 
+          active: activeIndex === 2 && direct, 
+          disactive: activeIndex !== 2 && direct,
+          activeUp: activeIndex === 2 && !direct,
+          disactiveUp: activeIndex !== 2 && !direct }" v-show="!isRefresh">
       <slot name="three"></slot>
     </div>
-    <div class="carousel-slide" :class="{ active: activeIndex === 3, disactive: activeIndex !== 3 }" v-show="!isRefresh">
+    <div class="carousel-slide" :class="{ 
+          active: activeIndex === 3 && direct, 
+          disactive: activeIndex !== 3 && direct,
+          activeUp: activeIndex === 3 && !direct,
+          disactiveUp: activeIndex !== 3 && !direct }" v-show="!isRefresh">
       <slot name="four"></slot>
     </div>
     <div class="indicator">
@@ -29,6 +46,7 @@ const activeIndex = ref(0);
 const totalSlides = 4; // 总共4个轮播项
 const isLock = ref(false);
 const isRefresh = ref(true);
+const direct = ref(true);
 
 const task = () => {
   if (!isLock.value) {
@@ -50,8 +68,10 @@ const handleScroll = (event: WheelEvent) => {
   isLock.value = true;
   stopAutoScroll();
   if (event.deltaY > 0) { // 向下滚动
+    direct.value = true;
     activeIndex.value = (activeIndex.value + 1) % totalSlides;
   } else { // 向上滚动
+    direct.value = false;
     activeIndex.value = (activeIndex.value - 1 + totalSlides) % totalSlides;
   }
   startAutoScroll();
@@ -59,12 +79,16 @@ const handleScroll = (event: WheelEvent) => {
 };
 
 const handleClick = (index) => {
-  isRefresh.value = false;
-  isLock.value = true;
-  stopAutoScroll();
-  activeIndex.value = index;
-  startAutoScroll();
-  isLock.value = false;
+  if (activeIndex.value != index) {
+    isRefresh.value = false;
+    isLock.value = true;
+    stopAutoScroll();
+    activeIndex.value > index ? direct.value = true : null;
+    activeIndex.value < index ? direct.value = false : null;
+    activeIndex.value = index;
+    startAutoScroll();
+    isLock.value = false;
+  }
 }
 
 const handleScrollFn = throttle(handleScroll, 1500);
@@ -96,7 +120,7 @@ onBeforeUnmount(() => {
 
 @keyframes refreshShow {
   from {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
   to {
     transform: translateY(0);
@@ -111,6 +135,28 @@ onBeforeUnmount(() => {
   to {
     opacity: 0.5;
     transform: translateY(100%);
+  }
+}
+
+@keyframes disactiveUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.5;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0.5;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -130,21 +176,36 @@ onBeforeUnmount(() => {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    animation: slideInDown 0.75s;
-
+    transition: opacity 0.75s ease-in-out;
+    
     &.active {
       opacity: 1;
+      animation: slideInDown 0.5s;
 
       &.restatus {
         opacity: 1;
-        animation: refreshShow 0.75s;
+        animation: refreshShow 0.5s;
+      }
+    }
+
+    &.activeUp {
+      opacity: 1;
+      animation: slideInUp 0.5s;
+
+      &.restatus {
+        opacity: 1;
+        animation: refreshShow 0.5s;
       }
     }
 
     &.disactive {
       opacity: 0;
-      animation: disactive 0.75s;
+      animation: disactive 0.5s;
+    }
+
+    &.disactiveUp {
+      opacity: 0;
+      animation: disactiveUp 0.5s;
     }
   }
 
