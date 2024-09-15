@@ -259,10 +259,14 @@ div.plans {
 
         .text {
           font-size: 16px !important;
-          margin: 0 0 10px 0 !important;
+          margin: 15px 75px 10px 75px !important;
         }
       }
     }
+  }
+
+  .plans.container .middle-content .index-container .three-box-layout .card-component {
+    width: 460px;
   }
 }
 
@@ -305,6 +309,10 @@ div.plans {
         margin: 25px 0 0 70px !important;
       }
     }
+  }
+
+  .plans.container .middle-content .index-container .three-box-layout .card-component {
+    width: 415px;
   }
 }
 </style>

@@ -83,8 +83,8 @@ const handleClick = (index) => {
     isRefresh.value = false;
     isLock.value = true;
     stopAutoScroll();
-    activeIndex.value > index ? direct.value = true : null;
-    activeIndex.value < index ? direct.value = false : null;
+    activeIndex.value < index ? direct.value = true : null;
+    activeIndex.value > index ? direct.value = false : null;
     activeIndex.value = index;
     startAutoScroll();
     isLock.value = false;

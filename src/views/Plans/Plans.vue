@@ -45,8 +45,8 @@
         <div class="box"  v-for="(item, index) in options[pageType].btmInfo.business" :key="index">
           <span class="icon iconfont" :class="item.icon"></span>
           <div class="text-content">
-            <span class="title">{{ item.title }}</span>
-            <span class="text" v-for="(text, index) in item.text" :key="index">{{ text }}</span>
+            <span class="title" v-for="(text, index) in item.title" :key="index">{{ text }}</span>
+            <span class="text" v-for="(text, index) in item.text" :key="index" :style="{ lineHeight: item.line }">{{ text }}</span>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ const options = reactive({
   yy:{
     banner: {
       title: '专业化·智能化·一体化',
-      btmText: 'Specialization, intelligence and integration',
+      btmText: 'Specialization, intelligence and integration'.toUpperCase(),
     },
     mainInfo: {
       title: '渔光一体智能运营专家',
@@ -89,7 +89,7 @@ const options = reactive({
       btmText: 'OPERATION',
       description: [
         '秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。',
-        '线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源.',
+        '线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源。',
         '形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。',
       ]
     },
@@ -104,16 +104,16 @@ const options = reactive({
       btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
       indicate: '业务范围 >>',
       business: [
-        { title: '运行维护', icon:'iconyunyingfuwu', text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'] },
-        { title: '专项服务', icon:'icondashuju', text: ['设备抢检修技改','电气试验','设备专项排查与分析','技术监督','电站性能检测与质量评估','防雷检测','电力设备安装'] },
-        { title: '增值服务', icon:'iconlianghaoderuanyingjianjianrongxing', text: ['生产前准备','电费结算','关系协调','AI巡检'] }
+        { title: ['运行维护'], icon:'iconyunyingfuwu', line: 1.3, text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'] },
+        { title: ['专项服务'], icon:'icondashuju', line: 1.3, text: ['设备抢检修技改','电气试验','设备专项排查与分析','技术监督','电站性能检测与质量评估','防雷检测','电力设备安装'] },
+        { title: ['增值服务'], icon:'iconlianghaoderuanyingjianjianrongxing', line: 1.3, text: ['生产前准备','电费结算','关系协调','AI巡检'] }
       ],
     }
   },
   yz:{
     banner: {
       title: '集约化·智能化·高效化',
-      btmText: 'Intensive, intelligent and efficient',
+      btmText: 'Intensive, intelligent and efficient'.toUpperCase(),
     },
     mainInfo: {
       title: '运用智能物联，赋能现代农业',
@@ -133,41 +133,38 @@ const options = reactive({
       btmText: 'Smart agriculture'.toUpperCase(),
       indicate: '业务范围 >>',
       business: [
-        { title: '现代化农业园区 整体解决方案', icon:'iconzhiwuzhongzhi', text: ['现代化水产产业园规划建设', '光伏农业园区规划建设', '园区智能化运营服务', '渔光一体整体解决方案'] },
-        { title: '专项服务', icon:'icondashuju', text: ['设备抢检修技改','电气试验','设备专项排查与分析','技术监督','电站性能检测与质量评估','防雷检测','电力设备安装'] },
-        { title: '增值服务', icon:'iconlianghaoderuanyingjianjianrongxing', text: ['生产前准备','电费结算','关系协调','AI巡检'] }
+        { title: ['现代化农业园区', '整体解决方案'], icon:'iconzhiwuzhongzhi', line: 1.3, text: ['现代化水产产业园规划建设', '光伏农业园区规划建设', '园区智能化运营服务', '渔光一体整体解决方案'] },
+        { title: ['多元化养殖设施设备'], icon:'iconyangzhishebei', line: 1.3, text: ['工厂化恒温养殖车间','智能推水流水槽','智能底排污系统','智能投喂机器人'] },
+        { title: ['智能化软件系统'], icon:'iconzhinengyangzhi', line: 1.3, text: ['智能投喂系统','慧养鱼水质监测与管理','水产物联网平台','养殖过程管理系统'] }
       ],
     }
   },
   xx:{
     banner: {
-      title: '专业化·智能化·一体化',
-      btmText: 'Specialization, intelligence and integration',
+      title: '平台化、多行业、一站式',
+      btmText: 'Platform, multi-industry, one-stop'.toUpperCase(),
     },
     mainInfo: {
-      title: '渔光一体智能运营专家',
-      shadowText: 'INTELLIGENT',
-      btmText: 'OPERATION',
+      title: '信息化解决方案服务提供商',
+      shadowText: 'Information'.toUpperCase(),
+      btmText: 'solution'.toUpperCase(),
       description: [
-        '秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。',
-        '线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源.',
-        '形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。',
+        '依托20年信息化方面的经验积累，为企业提供整体的信息化解决方案，利用物联网、大数据、云计算、人工智能等技术，实现信息化与传统产。',
       ]
     },
     indexs: [
-      { num: 40, unit: '个', descript: '在运城市', color: '#888888', upcolor: '#EF7D1B' },
-      { num: 50, unit: '座', descript: '在运电站', color: '#888888', upcolor: '#EF7D1B' },
-      { num: 4.27, unit: 'Gw', descript: '在运维总容量', color: '#888888', upcolor: '#EF7D1B' },
-      { num: 3170, unit: '天', descript: '安全生产天数', color: '#888888', upcolor: '#EF7D1B' },
+      { icon: 'iconduohangye', iconColor: '#30A8E6', labelCh: '平台化', labelEn: 'Platform'.toUpperCase(), labelColor: '#30A8E6' },
+      { icon: 'iconzichan', iconColor: '#30A8E6', labelCh: '多行业', labelEn: 'multi-industry'.toUpperCase(), labelColor: '#30A8E6' },
+      { icon: 'iconhangzheng', iconColor: '#30A8E6', labelCh: '一站式', labelEn: 'one-stop'.toUpperCase(), labelColor: '#30A8E6' },
     ],
     btmInfo: {
       title: '渔光一体智能运营',
       btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
       indicate: '业务范围 >>',
       business: [
-        { title: '运行维护', icon:'iconyunyingfuwu', text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'] },
-        { title: '专项服务', icon:'icondashuju', text: ['设备抢检修技改','电气试验','设备专项排查与分析','技术监督','电站性能检测与质量评估','防雷检测','电力设备安装'] },
-        { title: '增值服务', icon:'iconlianghaoderuanyingjianjianrongxing', text: ['生产前准备','电费结算','关系协调','AI巡检'] }
+        { title: ['企业信息化解决方案'], icon:'iconhulianwang', line: 2.2, text: ['依托自主研发的业务架构平台，高效的开发团队，为企业建立业务分析模型，发现潜在问题，进行针对性地改善和规范，助力 管理升级，支撑。'] },
+        { title: ['物联网应用解决方案'], icon:'iconxinxihua1', line: 2.2, text: ['基于自主研发的数据采集器和通信平台，实现物联网与信息化的融合，提升生产过程的质量管控能力，实现质量安全的可追溯性，提高智能化水。'] },
+        { title: ['智慧电站运维解决方案'], icon:'iconzhinengguangfu', line: 2.2, text: ['利用大数据、AI、5G等技术，通过智能IOT设备，实现对电站设备的统一监控，为电站管理业务建设全面、智能、高效的运维管理平台。'] }
       ],
     }
   },
@@ -184,16 +181,20 @@ const updateHeights = () => {
   bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
 };
 
+const handleType = (type) => {
+  hImage.value = hType.replace('{type}', type);
+  mImage.value = mType.replace('{type}', type);
+  pageType.value = type;
+}
+
 // 监听窗口大小变化
 onMounted(() => {
   updateHeights();
   window.addEventListener('resize', updateHeights); // 监听窗口变化
   MsgManager.getInstance().listen('pagechange', (message) => {
-    hImage.value = hType.replace('{type}', message.type);
-    mImage.value = mType.replace('{type}', message.type);
-    pageType.value = message.type;
+    handleType(message.type || 'yy');
   });
-  pageType.value = route.query.type;
+  handleType(route.query.type || 'yy');
 });
 
 onBeforeUnmount(() => {
@@ -317,10 +318,17 @@ onBeforeUnmount(() => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        box-shadow: 0px 3px 3px 0px #3e3e3e15;
       }
 
-      .three-box-layout + .three-box-layout {
-        margin-left: 49px;
+      .three-box-layout  {
+        & + .three-box-layout {
+          margin-left: 49px;
+        }
+
+        :deep(.card-component) {
+          box-shadow: 0px 3px 3px 0px #3e3e3e15;
+        }
       }
     }
   }
@@ -403,9 +411,13 @@ onBeforeUnmount(() => {
             display: block;
             font-size: 18px;
             font-weight: 300;
-            margin: 0 0 7.5px 0;
+            margin: 5px 55px 7.5px 55px !important;
             color: #000;
             opacity: 0.6;
+
+            &:first-child {
+              margin-top: 10px !important;
+            }
           }
         }
       }
