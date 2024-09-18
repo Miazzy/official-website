@@ -24,7 +24,7 @@ const handleReload = () => {
   const url = window.location.origin + window.location.pathname;
   const now = getDayTimestamp();
   const lastTime = getParamByName('T') || 0;
-  if (Math.abs(parseInt(now, 36) - parseInt(lastTime, 36)) > 36000) {
+  if (Math.abs(parseInt(now, 36) - parseInt(lastTime, 36)) > 3600 * 24) {
     window.location.href = url + '?T=' + now + window.location.hash;
   }
 };

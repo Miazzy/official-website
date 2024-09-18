@@ -281,10 +281,6 @@ const fetchBundle = (isReloadIndexFile = true) => {
 
 // 加载bundle文件函数
 const handleLoadBundle = () => {
-  // 只在iframe的页面中执行此操作，外层框架不执行此操作
-  if (window.self === window.top) {
-    return;
-  }
   // 开发环境不执行此操作
   if (['5173'].includes(window.location.port)) {
     return;
