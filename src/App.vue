@@ -201,7 +201,7 @@ div.plans {
   }
 
   .plans.container .middle-content {
-    margin: -59.5px 89.25px 0 89.25px !important;
+    margin: -68px 102px 0 102px !important;
 
     .upper {
       font-size: 50px !important;
@@ -284,11 +284,11 @@ div.plans {
   }
 
   .aboutus.container .submid-section {
-    padding: 0px 220px 0 220px !important;
+    padding: 0px 202px 0 202px !important;
   }
 
   .aboutus.container .bottom-section {
-    padding: 0px 220px 0 220px !important;
+    padding: 0px 202px 0 202px !important;
   }
 }
 

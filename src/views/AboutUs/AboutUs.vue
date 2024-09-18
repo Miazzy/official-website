@@ -212,17 +212,17 @@ onBeforeUnmount(() => {
     display: flex;
     overflow-x: hidden;
     transition: height 0.3s ease;
-    margin: 80px 200px 0 200px;
+    margin: 65px 195px 0 195px;
     background-color: transparent;
 
     .banner {
       position: relative;
-      padding: 10px;
+      padding: 10px 10px 10px 0;
       margin: 0px 30px 0 0;
 
       .upper {
         position: relative;
-        margin: 50px 0 10px 10px;
+        margin: 50px 0 10px 0px;
         font-weight: 600;
         font-size: 46px;
         color: #333333;
@@ -231,6 +231,7 @@ onBeforeUnmount(() => {
         .shadow-text {
           position: absolute;
           top: -30px;
+          left: 7px;
           font-weight: 400;
           font-size: 120px;
           color: #999999;
@@ -241,7 +242,7 @@ onBeforeUnmount(() => {
         .bottom-text {
           position: absolute;
           top: 50px;
-          left: 2px;
+          left: 8px;
           font-weight: 400;
           font-size: 26px;
           color: #CCCCCC;
@@ -251,7 +252,7 @@ onBeforeUnmount(() => {
 
       .content {
         position: absolute;
-        left: 25px;
+        left: 14px;
         top: 180px;
 
         p {
@@ -266,7 +267,7 @@ onBeforeUnmount(() => {
 
     .image {
       flex: 1;
-      padding: 10px;
+      padding: 10px 5px 10px 15px;
 
       img {
         margin: 195px 0 0 20px;
