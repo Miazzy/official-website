@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel-container" @wheel="handleScrollFn">
+  <div class="carousel-container" @wheel.capture="handleScrollFn">
     <div class="carousel-slide" :class="{ 
           active: activeIndex === 0 && direct, 
           disactive: activeIndex !== 0 && direct, 
@@ -91,7 +91,7 @@ const handleClick = (index) => {
   }
 }
 
-const handleScrollFn = throttle(handleScroll, 1500);
+const handleScrollFn = throttle(handleScroll, 250, 1000);
 
 onMounted(() => {
   TaskExecutor.getInstance().start();
