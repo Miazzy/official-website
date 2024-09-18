@@ -185,6 +185,7 @@ const handleType = (type) => {
   hImage.value = hType.replace('{type}', type);
   mImage.value = mType.replace('{type}', type);
   pageType.value = type;
+  MsgManager.getInstance().sendMsg('pagetype', { type });
 }
 
 // 监听窗口大小变化
@@ -198,6 +199,7 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
+  MsgManager.getInstance().sendMsg('pagetype', { type: '' });
   window.removeEventListener('resize', updateHeights); // 页面销毁时移除监听器
 });
 </script>

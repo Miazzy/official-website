@@ -11,7 +11,7 @@
           <a :href="href" @click="navigate">首页</a>
         </li>
       </router-link>
-      <router-link exact to="/plans" v-slot="{ href, navigate, isActive }" >
+      <router-link exact to="/plans?type=yy" v-slot="{ href, navigate, isActive }" >
         <li class="navbar-item" :class="{ active: isActive }">
           <ElTooltip
               placement="bottom"
@@ -20,9 +20,9 @@
             <a :href="href" @click="handleClick('yy')">解决方案</a>
             <template #content>
               <div class='tooltips-text'>
-                <span class='operation' @click="handleClick('yy')">智能运营</span>
-                <span class='agriculture' @click="handleClick('yz')">智慧农业</span>
-                <span class='information' @click="handleClick('xx')">信息化</span>
+                <span class='operation' :class="planType === 'yy' ? 'active': ''" @click="handleClick('yy')">智能运营</span>
+                <span class='agriculture' :class="planType === 'yz' ? 'active': ''" @click="handleClick('yz')">智慧农业</span>
+                <span class='information' :class="planType === 'xx' ? 'active': ''" @click="handleClick('xx')">信息化</span>
               </div>
             </template>
           </ElTooltip>
@@ -47,11 +47,13 @@
   </div>
 </template>
 <script setup>
+import { ref, onMounted } from 'vue';
 import { useRouter } from "vue-router";
 import { ElTooltip } from "element-plus";
 import { MsgManager } from "../manager/MsgManager";
 
 const router = useRouter();
+const planType = ref('');
 
 const props = defineProps({
   themeColor: {
@@ -68,6 +70,12 @@ const handleClick = (type) => {
   MsgManager.getInstance().sendMsg('pagechange', { route: 'plans', type });
   router.push('/plans?type=' + type);
 };
+
+onMounted(() => {
+  MsgManager.getInstance().listen('pagetype', (message) => {
+    planType.value = message.type;
+  });
+});
 
 </script>
 <style lang="less" scoped>

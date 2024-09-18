@@ -91,7 +91,20 @@ div.plans {
     cursor: pointer;
 
     &:hover {
+      color: #fefefeE0;
+      text-shadow: 1px 0px 0px #fefefe10;
+    }
+
+    &.operation.active {
       color: #EF7D1B;
+    }
+
+    &.agriculture.active {
+      color: #43A438;
+    }
+
+    &.information.active {
+      color: #30A8E6;
     }
   }
 }
