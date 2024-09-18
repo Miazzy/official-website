@@ -201,6 +201,7 @@ div.plans {
   }
 
   .plans.container .middle-content {
+    margin: -59.5px 89.25px 0 89.25px !important;
 
     .upper {
       font-size: 50px !important;

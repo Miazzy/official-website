@@ -172,9 +172,8 @@ const options = reactive({
 
 // 动态计算区域高度的函数
 const updateHeights = () => {
-  const screenWidth = window.innerWidth;
+  const screenWidth = window.screen.width < window.innerWidth ? window.screen.width : window.innerWidth;
   const scaleFactor = screenWidth / baseWidth;
-
   // 根据比例缩放高度
   topHeight.value = parseInt(topBaseHeight * scaleFactor);
   middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
@@ -258,10 +257,10 @@ onBeforeUnmount(() => {
     position: absolute;
     top: 540px;
     width: 90%;
-    margin: -50px 5% 0 5%;
+    margin: -68px 102px 0 102px;
     background: #F7F9FC;
     border: 1px solid #F7F9FCCE;
-    border-radius: 4px;
+    border-radius: 0px;
     font-family: Source Han Sans CN;
 
     .upper {

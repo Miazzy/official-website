@@ -125,7 +125,7 @@ const options = reactive(
 
 // 动态计算区域高度的函数
 const updateHeights = () => {
-  const screenWidth = window.innerWidth;
+  const screenWidth = window.screen.width < window.innerWidth ? window.screen.width : window.innerWidth;
   const scaleFactor = screenWidth / baseWidth;
 
   // 根据比例缩放高度
