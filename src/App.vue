@@ -185,6 +185,18 @@ div.plans {
         top: calc(50vh + 78px) !important;
       }
     }
+
+    &:not(:first-child) {
+      .banner-title {
+        left: 215px !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 11px !important;
+    right: 194px !important;
+    font-size: 16.5px !important;
   }
 
   .plans.container .bottom-section .banner .text {
@@ -292,6 +304,166 @@ div.plans {
   }
 }
 
+@media screen and (min-width: 1250px) and (max-width: 1280px) {
+
+  .header .logo a {
+    margin: 33.5px 0 0 33px !important;
+
+    .logo {
+      width: 140px !important;
+
+      img {
+        width: 140px !important;
+      }
+    }
+  }
+
+  .header .navbar {
+    margin-left: calc(20vw + 20px) !important;
+    margin-top: calc(10.05vh) !important;
+
+    .navbar-item {
+      width: 60px !important;
+      font-size: 14.5px !important;
+      margin: 0 33px !important;
+      padding: 1px 0 !important;
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 79px !important;
+    top: calc(50% + 0px) !important;
+
+    .segment {
+      height: 42.75px !important;
+
+      &:before {
+        height: 42.75px;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: -1px !important;
+    right: 131px !important;
+    font-size: 10.88px !important;
+  }
+
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .tooltip {
+        font-size: 8px !important;
+        top: calc(50vh - 72px) !important;
+      }
+    }
+
+    &:nth-child(2) {
+      .banner .tooltip {
+        font-size: 8px !important;
+        top: calc(50vh - 39px) !important;
+      }
+    }
+
+    &:nth-child(3) {
+      .banner .tooltip {
+        font-size: 8px !important;
+        top: calc(50vh + 5px) !important;
+      }
+    }
+
+    &:nth-child(4) {
+      .banner .tooltip {
+        font-size: 8px !important;
+        top: calc(50vh + 50px) !important;
+      }
+    }
+  }
+
+  .home .carousel-container .carousel-slide {
+
+    .quota {
+      .indicator-component{
+        width: 145px !important;
+  
+        .upper span.num {
+            font-size: 35px;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      .banner-title {
+        font-size: 42.5px;
+        left: 180px;
+        top: 263px;
+
+        .subTitle {
+          font-size: 14.75px;
+          left: -5px;
+          top: 60px;
+          text-align: left;
+        }
+      }
+
+      .banner .bg-button {
+        width: 108px;
+        height: 33px;
+        left: 176px;
+        top: calc(50vh + 53px);
+
+        .content {
+          margin: 6px 12px;
+          font-size: 14px;
+          font-weight: 600;
+          color: #fefefe;
+          text-align: center;
+
+          .icon {
+            font-size: 14px;
+            font-family: monospace;
+          }
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      .banner-title {
+        font-size: 42.5px !important;
+        left: 135px !important;
+        top: 269px !important;
+
+        .subTitle {
+          font-size: 20.75px !important;
+          left: 0px !important;
+          top: 76px !important;
+          text-align: left !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 108px !important;
+        height: 33px !important;
+        left: 134px !important;
+        top: calc(50vh + 58px) !important;
+
+        .content {
+          margin: 6px 12px;
+          font-size: 14px;
+          font-weight: 600;
+          color: #fefefe;
+          text-align: center;
+
+          .icon {
+            font-size: 14px;
+            font-family: monospace;
+          }
+        }
+      }
+    }
+  }
+
+}
+
 @media screen and (min-width: 1650px) and (max-width: 1680px) {
   .home .carousel-container .carousel-slide {
     &:nth-child(1) {
@@ -337,7 +509,7 @@ div.plans {
     width: 415px;
   }
 
-  .aboutus.container .middle-section{
+  .aboutus.container .middle-section {
     margin: 30px 80px 0 120px !important;
     overflow: hidden !important;
 
@@ -393,12 +565,13 @@ div.plans {
 
     .content-container {
       height: 415px !important;
+
       .horizontal-scroll-box {
         img {
           max-height: 415px !important;
         }
 
-        .honor-item + .honor-item {
+        .honor-item+.honor-item {
           margin-left: 12px;
         }
       }

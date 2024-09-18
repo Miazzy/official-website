@@ -56,7 +56,7 @@ const task = () => {
 };
 
 const startAutoScroll = () => {
-  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND);
+  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND * 100);
 };
 
 const stopAutoScroll = () => {
@@ -98,7 +98,7 @@ onMounted(() => {
   startAutoScroll();
   setTimeout(() => {
     isRefresh.value = false;
-  }, TimeInterval.TEN_SECOND);
+  }, TimeInterval.TEN_SECOND * 100);
 });
 
 onBeforeUnmount(() => {
