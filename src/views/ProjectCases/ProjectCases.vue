@@ -1,11 +1,13 @@
 <template>
   <div class="project-cases">
-    <div class="banner-box">
+
+    <div class="banner-box" :style="{ height: topHeight + 'px', }" >
       <h1 class="banner-title-ch">项目案例</h1>
       <h2 class="banner-title-en">PROJECT CASE</h2>
     </div>
-    <div class="content-box-1">
-      <div class="intelligent-operation-box">
+
+    <div class="content-box-1" :style="{ height: middleHeight + 'px', }" >
+      <div class="intelligent-operation-box" :style="{ height: submidHeight + 'px', }" >
         <div class="title-box">
           <span class="title-ch">智能运营</span>
           <span class="title-en">INTELLIGENT OPERATION</span>
@@ -27,7 +29,8 @@
         </div>
       </div>
     </div>
-    <div class="content-box-2">
+
+    <div class="content-box-2" :style="{ height: bottomHeight + 'px', }" >
       <div class="smart-agriculture-box">
         <div class="title-box">
           <span class="title-ch">智慧农业</span>
@@ -54,10 +57,23 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+const baseWidth = 1920; // 基准宽度
+
+const topBaseHeight = 540; // 上部初始高度
+const middleBaseHeight = 682 + 68; // 中部初始高度
+const submidBaseHeight = 716; // 中部初始高度
+const bottomBaseHeight = 814; // 下部初始高度
+
+const topHeight = ref(topBaseHeight);
+const middleHeight = ref(middleBaseHeight);
+const submidHeight = ref(submidBaseHeight);
+const bottomHeight = ref(bottomBaseHeight);
+
+const scaleRatio = ref(1);
 
 const getImgUrl = (url) => {
   const path = new URL(`../../assets/images/${url}`, import.meta.url);
@@ -110,11 +126,45 @@ const smartAgricultureList = ref([
   },
 ]);
 
-onMounted(() => {});
+// 动态计算区域高度的函数
+const updateHeights = () => {
+  const screenWidth = window.screen.width < window.innerWidth ? window.screen.width : window.innerWidth;
+  const scaleFactor = screenWidth / baseWidth;
+
+  // 根据比例缩放高度
+  topHeight.value = parseInt(topBaseHeight * scaleFactor);
+  middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
+  submidHeight.value = parseInt(submidBaseHeight * scaleFactor);
+  bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
+  scaleRatio.value = scaleFactor;
+};
+
+// 监听窗口大小变化
+onMounted(() => {
+  updateHeights();
+  window.addEventListener('resize', updateHeights); // 监听窗口变化
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateHeights); // 页面销毁时移除监听器
+});
 </script>
 
 <style scoped lang="less">
 .project-cases {
+  width: 1920px;
+  max-width: 1920px;
+  height: calc(540px + 682px + 814px + 0px);
+  overflow-x: scroll;
+  overflow-y: scroll;
+  // height: calc(540px + 682px + 814px + 322px);
+  // background-image: url('../../assets/images/cases_bg.png');
+  // background-size: cover;
+  // background-position: center;
+  transition: height 0.3s ease;
+  position: relative;
+  overflow-x: hidden;
+
   .banner-box {
     width: 100%;
     height: 540px;
@@ -124,47 +174,56 @@ onMounted(() => {});
     background-repeat: no-repeat;
     text-align: center;
     line-height: 1;
-    padding-top: 260px;
+    padding-top: 244px;
+    opacity: 1;
+
     .banner-title-ch {
       font-weight: bold;
-      font-size: 64px;
+      font-size: 50px;
       color: #ffffff;
       text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-      margin-bottom: 22px;
+      margin-bottom: 15px;
     }
     .banner-title-en {
       font-weight: 400;
-      font-size: 24px;
+      font-size: 18px;
       color: #ffffff;
       text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
       opacity: 0.77;
     }
   }
+
   .content-box-1 {
     width: 100%;
-    height: 914px;
+    height: calc(682px + 68px);
+    opacity: 1;
+    margin: 0 0 0 0;
+
     .intelligent-operation-box {
-      width: 1716px;
+      width: 1480px;
       height: 877px;
       margin: -68px auto 0;
       background: #f7f9fc;
       .title-box {
-        padding: 103px;
+        padding: 68px 0 0 95px;
+
         & > span {
           display: inline-block;
           height: 46px;
           line-height: 1;
         }
+
         .title-ch {
-          margin-right: 36px;
+          margin-right: 18px;
           font-weight: 500;
-          font-size: 46px;
+          font-size: 34px;
           color: #333333;
         }
+
         .title-en {
           padding-top: 12px;
           font-weight: 400;
-          font-size: 34px;
+          font-size: 16px;
           color: #cccccc;
           vertical-align: sub;
         }
@@ -172,47 +231,64 @@ onMounted(() => {});
       .case-box {
         display: flex;
         justify-content: space-between;
-        padding: 0 96px;
+        padding: 0 83px 0 83px;
+        margin: 35px 0 0 0;
       }
     }
   }
+
   .case-item-box {
-    width: 358px;
-    height: 564px;
+    width: 306px;
+    height: 503px;
     background: #ffffff;
     box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.11);
     cursor: pointer;
+    opacity: 1;
+    margin-right: 10px;
+    margin: 6px 5px 0 -10px;
+
+    & + .case-item-box {
+      margin: 6px 5px 0 -10px;
+    }
+
     &:hover {
+      width: 307px;
+      height: 503px;
       background: #fefaf6;
       box-shadow: -1px 7px 13px 0px rgba(221, 120, 22, 0.3);
     }
+
     .img-box {
       width: 100%;
-      height: 335px;
+      height: 298px;
       font-size: 0;
+
       .case-img {
         width: 100%;
         height: 100%;
       }
+
     }
     .case-title-text {
       padding: 19px 0 8px;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 20px;
       color: #333333;
       line-height: 1;
       text-align: center;
     }
+
     .case-desc-text {
       margin: 0;
       padding: 0 34px;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 12px;
       color: #999999;
-      line-height: 24px;
+      line-height: 21px;
       word-break: break-all;
     }
   }
+
   .content-box-2 {
     width: 100%;
     height: 1060px;
@@ -220,34 +296,58 @@ onMounted(() => {});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 1;
+
     .smart-agriculture-box {
-      width: 1524px;
+      width: calc(1920px - 620px);
       margin: 0 auto;
+
       .title-box {
-        padding: 103px 0;
+        padding: 70px 0 42px 0px;
+
         & > span {
           display: inline-block;
           height: 46px;
           line-height: 1;
         }
+
         .title-ch {
           margin-right: 36px;
           font-weight: 500;
-          font-size: 46px;
+          font-size: 34px;
           color: #ffffff;
         }
+
         .title-en {
           padding-top: 12px;
           font-weight: 400;
-          font-size: 34px;
+          font-size: 16px;
           color: #ffffff;
           vertical-align: sub;
           opacity: 0.3;
         }
       }
+
       .case-box {
         display: flex;
         justify-content: space-between;
+        margin: 0 0 0 8px;
+
+        .case-item-box {
+          height: 500px;
+
+          .img-box {
+            width: 306px;
+            height: 285px;
+            font-size: 0;
+
+            .case-img {
+              width: 100%;
+              height: 100%;
+            }
+
+          }
+        }
       }
     }
   }
