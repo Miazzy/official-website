@@ -46,7 +46,7 @@ const activeIndex = ref(0);
 const totalSlides = 4; // 总共4个轮播项
 const isLock = ref(false);
 const isRefresh = ref(true);
-const direct = ref(true);
+const direct = ref(false);
 
 const task = () => {
   if (!isLock.value) {
@@ -68,10 +68,10 @@ const handleScroll = (event: WheelEvent) => {
   isLock.value = true;
   stopAutoScroll();
   if (event.deltaY > 0) { // 向下滚动
-    direct.value = true;
+    direct.value = false;
     activeIndex.value = (activeIndex.value + 1) % totalSlides;
   } else { // 向上滚动
-    direct.value = false;
+    direct.value = true;
     activeIndex.value = (activeIndex.value - 1 + totalSlides) % totalSlides;
   }
   startAutoScroll();
@@ -83,8 +83,8 @@ const handleClick = (index) => {
     isRefresh.value = false;
     isLock.value = true;
     stopAutoScroll();
-    activeIndex.value < index ? direct.value = true : null;
-    activeIndex.value > index ? direct.value = false : null;
+    activeIndex.value < index ? direct.value = false : null;
+    activeIndex.value > index ? direct.value = true : null;
     activeIndex.value = index;
     startAutoScroll();
     isLock.value = false;
@@ -176,36 +176,36 @@ onBeforeUnmount(() => {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.75s ease-in-out;
+    transition: opacity 1.25s ease-in-out;
     
     &.active {
       opacity: 1;
-      animation: slideInDown 0.5s;
+      animation: slideInDown 1.25s;
 
       &.restatus {
         opacity: 1;
-        animation: refreshShow 0.5s;
+        animation: refreshShow 1.25s;
       }
     }
 
     &.activeUp {
       opacity: 1;
-      animation: slideInUp 0.5s;
+      animation: slideInUp 1.25s;
 
       &.restatus {
         opacity: 1;
-        animation: refreshShow 0.5s;
+        animation: refreshShow 1.25s;
       }
     }
 
     &.disactive {
       opacity: 0;
-      animation: disactive 0.5s;
+      animation: disactive 1.25s;
     }
 
     &.disactiveUp {
       opacity: 0;
-      animation: disactiveUp 0.5s;
+      animation: disactiveUp 1.25s;
     }
   }
 

@@ -26,7 +26,7 @@
           <div class="bg-wrapper">
             <img src="../../assets/images/home02.jpg" />
           </div>
-          <h1 class="banner-title" style="left: 215px;">
+          <h1 class="banner-title" >
             新能源电站智能运营方案
             <div class="subTitle lang">专业化、智能化、一体化</div>
           </h1>
@@ -58,7 +58,7 @@
           <div class="bg-wrapper">
             <img src="../../assets/images/home03.jpg" />
           </div>
-          <h1 class="banner-title" style="left: 215px;">
+          <h1 class="banner-title" >
             智慧农业解决方案
             <div class="subTitle lang">集约化、智能化、高效化</div>
           </h1>
@@ -78,7 +78,7 @@
           <div class="bg-wrapper">
             <img src="../../assets/images/home04.jpg" />
           </div>
-          <h1 class="banner-title" style="left: 215px;">
+          <h1 class="banner-title">
             信息化解决方案
             <div class="subTitle lang">平台化、多行业、一站式</div>
           </h1>
@@ -209,7 +209,6 @@ onMounted(() => {
     overflow: hidden;
 
     img {
-      object-fit: cover;
       width: 100%;
       height: 100%;
     }
