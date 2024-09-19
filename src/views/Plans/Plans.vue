@@ -414,6 +414,10 @@ onBeforeUnmount(() => {
         background: #FFFFFF;
         box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.3);
 
+        &::before {
+          display: none;
+        }
+
         &.operation:hover {
           background: #fefaf6;
           box-shadow: 0px 7px 13px 1px #EF7D1B90;
@@ -429,8 +433,6 @@ onBeforeUnmount(() => {
 
         &:hover {
           cursor: pointer;
-
-          
 
           .icon {
             &.operation {
