@@ -229,12 +229,33 @@ div.plans {
     }
   }
 
+  .home .carousel-container {
+    .carousel-slide {
+      &:not(:first-child) {
+        .banner .banner-title .subTitle {
+          left: -195px;
+          top: 122px;
+          font-size: 34px;
+          width: 700px;
+          letter-spacing: -3px;
+        }
+
+        .banner .bg-button {
+          width: 161px;
+          height: 49px;
+          left: 200px;
+          top: calc(50vh + 90px);
+        }
+      }
+    }
+  }
+
   .home .carousel-container .banner .banner-title {
     font-size: 64.5px;
     left: 269px !important;
     top: 395px !important;
 
-    .subTitle[data-v-e345e995] {
+    .subTitle{
       left: -33px;
       top: 90px;
       font-size: 22px;
