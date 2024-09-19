@@ -13,7 +13,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const iframeURL = ref('http://10.8.111.231:8080/ms-mcms/html/1//150/151/index.html?onlyShowContent=true');
+const iframeURL = ref('http://www.ygwl.net/ms-mcms/html/1//150/151/index.html?onlyShowContent=true');
 const iframeRef = ref();;
 
 const minHeight = 1260;
@@ -27,7 +27,7 @@ const checkHeight = () => {
 };
 
 onMounted(() => {
-  iframeURL.value = iframeURL.value + '?_t=' + new Date().getTime();
+  iframeURL.value = iframeURL.value + '&_t=' + new Date().getTime();
   setTimeout(() => {
     iframeRef.value.addEventListener('load', checkHeight);
   }, 100);
