@@ -13,7 +13,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const iframeURL = ref('http://10.8.111.231:8080/ms-mcms/html/1//150/151/index.html');
+const iframeURL = ref('http://10.8.111.231:8080/ms-mcms/html/1//150/151/index.html?onlyShowContent=true');
 const iframeRef = ref();;
 
 const minHeight = 1260;

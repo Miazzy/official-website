@@ -233,8 +233,8 @@ div.plans {
     .carousel-slide {
       &:not(:first-child) {
         .banner .banner-title .subTitle {
-          left: -195px;
-          top: 122px;
+          left: -182px;
+          top: 118px;
           font-size: 34px;
           width: 700px;
           letter-spacing: -3px;
@@ -296,7 +296,8 @@ div.plans {
 
     &:not(:first-child) {
       .banner-title {
-        left: 215px !important;
+        left: 202px !important;
+        top: 399px !important;
       }
     }
   }
