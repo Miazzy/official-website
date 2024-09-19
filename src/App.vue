@@ -288,90 +288,93 @@ div.plans {
 
   .plans.container .bottom-section .banner .text {
     padding: 2px 0 0 0 !important;
-    font-size: 46px !important;
+    font-size: 34px !important;
 
     &.en {
-      font-size: 26px !important;
+      font-size: 16px !important;
     }
 
     &.indicate {
-      font-size: 24px !important;
+      font-size: 16px !important;
     }
   }
 
   .plans.container .middle-content {
-    margin: -68px 102px 0 102px !important;
+    margin: -68px 220px 0 220px !important;
 
     .upper {
-      font-size: 50px !important;
+      font-size: 34px !important;
+      margin: 100px 0 10px 84px !important;
 
       .shadow-text {
-        font-size: 135px !important;
+        font-size: 72px !important;
       }
 
       .bottom-text {
-        font-size: 28px !important;
+        font-size: 16px !important;
       }
     }
 
     .description {
-      margin: 135px 87.5px 53.5px 87.5px !important;
-      font-size: 30px !important;
-      line-height: 60px !important;
+      text-indent: 2em !important;
+      margin: 65px 87.5px 53.5px 87.5px !important;
+      font-size: 16px !important;
+      line-height: 30px !important;
     }
 
     .index-container {
       margin: 100px 0 0 120px !important;
 
       .box {
-        width: 330px !important;
-        height: 190px !important;
+        width: 386px;
+        height: 170px;
         margin-right: 50.5px !important;
 
         .indicator-component {
-          margin: 25px 0 0 90px !important;
+          margin: -90px 0 0 20px !important;
         }
 
         .upper {
           span.num {
-            font-size: 62px !important;
+            font-size: 52px !important;
           }
 
           span.unit {
-            font-size: 30px !important;
+            font-size: 24px !important;
           }
         }
 
         .descript {
-          font-size: 22px !important;
+          font-size: 18px !important;
+          margin: 0 0 0 50px !important;
         }
       }
     }
   }
 
   .plans.container .bottom-section .business-container {
-    margin: 390px 80px 0px 26vw !important;
+    margin: 270px 80px 0px calc(28vw + 20px) !important;
 
     .box {
-      width: 400px !important;
-      height: 625px !important;
+      width: 322px !important;
+      height: 442px !important;
 
       .icon {
         margin: 80px 0 10px 35% !important;
-        font-size: 90px !important;
-        height: 90px !important;
+        font-size: 74px !important;
+        height: 75px !important;
       }
 
       .text-content {
         height: 415px !important;
 
         .title {
-          font-size: 30px !important;
+          font-size: 24px !important;
           margin: 7.5px 0 12.5px 0 !important;
         }
 
         .text {
-          font-size: 16px !important;
+          font-size: 13px !important;
           margin: 15px 75px 10px 75px !important;
         }
       }
@@ -379,7 +382,21 @@ div.plans {
   }
 
   .plans.container .middle-content .index-container .three-box-layout .card-component {
-    width: 460px;
+    width: 100% !important;
+    height: 170px !important;
+    padding-left: 50px !important;
+
+    .icon-box .iconfont {
+      font-size: 78px !important;
+    }
+
+    .label-box .label-ch-text {
+      font-size: 26px !important;
+    }
+
+    .label-box .label-en-text {
+      font-size: 16px !important;
+    }
   }
 
   .aboutus.container .submid-section {

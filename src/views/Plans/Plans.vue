@@ -41,7 +41,7 @@
       </div>
 
       <div class="business business-container">
-        <div class="box" v-for="(item, index) in options[pageType].btmInfo.business" :key="index">
+        <div class="box" v-for="(item, index) in options[pageType].btmInfo.business" :key="index" :class="item.icon">
           <span class="icon iconfont" :class="item.icon"></span>
           <div class="text-content">
             <span class="title" v-for="(text, index) in item.title" :key="index">{{ text }}</span>
@@ -65,8 +65,8 @@ const route = useRoute();
 
 const baseWidth = 1920; // 基准宽度
 const topBaseHeight = 540; // 上部初始高度
-const middleBaseHeight = 845; // 中部初始高度
-const bottomBaseHeight = 1060; // 下部初始高度
+const middleBaseHeight = 612; // 中部初始高度
+const bottomBaseHeight = 874; // 下部初始高度
 const hType = "/src/assets/images/plan_header_{type}.jpg";
 const mType = "/src/assets/images/plan_middle_{type}.jpg";
 
@@ -80,7 +80,7 @@ const mImage = ref(mType.replace('{type}', pageType.value));
 const options = reactive({
   yy: {
     banner: {
-      title: '专业化·智能化·一体化',
+      title: '专业化、智能化、一体化',
       btmText: 'Specialization, intelligence and integration'.toUpperCase(),
     },
     mainInfo: {
@@ -112,7 +112,7 @@ const options = reactive({
   },
   yz: {
     banner: {
-      title: '集约化·智能化·高效化',
+      title: '集约化、智能化、高效化',
       btmText: 'Intensive, intelligent and efficient'.toUpperCase(),
     },
     mainInfo: {
@@ -214,6 +214,14 @@ onBeforeUnmount(() => {
   overflow-x: hidden;
   overflow-y: scroll;
 
+  width: 1920px;
+  max-width: 1920px;
+  height: calc(540px + 612px + 874px + 0px);
+  // height: calc(540px + 612px + 874px + 322px);
+  // background-image: url('../../assets/images/plan_bg.png');
+  // background-size: cover;
+  // background-position: center;
+
   .top-section {
     background-image: url('../../assets/images/plan_header_yy.jpg');
     background-size: cover;
@@ -221,24 +229,25 @@ onBeforeUnmount(() => {
     transition: height 0.3s ease;
     position: relative;
     overflow-x: hidden;
+    opacity: 1;
 
     .banner {
       position: absolute;
       text-align: center;
       width: 100%;
-      margin: 270px 0 0 0;
+      margin: 235px 0 0 -3px;
 
       .text {
         font-family: Source Han Sans CN;
         font-weight: bold;
-        font-size: 64px;
+        font-size: 50px;
         color: #FFFFFF;
         text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
 
         &.en {
           font-family: Source Han Sans CN;
           font-weight: 400;
-          font-size: 24px;
+          font-size: 18px;
           color: #FFFFFF;
           text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
           opacity: 0.77;
@@ -251,31 +260,34 @@ onBeforeUnmount(() => {
     background-color: #f0f0f0;
     transition: height 0.3s ease;
     overflow-x: hidden;
+    opacity: 1;
   }
 
   .middle-content {
     position: absolute;
     top: 540px;
-    width: 90%;
-    margin: -68px 102px 0 102px;
+    width: 1480px;
+    height: 623px;
+    margin: -68px 220px 0 220px;
     background: #F7F9FC;
     border: 1px solid #F7F9FCCE;
     border-radius: 0px;
     font-family: Source Han Sans CN;
+    opacity: 1;
 
     .upper {
       position: relative;
-      margin: 120px 0 10px 80px;
+      margin: 100px 0 10px 80px;
       font-weight: 600;
-      font-size: 46px;
+      font-size: 34px;
       color: #333333;
       line-height: 39px;
 
       .shadow-text {
         position: absolute;
-        top: -30px;
+        top: -22px;
         font-weight: 400;
-        font-size: 120px;
+        font-size: 72px;
         color: #999999;
         line-height: 43px;
         opacity: 0.2;
@@ -286,7 +298,7 @@ onBeforeUnmount(() => {
         top: 50px;
         left: 2px;
         font-weight: 400;
-        font-size: 26px;
+        font-size: 16px;
         color: #CCCCCC;
         line-height: 39px;
       }
@@ -294,11 +306,11 @@ onBeforeUnmount(() => {
 
     .description {
       position: relative;
-      margin: 130px 80px 10px 80px;
+      margin: 80px 80px 10px 80px;
       border: 0;
       font-family: Source Han Sans CN;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 16px;
       color: #444444;
       line-height: 48px;
 
@@ -328,6 +340,8 @@ onBeforeUnmount(() => {
       }
 
       .three-box-layout {
+        width: 386px;
+        height: 170px;
 
         &+.three-box-layout {
           margin-left: 49px;
@@ -352,12 +366,13 @@ onBeforeUnmount(() => {
     background-position: center;
     transition: height 0.3s ease;
     overflow-x: hidden;
+    opacity: 1;
 
     .banner {
       position: absolute;
       text-align: left;
       width: 100%;
-      margin: 80px 0 0 160px;
+      margin: 56px 0 0 306px;
       font-family: Source Han Sans CN;
 
       .text {
@@ -368,15 +383,15 @@ onBeforeUnmount(() => {
 
         &.en {
           font-weight: 400;
-          font-size: 24px;
+          font-size: 16px;
           color: #FFFFFF;
           text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
           opacity: 0.3;
         }
 
         &.indicate {
-          margin: 20px 0 0 0;
-          font-size: 22px;
+          margin: 30px 0 0 0;
+          font-size: 16px;
           color: #FFFFFF;
           text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
           opacity: 0.8;
@@ -386,7 +401,7 @@ onBeforeUnmount(() => {
 
     .business-container {
       display: flex;
-      margin: 320px 80px 0px 25vw;
+      margin: 200px 80px 0px 25vw;
       overflow-x: hidden;
 
       .box {
@@ -394,14 +409,28 @@ onBeforeUnmount(() => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 360px;
-        height: 502px;
+        width: 322px;
+        height: 442px;
         background: #FFFFFF;
         box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.3);
 
+        &.operation:hover {
+          background: #fefaf6;
+          box-shadow: 0px 7px 13px 1px #EF7D1B90;
+        }
+        &.agriculture:hover {
+          background: #f5f9f6;
+          box-shadow: 0px 7px 13px 1px #318A3690;
+        }
+        &.inform:hover {
+          background: #f6fafe;
+          box-shadow: 0px 7px 13px 1px #30A8e690;
+        }
+
         &:hover {
-          background: #fefefef0;
           cursor: pointer;
+
+          
 
           .icon {
             &.operation {
