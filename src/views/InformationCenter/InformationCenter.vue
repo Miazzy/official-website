@@ -19,12 +19,11 @@ const iframeRef = ref();;
 const minHeight = 1260;
 
 const checkHeight = () => {
-  debugger;
   const iframe = document.querySelector('.iframe');
   const contentBox = document.querySelector('.content-box');
-  if (iframe.contentWindow.document.body.scrollHeight > minHeight) {
-    contentBox.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-  }
+  // if (iframe.contentWindow.document.body.scrollHeight > minHeight) {
+  //   contentBox.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+  // }
 };
 
 onMounted(() => {

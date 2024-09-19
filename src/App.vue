@@ -110,14 +110,101 @@ div.plans {
 }
 
 @media screen and (min-width: 1900px) and (max-width: 2000px) {
+
+  .header .logo a {
+    margin: 20px 0 0 210px !important;
+
+    .logo {
+      width: 142px !important;
+
+      img {
+        width: 142px !important;
+      }
+    }
+  }
+
   .header .navbar {
-    margin-left: calc(27vw + 15px) !important;
-    margin-top: calc(11.75vh + 12px) !important;
+    margin-left: calc(34vw + 47.5px) !important;
+    margin-top: calc(3.95vh + 0px) !important;
+
+    a {
+      &:first-child {
+        .navbar-item {
+          width: 40px !important;
+        }
+      }
+    }
 
     &-item {
-      width: 100px !important;
-      font-size: 24.5px !important;
+      margin: -6px 30px 0px 30px !important;
+      width: 75px !important;
+      min-width: 40px !important;
+      font-size: 18.5px !important;
     }
+  }
+
+  .aboutus.container .top-section .banner {
+    margin: 271px 0 0 0 !important;
+
+    .text {
+      font-size: 50px !important;
+    }
+
+    .text.en {
+      font-weight: 600 !important;
+      font-size: 18px !important;
+    }
+  }
+
+  .aboutus.container .middle-section {
+    margin: 0px 305px 0 305px !important;
+
+    .image img {
+      margin: 208px 0 0 50px !important;
+    }
+
+    .banner {
+      .upper {
+        margin: 30px 0 10px 0px !important;
+        padding: 10px 0px 10px 0px !important;
+        font-size: 34px !important;
+
+        .shadow-text {
+          top: 53px !important;
+          left: -2px !important;
+          font-size: 72px !important;
+          letter-spacing: -3px !important;
+        }
+
+        .bottom-text {
+          top: 107px !important;
+          left: 0px !important;
+          font-size: 16px !important;
+        }
+      }
+
+      .content {
+        left: 14px !important;
+        top: 198px !important;
+
+        p {
+          line-height: 1.8 !important;
+          text-indent: 2em !important;
+          font-size: 16px !important;
+
+          &:nth-child(2) {
+            font-size: 16px !important;
+            margin: -10px 0 0 0;
+          }
+
+          &:nth-child(3) {
+            font-size: 16px !important;
+            margin: 0px 0 0 0;
+          }
+        }
+      }
+    }
+
   }
 
   .home .carousel-container .indicator {
@@ -296,11 +383,11 @@ div.plans {
   }
 
   .aboutus.container .submid-section {
-    padding: 0px 202px 0 202px !important;
+    padding: 0px 310px 0 310px !important;
   }
 
   .aboutus.container .bottom-section {
-    padding: 0px 202px 0 202px !important;
+    padding: 0px 310px 0 310px !important;
   }
 }
 
@@ -382,11 +469,11 @@ div.plans {
   .home .carousel-container .carousel-slide {
 
     .quota {
-      .indicator-component{
+      .indicator-component {
         width: 145px !important;
-  
+
         .upper span.num {
-            font-size: 35px;
+          font-size: 35px;
         }
       }
     }
