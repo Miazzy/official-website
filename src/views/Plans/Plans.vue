@@ -1,7 +1,7 @@
 <template>
   <div class="plans container" :class="pageType">
     <!-- 上部区域 -->
-    <div class="top-section" :style="{ height: topHeight + 'px', backgroundImage: `url(\'${hImage}\')` }">
+    <div class="top-section" :style="{ height: topHeight + 'px' }">
       <div class="banner">
         <h1 class="text lang">{{ options[pageType].banner.title }}</h1>
         <h2 class="text lang en">{{ options[pageType].banner.btmText.toUpperCase() }}</h2>
@@ -33,7 +33,7 @@
     </div>
 
     <!-- 下部区域 -->
-    <div class="bottom-section" :style="{ height: bottomHeight + 'px', backgroundImage: `url(\'${mImage}\')` }">
+    <div class="bottom-section" :style="{ height: bottomHeight + 'px' }">
       <div class="banner">
         <h1 class="text lang">{{ options[pageType].btmInfo.title }}</h1>
         <h2 class="text lang en">{{ options[pageType].btmInfo.btmText }}</h2>
@@ -222,6 +222,33 @@ onBeforeUnmount(() => {
   // background-size: cover;
   // background-position: center;
 
+  &.yy {
+    .top-section {
+      background-image: url('../../assets/images/plan_header_yy.jpg');
+    }
+    .bottom-section {
+      background-image: url('../../assets/images/plan_middle_yy.jpg');
+    }
+  }
+
+  &.yz {
+    .top-section{
+      background-image: url('../../assets/images/plan_header_yz.jpg');
+    }
+    .bottom-section {
+      background-image: url('../../assets/images/plan_middle_yz.jpg');
+    }
+  }
+
+  &.xx {
+    .top-section {
+      background-image: url('../../assets/images/plan_header_xx.jpg');
+    }
+    .bottom-section {
+      background-image: url('../../assets/images/plan_middle_xx.jpg');
+    }
+  }
+
   .top-section {
     background-image: url('../../assets/images/plan_header_yy.jpg');
     background-size: cover;
@@ -265,6 +292,9 @@ onBeforeUnmount(() => {
 
   .middle-content {
     position: absolute;
+    background-image: url('../../assets/images/plan_wenli.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
     top: 540px;
     width: 1480px;
     height: 623px;

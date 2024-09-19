@@ -323,6 +323,9 @@ div.plans {
 
   .plans.container .middle-content {
     margin: -68px 220px 0 220px !important;
+    background-image: url('../../assets/images/plan_wenli.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
 
     .upper {
       font-size: 34px !important;
@@ -385,19 +388,24 @@ div.plans {
         margin: 80px 0 10px 35% !important;
         font-size: 74px !important;
         height: 75px !important;
+        color: #686868 !important;
       }
 
       .text-content {
         height: 415px !important;
-
+        
         .title {
           font-size: 24px !important;
+          color: #333333 !important;
           margin: 7.5px 0 12.5px 0 !important;
+          opacity: 1 !important;
         }
 
         .text {
           font-size: 13px !important;
           margin: 15px 75px 10px 75px !important;
+          color: #999999 !important;
+          opacity: 1 !important;
         }
       }
     }
