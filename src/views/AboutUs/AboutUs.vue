@@ -130,7 +130,11 @@ const updateHeights = () => {
   middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
   submidHeight.value = parseInt(submidBaseHeight * scaleFactor);
   bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
-  bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor);
+  if (screenWidth >= 1700) {
+    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor);
+  } else if (screenWidth >= 1600 & screenWidth < 1700) {
+    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor * 1.2);
+  }
   scaleRatio.value = scaleFactor;
 };
 

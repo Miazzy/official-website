@@ -322,7 +322,7 @@ div.plans {
 
   .plans.container .middle-content {
     margin: -68px 220px 0 220px !important;
-    background-image: url('../../assets/images/plan_wenli.jpg') !important;
+    background-image: url('/src/assets/images/plan_wenli.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
 
@@ -437,7 +437,7 @@ div.plans {
   }
 }
 
-@media screen and (min-width: 1800px) and (max-width: 1900px) {
+@media screen and (min-width: 1800px) and (max-width: 1899px) {
   transform: scale(0.95);
 
   .header .logo a {
@@ -651,7 +651,7 @@ div.plans {
 
   .plans.container .middle-content {
     margin: -68px 180px 0 160px !important;
-    background-image: url('../../assets/images/plan_wenli.jpg') !important;
+    background-image: url('/src/assets/images/plan_wenli.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
 
@@ -783,6 +783,1266 @@ div.plans {
 
   .aboutus.container .bottom-section {
     padding: 0px 310px 0 310px !important;
+  }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1799px) {
+  transform: scale(0.89);
+
+  .header .logo a {
+    margin: 20px 0 0 210px !important;
+
+    .logo {
+      width: 142px !important;
+
+      img {
+        width: 142px !important;
+      }
+    }
+  }
+
+  .header .navbar {
+    margin-left: calc(34vw + 47.5px) !important;
+    margin-top: calc(3.95vh + 0px) !important;
+
+    a {
+      &:first-child {
+        .navbar-item {
+          width: 40px !important;
+        }
+      }
+    }
+
+    &-item {
+      margin: -6px 30px 0px 30px !important;
+      width: 75px !important;
+      min-width: 40px !important;
+      font-size: 18.5px !important;
+    }
+  }
+
+  .aboutus.container .top-section .banner {
+    margin: 215px 0 0 -100px !important;
+
+    .text {
+      font-size: 50px !important;
+    }
+
+    .text.en {
+      font-weight: 600 !important;
+      font-size: 18px !important;
+      margin: 5px 0 0 0 !important;
+    }
+  }
+
+  .aboutus.container {
+    height: calc(2215px) !important;
+  }
+
+  .aboutus.container .middle-section .banner {
+    margin: -50px 30px 0 0 !important;
+  }
+
+  .aboutus.container .middle-section {
+    margin: 0px 230px 0 230px !important;
+
+    .image img {
+      margin: 160px 0 0 70px !important;
+    }
+
+    .banner {
+      .upper {
+        margin: 30px 0 10px 0px !important;
+        padding: 10px 0px 10px 0px !important;
+        font-size: 34px !important;
+
+        .shadow-text {
+          top: 53px !important;
+          left: -2px !important;
+          font-size: 72px !important;
+          letter-spacing: -3px !important;
+        }
+
+        .bottom-text {
+          top: 107px !important;
+          left: 0px !important;
+          font-size: 16px !important;
+        }
+      }
+
+      .content {
+        left: 14px !important;
+        top: 198px !important;
+
+        p {
+          line-height: 1.8 !important;
+          text-indent: 2em !important;
+          font-size: 16px !important;
+
+          &:nth-child(2) {
+            font-size: 16px !important;
+            margin: -10px 0 0 0;
+          }
+
+          &:nth-child(3) {
+            font-size: 16px !important;
+            margin: 0px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 120px !important;
+    top: calc(50% + 0px) !important;
+
+    .segment {
+      height: 64px !important;
+    }
+  }
+
+  .home .carousel-container .banner .bg-button {
+    width: 161px;
+    height: 49px;
+    left: 264px;
+    top: calc(50vh + 80px);
+
+    .content {
+      margin: 10px 22px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .home .carousel-container {
+    .carousel-slide {
+      &:not(:first-child) {
+        .banner .banner-title .subTitle {
+          left: -182px;
+          top: 118px;
+          font-size: 34px;
+          width: 700px;
+          letter-spacing: -3px;
+        }
+
+        .banner .bg-button {
+          width: 161px;
+          height: 49px;
+          left: 200px;
+          top: calc(50vh + 90px);
+        }
+      }
+    }
+  }
+
+  .home .carousel-container .banner .banner-title {
+    font-size: 64.5px;
+    left: 269px !important;
+    top: 395px !important;
+
+    .subTitle {
+      left: -33px;
+      top: 90px;
+      font-size: 22px;
+      width: 700px;
+      letter-spacing: 0px;
+    }
+  }
+
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .tooltip {
+        font-size: 11.5px !important;
+        right: 95px !important;
+        top: calc(50vh - 108px) !important;
+      }
+    }
+
+    &:nth-child(2) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh - 55.5px) !important;
+      }
+    }
+
+    &:nth-child(3) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 10px) !important;
+      }
+    }
+
+    &:nth-child(4) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 78px) !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner-title {
+        left: 202px !important;
+        top: 399px !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 11px !important;
+    right: 194px !important;
+    font-size: 16.5px !important;
+  }
+
+  .plans.container .top-section .banner {
+    margin: 205px 0 0 -100px !important;
+  }
+
+  .plans.container .bottom-section .banner .text {
+    padding: 2px 0 0 0 !important;
+    font-size: 34px !important;
+
+    &.en {
+      font-size: 16px !important;
+    }
+
+    &.indicate {
+      font-size: 16px !important;
+    }
+  }
+
+  .plans.container .middle-content {
+    margin: -68px 115px 0 115px !important;
+    background-image: url('/src/assets/images/plan_wenli.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+    .upper {
+      font-size: 34px !important;
+      margin: 100px 0 10px 84px !important;
+
+      .shadow-text {
+        font-size: 72px !important;
+      }
+
+      .bottom-text {
+        font-size: 16px !important;
+      }
+    }
+
+    .description {
+      text-indent: 2em !important;
+      margin: 65px 87.5px 53.5px 87.5px !important;
+      font-size: 16px !important;
+      line-height: 30px !important;
+    }
+
+    .index-container {
+      margin: 30px 0 0 60px !important;
+      transform: scale(0.90);
+
+      .box {
+        width: 386px;
+        height: 170px;
+        margin-right: 50.5px !important;
+
+        .indicator-component {
+          margin: -90px 0 0 20px !important;
+        }
+
+        .upper {
+          span.num {
+            font-size: 52px !important;
+          }
+
+          span.unit {
+            font-size: 24px !important;
+          }
+        }
+
+        .descript {
+          font-size: 18px !important;
+          margin: 0 0 0 50px !important;
+        }
+      }
+    }
+  }
+
+  .plans.container {
+    overflow: hidden !important;
+    height: calc(1810px) !important;
+  }
+
+  .project-cases.container {
+    overflow: hidden !important;
+    height: calc(1810px) !important;
+  }
+
+  .project-cases .content-box-1 .intelligent-operation-box {
+    transform: scale(0.95) !important;
+    margin: -68px 0 0 120px !important;
+    .title-box {
+      padding: 33px 0 0 65px !important;
+    }
+    .case-box {
+      margin: 25px 0 0 0 !important;
+    }
+  }
+
+  .project-cases .banner-box {
+    .banner-title-ch {
+      margin: -20px 0 0 -180px !important;
+    }
+    .banner-title-en {
+      margin: 15px 0 0 -180px !important;
+    }
+  }
+
+  .project-cases .content-box-2 {
+    overflow-y: hidden !important;
+
+    .smart-agriculture-box {
+      transform: scale(0.95) !important;
+      margin: 0px 0 0 200px !important;
+      overflow-y: hidden !important;
+
+      .title-box {
+        padding: 35px 0 42px 0px !important;
+      }
+
+      .case-box {
+        margin: 0 0 0 28px !important;
+      }
+    }
+  }
+
+  .plans.container .bottom-section .banner {
+    margin: 40px 0 0 200px !important;
+  }
+
+  .plans.container .bottom-section .business-container {
+    margin: 240px 80px 0px calc(26vw + 0px) !important;
+
+    .box {
+      width: 322px !important;
+      height: 442px !important;
+
+      .icon {
+        margin: 60px 0 10px 35% !important;
+        font-size: 74px !important;
+        height: 75px !important;
+        color: #686868 !important;
+      }
+
+      .text-content {
+        height: 415px !important;
+
+        .title {
+          font-size: 24px !important;
+          color: #333333 !important;
+          margin: 7.5px 0 12.5px 0 !important;
+          opacity: 1 !important;
+        }
+
+        .text {
+          font-size: 13px !important;
+          margin: 15px 75px 10px 75px !important;
+          color: #999999 !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+
+  .plans.container .middle-content .index-container .three-box-layout .card-component {
+    width: 100% !important;
+    height: 170px !important;
+    padding-left: 50px !important;
+
+    .icon-box .iconfont {
+      font-size: 78px !important;
+    }
+
+    .label-box .label-ch-text {
+      font-size: 26px !important;
+    }
+
+    .label-box .label-en-text {
+      font-size: 16px !important;
+    }
+  }
+
+  .aboutus.container .submid-section {
+    padding: 0px 230px 0 230px !important;
+
+    .banner {
+      margin: -20px auto 0 !important;
+    }
+
+    .content-container {
+      width: calc(100%/0.85) !important;
+      margin: 10.5px 0 0 -110px !important;
+      transform: scale(0.85) !important;
+    }
+  }
+
+  .aboutus.container .bottom-section {
+    padding: 0px 230px 0 230px !important;
+
+    .title-box {
+      margin: 38px 0 0 0 !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1650px) and (max-width: 1699px) {
+  transform: scale(0.86);
+
+  .header .logo a {
+    margin: 20px 0 0 210px !important;
+
+    .logo {
+      width: 142px !important;
+
+      img {
+        width: 142px !important;
+      }
+    }
+  }
+
+  .header .navbar {
+    margin-left: calc(34vw + 47.5px) !important;
+    margin-top: calc(3.95vh + 0px) !important;
+
+    a {
+      &:first-child {
+        .navbar-item {
+          width: 40px !important;
+        }
+      }
+    }
+
+    &-item {
+      margin: -6px 30px 0px 30px !important;
+      width: 75px !important;
+      min-width: 40px !important;
+      font-size: 18.5px !important;
+    }
+  }
+
+  .aboutus.container .top-section .banner {
+    margin: 185px 0 0 -170px !important;
+
+    .text {
+      font-size: 50px !important;
+    }
+
+    .text.en {
+      font-weight: 600 !important;
+      font-size: 18px !important;
+      margin: 5px 0 0 0 !important;
+    }
+  }
+
+  .aboutus.container {
+    overflow: hidden;
+    height: calc(2105px) !important;
+  }
+
+  .aboutus.container .middle-section .banner {
+    margin: -50px 30px 0 0 !important;
+  }
+
+  .aboutus.container .middle-section {
+    margin: 0px 155px 0 155px !important;
+
+    .image img {
+      margin: 139px 0 0 45px !important;
+    }
+
+    .banner {
+      .upper {
+        margin: 15px 0 10px 0px !important;
+        padding: 10px 0px 10px 0px !important;
+        font-size: 34px !important;
+
+        .shadow-text {
+          top: 53px !important;
+          left: -2px !important;
+          font-size: 72px !important;
+          letter-spacing: -3px !important;
+        }
+
+        .bottom-text {
+          top: 107px !important;
+          left: 0px !important;
+          font-size: 16px !important;
+        }
+      }
+
+      .content {
+        left: 14px !important;
+        top: 178px !important;
+
+        p {
+          line-height: 1.8 !important;
+          text-indent: 2em !important;
+          font-size: 16px !important;
+
+          &:nth-child(2) {
+            font-size: 16px !important;
+            margin: -10px 0 0 0;
+          }
+
+          &:nth-child(3) {
+            font-size: 16px !important;
+            margin: 0px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 120px !important;
+    top: calc(50% + 0px) !important;
+
+    .segment {
+      height: 64px !important;
+    }
+  }
+
+  .home .carousel-container .banner .bg-button {
+    width: 161px;
+    height: 49px;
+    left: 264px;
+    top: calc(50vh + 80px);
+
+    .content {
+      margin: 10px 22px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .home .carousel-container {
+    .carousel-slide {
+      &:not(:first-child) {
+        .banner .banner-title .subTitle {
+          left: -182px;
+          top: 118px;
+          font-size: 34px;
+          width: 700px;
+          letter-spacing: -3px;
+        }
+
+        .banner .bg-button {
+          width: 161px;
+          height: 49px;
+          left: 200px;
+          top: calc(50vh + 90px);
+        }
+      }
+    }
+  }
+
+  .home .carousel-container .banner .banner-title {
+    font-size: 64.5px;
+    left: 269px !important;
+    top: 395px !important;
+
+    .subTitle {
+      left: -33px;
+      top: 90px;
+      font-size: 22px;
+      width: 700px;
+      letter-spacing: 0px;
+    }
+  }
+
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .tooltip {
+        font-size: 11.5px !important;
+        right: 95px !important;
+        top: calc(50vh - 108px) !important;
+      }
+    }
+
+    &:nth-child(2) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh - 55.5px) !important;
+      }
+    }
+
+    &:nth-child(3) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 10px) !important;
+      }
+    }
+
+    &:nth-child(4) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 78px) !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner-title {
+        left: 202px !important;
+        top: 399px !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 11px !important;
+    right: 194px !important;
+    font-size: 16.5px !important;
+  }
+
+  .plans.container .top-section .banner {
+    margin: 190px 0 0 -160px !important;
+  }
+
+  .plans.container .bottom-section .banner .text {
+    padding: 2px 0 0 0 !important;
+    font-size: 34px !important;
+
+    &.en {
+      font-size: 16px !important;
+    }
+
+    &.indicate {
+      font-size: 16px !important;
+    }
+  }
+
+  .plans.container .middle-content {
+    margin: -68px 85px 0 85px !important;
+    transform: scale(0.95) !important;
+    background-image: url('/src/assets/images/plan_wenli.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+    .upper {
+      font-size: 34px !important;
+      margin: 70px 0 10px 64px !important;
+
+      .shadow-text {
+        font-size: 72px !important;
+      }
+
+      .bottom-text {
+        font-size: 16px !important;
+      }
+    }
+
+    .description {
+      text-indent: 2em !important;
+      margin: 65px 87.5px 53.5px 87.5px !important;
+      font-size: 16px !important;
+      line-height: 30px !important;
+    }
+
+    .index-container {
+      margin: 30px 0 0 60px !important;
+      transform: scale(0.90) !important;
+
+      .box {
+        margin-right: 50.5px !important;
+
+        .indicator-component {
+          margin: -50px 0 0 35px !important;
+        }
+
+        .upper {
+          span.num {
+            font-size: 52px !important;
+          }
+
+          span.unit {
+            font-size: 24px !important;
+          }
+        }
+
+        .descript {
+          font-size: 18px !important;
+          margin: 0 0 0 50px !important;
+        }
+      }
+    }
+  }
+
+  .plans.container {
+    overflow: hidden !important;
+    height: calc(1685px) !important;
+  }
+
+  .project-cases.container {
+    overflow: hidden !important;
+    height: calc(1685px) !important;
+  }
+
+  .project-cases .content-box-1 .intelligent-operation-box {
+    transform: scale(0.91) !important;
+    margin: -68px 0 0 98px !important;
+    .title-box {
+      padding: 33px 0 0 65px !important;
+    }
+    .case-box {
+      margin: 15px 0 0 0 !important;
+
+      .case-item-box{
+        width: 306px !important;
+        height: 473px !important;
+
+        .img-box {
+            height: 268px !important; 
+        }
+      }
+    }
+  }
+
+  .project-cases .banner-box {
+    .banner-title-ch {
+      margin: -45px 0 0 -330px !important;
+    }
+    .banner-title-en {
+      margin: 15px 0 0 -330px !important;
+    }
+  }
+
+  .project-cases .content-box-2 {
+    overflow-y: hidden !important;
+
+    .smart-agriculture-box {
+      transform: scale(0.91) !important;
+      margin: 0px 0 0 170px !important;
+      overflow-y: hidden !important;
+
+      .title-box {
+        padding: 15px 0 42px 0px !important;
+      }
+
+      .case-box {
+        margin: 0 0 0 28px !important;
+      }
+    }
+  }
+
+  .plans.container .bottom-section .banner {
+    margin: 40px 0 0 185px !important;
+  }
+
+  .plans.container .bottom-section .business-container {
+    margin: 220px 80px 0px calc(23vw + 0px) !important;
+
+    .box {
+      width: calc(322px * 0.98) !important;
+      height: calc(442px * 0.98) !important;
+
+      .icon {
+        margin: 60px 0 10px 35% !important;
+        font-size: 74px !important;
+        height: 75px !important;
+        color: #686868 !important;
+      }
+
+      .text-content {
+        height: 415px !important;
+
+        .title {
+          font-size: 24px !important;
+          color: #333333 !important;
+          margin: 7.5px 0 12.5px 0 !important;
+          opacity: 1 !important;
+        }
+
+        .text {
+          font-size: 13px !important;
+          margin: 15px 75px 10px 75px !important;
+          color: #999999 !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+
+  .plans.container .middle-content .index-container .three-box-layout .card-component {
+    width: 100% !important;
+    height: 170px !important;
+    padding-left: 50px !important;
+
+    .icon-box .iconfont {
+      font-size: 78px !important;
+    }
+
+    .label-box .label-ch-text {
+      font-size: 26px !important;
+    }
+
+    .label-box .label-en-text {
+      font-size: 16px !important;
+    }
+  }
+
+  .aboutus.container .submid-section {
+    padding: 0px 165px 0 165px !important;
+
+    .banner {
+      margin: -20px auto 0 !important;
+    }
+
+    .content-container {
+      width: calc(100%/0.88) !important;
+      margin: 0.5px 0 0 -110.5px !important;
+      transform: scale(0.84) !important;
+    }
+  }
+
+  .aboutus.container .bottom-section .map-container {
+    transform: scale(0.90) !important;
+    margin: 30px 0 0 -30px !important;
+  }
+
+  .aboutus.container .bottom-section {
+    overflow: hidden;
+    padding: 0px 165px 0 165px !important;
+
+    .title-box {
+      margin: 38px 0 0 0 !important;
+    }
+  }
+
+  .footer {
+    padding: 0 100px !important;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1649px) {
+  transform: scale(0.83);
+
+  .header .logo a {
+    margin: 20px 0 0 210px !important;
+
+    .logo {
+      width: 142px !important;
+
+      img {
+        width: 142px !important;
+      }
+    }
+  }
+
+  .header .navbar {
+    margin-left: calc(34vw + 47.5px) !important;
+    margin-top: calc(3.95vh + 0px) !important;
+
+    a {
+      &:first-child {
+        .navbar-item {
+          width: 40px !important;
+        }
+      }
+    }
+
+    &-item {
+      margin: -6px 30px 0px 30px !important;
+      width: 75px !important;
+      min-width: 40px !important;
+      font-size: 18.5px !important;
+    }
+  }
+
+  .aboutus.container .top-section .banner {
+    margin: 185px 0 0 -170px !important;
+
+    .text {
+      font-size: 50px !important;
+    }
+
+    .text.en {
+      font-weight: 600 !important;
+      font-size: 18px !important;
+      margin: 5px 0 0 0 !important;
+    }
+  }
+
+  .aboutus.container {
+    overflow: hidden;
+    height: calc(2105px) !important;
+  }
+
+  .aboutus.container .middle-section .banner {
+    margin: -50px 30px 0 0 !important;
+  }
+
+  .aboutus.container .middle-section {
+    margin: 0px 140px 0 140px !important;
+
+    .image img {
+      margin: 139px 0 0 45px !important;
+    }
+
+    .banner {
+      .upper {
+        margin: 15px 0 10px 0px !important;
+        padding: 10px 0px 10px 0px !important;
+        font-size: 34px !important;
+
+        .shadow-text {
+          top: 53px !important;
+          left: -2px !important;
+          font-size: 72px !important;
+          letter-spacing: -3px !important;
+        }
+
+        .bottom-text {
+          top: 107px !important;
+          left: 0px !important;
+          font-size: 16px !important;
+        }
+      }
+
+      .content {
+        left: 14px !important;
+        top: 178px !important;
+
+        p {
+          line-height: 1.8 !important;
+          text-indent: 2em !important;
+          font-size: 16px !important;
+
+          &:nth-child(2) {
+            font-size: 16px !important;
+            margin: -10px 0 0 0;
+          }
+
+          &:nth-child(3) {
+            font-size: 16px !important;
+            margin: 0px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 120px !important;
+    top: calc(50% + 0px) !important;
+
+    .segment {
+      height: 64px !important;
+    }
+  }
+
+  .home .carousel-container .banner .bg-button {
+    width: 161px;
+    height: 49px;
+    left: 264px;
+    top: calc(50vh + 80px);
+
+    .content {
+      margin: 10px 22px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .home .carousel-container {
+    .carousel-slide {
+      &:not(:first-child) {
+        .banner .banner-title .subTitle {
+          left: -182px;
+          top: 118px;
+          font-size: 34px;
+          width: 700px;
+          letter-spacing: -3px;
+        }
+
+        .banner .bg-button {
+          width: 161px;
+          height: 49px;
+          left: 200px;
+          top: calc(50vh + 90px);
+        }
+      }
+    }
+  }
+
+  .home .carousel-container .banner .banner-title {
+    font-size: 64.5px;
+    left: 269px !important;
+    top: 395px !important;
+
+    .subTitle {
+      left: -33px;
+      top: 90px;
+      font-size: 22px;
+      width: 700px;
+      letter-spacing: 0px;
+    }
+  }
+
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .tooltip {
+        font-size: 11.5px !important;
+        right: 95px !important;
+        top: calc(50vh - 108px) !important;
+      }
+    }
+
+    &:nth-child(2) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh - 55.5px) !important;
+      }
+    }
+
+    &:nth-child(3) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 10px) !important;
+      }
+    }
+
+    &:nth-child(4) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 78px) !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner-title {
+        left: 202px !important;
+        top: 399px !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 11px !important;
+    right: 194px !important;
+    font-size: 16.5px !important;
+  }
+
+  .plans.container .top-section .banner {
+    margin: 190px 0 0 -140px !important;
+  }
+
+  .plans.container .bottom-section .banner .text {
+    padding: 2px 0 0 0 !important;
+    font-size: 34px !important;
+
+    &.en {
+      font-size: 16px !important;
+    }
+
+    &.indicate {
+      font-size: 16px !important;
+    }
+  }
+
+  .plans.container .middle-content {
+    margin: -68px 55px 0 55px !important;
+    transform: scale(0.95) !important;
+    background-image: url('/src/assets/images/plan_wenli.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+    .upper {
+      font-size: 34px !important;
+      margin: 70px 0 10px 64px !important;
+
+      .shadow-text {
+        font-size: 72px !important;
+      }
+
+      .bottom-text {
+        font-size: 16px !important;
+      }
+    }
+
+    .description {
+      text-indent: 2em !important;
+      margin: 65px 87.5px 53.5px 87.5px !important;
+      font-size: 16px !important;
+      line-height: 30px !important;
+    }
+
+    .index-container {
+      margin: 30px 0 0 60px !important;
+      transform: scale(0.90) !important;
+
+      .box {
+        margin-right: 50.5px !important;
+
+        .indicator-component {
+          margin: -50px 0 0 35px !important;
+        }
+
+        .upper {
+          span.num {
+            font-size: 52px !important;
+          }
+
+          span.unit {
+            font-size: 24px !important;
+          }
+        }
+
+        .descript {
+          font-size: 18px !important;
+          margin: 0 0 0 50px !important;
+        }
+      }
+    }
+  }
+
+  .plans.container {
+    overflow: hidden !important;
+    height: calc(1685px) !important;
+  }
+
+  .project-cases.container {
+    overflow: hidden !important;
+    height: calc(1685px) !important;
+  }
+
+  .project-cases .content-box-1 .intelligent-operation-box {
+    transform: scale(0.91) !important;
+    margin: -68px 0 0 60px !important;
+    .title-box {
+      padding: 33px 0 0 65px !important;
+    }
+    .case-box {
+      margin: 15px 0 0 0 !important;
+
+      .case-item-box{
+        width: 306px !important;
+        height: 473px !important;
+
+        .img-box {
+            height: 268px !important; 
+        }
+      }
+    }
+  }
+
+  .project-cases .banner-box {
+    .banner-title-ch {
+      margin: -45px 0 0 -350px !important;
+    }
+    .banner-title-en {
+      margin: 15px 0 0 -350px !important;
+    }
+  }
+
+  .project-cases .content-box-2 {
+    overflow-y: hidden !important;
+
+    .smart-agriculture-box {
+      transform: scale(0.91) !important;
+      margin: 0px 0 0 130px !important;
+      overflow-y: hidden !important;
+
+      .title-box {
+        padding: 15px 0 42px 0px !important;
+      }
+
+      .case-box {
+        margin: 0 0 0 28px !important;
+      }
+    }
+  }
+
+  .plans.container .bottom-section .banner {
+    margin: 40px 0 0 155px !important;
+  }
+
+  .plans.container .bottom-section .business-container {
+    margin: 220px 80px 0px calc(23vw + 0px) !important;
+
+    .box {
+      width: calc(322px * 0.98) !important;
+      height: calc(442px * 0.98) !important;
+
+      .icon {
+        margin: 60px 0 10px 35% !important;
+        font-size: 74px !important;
+        height: 75px !important;
+        color: #686868 !important;
+      }
+
+      .text-content {
+        height: 415px !important;
+
+        .title {
+          font-size: 24px !important;
+          color: #333333 !important;
+          margin: 7.5px 0 12.5px 0 !important;
+          opacity: 1 !important;
+        }
+
+        .text {
+          font-size: 13px !important;
+          margin: 15px 75px 10px 75px !important;
+          color: #999999 !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+
+  .plans.container .middle-content .index-container .three-box-layout .card-component {
+    width: 100% !important;
+    height: 170px !important;
+    padding-left: 50px !important;
+
+    .icon-box .iconfont {
+      font-size: 78px !important;
+    }
+
+    .label-box .label-ch-text {
+      font-size: 26px !important;
+    }
+
+    .label-box .label-en-text {
+      font-size: 16px !important;
+    }
+  }
+
+  .aboutus.container .submid-section {
+    padding: 0px 150px 0 150px !important;
+
+    .banner {
+      margin: -20px auto 0 !important;
+    }
+
+    .content-container {
+      width: calc(100%/0.80) !important;
+      margin: 0.5px 0 0 -157.5px !important;
+      transform: scale(0.80) !important;
+    }
+  }
+
+  .aboutus.container .bottom-section {
+    overflow: hidden;
+    padding: 0px 150px 0 150px !important;
+
+    .title-box {
+      margin: 38px 0 0 0 !important;
+    }
+  }
+
+  .footer {
+    padding: 0 100px !important;
   }
 }
 
@@ -975,125 +2235,6 @@ div.plans {
     }
   }
 
-}
-
-@media screen and (min-width: 1650px) and (max-width: 1680px) {
-  .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
-      .banner .tooltip {
-        top: calc(50vh - 96.5px) !important;
-      }
-    }
-
-    &:nth-child(3) {
-      .banner .tooltip {
-        top: calc(50vh + 6px) !important;
-      }
-    }
-
-    &:nth-child(4) {
-      .banner .tooltip {
-        top: calc(50vh + 68px) !important;
-      }
-    }
-  }
-
-  .plans .top-section .banner {
-    margin: 240px 0 0 0 !important;
-
-    .text {
-      font-size: 59px !important;
-
-      &.en {
-        font-size: 22px !important;
-      }
-    }
-  }
-
-  .plans.container .middle-content .index-container {
-    .box {
-      .indicator-component {
-        margin: 25px 0 0 70px !important;
-      }
-    }
-  }
-
-  .plans.container .middle-content .index-container .three-box-layout .card-component {
-    width: 415px;
-  }
-
-  .aboutus.container .middle-section {
-    margin: 30px 80px 0 120px !important;
-    overflow: hidden !important;
-
-    .banner {
-      padding: 8px !important;
-      margin: 0px 30px 0 0 !important;
-
-      .upper {
-        margin: 40px 0 10px 10px !important;
-        font-size: 42px !important;
-        line-height: 39px !important;
-
-        .shadow-text {
-          top: -20px !important;
-          font-size: 90px !important;
-        }
-
-        .bottom-text {
-          top: 50px !important;
-          font-size: 24px !important;
-          line-height: 39px !important;
-        }
-      }
-
-      .content {
-        position: absolute;
-        left: 35px;
-        top: 150px !important;
-
-        p {
-          line-height: 1.8 !important;
-          text-indent: 1.8em !important;
-          font-size: 18px !important;
-        }
-      }
-    }
-
-    .image {
-      padding: 8px !important;
-
-      img {
-        margin: 168px 0 0 30px !important;
-      }
-    }
-  }
-
-  .aboutus.container .submid-section {
-    padding: 0px 140px 0 140px !important;
-
-    .title-box {
-      margin-bottom: 50px !important;
-    }
-
-    .content-container {
-      height: 415px !important;
-
-      .horizontal-scroll-box {
-        img {
-          max-height: 415px !important;
-        }
-
-        .honor-item+.honor-item {
-          margin-left: 12px;
-        }
-      }
-    }
-  }
-
-  .aboutus.container .bottom-section {
-    padding: 0px 140px 0 140px !important;
-  }
 }
 </style>
 <style scoped lang="scss">
