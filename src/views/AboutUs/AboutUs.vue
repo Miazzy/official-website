@@ -10,7 +10,7 @@
 
     <!-- 中部区域 -->
     <div class="middle-section" :style="{ height: middleHeight + 'px', }">
-      <div class="banner" :style="{ width: (bnrWidth * 1.03)+ 'px' }">
+      <div class="banner" :style="{ width: (bnrWidth * 1.03) + 'px' }">
         <div class="upper">
           {{ options.company.title }}
           <div class="shadow-text">{{ options.company.shadowText }}</div>
@@ -20,7 +20,7 @@
           <p v-for="(text, index) in options.company.description" :key="index"> {{ text }}</p>
         </div>
       </div>
-      <div class="image" >
+      <div class="image">
         <img src="../../assets/images/aboutus_company.jpg" alt="公司照片"
           :style="{ width: imageWidth + 'px', height: imageHeight + 'px' }">
       </div>
@@ -57,12 +57,13 @@
           <div class="business-container">
             <div class="business-item" v-for="(item, index) in options.contact.business" :key="index">
               <i class="iconfont" :class="item.icon"></i>
-              <span class="business-text">{{item.title}}</span>
+              <span class="business-text">{{ item.title }}</span>
             </div>
           </div>
         </div>
         <div class="right-content">
-          <div id="map-container" class="map-container" :style="{ width: bnrWidth + 'px', height: parseInt(bnrWidth * 0.638) + 'px' }"></div>
+          <div id="map-container" class="map-container"
+            :style="{ width: bnrWidth + 'px', height: parseInt(bnrWidth * 0.638) + 'px' }"></div>
         </div>
       </div>
     </div>
@@ -143,8 +144,8 @@ const initMap = () => {
   mapObject.value = new BMapGL.Map('map-container'); // 创建Map实例
   mapObject.value.setMapType(BMAP_NORMAL_MAP); // 设置地图类型为地球模式
   mapObject.value.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
-  mapObject.value.centerAndZoom(new BMapGL.Point(104.074384,30.556542), 16); // 初始化地图,设置中心点坐标和地图级别
-  let marker = new BMapGL.Marker(new BMapGL.Point(104.074384,30.556542));
+  mapObject.value.centerAndZoom(new BMapGL.Point(104.074384, 30.556542), 16); // 初始化地图,设置中心点坐标和地图级别
+  let marker = new BMapGL.Marker(new BMapGL.Point(104.074384, 30.556542));
   mapObject.value.addOverlay(marker);
 };
 
@@ -315,7 +316,7 @@ onBeforeUnmount(() => {
         margin: 0 0 0 0;
       }
     }
-  
+
     .content-container {
       width: 100%;
       height: 402px;
@@ -335,13 +336,13 @@ onBeforeUnmount(() => {
         .honor-item {
           max-height: 402px;
 
-          & + .honor-item {
-          margin-left: 18px;
+          &+.honor-item {
+            margin-left: 18px;
 
-          img {
-            max-height: 402px;
+            img {
+              max-height: 402px;
+            }
           }
-        }
         }
       }
     }
@@ -358,9 +359,11 @@ onBeforeUnmount(() => {
       width: 100%;
       margin: 0px auto 0;
       display: flex;
+
       .left-content {
         width: 45%;
       }
+
       .right-content {
         width: 55%;
       }
@@ -395,6 +398,7 @@ onBeforeUnmount(() => {
           margin-right: 8px;
           line-height: 49px;
         }
+
         .business-text {
           font-weight: 400;
           font-size: 16px;
@@ -402,10 +406,11 @@ onBeforeUnmount(() => {
           line-height: 49px;
         }
 
-        & + .business-item {
+        &+.business-item {
           .iconfont {
             line-height: 45px;
           }
+
           .business-text {
             line-height: 45px;
             margin: -2px 0 0 0;
@@ -427,8 +432,80 @@ onBeforeUnmount(() => {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-50%);
+    }
+  }
+}
+
+.aboutus.container .submid-section {
+  padding: 0px 310px 0 310px;
+}
+
+.aboutus.container .bottom-section {
+  padding: 0px 310px 0 310px;
+}
+
+.aboutus.container .top-section .banner {
+  margin: 271px 0 0 0;
+
+  .text {
+    font-size: 50px;
+  }
+
+  .text.en {
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+.aboutus.container .middle-section {
+  margin: 0px 305px 0 305px;
+
+  .image img {
+    margin: 208px 0 0 50px;
+  }
+
+  .banner {
+    .upper {
+      margin: 30px 0 10px 0px;
+      padding: 10px 0px 10px 0px;
+      font-size: 34px;
+
+      .shadow-text {
+        top: 53px;
+        left: -2px;
+        font-size: 72px;
+        letter-spacing: -3px;
+      }
+
+      .bottom-text {
+        top: 107px;
+        left: 0px;
+        font-size: 16px;
+      }
+    }
+
+    .content {
+      left: 14px;
+      top: 198px;
+
+      p {
+        line-height: 1.8;
+        text-indent: 2em;
+        font-size: 16px;
+
+        &:nth-child(2) {
+          font-size: 16px;
+          margin: -10px 0 0 0;
+        }
+
+        &:nth-child(3) {
+          font-size: 16px;
+          margin: 0px 0 0 0;
+        }
+      }
     }
   }
 }

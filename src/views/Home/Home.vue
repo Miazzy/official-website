@@ -4,7 +4,7 @@
       <template #one>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home01.jpg" />
+            <img src="../../assets/images/home01.png" />
           </div>
           <h1 class="banner-title">
             渔光一体智能运营专家
@@ -24,9 +24,9 @@
       <template #two>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home02.jpg" />
+            <img src="../../assets/images/home02.png" />
           </div>
-          <h1 class="banner-title" >
+          <h1 class="banner-title">
             新能源电站智能运营方案
             <div class="subTitle lang">专业化、智能化、一体化</div>
           </h1>
@@ -56,9 +56,9 @@
       <template #three>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home03.jpg" />
+            <img src="../../assets/images/home03.png" />
           </div>
-          <h1 class="banner-title" >
+          <h1 class="banner-title">
             智慧农业解决方案
             <div class="subTitle lang">集约化、智能化、高效化</div>
           </h1>
@@ -76,7 +76,7 @@
       <template #four>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home04.jpg" />
+            <img src="../../assets/images/home04.png" />
           </div>
           <h1 class="banner-title">
             信息化解决方案
@@ -259,7 +259,7 @@ onMounted(() => {
 
       .text {
         margin-right: 10px;
-        font-family: fangsong;
+        font-family: Source Han Sans CN;
       }
 
       .icon {
@@ -335,4 +335,105 @@ onMounted(() => {
   }
 }
 
+
+.home .carousel-container .indicator {
+  right: 120px ;
+  top: calc(50% + 0px) ;
+
+  .segment {
+    height: 64px ;
+  }
+}
+
+.home .carousel-container .banner .bg-button {
+  width: 161px;
+  height: 49px;
+  left: 264px;
+  top: calc(50vh + 80px);
+
+  .content {
+    margin: 10px 22px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.home .carousel-container {
+  .carousel-slide {
+    &:not(:first-child) {
+      .banner .banner-title .subTitle {
+        left: -182px;
+        top: 118px;
+        font-size: 34px;
+        width: 700px;
+        letter-spacing: -3px;
+      }
+
+      .banner .bg-button {
+        width: 161px;
+        height: 49px;
+        left: 200px;
+        top: calc(50vh + 90px);
+      }
+    }
+  }
+}
+
+.home .carousel-container .banner .banner-title {
+  font-size: 64.5px;
+  left: 269px ;
+  top: 395px ;
+
+  .subTitle {
+    left: -33px;
+    top: 90px;
+    font-size: 22px;
+    width: 700px;
+    letter-spacing: 0px;
+  }
+}
+
+.home .carousel-container .carousel-slide {
+  &:nth-child(1) {
+    .banner .tooltip {
+      font-size: 11.5px ;
+      right: 95px ;
+      top: calc(50vh - 108px) ;
+    }
+  }
+
+  &:nth-child(2) {
+    .banner .tooltip {
+      right: 95px ;
+      top: calc(50vh - 55.5px) ;
+    }
+  }
+
+  &:nth-child(3) {
+    .banner .tooltip {
+      right: 95px ;
+      top: calc(50vh + 10px) ;
+    }
+  }
+
+  &:nth-child(4) {
+    .banner .tooltip {
+      right: 95px ;
+      top: calc(50vh + 78px) ;
+    }
+  }
+
+  &:not(:first-child) {
+    .banner-title {
+      left: 202px ;
+      top: 399px ;
+    }
+  }
+}
+
+.home .copyright {
+  bottom: 11px ;
+  right: 194px ;
+  font-size: 16.5px ;
+}
 </style>

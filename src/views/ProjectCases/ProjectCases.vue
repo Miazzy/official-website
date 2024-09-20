@@ -1,5 +1,5 @@
 <template>
-  <div class="project-cases">
+  <div class="project-cases container">
 
     <div class="banner-box" :style="{ height: topHeight + 'px', }" >
       <h1 class="banner-title-ch">项目案例</h1>

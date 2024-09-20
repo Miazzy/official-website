@@ -204,7 +204,6 @@ div.plans {
         }
       }
     }
-
   }
 
   .home .carousel-container .indicator {
@@ -255,7 +254,7 @@ div.plans {
     left: 269px !important;
     top: 395px !important;
 
-    .subTitle{
+    .subTitle {
       left: -33px;
       top: 90px;
       font-size: 22px;
@@ -393,7 +392,7 @@ div.plans {
 
       .text-content {
         height: 415px !important;
-        
+
         .title {
           font-size: 24px !important;
           color: #333333 !important;
@@ -435,6 +434,386 @@ div.plans {
 
   .aboutus.container .bottom-section {
     padding: 0px 310px 0 310px !important;
+  }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 1900px) {
+  transform: scale(0.95);
+
+  .header .logo a {
+    margin: 20px 0 0 210px !important;
+
+    .logo {
+      width: 142px !important;
+
+      img {
+        width: 142px !important;
+      }
+    }
+  }
+
+  .header .navbar {
+    margin-left: calc(34vw + 47.5px) !important;
+    margin-top: calc(3.95vh + 0px) !important;
+
+    a {
+      &:first-child {
+        .navbar-item {
+          width: 40px !important;
+        }
+      }
+    }
+
+    &-item {
+      margin: -6px 30px 0px 30px !important;
+      width: 75px !important;
+      min-width: 40px !important;
+      font-size: 18.5px !important;
+    }
+  }
+
+  .aboutus.container .top-section .banner {
+    margin: 271px 0 0 0 !important;
+
+    .text {
+      font-size: 50px !important;
+    }
+
+    .text.en {
+      font-weight: 600 !important;
+      font-size: 18px !important;
+    }
+  }
+
+  .aboutus.container .middle-section {
+    margin: 0px 255px 0 255px !important;
+
+    .image img {
+      margin: 208px 0 0 50px !important;
+    }
+
+    .banner {
+      .upper {
+        margin: 30px 0 10px 0px !important;
+        padding: 10px 0px 10px 0px !important;
+        font-size: 34px !important;
+
+        .shadow-text {
+          top: 53px !important;
+          left: -2px !important;
+          font-size: 72px !important;
+          letter-spacing: -3px !important;
+        }
+
+        .bottom-text {
+          top: 107px !important;
+          left: 0px !important;
+          font-size: 16px !important;
+        }
+      }
+
+      .content {
+        left: 14px !important;
+        top: 198px !important;
+
+        p {
+          line-height: 1.8 !important;
+          text-indent: 2em !important;
+          font-size: 16px !important;
+
+          &:nth-child(2) {
+            font-size: 16px !important;
+            margin: -10px 0 0 0;
+          }
+
+          &:nth-child(3) {
+            font-size: 16px !important;
+            margin: 0px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 120px !important;
+    top: calc(50% + 0px) !important;
+
+    .segment {
+      height: 64px !important;
+    }
+  }
+
+  .home .carousel-container .banner .bg-button {
+    width: 161px;
+    height: 49px;
+    left: 264px;
+    top: calc(50vh + 80px);
+
+    .content {
+      margin: 10px 22px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .home .carousel-container {
+    .carousel-slide {
+      &:not(:first-child) {
+        .banner .banner-title .subTitle {
+          left: -182px;
+          top: 118px;
+          font-size: 34px;
+          width: 700px;
+          letter-spacing: -3px;
+        }
+
+        .banner .bg-button {
+          width: 161px;
+          height: 49px;
+          left: 200px;
+          top: calc(50vh + 90px);
+        }
+      }
+    }
+  }
+
+  .home .carousel-container .banner .banner-title {
+    font-size: 64.5px;
+    left: 269px !important;
+    top: 395px !important;
+
+    .subTitle {
+      left: -33px;
+      top: 90px;
+      font-size: 22px;
+      width: 700px;
+      letter-spacing: 0px;
+    }
+  }
+
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .tooltip {
+        font-size: 11.5px !important;
+        right: 95px !important;
+        top: calc(50vh - 108px) !important;
+      }
+    }
+
+    &:nth-child(2) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh - 55.5px) !important;
+      }
+    }
+
+    &:nth-child(3) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 10px) !important;
+      }
+    }
+
+    &:nth-child(4) {
+      .banner .tooltip {
+        right: 95px !important;
+        top: calc(50vh + 78px) !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner-title {
+        left: 202px !important;
+        top: 399px !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 11px !important;
+    right: 194px !important;
+    font-size: 16.5px !important;
+  }
+
+  .plans.container .bottom-section .banner .text {
+    padding: 2px 0 0 0 !important;
+    font-size: 34px !important;
+
+    &.en {
+      font-size: 16px !important;
+    }
+
+    &.indicate {
+      font-size: 16px !important;
+    }
+  }
+
+  .plans.container .middle-content {
+    margin: -68px 180px 0 160px !important;
+    background-image: url('../../assets/images/plan_wenli.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+    .upper {
+      font-size: 34px !important;
+      margin: 100px 0 10px 84px !important;
+
+      .shadow-text {
+        font-size: 72px !important;
+      }
+
+      .bottom-text {
+        font-size: 16px !important;
+      }
+    }
+
+    .description {
+      text-indent: 2em !important;
+      margin: 65px 87.5px 53.5px 87.5px !important;
+      font-size: 16px !important;
+      line-height: 30px !important;
+    }
+
+    .index-container {
+      margin: 100px 0 0 120px !important;
+
+      .box {
+        width: 386px;
+        height: 170px;
+        margin-right: 50.5px !important;
+
+        .indicator-component {
+          margin: -90px 0 0 20px !important;
+        }
+
+        .upper {
+          span.num {
+            font-size: 52px !important;
+          }
+
+          span.unit {
+            font-size: 24px !important;
+          }
+        }
+
+        .descript {
+          font-size: 18px !important;
+          margin: 0 0 0 50px !important;
+        }
+      }
+    }
+  }
+
+  .plans.container {
+    height: calc(1924px) !important;
+  }
+
+  .project-cases.container {
+    height: calc(1924px) !important;
+  }
+
+  .project-cases .content-box-1 .intelligent-operation-box {
+    margin: -68px 0 0 170px !important;
+  }
+
+  .project-cases .content-box-2 .smart-agriculture-box {
+    margin: 0px 0 0 250px !important;
+  }
+
+  .plans.container .bottom-section .banner {
+    margin: 56px 0 0 236px !important;
+  }
+
+  .plans.container .bottom-section .business-container {
+    margin: 270px 80px 0px calc(28vw + 20px) !important;
+
+    .box {
+      width: 322px !important;
+      height: 442px !important;
+
+      .icon {
+        margin: 80px 0 10px 35% !important;
+        font-size: 74px !important;
+        height: 75px !important;
+        color: #686868 !important;
+      }
+
+      .text-content {
+        height: 415px !important;
+
+        .title {
+          font-size: 24px !important;
+          color: #333333 !important;
+          margin: 7.5px 0 12.5px 0 !important;
+          opacity: 1 !important;
+        }
+
+        .text {
+          font-size: 13px !important;
+          margin: 15px 75px 10px 75px !important;
+          color: #999999 !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+
+  .plans.container .middle-content .index-container .three-box-layout .card-component {
+    width: 100% !important;
+    height: 170px !important;
+    padding-left: 50px !important;
+
+    .icon-box .iconfont {
+      font-size: 78px !important;
+    }
+
+    .label-box .label-ch-text {
+      font-size: 26px !important;
+    }
+
+    .label-box .label-en-text {
+      font-size: 16px !important;
+    }
+  }
+
+  .aboutus.container .submid-section {
+    padding: 0px 310px 0 310px !important;
+  }
+
+  .aboutus.container .bottom-section {
+    padding: 0px 310px 0 310px !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) and (min-height: 969px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        left: 269px !important;
+        top: 350px !important;
+
+        .subTitle {
+          top: 85px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 70px) !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        top: 360px !important;
+        .subTitle {
+          top: 102px !important;
+        }
+      }
+      .banner .bg-button {
+        top: calc(50vh + 80px) !important;
+      }
+    }
   }
 }
 

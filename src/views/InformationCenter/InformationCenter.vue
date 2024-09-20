@@ -45,11 +45,11 @@ onMounted(() => {
     background-repeat: no-repeat;
     text-align: center;
     line-height: 1;
-    padding-top: 260px;
+    padding-top: 244px;
 
     .banner-title-ch {
       font-weight: bold;
-      font-size: 64px;
+      font-size: 50px;
       color: #ffffff;
       text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
       margin-bottom: 22px;
@@ -57,7 +57,7 @@ onMounted(() => {
 
     .banner-title-en {
       font-weight: 400;
-      font-size: 24px;
+      font-size: 18px;
       color: #ffffff;
       text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
       opacity: 0.77;

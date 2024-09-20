@@ -226,15 +226,17 @@ onBeforeUnmount(() => {
     .top-section {
       background-image: url('../../assets/images/plan_header_yy.jpg');
     }
+
     .bottom-section {
       background-image: url('../../assets/images/plan_middle_yy.jpg');
     }
   }
 
   &.yz {
-    .top-section{
+    .top-section {
       background-image: url('../../assets/images/plan_header_yz.jpg');
     }
+
     .bottom-section {
       background-image: url('../../assets/images/plan_middle_yz.jpg');
     }
@@ -244,6 +246,7 @@ onBeforeUnmount(() => {
     .top-section {
       background-image: url('../../assets/images/plan_header_xx.jpg');
     }
+
     .bottom-section {
       background-image: url('../../assets/images/plan_middle_xx.jpg');
     }
@@ -292,9 +295,9 @@ onBeforeUnmount(() => {
 
   .middle-content {
     position: absolute;
-    background-image: url('../../assets/images/plan_wenli.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
+    background-image: url('../../assets/images/plan_wenli.jpg');
+    background-size: cover;
+    background-position: center;
     top: 540px;
     width: 1480px;
     height: 623px;
@@ -452,10 +455,12 @@ onBeforeUnmount(() => {
           background: #fefaf6;
           box-shadow: 0px 7px 13px 1px #EF7D1B90;
         }
+
         &.agriculture:hover {
           background: #f5f9f6;
           box-shadow: 0px 7px 13px 1px #318A3690;
         }
+
         &.inform:hover {
           background: #f6fafe;
           box-shadow: 0px 7px 13px 1px #30A8e690;
@@ -468,9 +473,11 @@ onBeforeUnmount(() => {
             &.operation {
               color: #EF7D1B;
             }
+
             &.agriculture {
               color: #318A36;
             }
+
             &.inform {
               color: #30A8E6;
             }
@@ -501,17 +508,138 @@ onBeforeUnmount(() => {
             display: block;
             font-size: 18px;
             font-weight: 300;
-            margin: 5px 55px 7.5px 55px !important;
+            margin: 5px 55px 7.5px 55px;
             color: #000;
             opacity: 0.6;
 
             &:first-child {
-              margin-top: 10px !important;
+              margin-top: 10px;
             }
           }
         }
       }
     }
+  }
+}
+
+.plans.container .bottom-section .banner .text {
+  padding: 2px 0 0 0;
+  font-size: 34px;
+
+  &.en {
+    font-size: 16px;
+  }
+
+  &.indicate {
+    font-size: 16px;
+  }
+}
+
+.plans.container .middle-content {
+  margin: -68px 220px 0 220px;
+  background-image: url('../../assets/images/plan_wenli.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .upper {
+    font-size: 34px;
+    margin: 100px 0 10px 84px;
+
+    .shadow-text {
+      font-size: 72px;
+    }
+
+    .bottom-text {
+      font-size: 16px;
+    }
+  }
+
+  .description {
+    text-indent: 2em;
+    margin: 65px 87.5px 53.5px 87.5px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .index-container {
+    margin: 100px 0 0 120px;
+
+    .box {
+      width: 386px;
+      height: 170px;
+      margin-right: 50.5px;
+
+      .indicator-component {
+        margin: -90px 0 0 20px;
+      }
+
+      .upper {
+        span.num {
+          font-size: 52px;
+        }
+
+        span.unit {
+          font-size: 24px;
+        }
+      }
+
+      .descript {
+        font-size: 18px;
+        margin: 0 0 0 50px;
+      }
+    }
+  }
+}
+
+.plans.container .bottom-section .business-container {
+  margin: 270px 80px 0px calc(28vw + 20px);
+
+  .box {
+    width: 322px;
+    height: 442px;
+
+    .icon {
+      margin: 80px 0 10px 35%;
+      font-size: 74px;
+      height: 75px;
+      color: #686868;
+    }
+
+    .text-content {
+      height: 415px;
+
+      .title {
+        font-size: 24px;
+        color: #333333;
+        margin: 7.5px 0 12.5px 0;
+        opacity: 1;
+      }
+
+      .text {
+        font-size: 13px;
+        margin: 15px 75px 10px 75px;
+        color: #999999;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.plans.container .middle-content .index-container .three-box-layout .card-component {
+  width: 100%;
+  height: 170px;
+  padding-left: 50px;
+
+  .icon-box .iconfont {
+    font-size: 78px;
+  }
+
+  .label-box .label-ch-text {
+    font-size: 26px;
+  }
+
+  .label-box .label-en-text {
+    font-size: 16px;
   }
 }
 </style>
