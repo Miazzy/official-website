@@ -3266,26 +3266,6 @@ div.plans {
     }
   }
 
-  .footer {
-    padding: 0 80px !important;
-
-    .footer-content-column {
-      &:last-child {
-        display: none;
-      }
-    }
-  }
-
-  .el-popper .tooltips-text {
-    padding: 5px 15px !important;
-    transform: scale(0.8) !important;
-    transform-origin: center center !important;
-    margin: -2px 0 0 15px !important;
-  }
-}
-
-@media screen and (min-width: 1250px) and (max-width: 1280px) {
-
   .header .logo a {
     margin: 33.5px 0 0 33px !important;
 
@@ -3446,6 +3426,22 @@ div.plans {
     }
   }
 
+  .footer {
+    padding: 0 80px !important;
+
+    .footer-content-column {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .el-popper .tooltips-text {
+    padding: 5px 15px !important;
+    transform: scale(0.8) !important;
+    transform-origin: center center !important;
+    margin: -2px 0 0 15px !important;
+  }
 }
 </style>
 <style scoped lang="scss">
