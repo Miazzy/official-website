@@ -4,7 +4,7 @@
       <template #one>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home01.png" />
+            <img src="../../assets/images/home01.jpg" />
           </div>
           <h1 class="banner-title">
             渔光一体智能运营专家
@@ -24,7 +24,7 @@
       <template #two>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home02.png" />
+            <img src="../../assets/images/home02.jpg" />
           </div>
           <h1 class="banner-title">
             新能源电站智能运营方案
@@ -56,7 +56,7 @@
       <template #three>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home03.png" />
+            <img src="../../assets/images/home03.jpg" />
           </div>
           <h1 class="banner-title">
             智慧农业解决方案
@@ -76,7 +76,7 @@
       <template #four>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home04.png" />
+            <img src="../../assets/images/home04.jpg" />
           </div>
           <h1 class="banner-title">
             信息化解决方案
