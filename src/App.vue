@@ -2929,19 +2929,21 @@ div.plans {
     margin: 185px 0 0 -170px !important;
 
     .text {
+      transform: scale(0.83);
       font-size: 50px !important;
+      margin: -35px 0 0 -270px
     }
 
     .text.en {
       font-weight: 600 !important;
       font-size: 18px !important;
-      margin: 5px 0 0 0 !important;
+      margin: -5px 0 0 -280px !important;
     }
   }
 
   .aboutus.container {
-    overflow: hidden;
-    height: calc(2105px) !important;
+    overflow: hidden !important;
+    height: calc(1530px) !important;
   }
 
   .aboutus.container .middle-section .banner {
@@ -2949,7 +2951,9 @@ div.plans {
   }
 
   .aboutus.container .middle-section {
-    margin: 0px 140px 0 140px !important;
+    transform: scale(0.67) !important;
+    transform-origin: top left !important;
+    margin: 10px 150px 0 150px !important;
 
     .image img {
       margin: 139px 0 0 45px !important;
@@ -2996,6 +3000,12 @@ div.plans {
         }
       }
     }
+  }
+
+  .aboutus.container .bottom-section .banner {
+    transform: scale(0.67) !important;
+    transform-origin: top left !important;
+    width: calc(111vw) !important;
   }
 
   .plans.container .top-section .banner {
@@ -3080,6 +3090,12 @@ div.plans {
   #container.projectCases {
     main {
       height: calc(1330px) !important;
+    }
+  }
+
+  #container.aboutus {
+    main {
+      height: calc(1530px) !important;
     }
   }
 
@@ -3205,14 +3221,18 @@ div.plans {
   }
 
   .aboutus.container .submid-section {
+    margin: -220px 0 0 0;
     padding: 0px 150px 0 150px !important;
 
     .banner {
-      margin: -20px auto 0 !important;
+      transform: scale(0.67) !important;
+      transform-origin: top left !important;
+      width: calc(100%/0.67) !important;
+      margin: -25px auto 0 !important;
     }
 
     .content-container {
-      width: calc(100%/0.80) !important;
+      width: calc(100%/0.83) !important;
       margin: 0.5px 0 0 -157.5px !important;
       transform: scale(0.80) !important;
     }
@@ -3227,6 +3247,25 @@ div.plans {
     }
   }
 
+  .information-center .banner-box {
+    width: calc(150%) !important;
+    transform: scale(0.67) !important;
+    transform-origin: top left !important;
+  }
+
+  .information-center .content-box {
+    margin: -200px 0 0 0 !important;
+  }
+
+  .information-center .banner-box {
+    .banner-title-ch {
+      font-size: 61px !important;
+    }
+    .banner-title-en {
+      font-size: 22px !important;
+    }
+  }
+
   .footer {
     padding: 0 80px !important;
 
@@ -3235,6 +3274,13 @@ div.plans {
         display: none;
       }
     }
+  }
+
+  .el-popper .tooltips-text {
+    padding: 5px 15px !important;
+    transform: scale(0.8) !important;
+    transform-origin: center center !important;
+    margin: -2px 0 0 15px !important;
   }
 }
 
