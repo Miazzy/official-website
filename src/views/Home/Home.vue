@@ -233,7 +233,7 @@ onMounted(() => {
 
   &-title {
     color: #fff;
-    font-size: 57.5px;
+    font-size: 50px;
     text-align: center;
     position: absolute;
     left: 219px;
@@ -398,14 +398,14 @@ onMounted(() => {
 }
 
 .home .carousel-container .banner .banner-title {
-  font-size: 64.5px;
+  font-size: 50px;
   left: 269px ;
   top: 395px ;
 
   .subTitle {
     left: -33px;
     top: 90px;
-    font-size: 22px;
+    font-size: 20px;
     width: 700px;
     letter-spacing: 0px;
   }
