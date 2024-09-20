@@ -247,7 +247,7 @@ onBeforeUnmount(() => {
 
   .case-item-box {
     width: 306px;
-    height: 503px;
+    height: 525px;
     background: #ffffff;
     box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.11);
     cursor: pointer;

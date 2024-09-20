@@ -109,34 +109,167 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 1920px) and (min-height: 969px) {
+@media only screen and (min-width: 1920px) and (min-height: 1050px) and (max-height: 1080px) {
   .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(40vh + 108px) !important;
+    }
+
     &:nth-child(1) {
       .banner .banner-title {
-        left: 269px !important;
-        top: 350px !important;
+        top: 412px !important;
+        font-size: 50px !important;
+        left: 215px !important;
 
         .subTitle {
-          top: 85px !important;
+          top: 75px !important;
         }
       }
 
       .banner .bg-button {
-        top: calc(50vh + 70px) !important;
+        top: calc(50vh + 68px) !important;
+        left: 215px !important;
       }
     }
 
     &:not(:first-child) {
       .banner .banner-title {
-        top: 360px !important;
+        font-size: 50px !important;
+        top: 425px !important;
+        left: 220px !important;
 
         .subTitle {
-          top: 102px !important;
+          top: 86px !important;
+          font-size: 26px !important;
+          left: -222px !important;
         }
       }
 
       .banner .bg-button {
-        top: calc(50vh + 80px) !important;
+        top: calc(50vh + 60px) !important;
+        left: 217px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) and (min-height: 1000px) and (max-height: 1049px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: 378px !important;
+        font-size: 50px !important;
+        left: 215px !important;
+
+        .subTitle {
+          top: 72px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 66px) !important;
+        left: 215px !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        font-size: 50px !important;
+        top: 395px !important;
+        left: 220px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 26px !important;
+          left: -228px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 55px) !important;
+        left: 220px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) and (min-height: 969px) and (max-height: 999px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        left: 215px !important;
+        top: 365px !important;
+        font-size: 50px !important;
+
+        .subTitle {
+          top: 72px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 66px) !important;
+        left: 215px !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        font-size: 50px !important;
+        top: 380px !important;
+        left: 220px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 26px !important;
+          left: -228px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 55px) !important;
+        left: 220px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) and (min-height: 919px) and (max-height: 968px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        left: 215px !important;
+        top: 345px !important;
+        font-size: 50px !important;
+
+        .subTitle {
+          top: 65px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 60px) !important;
+        left: 220px !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        font-size: 50px !important;
+        top: 360px !important;
+        left: 210px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 26px !important;
+          left: -210px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 51px) !important;
+        left: 220px !important;
       }
     }
   }

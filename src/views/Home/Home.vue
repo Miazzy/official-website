@@ -37,14 +37,10 @@
             </div>
           </div>
           <div class="quota">
-            <Indicator :num="40" :unit="'个'" :descript="'在运城市'"
-              style="top: calc(40vh - 12px); right: calc(20vw + 35px);"></Indicator>
-            <Indicator :num="40" :unit="'座'" :descript="'在运电站'"
-              style="top: calc(40vh - 12px); right: calc(10vw - 5px);"></Indicator>
-            <Indicator :num="4.27" :unit="'Gw'" :descript="'在运维总容量'"
-              style="top: calc(40vh + 98px); right: calc(20vw + 15px);"></Indicator>
-            <Indicator :num="3032" :unit="'天'" :descript="'安全生产天数'"
-              style="top: calc(40vh + 98px); right: calc(10vw - 30px);"></Indicator>
+            <Indicator :num="40" :unit="'个'" :descript="'在运城市'" ></Indicator>
+            <Indicator :num="40" :unit="'座'" :descript="'在运电站'" ></Indicator>
+            <Indicator :num="4.27" :unit="'Gw'" :descript="'在运维总容量'" ></Indicator>
+            <Indicator :num="3032" :unit="'天'" :descript="'安全生产天数'" ></Indicator>
             <div class="segment"></div>
             <div class="segment" style="top: calc(50vh + 50px)"></div>
           </div>
@@ -165,6 +161,27 @@ onMounted(() => {
     .title {
       font-size: @font-size-larger;
     }
+
+    &.banner {
+      :deep(.indicator-component) {
+        &:nth-child(1) {
+          top: calc(40vh - 12px); 
+          right: calc(20vw + 72px);
+        }
+        &:nth-child(2) {
+          top: calc(40vh - 12px); 
+          right: calc(10vw + 35px);
+        }
+        &:nth-child(3) {
+          top: calc(40vh + 98px); 
+          right: calc(20vw + 50px);
+        }
+        &:nth-child(4) {
+          top: calc(40vh + 98px); 
+          right: calc(10vw + 7px);
+        }
+      }
+    }
   }
 
   :deep(.carousel-slide.active) {
@@ -243,8 +260,8 @@ onMounted(() => {
   .bg-button {
     position: absolute;
     background: #EF7D1B;
-    width: 145px;
-    height: 44px;
+    width: 147px;
+    height: 45px;
     left: 215px;
     top: calc(50vh + 72px);
     cursor: pointer;
@@ -274,7 +291,7 @@ onMounted(() => {
     width: 2px;
     height: 36px;
     top: calc(40vh + 28px);
-    right: calc(20vw - 5px);
+    right: calc(20vw + 18px);
     background-color: rgba(255, 255, 255, 0.4);
     transition: background-color 0.3s, width 0.3s;
   }
@@ -346,8 +363,8 @@ onMounted(() => {
 }
 
 .home .carousel-container .banner .bg-button {
-  width: 161px;
-  height: 49px;
+  width: 147px;
+  height: 45px;
   left: 264px;
   top: calc(50vh + 80px);
 
@@ -355,6 +372,7 @@ onMounted(() => {
     margin: 10px 22px;
     font-size: 20px;
     font-weight: 600;
+    line-height: 25px;
   }
 }
 
@@ -370,8 +388,8 @@ onMounted(() => {
       }
 
       .banner .bg-button {
-        width: 161px;
-        height: 49px;
+        width: 147px;
+        height: 45px;
         left: 200px;
         top: calc(50vh + 90px);
       }
