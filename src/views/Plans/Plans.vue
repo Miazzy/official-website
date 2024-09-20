@@ -178,6 +178,12 @@ const updateHeights = () => {
   topHeight.value = parseInt(topBaseHeight * scaleFactor);
   middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
   bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
+
+  if (screenWidth <= 1280) {
+    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.20);
+    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.20);
+    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.20);
+  }
 };
 
 const handleType = (type) => {
