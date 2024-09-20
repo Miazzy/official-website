@@ -454,16 +454,25 @@ onBeforeUnmount(() => {
         &.operation:hover {
           background: #fefaf6;
           box-shadow: 0px 7px 13px 1px #EF7D1B90;
+          .icon {
+            color: #EF7D1B !important;
+          }
         }
 
         &.agriculture:hover {
           background: #f5f9f6;
           box-shadow: 0px 7px 13px 1px #318A3690;
+          .icon {
+            color: #318A36 !important;
+          }
         }
 
         &.inform:hover {
           background: #f6fafe;
           box-shadow: 0px 7px 13px 1px #30A8e690;
+          .icon {
+            color: #30A8E6 !important;
+          }
         }
 
         &:hover {
