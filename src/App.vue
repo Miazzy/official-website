@@ -7335,26 +7335,26 @@ div.plans {
 
     &:nth-child(1) {
       .banner-title {
-        font-size: 42.5px !important;
-        left: 180px !important;
-        top: 263px !important;
+        font-size: 37.5px !important;
+        left: 145px !important;
+        top: 273px !important;
 
         .subTitle {
           font-size: 14.75px !important;
           left: -5px !important;
-          top: 60px !important;
+          top: 52px !important;
           text-align: left !important;
         }
       }
 
       .banner .bg-button {
-        width: 108px !important;
+        width: 100px !important;
         height: 33px !important;
         left: 176px !important;
         top: calc(50vh + 53px) !important;
 
         .content {
-          margin: 6px 12px !important;
+          margin: 4px 12px !important;
           font-size: 14px !important;
           font-weight: 600 !important;
           color: #fefefe !important;
@@ -7370,26 +7370,26 @@ div.plans {
 
     &:not(:first-child) {
       .banner-title {
-        font-size: 42.5px !important;
+        font-size: 37.5px !important;
         left: 135px !important;
-        top: 269px !important;
+        top: 279px !important;
 
         .subTitle {
           font-size: 20.75px !important;
           left: 0px !important;
-          top: 76px !important;
+          top: 56px !important;
           text-align: left !important;
         }
       }
 
       .banner .bg-button {
-        width: 108px !important;
+        width: 100px !important;
         height: 33px !important;
-        left: 134px !important;
-        top: calc(50vh + 58px) !important;
+        left: 144px !important;
+        top: calc(50vh + 40px) !important;
 
         .content {
-          margin: 6px 12px !important;
+          margin: 4px 12px !important;
           font-size: 14px !important;
           font-weight: 600 !important;
           color: #fefefe !important;
