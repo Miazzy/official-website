@@ -458,4 +458,240 @@ onMounted(() => {
   right: 194px ;
   font-size: 16.5px ;
 }
+
+@media only screen and (min-width: 1800px) and (max-width: 1900px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        left: 215px !important;
+        top: 339px !important;
+        font-size: 50px !important;
+        letter-spacing: 2.95px !important;
+
+        .subTitle {
+          top: 69px !important;
+          left: -72px !important;
+          letter-spacing: -0.7px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 60px) !important;
+        left: 215px !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        font-size: 50px !important;
+        top: 350px !important;
+        left: 210px !important;
+        letter-spacing: 3.45px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 26px !important;
+          left: -205px !important;
+          letter-spacing: -0.5px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 51px) !important;
+        left: 220px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1700px) and (max-width: 1799px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        left: 195px !important;
+        top: 339px !important;
+        font-size: 50px !important;
+        letter-spacing: 0.5px !important;
+
+        .subTitle {
+          top: 69px !important;
+          left: -72px !important;
+          letter-spacing: -0.7px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 60px) !important;
+        left: 195px !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        font-size: 50px !important;
+        top: 350px !important;
+        left: 190px !important;
+        letter-spacing: 3.45px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 26px !important;
+          left: -205px !important;
+          letter-spacing: -0.75px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 51px) !important;
+        left: 195px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1699px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        left: 185px !important;
+        top: 339px !important;
+        font-size: 45px !important;
+        letter-spacing: 2.35px !important;
+
+        .subTitle {
+          top: 69px !important;
+          left: -105px !important;
+          font-size: 18px !important;
+          letter-spacing: -0.7px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 60px) !important;
+        left: 185px !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        font-size: 45px !important;
+        top: 350px !important;
+        left: 180px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 23px !important;
+          left: -225px !important;
+          letter-spacing: -0.5px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 51px) !important;
+        left: 185px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1599px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        font-size: 42px !important;
+        top: 345px !important;
+        left: 170px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 62px !important;
+          left: -140px !important;
+          font-size: 18px !important;
+          letter-spacing: -2.25px !important;
+        }
+      }
+
+      .banner .bg-button {
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 58px) !important;
+        left: 155px !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        font-size: 42px !important;
+        top: 355px !important;
+        left: 170px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 72px !important;
+          font-size: 23px !important;
+          left: -235px !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+
+      .banner .bg-button {
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 45px) !important;
+        left: 155px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1499px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        font-size: 42px !important;
+        top: 345px !important;
+        left: 170px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 62px !important;
+          left: -140px !important;
+          font-size: 18px !important;
+          letter-spacing: -2.25px !important;
+        }
+      }
+
+      .banner .bg-button {
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 58px) !important;
+        left: 155px !important;
+      }
+    }
+
+    &:not(:first-child) {
+      .banner .banner-title {
+        font-size: 42px !important;
+        top: 355px !important;
+        left: 170px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 72px !important;
+          font-size: 23px !important;
+          left: -235px !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+
+      .banner .bg-button {
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 45px) !important;
+        left: 155px !important;
+      }
+    }
+  }
+}
 </style>
