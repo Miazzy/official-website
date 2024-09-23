@@ -7419,10 +7419,10 @@ div.plans {
   }
 }
 
-@media screen and (min-width: 1250px) and (min-height: 560px) and (max-height: 595px){
+@media screen and (min-width: 1250px) and (min-height: 550px) and (max-height: 595px){
 
 .aboutus.container .top-section .banner {
-  margin: 185px 0 0 -170px !important;
+  margin: 185px 0 0 -190px !important;
 
   .text {
     transform: scale(0.83);
@@ -7637,7 +7637,7 @@ div.plans {
 
 .project-cases .banner-box {
   .banner-title-ch {
-    margin: -45px 0 0 -350px !important;
+    margin: -45px 0 0 -420px !important;
   }
 
   .banner-title-en {
@@ -7973,10 +7973,10 @@ div.plans {
 }
 }
 
-@media screen and (min-width: 1230px)  and (max-width: 1279px) and (min-height: 560px) and (max-height: 580px){
+@media screen and (min-width: 1220px)  and (max-width: 1250px) and (min-height: 550px) and (max-height: 595px){
 
 .aboutus.container .top-section .banner {
-  margin: 185px 0 0 -170px !important;
+  margin: 185px 0 0 -205px !important;
 
   .text {
     transform: scale(0.83);
@@ -8059,7 +8059,7 @@ div.plans {
 }
 
 .plans.container .top-section .banner {
-  margin: 190px 0 0 -180px !important;
+  margin: 190px 0 0 -220px !important;
 }
 
 .plans.container .bottom-section .banner .text {
@@ -8191,11 +8191,11 @@ div.plans {
 
 .project-cases .banner-box {
   .banner-title-ch {
-    margin: -45px 0 0 -350px !important;
+    margin: -45px 0 0 -420px !important;
   }
 
   .banner-title-en {
-    margin: 15px 0 0 -350px !important;
+    margin: 15px 0 0 -420px !important;
   }
 }
 
