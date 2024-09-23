@@ -7416,6 +7416,13 @@ div.plans {
     transform: scale(0.8) !important;
     transform-origin: center center !important;
     margin: -2px 0 0 15px !important;
+
+    > span {
+      margin: 0px 10px 0px 0px;
+      &:first-child {
+        margin: 0px 10px 0px 10px;
+      }
+    }
   }
 }
 
@@ -7970,6 +7977,13 @@ div.plans {
   transform: scale(0.8) !important;
   transform-origin: center center !important;
   margin: -2px 0 0 15px !important;
+
+  > span {
+    margin: 0px 10px 0px 0px;
+    &:first-child {
+      margin: 0px 10px 0px 10px;
+    }
+  }
 }
 }
 
@@ -8076,6 +8090,7 @@ div.plans {
 }
 
 .plans.container .middle-content {
+  width: 1420px !important;
   margin: -68px 30px 0 30px !important;
   transform: scale(0.95) !important;
   background-image: url('/src/assets/images/plan_wenli.jpg') !important;
@@ -8169,7 +8184,7 @@ div.plans {
 
 .project-cases .content-box-1 .intelligent-operation-box {
   transform: scale(0.91) !important;
-  margin: -68px 0 0 30px !important;
+  margin: -68px 0 0 0px !important;
 
   .title-box {
     padding: 33px 0 0 65px !important;
@@ -8222,10 +8237,11 @@ div.plans {
 }
 
 .plans.container .bottom-section .business-container {
-  margin: 220px 80px 0px calc(23vw + 0px) !important;
+  overflow: hidden;
+  margin: 220px 80px 0px calc(28vw + 0px) !important;
 
   .box {
-    width: calc(322px * 0.98) !important;
+    width: calc(322px * 0.91) !important;
     height: calc(442px * 0.98) !important;
 
     .icon {
@@ -8536,6 +8552,13 @@ div.plans {
   transform: scale(0.8) !important;
   transform-origin: center center !important;
   margin: -2px 0 0 15px !important;
+
+  > span {
+    margin: 0px 10px 0px 0px;
+    &:first-child {
+      margin: 0px 10px 0px 10px;
+    }
+  }
 }
 }
 </style>
