@@ -42,7 +42,7 @@
             <Indicator :num="4.27" :unit="'Gw'" :descript="'在运维总容量'" ></Indicator>
             <Indicator :num="3032" :unit="'天'" :descript="'安全生产天数'" ></Indicator>
             <div class="segment"></div>
-            <div class="segment" style="top: calc(50vh + 50px)"></div>
+            <div class="segment" style=""></div>
           </div>
           <div class="tooltip">
             <span>智能运营</span>
@@ -294,6 +294,10 @@ onMounted(() => {
     right: calc(20vw + 18px);
     background-color: rgba(255, 255, 255, 0.4);
     transition: background-color 0.3s, width 0.3s;
+
+    &:last-child {
+      top: calc(50vh + 50px);
+    }
   }
 
   .tooltip {

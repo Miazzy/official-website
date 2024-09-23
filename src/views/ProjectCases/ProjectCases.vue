@@ -139,9 +139,9 @@ const updateHeights = () => {
 
   if (screenWidth <= 1280) {
     topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.175);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.20);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.20);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.20);
+    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.28);
+    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.35);
+    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.22);
   }
 
   scaleRatio.value = scaleFactor;
@@ -342,7 +342,7 @@ onBeforeUnmount(() => {
         margin: 0 0 0 8px;
 
         .case-item-box {
-          height: 500px;
+          height: 514px;
 
           .img-box {
             width: 306px;
