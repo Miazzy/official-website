@@ -4900,7 +4900,7 @@ div.plans {
 @media screen and (min-width: 1400px) and (max-width: 1499px) {
 
   .aboutus.container .top-section .banner {
-    margin: 195px 0 0 -141px !important;
+    margin: 195px 0 0 -106px !important;
 
     .text {
       transform: scale(0.83);
@@ -4983,7 +4983,7 @@ div.plans {
   }
 
   .plans.container .top-section .banner {
-    margin: 190px 0 0 -155px !important;
+    margin: 190px 0 0 -95px !important;
   }
 
   .plans.container .bottom-section .banner .text {
@@ -5000,7 +5000,7 @@ div.plans {
   }
 
   .plans.container .middle-content {
-    margin: -68px 80px 0 80px !important;
+    margin: -68px 125px 0 125px !important;
     transform: scale(0.95) !important;
     background-image: url('/src/assets/images/plan_wenli.jpg') !important;
     background-size: cover !important;
@@ -5093,7 +5093,7 @@ div.plans {
 
   .project-cases .content-box-1 .intelligent-operation-box {
     transform: scale(0.91) !important;
-    margin: -68px 0 0 78px !important;
+    margin: -68px 0 0 125px !important;
 
     .title-box {
       padding: 33px 0 0 65px !important;
@@ -5115,11 +5115,11 @@ div.plans {
 
   .project-cases .banner-box {
     .banner-title-ch {
-      margin: -40px 0 0 -300px !important;
+      margin: -40px 0 0 -200px !important;
     }
 
     .banner-title-en {
-      margin: 10px 0 0 -300px !important;
+      margin: 10px 0 0 -200px !important;
     }
   }
 
@@ -5128,7 +5128,7 @@ div.plans {
 
     .smart-agriculture-box {
       transform: scale(0.91) !important;
-      margin: 0px 0 0 148px !important;
+      margin: 0px 0 0 195px !important;
       overflow-y: hidden !important;
 
       .title-box {
@@ -5142,11 +5142,11 @@ div.plans {
   }
 
   .plans.container .bottom-section .banner {
-    margin: 40px 0 0 185px !important;
+    margin: 40px 0 0 225px !important;
   }
 
   .plans.container .bottom-section .business-container {
-    margin: 220px 80px 0px calc(23vw + 30px) !important;
+    margin: 220px 80px 0px calc(23vw + 80px) !important;
 
     .box {
       width: calc(322px * 0.98) !important;
@@ -5412,6 +5412,10 @@ div.plans {
         display: none;
       }
     }
+  }
+
+  .projectCases .footer {
+    margin-top: 50px !important;
   }
 
   .el-popper .tooltips-text {
