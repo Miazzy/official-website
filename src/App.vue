@@ -5245,25 +5245,25 @@ div.plans {
   }
 
   .header .logo a {
-    margin: 33.5px 0 0 33px !important;
+    margin: 12.5px 0 0 123px !important;
 
     .logo {
-      width: 140px !important;
+      width: 120px !important;
 
       img {
-        width: 140px !important;
+        width: 120px !important;
       }
     }
   }
 
   .header .navbar {
-    margin-left: calc(20vw + 20px) !important;
-    margin-top: calc(10.05vh) !important;
+    margin-left: calc(30vw + 0px) !important;
+    margin-top: calc(2.85vh) !important;
 
     .navbar-item {
-      width: 60px !important;
-      font-size: 14.5px !important;
-      margin: 0 33px !important;
+      width: 58px !important;
+      font-size: 13.5px !important;
+      margin: 0 25px !important;
       padding: 1px 0 !important;
     }
   }
