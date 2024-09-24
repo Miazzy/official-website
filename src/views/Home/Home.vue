@@ -656,7 +656,7 @@ onMounted(() => {
 
         .subTitle {
           top: 62px !important;
-          left: -140px !important;
+          left: 0px !important;
           font-size: 18px !important;
           letter-spacing: -2.25px !important;
         }
@@ -687,7 +687,7 @@ onMounted(() => {
         .subTitle {
           top: 72px !important;
           font-size: 23px !important;
-          left: -235px !important;
+          left: 0px !important;
           letter-spacing: -1.5px !important;
         }
       }
