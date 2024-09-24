@@ -183,6 +183,14 @@ const updateHeights = () => {
     topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.20);
     middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.20);
     bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.20);
+  } else if (screenWidth <= 1300) {
+    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.18);
+    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.18);
+    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.18);
+  } else if (screenWidth <= 1366) {
+    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.10);
+    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.10);
+    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.10);
   }
 };
 
