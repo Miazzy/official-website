@@ -113,7 +113,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 1920px) and (min-height: 1050px) and (max-height: 1080px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 1050px) and (max-height: 1080px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(3),
@@ -159,7 +159,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 1920px) and (min-height: 1000px) and (max-height: 1049px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 1000px) and (max-height: 1049px) {
   .home .carousel-container .carousel-slide {
     &:nth-child(1) {
       .banner .banner-title {
@@ -199,7 +199,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 1920px) and (min-height: 969px) and (max-height: 999px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 969px) and (max-height: 999px) {
   .home .carousel-container .carousel-slide {
     &:nth-child(1) {
       .banner .banner-title {
@@ -239,7 +239,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 1920px) and (min-height: 919px) and (max-height: 968px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 919px) and (max-height: 968px) {
   .home .carousel-container .carousel-slide {
     &:nth-child(1) {
       .banner .banner-title {
@@ -279,7 +279,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 1920px) and (min-height: 880px) and (max-height: 918px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 880px) and (max-height: 918px) {
   .home .carousel-container .carousel-slide {
     &:nth-child(1) {
       .banner .banner-title {
@@ -320,7 +320,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 1920px) and (min-height: 800px) and (max-height: 879px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 700px) and (max-height: 879px) {
   .home .carousel-container .carousel-slide {
     &:nth-child(1) {
       .banner .banner-title {
@@ -361,7 +361,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 1920px) and (min-height: 0px) and (max-height: 799px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 0px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
     &:nth-child(1) {
       .banner .banner-title {
