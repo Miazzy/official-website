@@ -601,22 +601,29 @@ onMounted(() => {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
-        left: 170px !important;
+        left: 155px !important;
         letter-spacing: 0.45px !important;
 
         .subTitle {
           top: 62px !important;
-          left: -140px !important;
+          left: 0px !important;
           font-size: 18px !important;
           letter-spacing: -2.25px !important;
         }
       }
 
       .banner .bg-button {
+        width: 133px !important;
+        height: 43px !important;
         transform: scale(0.82) !important;
         transform: top left !important;
         top: calc(50vh + 58px) !important;
-        left: 155px !important;
+        left: 145px !important;
+
+        .content {
+          margin: 8px 15px !important;
+          font-size: 17px !important;
+        }
       }
     }
 
@@ -624,22 +631,29 @@ onMounted(() => {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
-        left: 170px !important;
+        left: 160px !important;
         letter-spacing: 0.45px !important;
 
         .subTitle {
           top: 72px !important;
           font-size: 23px !important;
-          left: -235px !important;
+          left: 0px !important;
           letter-spacing: -1.5px !important;
         }
       }
 
       .banner .bg-button {
+        width: 133px !important;
+        height: 43px !important;
         transform: scale(0.82) !important;
         transform: top left !important;
-        top: calc(50vh + 45px) !important;
-        left: 155px !important;
+        top: calc(50vh + 47px) !important;
+        left: 148px !important;
+
+        .content {
+          margin: 8px 15px !important;
+          font-size: 17px !important;
+        }
       }
     }
   }
