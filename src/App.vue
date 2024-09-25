@@ -138,7 +138,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 425px !important;
@@ -178,7 +178,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 395px !important;
@@ -218,7 +218,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 380px !important;
@@ -258,7 +258,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 360px !important;
@@ -299,7 +299,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 340px !important;
@@ -340,7 +340,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 325px !important;
@@ -381,7 +381,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 285px !important;
@@ -523,7 +523,7 @@ div.plans {
 
 .home .carousel-container {
   .carousel-slide {
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title .subTitle {
         left: -182px;
         top: 118px;
@@ -543,9 +543,6 @@ div.plans {
 }
 
 .home .carousel-container .banner .banner-title {
-  font-size: 64.5px;
-  left: 269px !important;
-  top: 395px !important;
 
   .subTitle {
     left: -33px;
@@ -586,7 +583,7 @@ div.plans {
     }
   }
 
-  &:not(:first-child) {
+  &:nth-child(2), &:nth-child(3), &:nth-child(4) {
     .banner-title {
       left: 202px !important;
       top: 399px !important;
@@ -863,7 +860,7 @@ div.plans {
 
 .home .carousel-container {
   .carousel-slide {
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title .subTitle {
         left: -182px;
         top: 118px;
@@ -883,9 +880,6 @@ div.plans {
 }
 
 .home .carousel-container .banner .banner-title {
-  font-size: 64.5px;
-  left: 269px !important;
-  top: 395px !important;
 
   .subTitle {
     left: -33px;
@@ -926,7 +920,7 @@ div.plans {
     }
   }
 
-  &:not(:first-child) {
+  &:nth-child(2), &:nth-child(3), &:nth-child(4) {
     .banner-title {
       left: 202px !important;
       top: 399px !important;
@@ -1203,7 +1197,7 @@ div.plans {
 
 .home .carousel-container {
   .carousel-slide {
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title .subTitle {
         left: -182px;
         top: 118px;
@@ -1223,9 +1217,6 @@ div.plans {
 }
 
 .home .carousel-container .banner .banner-title {
-  font-size: 64.5px;
-  left: 269px !important;
-  top: 395px !important;
 
   .subTitle {
     left: -33px;
@@ -1266,7 +1257,7 @@ div.plans {
     }
   }
 
-  &:not(:first-child) {
+  &:nth-child(2), &:nth-child(3), &:nth-child(4) {
     .banner-title {
       left: 202px !important;
       top: 399px !important;
@@ -1543,7 +1534,7 @@ div.plans {
 
 .home .carousel-container {
   .carousel-slide {
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title .subTitle {
         left: -182px;
         top: 118px;
@@ -1563,9 +1554,6 @@ div.plans {
 }
 
 .home .carousel-container .banner .banner-title {
-  font-size: 64.5px;
-  left: 269px !important;
-  top: 395px !important;
 
   .subTitle {
     left: -33px;
@@ -1606,7 +1594,7 @@ div.plans {
     }
   }
 
-  &:not(:first-child) {
+  &:nth-child(2), &:nth-child(3), &:nth-child(4) {
     .banner-title {
       left: 202px !important;
       top: 399px !important;
@@ -1883,7 +1871,7 @@ div.plans {
 
   .home .carousel-container {
     .carousel-slide {
-      &:not(:first-child) {
+      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
         .banner .banner-title .subTitle {
           left: -182px;
           top: 118px;
@@ -1903,9 +1891,6 @@ div.plans {
   }
 
   .home .carousel-container .banner .banner-title {
-    font-size: 64.5px;
-    left: 269px !important;
-    top: 395px !important;
 
     .subTitle {
       left: -33px;
@@ -1946,7 +1931,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         left: 202px !important;
         top: 399px !important;
@@ -2223,7 +2208,7 @@ div.plans {
 
   .home .carousel-container {
     .carousel-slide {
-      &:not(:first-child) {
+      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
         .banner .banner-title .subTitle {
           left: -182px;
           top: 118px;
@@ -2243,9 +2228,6 @@ div.plans {
   }
 
   .home .carousel-container .banner .banner-title {
-    font-size: 64.5px;
-    left: 269px !important;
-    top: 395px !important;
 
     .subTitle {
       left: -33px;
@@ -2286,7 +2268,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         left: 202px !important;
         top: 399px !important;
@@ -2551,7 +2533,7 @@ div.plans {
 
   .home .carousel-container {
     .carousel-slide {
-      &:not(:first-child) {
+      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
         .banner .banner-title .subTitle {
           width: 700px;
           letter-spacing: -3px;
@@ -2607,7 +2589,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         left: 202px !important;
         top: 389px !important;
@@ -2907,7 +2889,7 @@ div.plans {
 
   .home .carousel-container {
     .carousel-slide {
-      &:not(:first-child) {
+      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
         .banner .banner-title .subTitle {
           left: -235px !important;
           top: 82px !important;
@@ -2970,7 +2952,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         left: 202px !important;
         top: 393px !important;
@@ -3320,7 +3302,7 @@ div.plans {
 
   .home .carousel-container {
     .carousel-slide {
-      &:not(:first-child) {
+      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
         .banner .banner-title .subTitle {
           left: -182px;
           top: 118px;
@@ -3340,9 +3322,6 @@ div.plans {
   }
 
   .home .carousel-container .banner .banner-title {
-    font-size: 64.5px;
-    left: 269px !important;
-    top: 395px !important;
 
     .subTitle {
       left: -33px;
@@ -3383,7 +3362,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         left: 202px !important;
         top: 399px !important;
@@ -3751,7 +3730,7 @@ div.plans {
 
   .home .carousel-container {
     .carousel-slide {
-      &:not(:first-child) {
+      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
         .banner .banner-title .subTitle {
           left: -182px;
           top: 118px;
@@ -3771,9 +3750,6 @@ div.plans {
   }
 
   .home .carousel-container .banner .banner-title {
-    font-size: 64.5px;
-    left: 269px !important;
-    top: 395px !important;
 
     .subTitle {
       left: -33px;
@@ -3814,7 +3790,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         left: 202px !important;
         top: 399px !important;
@@ -4519,7 +4495,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         font-size: 37.5px !important;
         left: 135px !important;
@@ -5055,7 +5031,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         font-size: 37.5px !important;
         left: 135px !important;
@@ -5591,7 +5567,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         font-size: 37.5px !important;
         left: 135px !important;
@@ -6123,7 +6099,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         font-size: 42.5px !important;
         left: 135px !important;
@@ -6648,7 +6624,7 @@ div.plans {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner-title {
         font-size: 37.5px !important;
         left: 135px !important;
@@ -7209,7 +7185,7 @@ div.plans {
     }
   }
 
-  &:not(:first-child) {
+  &:nth-child(2), &:nth-child(3), &:nth-child(4) {
     .banner-title {
       font-size: 31.5px !important;
       left: 146px !important;
@@ -7774,7 +7750,7 @@ div.plans {
     }
   }
 
-  &:not(:first-child) {
+  &:nth-child(2), &:nth-child(3), &:nth-child(4) {
     .banner-title {
       font-size: 31.5px !important;
       left: 142px !important;

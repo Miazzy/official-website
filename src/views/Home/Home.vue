@@ -89,6 +89,13 @@
           </div>
         </div>
       </template>
+      <template #five>
+        <div ref="banner" class="banner content-item-block">
+          <div class="bg-wrapper">
+            <img src="../../assets/images/home01.jpg" />
+          </div>
+        </div>
+      </template>
     </Carousel>
     <div class="copyright">
       Copyright ©渔光物联(www.ygwl.net)   |   蜀ICP备16026089号
@@ -382,7 +389,7 @@ onMounted(() => {
 
 .home .carousel-container {
   .carousel-slide {
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title .subTitle {
         left: -182px;
         top: 118px;
@@ -416,7 +423,7 @@ onMounted(() => {
 }
 
 .home .carousel-container .carousel-slide {
-  &:nth-child(1) {
+  &:first-child, &:last-child {
     .banner .tooltip {
       font-size: 11.5px ;
       right: 95px ;
@@ -445,7 +452,7 @@ onMounted(() => {
     }
   }
 
-  &:not(:first-child) {
+  &:nth-child(2), &:nth-child(3), &:nth-child(4) {
     .banner-title {
       left: 202px ;
       top: 399px ;
@@ -461,7 +468,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1800px) and (max-width: 1900px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         left: 215px !important;
         top: 339px !important;
@@ -481,7 +488,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 350px !important;
@@ -506,7 +513,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1700px) and (max-width: 1799px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         left: 195px !important;
         top: 339px !important;
@@ -526,7 +533,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 350px !important;
@@ -551,7 +558,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1600px) and (max-width: 1699px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         left: 185px !important;
         top: 339px !important;
@@ -572,7 +579,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 45px !important;
         top: 350px !important;
@@ -597,7 +604,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1500px) and (max-width: 1599px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
@@ -627,7 +634,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
@@ -661,7 +668,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1400px) and (max-width: 1499px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
@@ -691,7 +698,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
@@ -725,7 +732,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1350px) and (max-width: 1399px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -755,7 +762,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 40px !important;
         top: 355px !important;
@@ -789,7 +796,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1300px) and (max-width: 1349px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -819,7 +826,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 40px !important;
         top: 355px !important;
@@ -853,7 +860,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1250px) and (max-width: 1299px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -883,7 +890,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 39px !important;
         top: 355px !important;
@@ -917,7 +924,7 @@ onMounted(() => {
 
 @media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
+    &:first-child, &:last-child {
       .banner .banner-title {
         font-size: 36px !important;
         top: 345px !important;
@@ -947,7 +954,7 @@ onMounted(() => {
       }
     }
 
-    &:not(:first-child) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 36px !important;
         top: 360px !important;

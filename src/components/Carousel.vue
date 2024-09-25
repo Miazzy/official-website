@@ -5,29 +5,40 @@
           disactive: activeIndex !== 0 && direct, 
           activeUp: activeIndex === 0 && !direct,
           disactiveUp: activeIndex !== 0 && !direct, 
-          restatus: isRefresh }">
+          restatus: isRestatus }" >
       <slot name="one"></slot>
     </div>
     <div class="carousel-slide" :class="{ 
           active: activeIndex === 1 && direct, 
           disactive: activeIndex !== 1 && direct,
           activeUp: activeIndex === 1 && !direct,
-          disactiveUp: activeIndex !== 1 && !direct }" v-show="!isRefresh">
+          disactiveUp: activeIndex !== 1 && !direct,
+          disabled: isRestatus }" v-if="!isRefresh">
       <slot name="two"></slot>
     </div>
     <div class="carousel-slide" :class="{ 
           active: activeIndex === 2 && direct, 
           disactive: activeIndex !== 2 && direct,
           activeUp: activeIndex === 2 && !direct,
-          disactiveUp: activeIndex !== 2 && !direct }" v-show="!isRefresh">
+          disactiveUp: activeIndex !== 2 && !direct,
+          disabled: isRestatus }" v-if="!isRefresh">
       <slot name="three"></slot>
     </div>
     <div class="carousel-slide" :class="{ 
           active: activeIndex === 3 && direct, 
           disactive: activeIndex !== 3 && direct,
           activeUp: activeIndex === 3 && !direct,
-          disactiveUp: activeIndex !== 3 && !direct }" v-show="!isRefresh">
+          disactiveUp: activeIndex !== 3 && !direct,
+          disabled: isRestatus }" v-if="!isRefresh">
       <slot name="four"></slot>
+    </div>
+    <div class="carousel-slide" :class="{ 
+          active: activeIndex === 4 && direct, 
+          disactive: activeIndex !== 4 && direct,
+          activeUp: activeIndex === 4 && !direct,
+          disactiveUp: activeIndex !== 4 && !direct,
+          disabled: isRestatus }" v-if="!isRefresh">
+      <slot name="five"></slot>
     </div>
     <div class="indicator">
       <div v-for="(segment, index) in 4" :key="index" :class="{ active: activeIndex === index }" class="segment"
@@ -46,17 +57,19 @@ const activeIndex = ref(0);
 const totalSlides = 4; // 总共4个轮播项
 const isLock = ref(false);
 const isRefresh = ref(true);
+const isRestatus = ref(true);
 const direct = ref(false);
 
 const task = () => {
   if (!isLock.value) {
     isRefresh.value = false;
+    isRestatus.value = false;
     activeIndex.value = (activeIndex.value + 1) % totalSlides;
   }
 };
 
 const startAutoScroll = () => {
-  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND * 100);
+  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND);
 };
 
 const stopAutoScroll = () => {
@@ -74,6 +87,7 @@ const handleScroll = (event: WheelEvent) => {
     direct.value = true;
     activeIndex.value = (activeIndex.value - 1 + totalSlides) % totalSlides;
   }
+  isRestatus.value = false;
   startAutoScroll();
   isLock.value = false;
 };
@@ -81,6 +95,7 @@ const handleScroll = (event: WheelEvent) => {
 const handleClick = (index) => {
   if (activeIndex.value != index) {
     isRefresh.value = false;
+    isRestatus.value = false;
     isLock.value = true;
     stopAutoScroll();
     activeIndex.value < index ? direct.value = false : null;
@@ -94,11 +109,9 @@ const handleClick = (index) => {
 const handleScrollFn = throttle(handleScroll, 250, 1000);
 
 onMounted(() => {
+  isRefresh.value = false;
   TaskExecutor.getInstance().start();
   startAutoScroll();
-  setTimeout(() => {
-    isRefresh.value = false;
-  }, TimeInterval.TEN_SECOND * 100);
 });
 
 onBeforeUnmount(() => {
@@ -135,6 +148,17 @@ onBeforeUnmount(() => {
   to {
     opacity: 0.5;
     transform: translateY(100%);
+  }
+}
+
+@keyframes disabled {
+  from {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(200%);
   }
 }
 
@@ -177,6 +201,7 @@ onBeforeUnmount(() => {
     justify-content: center;
     opacity: 0;
     transition: opacity 1.25s ease-in-out;
+    transform: translateY(0);
     
     &.active {
       opacity: 1;
@@ -206,6 +231,11 @@ onBeforeUnmount(() => {
     &.disactiveUp {
       opacity: 0;
       animation: disactiveUp 1.25s;
+    }
+
+    &.disabled {
+      opacity: 0;
+      animation: disabled 0s;
     }
   }
 
