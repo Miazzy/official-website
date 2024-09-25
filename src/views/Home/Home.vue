@@ -472,7 +472,248 @@ onMounted(() => {
   font-size: 16.5px ;
 }
 
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 950px) and (max-height: 1080px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(40vh + 108px) !important;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(38.25vh) !important;
+        font-size: 2.8vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7vh) !important;
+          left: calc(-3vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.78vh) !important;
+        left: calc(11.25vw) !important;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(39.5vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8vh) !important;
+          font-size: 26px !important;
+          left: calc(-11.7vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: 217px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 900px) and (max-height: 949px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(40vh + 108px) !important;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(37.85vh) !important;
+        font-size: 2.8vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7.5vh) !important;
+          left: calc(-3vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.78vh) !important;
+        left: calc(11.25vw) !important;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(39.15vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8vh) !important;
+          font-size: 26px !important;
+          left: calc(-11.7vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: 217px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 700px) and (max-height: 899px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(40vh + 108px) !important;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(37.5vh) !important;
+        font-size: 2.8vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7.5vh) !important;
+          left: calc(-3vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.78vh) !important;
+        left: calc(11.25vw) !important;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(38.85vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8vh) !important;
+          font-size: 26px !important;
+          left: calc(-11.7vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: 217px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 0px) and (max-height: 799px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(40vh + 108px) !important;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(37vh) !important;
+        font-size: 2.8vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7.5vh) !important;
+          left: calc(-3vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.78vh) !important;
+        left: calc(11.25vw) !important;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(38.25vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8vh) !important;
+          font-size: 26px !important;
+          left: calc(-11.7vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: 217px !important;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1800px) and (max-width: 1900px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        left: 215px !important;
+        top: 339px !important;
+        font-size: 50px !important;
+        letter-spacing: 2.95px !important;
+
+        .subTitle {
+          top: 69px !important;
+          left: -72px !important;
+          letter-spacing: -0.7px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 60px) !important;
+        left: 215px !important;
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 50px !important;
+        top: 350px !important;
+        left: 210px !important;
+        letter-spacing: 3.45px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 26px !important;
+          left: -205px !important;
+          letter-spacing: -0.5px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 51px) !important;
+        left: 220px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) and (max-width: 1900px) and (min-height: 0px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
     &:first-child, &:last-child {
       .banner .banner-title {
@@ -562,12 +803,57 @@ onMounted(() => {
   }
 }
 
+@media only screen and (min-width: 1700px) and (max-width: 1799px) and (min-height: 0px) and (max-height: 899px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        left: 195px !important;
+        top: 339px !important;
+        font-size: 50px !important;
+        letter-spacing: 0.5px !important;
+
+        .subTitle {
+          top: 69px !important;
+          left: -72px !important;
+          letter-spacing: -0.7px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 60px) !important;
+        left: 195px !important;
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 50px !important;
+        top: 350px !important;
+        left: 190px !important;
+        letter-spacing: 3.45px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 26px !important;
+          left: -205px !important;
+          letter-spacing: -0.75px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 51px) !important;
+        left: 195px !important;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1600px) and (max-width: 1699px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
     &:first-child, &:last-child {
       .banner .banner-title {
-        left: 185px !important;
-        top: 339px !important;
+        left: calc(11.25vw) !important;
+        top: calc(38.5vh) !important;
         font-size: 45px !important;
         letter-spacing: 2.35px !important;
 
@@ -588,8 +874,54 @@ onMounted(() => {
     &:nth-child(2), &:nth-child(3), &:nth-child(4) {
       .banner .banner-title {
         font-size: 45px !important;
-        top: 350px !important;
-        left: 180px !important;
+        top: calc(39.75vh) !important;
+        left: calc(11.5vw) !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 75px !important;
+          font-size: 23px !important;
+          left: -225px !important;
+          letter-spacing: -0.5px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 51px) !important;
+        left: 185px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1699px) and (min-height: 0px) and (max-height: 899px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        left: calc(11.25vw) !important;
+        top: calc(38.5vh) !important;
+        font-size: 45px !important;
+        letter-spacing: 2.35px !important;
+
+        .subTitle {
+          top: 69px !important;
+          left: -105px !important;
+          font-size: 18px !important;
+          letter-spacing: -0.7px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(50vh + 60px) !important;
+        left: 185px !important;
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 45px !important;
+        top: calc(39.75vh) !important;
+        left: calc(11.5vw) !important;
         letter-spacing: 0.45px !important;
 
         .subTitle {
@@ -609,6 +941,70 @@ onMounted(() => {
 }
 
 @media only screen and (min-width: 1500px) and (max-width: 1599px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        font-size: 42px !important;
+        top: 345px !important;
+        left: 155px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 62px !important;
+          left: 0px !important;
+          font-size: 18px !important;
+          letter-spacing: -2.25px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 133px !important;
+        height: 43px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 58px) !important;
+        left: 145px !important;
+
+        .content {
+          margin: 8px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 42px !important;
+        top: 355px !important;
+        left: 160px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 72px !important;
+          font-size: 23px !important;
+          left: 0px !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 133px !important;
+        height: 43px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 47px) !important;
+        left: 148px !important;
+
+        .content {
+          margin: 8px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1599px) and (min-height: 0px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
     &:first-child, &:last-child {
       .banner .banner-title {
@@ -736,7 +1132,135 @@ onMounted(() => {
   }
 }
 
+@media only screen and (min-width: 1400px) and (max-width: 1499px) and (min-height: 0px) and (max-height: 899px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        font-size: 42px !important;
+        top: 345px !important;
+        left: 155px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 62px !important;
+          left: 0px !important;
+          font-size: 18px !important;
+          letter-spacing: -2.25px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 133px !important;
+        height: 43px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 58px) !important;
+        left: 145px !important;
+
+        .content {
+          margin: 8px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 42px !important;
+        top: 355px !important;
+        left: 160px !important;
+        letter-spacing: 0.45px !important;
+
+        .subTitle {
+          top: 72px !important;
+          font-size: 23px !important;
+          left: 0px !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 133px !important;
+        height: 43px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 47px) !important;
+        left: 148px !important;
+
+        .content {
+          margin: 8px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1350px) and (max-width: 1399px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        font-size: 40px !important;
+        top: 345px !important;
+        left: 155px !important;
+        letter-spacing: -1.5px !important;
+
+        .subTitle {
+          top: 62px !important;
+          left: 0px !important;
+          font-size: 17px !important;
+          letter-spacing: -2.40px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 133px !important;
+        height: 43px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 58px) !important;
+        left: 145px !important;
+
+        .content {
+          margin: 8px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 40px !important;
+        top: 355px !important;
+        left: 155px !important;
+        letter-spacing: -1.5px !important;
+
+        .subTitle {
+          top: 72px !important;
+          font-size: 20px !important;
+          left: 0px !important;
+          letter-spacing: -1.75px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 133px !important;
+        height: 43px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 47px) !important;
+        left: 148px !important;
+
+        .content {
+          margin: 8px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1350px) and (max-width: 1399px) and (min-height: 0px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
     &:first-child, &:last-child {
       .banner .banner-title {
@@ -864,6 +1388,70 @@ onMounted(() => {
   }
 }
 
+@media only screen and (min-width: 1300px) and (max-width: 1349px) and (min-height: 0px) and (max-height: 899px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        font-size: 40px !important;
+        top: 345px !important;
+        left: 145px !important;
+        letter-spacing: -1.05px !important;
+
+        .subTitle {
+          top: 62px !important;
+          left: 0px !important;
+          font-size: 17px !important;
+          letter-spacing: -2.40px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 122px !important;
+        height: 44px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 58px) !important;
+        left: 140px !important;
+
+        .content {
+          margin: 9px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 40px !important;
+        top: 355px !important;
+        left: 150px !important;
+        letter-spacing: -1.05px !important;
+
+        .subTitle {
+          top: 72px !important;
+          font-size: 20px !important;
+          left: 0px !important;
+          letter-spacing: -1.75px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 122px !important;
+        height: 44px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 47px) !important;
+        left: 140px !important;
+
+        .content {
+          margin: 9px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1250px) and (max-width: 1299px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
     &:first-child, &:last-child {
@@ -928,7 +1516,135 @@ onMounted(() => {
   }
 }
 
+@media only screen and (min-width: 1250px) and (max-width: 1299px) and (min-height: 0px) and (max-height: 899px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        font-size: 40px !important;
+        top: 345px !important;
+        left: 140px !important;
+        letter-spacing: -1.05px !important;
+
+        .subTitle {
+          top: 62px !important;
+          left: 0px !important;
+          font-size: 17px !important;
+          letter-spacing: -2.40px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 122px !important;
+        height: 44px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 58px) !important;
+        left: 130px !important;
+
+        .content {
+          margin: 9px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 39px !important;
+        top: 355px !important;
+        left: 140px !important;
+        letter-spacing: -1.05px !important;
+
+        .subTitle {
+          top: 72px !important;
+          font-size: 19px !important;
+          left: 0px !important;
+          letter-spacing: -1.75px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 122px !important;
+        height: 44px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 47px) !important;
+        left: 130px !important;
+
+        .content {
+          margin: 9px 15px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 900px) and (max-height: 1050px) {
+  .home .carousel-container .carousel-slide {
+    &:first-child, &:last-child {
+      .banner .banner-title {
+        font-size: 36px !important;
+        top: 345px !important;
+        left: 130px !important;
+        letter-spacing: -1.05px !important;
+
+        .subTitle {
+          top: 62px !important;
+          left: -155px !important;
+          font-size: 17px !important;
+          letter-spacing: -2.40px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 115px !important;
+        height: 44px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 58px) !important;
+        left: 125px !important;
+
+        .content {
+          margin: 8px 10px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 36px !important;
+        top: 360px !important;
+        left: 135px !important;
+        letter-spacing: -1.05px !important;
+
+        .subTitle {
+          top: 72px !important;
+          font-size: 19px !important;
+          left: -260px !important;
+          letter-spacing: -1.75px !important;
+        }
+      }
+
+      .banner .bg-button {
+        width: 115px !important;
+        height: 44px !important;
+        transform: scale(0.82) !important;
+        transform: top left !important;
+        top: calc(50vh + 47px) !important;
+        left: 130px !important;
+
+        .content {
+          margin: 8px 10px !important;
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 0px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
     &:first-child, &:last-child {
       .banner .banner-title {
