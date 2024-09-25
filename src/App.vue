@@ -7453,7 +7453,6 @@ div.plans {
   }
 
   .home .carousel-container .carousel-slide {
-
     .quota {
       .segment {
         height: 30px !important;
@@ -7489,82 +7488,6 @@ div.plans {
 
         .upper span.num {
           font-size: 35px !important;
-        }
-      }
-    }
-
-    &:nth-child(1) {
-      .banner-title {
-        font-size: 31.75px !important;
-        left: 140px !important;
-        top: 215px !important;
-        letter-spacing: 2.75px !important;
-
-        .subTitle {
-          font-size: 12.75px !important;
-          left: 0px !important;
-          top: 45px !important;
-          text-align: left !important;
-          letter-spacing: -0.625px !important;
-        }
-      }
-
-      .banner .bg-button {
-        width: 93px !important;
-        height: 24px !important;
-        left: 140px !important;
-        top: calc(50vh + 39px) !important;
-
-        .content {
-          margin: 0px 12px !important;
-          font-size: 12px !important;
-          font-weight: 400 !important;
-          color: #fefefe !important;
-          text-align: center !important;
-
-          .icon {
-            font-size: 12px !important;
-            font-family: monospace !important;
-          }
-        }
-      }
-    }
-
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      .banner-title {
-        font-size: 31.5px !important;
-        left: 142px !important;
-        top: 225px !important;
-        letter-spacing: 2.75px !important;
-
-        .subTitle {
-          font-size: 16.75px !important;
-          left: 0px !important;
-          top: 46px !important;
-          text-align: left !important;
-          letter-spacing: -0.55px !important;
-        }
-      }
-
-      .banner .bg-button {
-        width: 93px !important;
-        height: 24px !important;
-        left: 140px !important;
-        top: calc(50vh + 32px) !important;
-
-        .content {
-          margin: 0px 12px !important;
-          font-size: 12px !important;
-          font-weight: 400 !important;
-          color: #fefefe !important;
-          text-align: center !important;
-
-          .icon {
-            font-size: 14px !important;
-            font-family: monospace !important;
-          }
         }
       }
     }

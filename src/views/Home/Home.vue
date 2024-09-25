@@ -2039,61 +2039,77 @@ onMounted(() => {
 @media only screen and (min-width: 1250px) and (max-width: 1299px) and (min-height: 0px) and (max-height: 699px) {
   .home .carousel-container .carousel-slide {
     &:first-child, &:last-child {
-      .banner .banner-title {
-        font-size: 40px !important;
-        top: 345px !important;
+      .banner-title {
+        font-size: 31.75px !important;
         left: 140px !important;
-        letter-spacing: -1.05px !important;
+        top: 215px !important;
+        letter-spacing: 2.75px !important;
 
         .subTitle {
-          top: 62px !important;
+          font-size: 12.75px !important;
           left: 0px !important;
-          font-size: 17px !important;
-          letter-spacing: -2.40px !important;
+          top: 45px !important;
+          text-align: left !important;
+          letter-spacing: -0.625px !important;
         }
       }
 
       .banner .bg-button {
-        width: 122px !important;
-        height: 44px !important;
-        transform: scale(0.82) !important;
-        transform: top left !important;
-        top: calc(76vh) !important;
-        left: 130px !important;
+        width: 93px !important;
+        height: 24px !important;
+        left: 140px !important;
+        top: calc(50vh + 39px) !important;
 
         .content {
-          margin: 9px 15px !important;
-          font-size: 17px !important;
+          margin: 0px 12px !important;
+          font-size: 12px !important;
+          font-weight: 400 !important;
+          color: #fefefe !important;
+          text-align: center !important;
+
+          .icon {
+            font-size: 12px !important;
+            font-family: monospace !important;
+          }
         }
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
-      .banner .banner-title {
-        font-size: 39px !important;
-        top: 355px !important;
-        left: 140px !important;
-        letter-spacing: -1.05px !important;
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner-title {
+        font-size: 31.5px !important;
+        left: 142px !important;
+        top: 225px !important;
+        letter-spacing: 2.75px !important;
 
         .subTitle {
-          top: 72px !important;
-          font-size: 19px !important;
+          font-size: 16.75px !important;
           left: 0px !important;
-          letter-spacing: -1.75px !important;
+          top: 46px !important;
+          text-align: left !important;
+          letter-spacing: -0.55px !important;
         }
       }
 
       .banner .bg-button {
-        width: 122px !important;
-        height: 44px !important;
-        transform: scale(0.82) !important;
-        transform: top left !important;
-        top: calc(78vh) !important;
-        left: 130px !important;
+        width: 93px !important;
+        height: 24px !important;
+        left: 140px !important;
+        top: calc(50vh + 32px) !important;
 
         .content {
-          margin: 9px 15px !important;
-          font-size: 17px !important;
+          margin: 0px 12px !important;
+          font-size: 12px !important;
+          font-weight: 400 !important;
+          color: #fefefe !important;
+          text-align: center !important;
+
+          .icon {
+            font-size: 14px !important;
+            font-family: monospace !important;
+          }
         }
       }
     }
@@ -2292,128 +2308,80 @@ onMounted(() => {
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 600px) and (max-height: 699px) {
+@media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 0px) and (max-height: 699px) {
   .home .carousel-container .carousel-slide {
     &:first-child, &:last-child {
-      .banner .banner-title {
-        font-size: 36px !important;
-        top: 345px !important;
-        left: 130px !important;
-        letter-spacing: -1.05px !important;
+      .banner-title {
+        font-size: 31.75px !important;
+        left: 140px !important;
+        top: 215px !important;
+        letter-spacing: 2.75px !important;
 
         .subTitle {
-          top: 62px !important;
-          left: -155px !important;
-          font-size: 17px !important;
-          letter-spacing: -2.40px !important;
+          font-size: 12.75px !important;
+          left: 0px !important;
+          top: 45px !important;
+          text-align: left !important;
+          letter-spacing: -0.625px !important;
         }
       }
 
       .banner .bg-button {
-        width: 115px !important;
-        height: 44px !important;
-        transform: scale(0.82) !important;
-        transform: top left !important;
-        top: calc(76vh) !important;
-        left: 125px !important;
+        width: 93px !important;
+        height: 24px !important;
+        left: 140px !important;
+        top: calc(50vh + 39px) !important;
 
         .content {
-          margin: 8px 10px !important;
-          font-size: 17px !important;
+          margin: 0px 12px !important;
+          font-size: 12px !important;
+          font-weight: 400 !important;
+          color: #fefefe !important;
+          text-align: center !important;
+
+          .icon {
+            font-size: 12px !important;
+            font-family: monospace !important;
+          }
         }
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
-      .banner .banner-title {
-        font-size: 36px !important;
-        top: 360px !important;
-        left: 135px !important;
-        letter-spacing: -1.05px !important;
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner-title {
+        font-size: 31.5px !important;
+        left: 142px !important;
+        top: 225px !important;
+        letter-spacing: 2.75px !important;
 
         .subTitle {
-          top: 72px !important;
-          font-size: 19px !important;
-          left: -260px !important;
-          letter-spacing: -1.75px !important;
+          font-size: 16.75px !important;
+          left: 0px !important;
+          top: 46px !important;
+          text-align: left !important;
+          letter-spacing: -0.55px !important;
         }
       }
 
       .banner .bg-button {
-        width: 115px !important;
-        height: 44px !important;
-        transform: scale(0.82) !important;
-        transform: top left !important;
-        top: calc(78vh) !important;
-        left: 130px !important;
+        width: 93px !important;
+        height: 24px !important;
+        left: 140px !important;
+        top: calc(50vh + 32px) !important;
 
         .content {
-          margin: 8px 10px !important;
-          font-size: 17px !important;
-        }
-      }
-    }
-  }
-}
+          margin: 0px 12px !important;
+          font-size: 12px !important;
+          font-weight: 400 !important;
+          color: #fefefe !important;
+          text-align: center !important;
 
-@media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 0px) and (max-height: 599px) {
-  .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
-      .banner .banner-title {
-        font-size: 36px !important;
-        top: 345px !important;
-        left: 130px !important;
-        letter-spacing: -1.05px !important;
-
-        .subTitle {
-          top: 62px !important;
-          left: -155px !important;
-          font-size: 17px !important;
-          letter-spacing: -2.40px !important;
-        }
-      }
-
-      .banner .bg-button {
-        width: 115px !important;
-        height: 44px !important;
-        transform: scale(0.82) !important;
-        transform: top left !important;
-        top: calc(88vh) !important;
-        left: 125px !important;
-
-        .content {
-          margin: 8px 10px !important;
-          font-size: 17px !important;
-        }
-      }
-    }
-
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
-      .banner .banner-title {
-        font-size: 36px !important;
-        top: 360px !important;
-        left: 135px !important;
-        letter-spacing: -1.05px !important;
-
-        .subTitle {
-          top: 72px !important;
-          font-size: 19px !important;
-          left: -260px !important;
-          letter-spacing: -1.75px !important;
-        }
-      }
-
-      .banner .bg-button {
-        width: 115px !important;
-        height: 44px !important;
-        transform: scale(0.82) !important;
-        transform: top left !important;
-        top: calc(90vh) !important;
-        left: 130px !important;
-
-        .content {
-          margin: 8px 10px !important;
-          font-size: 17px !important;
+          .icon {
+            font-size: 14px !important;
+            font-family: monospace !important;
+          }
         }
       }
     }
