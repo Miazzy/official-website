@@ -60,6 +60,8 @@ const isRefresh = ref(true);
 const isRestatus = ref(true);
 const direct = ref(false);
 
+const emit = defineEmits(['change']);
+
 const task = () => {
   if (!isLock.value) {
     isRefresh.value = false;
@@ -80,6 +82,7 @@ const handleScroll = (event: WheelEvent) => {
   isRefresh.value = false;
   isLock.value = true;
   stopAutoScroll();
+  emit('change', activeIndex.value);
   if (event.deltaY > 0) { // 向下滚动
     direct.value = false;
     activeIndex.value = (activeIndex.value + 1) % totalSlides;
@@ -87,13 +90,15 @@ const handleScroll = (event: WheelEvent) => {
     direct.value = true;
     activeIndex.value = (activeIndex.value - 1 + totalSlides) % totalSlides;
   }
+  
   isRestatus.value = false;
   startAutoScroll();
   isLock.value = false;
 };
 
 const handleClick = (index) => {
-  if (activeIndex.value != index) {
+  if (activeIndex.value != activeIndex.value) {
+    emit('change', activeIndex.value);
     isRefresh.value = false;
     isRestatus.value = false;
     isLock.value = true;

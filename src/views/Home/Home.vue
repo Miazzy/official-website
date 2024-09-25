@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <Carousel>
+  <div class="home" >
+    <Carousel @change="handleChange">
       <template #one>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
@@ -92,7 +92,7 @@
       <template #five>
         <div ref="banner" class="banner content-item-block">
           <div class="bg-wrapper">
-            <img src="../../assets/images/home01.jpg" />
+            <img :src="imageURL" />
           </div>
         </div>
       </template>
@@ -111,6 +111,8 @@ import Carousel from '../../components/Carousel.vue';
 import Indicator from '../../components/Indicator.vue';
 import { MsgManager } from "../../manager/MsgManager";
 
+const purl = '/src/assets/images/home01.jpg';
+const imageURL = ref(purl);
 const { proxy } = getCurrentInstance()
 const router = useRouter()
 const banner = ref();
@@ -122,6 +124,10 @@ const handleToAboutUs = (routePath) => {
 const handleToPlan = (type) => {
   MsgManager.getInstance().sendMsg('pagechange', { route: 'plans', type });
   router.push('/plans?type=' + type);
+}
+
+const handleChange = (index) => {
+  imageURL.value = purl.replace('home01', `home0${index + 1}`);
 }
 
 onMounted(() => {
