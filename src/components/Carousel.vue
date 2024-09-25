@@ -90,7 +90,6 @@ const handleScroll = (event: WheelEvent) => {
     direct.value = true;
     activeIndex.value = (activeIndex.value - 1 + totalSlides) % totalSlides;
   }
-  
   isRestatus.value = false;
   startAutoScroll();
   isLock.value = false;
