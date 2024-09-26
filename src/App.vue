@@ -113,6 +113,223 @@ div.plans {
   }
 }
 
+@media only screen and (min-width: 3400px) and (max-width: 3840px) {
+  .header .navbar {
+    margin-left: calc(51.5vw - 10px) !important;
+    margin-top: 6.75vh !important;
+    transform: scale(1.75) !important;
+  }
+
+  .header .logo a {
+    margin: 2.45vh 0 0 13.5vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(2) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 80px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section .business-container {
+      margin: 270px 80px 0px calc(15vw + 20px) !important;
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(2) !important;
+      transform-origin: top left !important;
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(2) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 50% !important;
+      }
+
+      .content-box {
+        width: 50% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(2) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .left-content, .right-content {
+        width: 20.25%;
+      }
+    }
+
+    footer {
+      padding-top: 500px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(2) !important;
+    width: 50% !important;
+    transform-origin: top left !important;
+    margin-top: 1875px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 3000px) and (max-width: 3399px) {
+  .header .navbar {
+    margin-left: calc(51.5vw - 10px) !important;
+    margin-top: 6.75vh !important;
+    transform: scale(1.75) !important;
+  }
+
+  .header .logo a {
+    margin: 2.45vh 0 0 13.5vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(2) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 80px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section .business-container {
+      margin: 270px 80px 0px calc(15vw + 20px) !important;
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(2) !important;
+      transform-origin: top left !important;
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(2) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 50% !important;
+      }
+
+      .content-box {
+        width: 50% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(2) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .left-content, .right-content {
+        width: 20.25%;
+      }
+    }
+
+    footer {
+      padding-top: 500px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(2) !important;
+    width: 50% !important;
+    transform-origin: top left !important;
+    margin-top: 1875px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
 @media screen and (min-width: 2151px) and (max-width: 2199px) {
 
   .header .logo a {

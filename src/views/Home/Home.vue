@@ -472,6 +472,354 @@ onMounted(() => {
   font-size: 16.5px ;
 }
 
+@media only screen and (min-width: 3400px) and (max-width: 3840px) and (min-height: 1800px) and (max-height: 2160px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(1) {
+      right: calc(29.5vw);
+    }
+
+    .indicator-component:nth-child(2) {
+      right: calc(16.5vw);
+    }
+
+    .indicator-component:nth-child(3) {
+      right: calc(28vw);
+    }
+
+    .indicator-component:nth-child(4) {
+      right: calc(15.5vw);
+    }
+
+    .indicator-component:nth-child(1),
+    .indicator-component:nth-child(2) {
+      margin-left: -5vh;
+      top: calc(38vh) !important;
+      transform: scale(2.5);
+      transform-origin: top left;
+    }
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(49.75vh) !important;
+      transform: scale(2.5);
+      transform-origin: top left;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(38.25vh) !important;
+        font-size: 2.8vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7vh) !important;
+          left: calc(-4vw) !important;
+          font-size: 2vh !important;
+          width: 38.5vw !important;
+          letter-spacing: -2px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.7vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.5vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+
+    &:nth-child(1) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(40vh) !important;
+    }
+
+    &:nth-child(2) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(44.5vh) !important;
+    }
+
+    &:nth-child(3) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(50.75vh) !important;
+    }
+
+    &:nth-child(4) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(56.5vh) !important;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(39.5vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8vh) !important;
+          font-size: 1.35vw !important;
+          left: calc(-2.10vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.5vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 3000px) and (max-width: 3399px) and (min-height: 1800px) and (max-height: 2160px) {
+  .home .carousel-container .carousel-slide {
+
+.indicator-component:nth-child(1) {
+  right: calc(29.5vw);
+}
+
+.indicator-component:nth-child(2) {
+  right: calc(16.5vw);
+}
+
+.indicator-component:nth-child(3) {
+  right: calc(28vw);
+}
+
+.indicator-component:nth-child(4) {
+  right: calc(15.5vw);
+}
+
+.indicator-component:nth-child(1),
+.indicator-component:nth-child(2) {
+  margin-left: -5vh;
+  top: calc(38vh) !important;
+  transform: scale(2.5);
+  transform-origin: top left;
+}
+
+.indicator-component:nth-child(3),
+.indicator-component:nth-child(4) {
+  top: calc(49.75vh) !important;
+  transform: scale(2.5);
+  transform-origin: top left;
+}
+
+&:nth-child(1) {
+  .banner .banner-title {
+    top: calc(38.25vh) !important;
+    font-size: 2.8vw !important;
+    left: calc(11.25vw) !important;
+
+    .subTitle {
+      top: calc(7vh) !important;
+      left: calc(-4vw) !important;
+      font-size: 2vh !important;
+      width: 38.5vw !important;
+      letter-spacing: -2px !important;
+    }
+  }
+
+  .banner .bg-button {
+    top: calc(56.7vh) !important;
+    left: calc(11.25vw) !important;
+    width: 7.6vw !important;
+    height: 4.1vh !important;
+
+    .content {
+      margin: 1.5vh 22px !important;
+      font-size: 1.8vh !important;
+
+      .icon {
+        font-size: 1.8vh !important;
+      }
+    }
+  }
+}
+
+&:nth-child(1) .tooltip {
+  font-size: 0.6vw !important;
+  right: 5.2vw !important;
+  top: calc(40vh) !important;
+}
+
+&:nth-child(2) .tooltip {
+  font-size: 0.6vw !important;
+  right: 5.2vw !important;
+  top: calc(44.5vh) !important;
+}
+
+&:nth-child(3) .tooltip {
+  font-size: 0.6vw !important;
+  right: 5.2vw !important;
+  top: calc(50.75vh) !important;
+}
+
+&:nth-child(4) .tooltip {
+  font-size: 0.6vw !important;
+  right: 5.2vw !important;
+  top: calc(56.5vh) !important;
+}
+
+&:nth-child(2),
+&:nth-child(3),
+&:nth-child(4) {
+  .banner .banner-title {
+    font-size: 2.8vw !important;
+    top: calc(39.5vh) !important;
+    left: calc(11.45vw) !important;
+
+    .subTitle {
+      top: calc(8vh) !important;
+      font-size: 1.35vw !important;
+      left: calc(-2.10vw) !important;
+    }
+  }
+
+  .banner .bg-button {
+    top: calc(55.5vh) !important;
+    left: calc(11.25vw) !important;
+    width: 7.6vw !important;
+    height: 4.1vh !important;
+
+    .content {
+      margin: 1.5vh 22px !important;
+      font-size: 1.8vh !important;
+
+      .icon {
+        font-size: 1.8vh !important;
+      }
+    }
+  }
+}
+}
+}
+
+@media only screen and (min-width: 2200px) and (max-width: 2560px) and (min-height: 1200px) and (max-height: 1440px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(1) {
+      right: calc(29.5vw);
+    }
+
+    .indicator-component:nth-child(2) {
+      right: calc(16.5vw);
+    }
+
+    .indicator-component:nth-child(3) {
+      right: calc(28vw);
+    }
+
+    .indicator-component:nth-child(4) {
+      right: calc(15.5vw);
+    }
+
+    .indicator-component:nth-child(1),
+    .indicator-component:nth-child(2) {
+      margin-left: -5vh;
+      top: calc(38vh) !important;
+      transform: scale(2.5);
+      transform-origin: top left;
+    }
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(49.75vh) !important;
+      transform: scale(2.5);
+      transform-origin: top left;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(38.25vh) !important;
+        font-size: 2.8vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7vh) !important;
+          left: calc(-4vw) !important;
+          font-size: 2vh !important;
+          width: 38.5vw !important;
+          letter-spacing: -2px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.7vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.5vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(39.5vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8vh) !important;
+          font-size: 1.35vw !important;
+          left: calc(-2.10vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.5vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 950px) and (max-height: 1080px) {
   .home .carousel-container .carousel-slide {
 

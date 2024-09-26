@@ -71,7 +71,7 @@ const task = () => {
 };
 
 const startAutoScroll = () => {
-  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND);
+  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND * 100);
 };
 
 const stopAutoScroll = () => {
