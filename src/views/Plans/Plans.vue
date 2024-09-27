@@ -202,7 +202,7 @@ const updateHeights = () => {
   }
 
 
-  if (screenWidth >= 2800 && screenWidth <= 3840) {
+  if (screenWidth >= 2400 && screenWidth <= 3840) {
     topHeight.value = parseInt(topBaseHeight);
     middleHeight.value = parseInt(middleBaseHeight);
     bottomHeight.value = parseInt(bottomBaseHeight);

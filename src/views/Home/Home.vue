@@ -291,7 +291,7 @@ onMounted(() => {
     .content {
       margin: 9px 20px;
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 400;
       color: #fefefe;
       text-align: center;
 
@@ -396,7 +396,7 @@ onMounted(() => {
   .content {
     margin: 10px 22px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 25px;
   }
 }
@@ -1107,7 +1107,7 @@ onMounted(() => {
   }
 }
 
-@media only screen and (min-width: 2561px) and (max-width: 2799px) and (min-height: 900px) and (max-height: 2160px) {
+@media only screen and (min-width: 2561px) and (max-width: 2799px) and (min-height: 850px) and (max-height: 2000px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(1) {
@@ -1231,7 +1231,7 @@ onMounted(() => {
   }
 }
 
-@media only screen and (min-width: 2200px) and (max-width: 2560px) and (min-height: 900px) and (max-height: 1440px) {
+@media only screen and (min-width: 2200px) and (max-width: 2560px) and (min-height: 800px) and (max-height: 1440px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(1) {
@@ -1331,7 +1331,7 @@ onMounted(() => {
   }
 }
 
-@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 900px) and (max-height: 1080px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 800px) and (max-height: 1080px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(3),
@@ -1380,7 +1380,7 @@ onMounted(() => {
   }
 }
 
-@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 900px) and (max-height: 949px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 800px) and (max-height: 949px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(3),
