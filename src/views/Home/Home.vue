@@ -111,10 +111,14 @@ import Carousel from '../../components/Carousel.vue';
 import Indicator from '../../components/Indicator.vue';
 import { MsgManager } from "../../manager/MsgManager";
 
-const purl = '/src/assets/images/home01.jpg';
-const imageURL = ref(purl);
-const { proxy } = getCurrentInstance()
-const router = useRouter()
+// 通过 import 引入图片
+import home01 from '../../assets/images/home01.jpg';
+import home02 from '../../assets/images/home02.jpg';
+import home03 from '../../assets/images/home03.jpg';
+import home04 from '../../assets/images/home04.jpg';
+
+const imageURL = ref(home01);  // 默认显示的图片
+const router = useRouter();
 const banner = ref();
 
 // 了解更多跳转
@@ -127,7 +131,8 @@ const handleToPlan = (type) => {
 }
 
 const handleChange = (index) => {
-  imageURL.value = purl.replace('home01', `home0${index + 1}`);
+  const images = [home01, home02, home03, home04];
+  imageURL.value = images[index];
 }
 
 onMounted(() => {
