@@ -104,7 +104,7 @@
 </template>
 
 <script setup>
-import { ref, getCurrentInstance, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { useRouter } from 'vue-router';
 import EventBus from '../../helper/EventBus';
 import Carousel from '../../components/Carousel.vue';

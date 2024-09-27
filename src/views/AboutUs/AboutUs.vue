@@ -137,7 +137,7 @@ const updateHeights = () => {
     bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor * 1.2);
   }
 
-  if (screenWidth >= 2400 && screenWidth <= 3840) {
+  if (screenWidth >= 1920 && screenWidth <= 3840) {
     bnrWidth.value = parseInt(bnrBaseWidth);
   }
 

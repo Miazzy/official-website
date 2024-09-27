@@ -1870,7 +1870,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 2300px) and (max-width: 2399px) {
+@media only screen and (min-width: 2350px) and (max-width: 2399px) {
   .header .navbar {
     margin-left: calc(47.5vw - 10px) !important;
     margin-top: 6.05vh !important;
@@ -1906,16 +1906,16 @@ div.plans {
   #container.plans {
 
     main {
-      transform: scale(1.28) !important;
+      transform: scale(1.23) !important;
       transform-origin: top left !important;
     }
 
     .plans.container .middle-content {
-      margin: -68px auto 0 185px !important;
+      margin: -68px auto 0 215px !important;
     }
 
     .plans.container .middle-content .index-container {
-      margin: 60px 0 0 80px !important;
+      margin: 60px 0 0 100px !important;
 
       .indicator-component {
         margin: 20px 0 0 60px !important;
@@ -1925,7 +1925,7 @@ div.plans {
 
     .plans.container .bottom-section {
       .banner {
-        margin: 56px 0 0 270px !important;
+        margin: 56px 0 0 298px !important;
       }
       .business-container {
         margin: 250px 80px 0px calc(22.75vw + 0px) !important;
@@ -1935,16 +1935,16 @@ div.plans {
 
   #container.projectCases {
     main {
-      transform: scale(1.28) !important;
+      transform: scale(1.23) !important;
       transform-origin: top left !important;
     }
 
     .project-cases .content-box-1 .intelligent-operation-box{
-      margin: -68px auto 0 185px !important;
+      margin: -68px auto 0 215px !important;
     }
 
     .project-cases .content-box-2 .smart-agriculture-box {
-      margin: -20px auto 0 270px !important;
+      margin: -20px auto 0 300px !important;
 
       .title-box {
         padding: 60px 0 42px 15px !important;
@@ -1954,17 +1954,17 @@ div.plans {
 
   #container.informationCenter {
     main {
-      transform: scale(1.28) !important;
+      transform: scale(1.23) !important;
       transform-origin: top left !important;
     }
 
     .information-center {
       .banner-box {
-        width: 78.75% !important;
+        width: 82.25% !important;
       }
 
       .content-box {
-        width: 78.75% !important;
+        width: 82.25% !important;
         margin: 0 !important;
       }
     }
@@ -1972,18 +1972,18 @@ div.plans {
 
   #container.aboutus {
     main {
-      transform: scale(1.28) !important;
+      transform: scale(1.23) !important;
       transform-origin: top left !important;
     }
 
     .aboutus.container .middle-section {
-      margin: 0px auto 0 265px !important;
+      margin: 0px auto 0 280px !important;
     }
 
     .aboutus.container .submid-section {
       width: 100% !important;
       .banner {
-        margin: 25px auto 0 -40px !important;
+        margin: 25px auto 0 -25px !important;
       }
     }
 
@@ -1991,25 +1991,25 @@ div.plans {
       overflow: hidden;
 
       .banner {
-          margin: 0px auto 0 -40px !important;
+          margin: 0px auto 0 -25px !important;
       }
 
       .left-content,
       .right-content {
-        width: 36.75%;
+        width: 37.75%;
       }
     }
 
     footer {
-      padding-top: 250px !important;
+      padding-top: 200px !important;
     }
   }
 
   .footer {
-    transform: scale(1.28) !important;
-    width: 78.75% !important;
+    transform: scale(1.23) !important;
+    width: 82.25% !important;
     transform-origin: top left !important;
-    margin-top: 400px !important;
+    margin-top: 300px !important;
 
     .footer-content-column:last-child {
       margin: 0 0 0 110px !important;
@@ -2017,1033 +2017,1330 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 2100px) and (max-width: 2199px) {
+@media only screen and (min-width: 2300px) and (max-width: 2349px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
 
   .header .logo a {
-    margin: 20px 0 0 210px !important;
+    margin: 2.15vh 0 0 13.05vw !important;
 
     .logo {
-      width: 142px !important;
+      width: 7.5vw !important;
 
       img {
-        width: 142px !important;
-      }
-    }
-  }
-
-  .header .navbar {
-    margin-left: calc(34vw + 47.5px) !important;
-    margin-top: calc(3.95vh + 0px) !important;
-
-    a {
-      &:first-child {
-        .navbar-item {
-          width: 40px !important;
-        }
-      }
-    }
-
-    &-item {
-      margin: -6px 30px 0px 30px !important;
-      width: 75px !important;
-      min-width: 40px !important;
-      font-size: 18.5px !important;
-    }
-  }
-
-  .aboutus.container .top-section .banner {
-    margin: 271px 0 0 0 !important;
-
-    .text {
-      font-size: 50px !important;
-    }
-
-    .text.en {
-      font-weight: 600 !important;
-      font-size: 18px !important;
-    }
-  }
-
-  .aboutus.container .middle-section {
-    margin: 0px 305px 0 305px !important;
-
-    .image img {
-      margin: 208px 0 0 50px !important;
-    }
-
-    .banner {
-      .upper {
-        margin: 30px 0 10px 0px !important;
-        padding: 10px 0px 10px 0px !important;
-        font-size: 34px !important;
-
-        .shadow-text {
-          top: 53px !important;
-          left: -2px !important;
-          font-size: 72px !important;
-          letter-spacing: -3px !important;
-        }
-
-        .bottom-text {
-          top: 107px !important;
-          left: 0px !important;
-          font-size: 16px !important;
-        }
-      }
-
-      .content {
-        left: 14px !important;
-        top: 198px !important;
-
-        p {
-          line-height: 1.8 !important;
-          text-indent: 2em !important;
-          font-size: 16px !important;
-
-          &:nth-child(2) {
-            font-size: 16px !important;
-            margin: -10px 0 0 0;
-          }
-
-          &:nth-child(3) {
-            font-size: 16px !important;
-            margin: 0px 0 0 0;
-          }
-        }
-      }
-    }
-  }
-
-  .home .carousel-container .indicator {
-    right: 120px !important;
-    top: calc(50% + 0px) !important;
-
-    .segment {
-      height: 64px !important;
-    }
-  }
-
-  .home .carousel-container .banner .bg-button {
-    width: 161px;
-    height: 49px;
-    left: 264px;
-    top: calc(50vh + 80px);
-
-    .content {
-      margin: 10px 22px;
-      font-size: 20px;
-      font-weight: 400;
-    }
-  }
-
-  .home .carousel-container {
-    .carousel-slide {
-
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4) {
-        .banner .banner-title .subTitle {
-          left: -182px;
-          top: 118px;
-          font-size: 34px;
-          width: 700px;
-          letter-spacing: -3px;
-        }
-
-        .banner .bg-button {
-          width: 161px;
-          height: 49px;
-          left: 200px;
-          top: calc(50vh + 90px);
-        }
-      }
-    }
-  }
-
-  .home .carousel-container .banner .banner-title {
-
-    .subTitle {
-      left: -33px;
-      top: 90px;
-      font-size: 22px;
-      width: 700px;
-      letter-spacing: 0px;
-    }
-  }
-
-  .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
-      .banner .tooltip {
-        font-size: 11.5px !important;
-        right: 95px !important;
-        top: calc(50vh - 108px) !important;
-      }
-    }
-
-    &:nth-child(2) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh - 55.5px) !important;
-      }
-    }
-
-    &:nth-child(3) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh + 10px) !important;
-      }
-    }
-
-    &:nth-child(4) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh + 78px) !important;
-      }
-    }
-
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      .banner-title {
-        left: 202px !important;
-        top: 399px !important;
+        width: 7.5vw !important;
       }
     }
   }
 
   .home .copyright {
-    bottom: 11px !important;
-    right: 194px !important;
-    font-size: 16.5px !important;
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
   }
 
-  .plans.container .bottom-section .banner .text {
-    padding: 2px 0 0 0 !important;
-    font-size: 34px !important;
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
 
-    &.en {
-      font-size: 16px !important;
-    }
-
-    &.indicate {
-      font-size: 16px !important;
+    .segment {
+      height: 6vh !important;
     }
   }
 
-  .plans.container .middle-content {
-    margin: -68px 220px 0 220px !important;
-    background-image: url('/src/assets/images/plan_wenli.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
+  #container.plans {
 
-    .upper {
-      font-size: 34px !important;
-      margin: 100px 0 10px 84px !important;
+    main {
+      transform: scale(1.21) !important;
+      transform-origin: top left !important;
+    }
 
-      .shadow-text {
-        font-size: 72px !important;
-      }
+    .plans.container .middle-content {
+      margin: -68px auto 0 210px !important;
+    }
 
-      .bottom-text {
-        font-size: 16px !important;
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
       }
     }
 
-    .description {
-      text-indent: 2em !important;
-      margin: 65px 87.5px 53.5px 87.5px !important;
-      font-size: 16px !important;
-      line-height: 30px !important;
-    }
-
-    .index-container {
-      margin: 100px 0 0 120px !important;
-
-      .box {
-        width: 386px;
-        height: 170px;
-        margin-right: 50.5px !important;
-
-        .indicator-component {
-          margin: -90px 0 0 20px !important;
-        }
-
-        .upper {
-          span.num {
-            font-size: 52px !important;
-          }
-
-          span.unit {
-            font-size: 24px !important;
-          }
-        }
-
-        .descript {
-          font-size: 18px !important;
-          margin: 0 0 0 50px !important;
-        }
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 298px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
       }
     }
   }
 
-  .plans.container .bottom-section .business-container {
-    margin: 270px 80px 0px calc(28vw + 20px) !important;
+  #container.projectCases {
+    main {
+      transform: scale(1.21) !important;
+      transform-origin: top left !important;
+    }
 
-    .box {
-      width: 322px !important;
-      height: 442px !important;
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 210px !important;
+    }
 
-      .icon {
-        margin: 80px 0 10px 35% !important;
-        font-size: 74px !important;
-        height: 75px !important;
-        color: #686868 !important;
-      }
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 295px !important;
 
-      .text-content {
-        height: 415px !important;
-
-        .title {
-          font-size: 24px !important;
-          color: #333333 !important;
-          margin: 7.5px 0 12.5px 0 !important;
-          opacity: 1 !important;
-        }
-
-        .text {
-          font-size: 13px !important;
-          margin: 15px 75px 10px 75px !important;
-          color: #999999 !important;
-          opacity: 1 !important;
-        }
+      .title-box {
+        padding: 60px 0 42px 15px !important;
       }
     }
   }
 
-  .plans.container .middle-content .index-container .three-box-layout .card-component {
-    width: 100% !important;
-    height: 170px !important;
-    padding-left: 50px !important;
-
-    .icon-box .iconfont {
-      font-size: 78px !important;
+  #container.informationCenter {
+    main {
+      transform: scale(1.21) !important;
+      transform-origin: top left !important;
     }
 
-    .label-box .label-ch-text {
-      font-size: 26px !important;
-    }
-
-    .label-box .label-en-text {
-      font-size: 16px !important;
-    }
-  }
-
-  .aboutus.container .submid-section {
-    padding: 0px 310px 0 310px !important;
-  }
-
-  .aboutus.container .bottom-section {
-    padding: 0px 310px 0 310px !important;
-  }
-
-  #container {
-    &:not(.home) {
-      main {
-        transform: scale(1.12) !important;
+    .information-center {
+      .banner-box {
+        width: 83.25% !important;
       }
 
-      .footer {
-        margin: 120px 0 0 0 !important;
+      .content-box {
+        width: 83.25% !important;
+        margin: 0 !important;
       }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.21) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 290px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -15px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -15px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 38.35%;
+      }
+    }
+
+    footer {
+      padding-top: 200px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.21) !important;
+    width: 83.25% !important;
+    transform-origin: top left !important;
+    margin-top: 270px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
     }
   }
 }
 
-@media only screen and (min-width: 2000px) and (max-width: 2099px) {
+@media only screen and (min-width: 2250px) and (max-width: 2299px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
 
   .header .logo a {
-    margin: 20px 0 0 210px !important;
+    margin: 2.15vh 0 0 13.05vw !important;
 
     .logo {
-      width: 142px !important;
+      width: 7.5vw !important;
 
       img {
-        width: 142px !important;
-      }
-    }
-  }
-
-  .header .navbar {
-    margin-left: calc(34vw + 47.5px) !important;
-    margin-top: calc(3.95vh + 0px) !important;
-
-    a {
-      &:first-child {
-        .navbar-item {
-          width: 40px !important;
-        }
-      }
-    }
-
-    &-item {
-      margin: -6px 30px 0px 30px !important;
-      width: 75px !important;
-      min-width: 40px !important;
-      font-size: 18.5px !important;
-    }
-  }
-
-  .aboutus.container .top-section .banner {
-    margin: 271px 0 0 0 !important;
-
-    .text {
-      font-size: 50px !important;
-    }
-
-    .text.en {
-      font-weight: 600 !important;
-      font-size: 18px !important;
-    }
-  }
-
-  .aboutus.container .middle-section {
-    margin: 0px 305px 0 305px !important;
-
-    .image img {
-      margin: 208px 0 0 50px !important;
-    }
-
-    .banner {
-      .upper {
-        margin: 30px 0 10px 0px !important;
-        padding: 10px 0px 10px 0px !important;
-        font-size: 34px !important;
-
-        .shadow-text {
-          top: 53px !important;
-          left: -2px !important;
-          font-size: 72px !important;
-          letter-spacing: -3px !important;
-        }
-
-        .bottom-text {
-          top: 107px !important;
-          left: 0px !important;
-          font-size: 16px !important;
-        }
-      }
-
-      .content {
-        left: 14px !important;
-        top: 198px !important;
-
-        p {
-          line-height: 1.8 !important;
-          text-indent: 2em !important;
-          font-size: 16px !important;
-
-          &:nth-child(2) {
-            font-size: 16px !important;
-            margin: -10px 0 0 0;
-          }
-
-          &:nth-child(3) {
-            font-size: 16px !important;
-            margin: 0px 0 0 0;
-          }
-        }
-      }
-    }
-  }
-
-  .home .carousel-container .indicator {
-    right: 120px !important;
-    top: calc(50% + 0px) !important;
-
-    .segment {
-      height: 64px !important;
-    }
-  }
-
-  .home .carousel-container .banner .bg-button {
-    width: 161px;
-    height: 49px;
-    left: 264px;
-    top: calc(50vh + 80px);
-
-    .content {
-      margin: 10px 22px;
-      font-size: 20px;
-      font-weight: 400;
-    }
-  }
-
-  .home .carousel-container {
-    .carousel-slide {
-
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4) {
-        .banner .banner-title .subTitle {
-          left: -182px;
-          top: 118px;
-          font-size: 34px;
-          width: 700px;
-          letter-spacing: -3px;
-        }
-
-        .banner .bg-button {
-          width: 161px;
-          height: 49px;
-          left: 200px;
-          top: calc(50vh + 90px);
-        }
-      }
-    }
-  }
-
-  .home .carousel-container .banner .banner-title {
-
-    .subTitle {
-      left: -33px;
-      top: 90px;
-      font-size: 22px;
-      width: 700px;
-      letter-spacing: 0px;
-    }
-  }
-
-  .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
-      .banner .tooltip {
-        font-size: 11.5px !important;
-        right: 95px !important;
-        top: calc(50vh - 108px) !important;
-      }
-    }
-
-    &:nth-child(2) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh - 55.5px) !important;
-      }
-    }
-
-    &:nth-child(3) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh + 10px) !important;
-      }
-    }
-
-    &:nth-child(4) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh + 78px) !important;
-      }
-    }
-
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      .banner-title {
-        left: 202px !important;
-        top: 399px !important;
+        width: 7.5vw !important;
       }
     }
   }
 
   .home .copyright {
-    bottom: 11px !important;
-    right: 194px !important;
-    font-size: 16.5px !important;
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
   }
 
-  .plans.container .bottom-section .banner .text {
-    padding: 2px 0 0 0 !important;
-    font-size: 34px !important;
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
 
-    &.en {
-      font-size: 16px !important;
-    }
-
-    &.indicate {
-      font-size: 16px !important;
+    .segment {
+      height: 6vh !important;
     }
   }
 
-  .plans.container .middle-content {
-    margin: -68px 220px 0 220px !important;
-    background-image: url('/src/assets/images/plan_wenli.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
+  #container.plans {
 
-    .upper {
-      font-size: 34px !important;
-      margin: 100px 0 10px 84px !important;
+    main {
+      transform: scale(1.20) !important;
+      transform-origin: top left !important;
+    }
 
-      .shadow-text {
-        font-size: 72px !important;
-      }
+    .plans.container .middle-content {
+      margin: -68px auto 0 195px !important;
+    }
 
-      .bottom-text {
-        font-size: 16px !important;
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
       }
     }
 
-    .description {
-      text-indent: 2em !important;
-      margin: 65px 87.5px 53.5px 87.5px !important;
-      font-size: 16px !important;
-      line-height: 30px !important;
-    }
-
-    .index-container {
-      margin: 100px 0 0 120px !important;
-
-      .box {
-        width: 386px;
-        height: 170px;
-        margin-right: 50.5px !important;
-
-        .indicator-component {
-          margin: -90px 0 0 20px !important;
-        }
-
-        .upper {
-          span.num {
-            font-size: 52px !important;
-          }
-
-          span.unit {
-            font-size: 24px !important;
-          }
-        }
-
-        .descript {
-          font-size: 18px !important;
-          margin: 0 0 0 50px !important;
-        }
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 285px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
       }
     }
   }
 
-  .plans.container .bottom-section .business-container {
-    margin: 270px 80px 0px calc(28vw + 20px) !important;
+  #container.projectCases {
+    main {
+      transform: scale(1.20) !important;
+      transform-origin: top left !important;
+    }
 
-    .box {
-      width: 322px !important;
-      height: 442px !important;
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 195px !important;
+    }
 
-      .icon {
-        margin: 80px 0 10px 35% !important;
-        font-size: 74px !important;
-        height: 75px !important;
-        color: #686868 !important;
-      }
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 280px !important;
 
-      .text-content {
-        height: 415px !important;
-
-        .title {
-          font-size: 24px !important;
-          color: #333333 !important;
-          margin: 7.5px 0 12.5px 0 !important;
-          opacity: 1 !important;
-        }
-
-        .text {
-          font-size: 13px !important;
-          margin: 15px 75px 10px 75px !important;
-          color: #999999 !important;
-          opacity: 1 !important;
-        }
+      .title-box {
+        padding: 60px 0 42px 15px !important;
       }
     }
   }
 
-  .plans.container .middle-content .index-container .three-box-layout .card-component {
-    width: 100% !important;
-    height: 170px !important;
-    padding-left: 50px !important;
-
-    .icon-box .iconfont {
-      font-size: 78px !important;
+  #container.informationCenter {
+    main {
+      transform: scale(1.20) !important;
+      transform-origin: top left !important;
     }
 
-    .label-box .label-ch-text {
-      font-size: 26px !important;
-    }
-
-    .label-box .label-en-text {
-      font-size: 16px !important;
-    }
-  }
-
-  .aboutus.container .submid-section {
-    padding: 0px 310px 0 310px !important;
-  }
-
-  .aboutus.container .bottom-section {
-    padding: 0px 310px 0 310px !important;
-  }
-
-  #container {
-    &:not(.home) {
-      main {
-        transform: scale(1.19) !important;
+    .information-center {
+      .banner-box {
+        width: 83.75% !important;
       }
 
-      .footer {
-        margin: 190px 0 0 0 !important;
+      .content-box {
+        width: 83.75% !important;
+        margin: 0 !important;
       }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.20) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 280px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -25px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -25px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 39.40%;
+      }
+    }
+
+    footer {
+      padding-top: 200px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.20) !important;
+    width: 83.75% !important;
+    transform-origin: top left !important;
+    margin-top: 250px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
     }
   }
 }
 
-@media only screen and (min-width: 1973px) and (max-width: 1999px) {
+@media only screen and (min-width: 2200px) and (max-width: 2249px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
 
   .header .logo a {
-    margin: 20px 0 0 210px !important;
+    margin: 2.15vh 0 0 13.05vw !important;
 
     .logo {
-      width: 142px !important;
+      width: 7.5vw !important;
 
       img {
-        width: 142px !important;
-      }
-    }
-  }
-
-  .header .navbar {
-    margin-left: calc(34vw + 47.5px) !important;
-    margin-top: calc(3.95vh + 0px) !important;
-
-    a {
-      &:first-child {
-        .navbar-item {
-          width: 40px !important;
-        }
-      }
-    }
-
-    &-item {
-      margin: -6px 30px 0px 30px !important;
-      width: 75px !important;
-      min-width: 40px !important;
-      font-size: 18.5px !important;
-    }
-  }
-
-  .aboutus.container .top-section .banner {
-    margin: 271px 0 0 0 !important;
-
-    .text {
-      font-size: 50px !important;
-    }
-
-    .text.en {
-      font-weight: 600 !important;
-      font-size: 18px !important;
-    }
-  }
-
-  .aboutus.container .middle-section {
-    margin: 0px 305px 0 305px !important;
-
-    .image img {
-      margin: 208px 0 0 50px !important;
-    }
-
-    .banner {
-      .upper {
-        margin: 30px 0 10px 0px !important;
-        padding: 10px 0px 10px 0px !important;
-        font-size: 34px !important;
-
-        .shadow-text {
-          top: 53px !important;
-          left: -2px !important;
-          font-size: 72px !important;
-          letter-spacing: -3px !important;
-        }
-
-        .bottom-text {
-          top: 107px !important;
-          left: 0px !important;
-          font-size: 16px !important;
-        }
-      }
-
-      .content {
-        left: 14px !important;
-        top: 198px !important;
-
-        p {
-          line-height: 1.8 !important;
-          text-indent: 2em !important;
-          font-size: 16px !important;
-
-          &:nth-child(2) {
-            font-size: 16px !important;
-            margin: -10px 0 0 0;
-          }
-
-          &:nth-child(3) {
-            font-size: 16px !important;
-            margin: 0px 0 0 0;
-          }
-        }
-      }
-    }
-  }
-
-  .home .carousel-container .indicator {
-    right: 120px !important;
-    top: calc(50% + 0px) !important;
-
-    .segment {
-      height: 64px !important;
-    }
-  }
-
-  .home .carousel-container .banner .bg-button {
-    width: 161px;
-    height: 49px;
-    left: 264px;
-    top: calc(50vh + 80px);
-
-    .content {
-      margin: 10px 22px;
-      font-size: 20px;
-      font-weight: 400;
-    }
-  }
-
-  .home .carousel-container {
-    .carousel-slide {
-
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4) {
-        .banner .banner-title .subTitle {
-          left: -182px;
-          top: 118px;
-          font-size: 34px;
-          width: 700px;
-          letter-spacing: -3px;
-        }
-
-        .banner .bg-button {
-          width: 161px;
-          height: 49px;
-          left: 200px;
-          top: calc(50vh + 90px);
-        }
-      }
-    }
-  }
-
-  .home .carousel-container .banner .banner-title {
-
-    .subTitle {
-      left: -33px;
-      top: 90px;
-      font-size: 22px;
-      width: 700px;
-      letter-spacing: 0px;
-    }
-  }
-
-  .home .carousel-container .carousel-slide {
-    &:nth-child(1) {
-      .banner .tooltip {
-        font-size: 11.5px !important;
-        right: 95px !important;
-        top: calc(50vh - 108px) !important;
-      }
-    }
-
-    &:nth-child(2) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh - 55.5px) !important;
-      }
-    }
-
-    &:nth-child(3) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh + 10px) !important;
-      }
-    }
-
-    &:nth-child(4) {
-      .banner .tooltip {
-        right: 95px !important;
-        top: calc(50vh + 78px) !important;
-      }
-    }
-
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      .banner-title {
-        left: 202px !important;
-        top: 399px !important;
+        width: 7.5vw !important;
       }
     }
   }
 
   .home .copyright {
-    bottom: 11px !important;
-    right: 194px !important;
-    font-size: 16.5px !important;
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
   }
 
-  .plans.container .bottom-section .banner .text {
-    padding: 2px 0 0 0 !important;
-    font-size: 34px !important;
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
 
-    &.en {
-      font-size: 16px !important;
-    }
-
-    &.indicate {
-      font-size: 16px !important;
+    .segment {
+      height: 6vh !important;
     }
   }
 
-  .plans.container .middle-content {
-    margin: -68px 220px 0 220px !important;
-    background-image: url('/src/assets/images/plan_wenli.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
+  #container.plans {
 
-    .upper {
-      font-size: 34px !important;
-      margin: 100px 0 10px 84px !important;
+    main {
+      transform: scale(1.175) !important;
+      transform-origin: top left !important;
+    }
 
-      .shadow-text {
-        font-size: 72px !important;
-      }
+    .plans.container .middle-content {
+      margin: -68px auto 0 195px !important;
+    }
 
-      .bottom-text {
-        font-size: 16px !important;
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
       }
     }
 
-    .description {
-      text-indent: 2em !important;
-      margin: 65px 87.5px 53.5px 87.5px !important;
-      font-size: 16px !important;
-      line-height: 30px !important;
-    }
-
-    .index-container {
-      margin: 100px 0 0 120px !important;
-
-      .box {
-        width: 386px;
-        height: 170px;
-        margin-right: 50.5px !important;
-
-        .indicator-component {
-          margin: -90px 0 0 20px !important;
-        }
-
-        .upper {
-          span.num {
-            font-size: 52px !important;
-          }
-
-          span.unit {
-            font-size: 24px !important;
-          }
-        }
-
-        .descript {
-          font-size: 18px !important;
-          margin: 0 0 0 50px !important;
-        }
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 285px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
       }
     }
   }
 
-  .plans.container .bottom-section .business-container {
-    margin: 270px 80px 0px calc(28vw + 20px) !important;
+  #container.projectCases {
+    main {
+      transform: scale(1.175) !important;
+      transform-origin: top left !important;
+    }
 
-    .box {
-      width: 322px !important;
-      height: 442px !important;
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 195px !important;
+    }
 
-      .icon {
-        margin: 80px 0 10px 35% !important;
-        font-size: 74px !important;
-        height: 75px !important;
-        color: #686868 !important;
-      }
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 280px !important;
 
-      .text-content {
-        height: 415px !important;
-
-        .title {
-          font-size: 24px !important;
-          color: #333333 !important;
-          margin: 7.5px 0 12.5px 0 !important;
-          opacity: 1 !important;
-        }
-
-        .text {
-          font-size: 13px !important;
-          margin: 15px 75px 10px 75px !important;
-          color: #999999 !important;
-          opacity: 1 !important;
-        }
+      .title-box {
+        padding: 60px 0 42px 15px !important;
       }
     }
   }
 
-  .plans.container .middle-content .index-container .three-box-layout .card-component {
-    width: 100% !important;
-    height: 170px !important;
-    padding-left: 50px !important;
-
-    .icon-box .iconfont {
-      font-size: 78px !important;
+  #container.informationCenter {
+    main {
+      transform: scale(1.175) !important;
+      transform-origin: top left !important;
     }
 
-    .label-box .label-ch-text {
-      font-size: 26px !important;
-    }
-
-    .label-box .label-en-text {
-      font-size: 16px !important;
-    }
-  }
-
-  .aboutus.container .submid-section {
-    padding: 0px 310px 0 310px !important;
-  }
-
-  .aboutus.container .bottom-section {
-    padding: 0px 310px 0 310px !important;
-  }
-
-  #container {
-    &:not(.home) {
-      main {
-        transform: scale(1.07) !important;
+    .information-center {
+      .banner-box {
+        width: 85.25% !important;
       }
 
-      .footer {
-        margin: 60px 0 0 0 !important;
+      .content-box {
+        width: 85.25% !important;
+        margin: 0 !important;
       }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.175) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 280px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -25px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -25px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 41.20%;
+      }
+    }
+
+    footer {
+      padding-top: 180px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.175) !important;
+    width: 85.25% !important;
+    transform-origin: top left !important;
+    margin-top: 210px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
     }
   }
 }
 
-@media screen and (min-width: 1900px) and (max-width: 1972px) {
+@media only screen and (min-width: 2150px) and (max-width: 2199px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
+
+  .header .logo a {
+    margin: 2.15vh 0 0 13.05vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.1614) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content {
+      margin: -68px auto 0 195px !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 285px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
+      }
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.1614) !important;
+      transform-origin: top left !important;
+    }
+
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 195px !important;
+    }
+
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 280px !important;
+
+      .title-box {
+        padding: 60px 0 42px 15px !important;
+      }
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.1614) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 88.25% !important;
+      }
+
+      .content-box {
+        width: 88.25% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.1614) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 280px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -25px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -25px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 41.20%;
+      }
+    }
+
+    footer {
+      padding-top: 150px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.1614) !important;
+    width: 88.25% !important;
+    transform-origin: top left !important;
+    margin-top: 200px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 2100px) and (max-width: 2149px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
+
+  .header .logo a {
+    margin: 2.15vh 0 0 13.05vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.1285) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content {
+      margin: -68px auto 0 195px !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 285px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
+      }
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.1285) !important;
+      transform-origin: top left !important;
+    }
+
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 195px !important;
+    }
+
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 280px !important;
+
+      .title-box {
+        padding: 60px 0 42px 15px !important;
+      }
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.1614) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 88.25% !important;
+      }
+
+      .content-box {
+        width: 88.25% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.1285) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 280px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -25px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -25px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 41.20%;
+      }
+    }
+
+    footer {
+      padding-top: 150px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.1285) !important;
+    width: 90.25% !important;
+    transform-origin: top left !important;
+    margin-top: 140px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 2050px) and (max-width: 2099px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
+
+  .header .logo a {
+    margin: 2.15vh 0 0 13.05vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.0925) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content {
+      margin: -68px auto 0 195px !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 285px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
+      }
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.0925) !important;
+      transform-origin: top left !important;
+    }
+
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 195px !important;
+    }
+
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 280px !important;
+
+      .title-box {
+        padding: 60px 0 42px 15px !important;
+      }
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.0925) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 92.25% !important;
+      }
+
+      .content-box {
+        width: 92.25% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.0925) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 280px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -25px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -25px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 41.20%;
+      }
+    }
+
+    footer {
+      padding-top: 150px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.0925) !important;
+    width: 92.25% !important;
+    transform-origin: top left !important;
+    margin-top: 75px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 2000px) and (max-width: 2049px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
+
+  .header .logo a {
+    margin: 2.15vh 0 0 13.05vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.0675) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content {
+      margin: -68px auto 0 195px !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 285px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
+      }
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.0675) !important;
+      transform-origin: top left !important;
+    }
+
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 195px !important;
+    }
+
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 280px !important;
+
+      .title-box {
+        padding: 60px 0 42px 15px !important;
+      }
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.0675) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 94.25% !important;
+      }
+
+      .content-box {
+        width: 94.25% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.0675) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 280px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -25px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -25px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 41.20%;
+      }
+    }
+
+    footer {
+      padding-top: 150px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.0675) !important;
+    width: 94.25% !important;
+    transform-origin: top left !important;
+    margin-top: 35px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 1960px) and (max-width: 1999px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
+
+  .header .logo a {
+    margin: 2.15vh 0 0 13.05vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.0475) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content {
+      margin: -68px auto 0 195px !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 285px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
+      }
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.0475) !important;
+      transform-origin: top left !important;
+    }
+
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 195px !important;
+    }
+
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 280px !important;
+
+      .title-box {
+        padding: 60px 0 42px 15px !important;
+      }
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.0475) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 96.25% !important;
+      }
+
+      .content-box {
+        width: 96.25% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.0475) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 280px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -25px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -25px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 41.20%;
+      }
+    }
+
+    footer {
+      padding-top: 150px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.0475) !important;
+    width: 96.25% !important;
+    transform-origin: top left !important;
+    margin-top: -25px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 1921px) and (max-width: 1959px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
+
+  .header .logo a {
+    margin: 2.15vh 0 0 13.05vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.0275) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content {
+      margin: -68px auto 0 195px !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 100px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section {
+      .banner {
+        margin: 56px 0 0 285px !important;
+      }
+      .business-container {
+        margin: 250px 80px 0px calc(25.25vw + 0px) !important;
+      }
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.0275) !important;
+      transform-origin: top left !important;
+    }
+
+    .project-cases .content-box-1 .intelligent-operation-box{
+      margin: -68px auto 0 195px !important;
+    }
+
+    .project-cases .content-box-2 .smart-agriculture-box {
+      margin: -20px auto 0 280px !important;
+
+      .title-box {
+        padding: 60px 0 42px 15px !important;
+      }
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.0275) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 96.25% !important;
+      }
+
+      .content-box {
+        width: 96.25% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.0275) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .middle-section {
+      margin: 0px auto 0 280px !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+      .banner {
+        margin: 25px auto 0 -25px !important;
+      }
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .banner {
+          margin: 0px auto 0 -25px !important;
+      }
+
+      .left-content,
+      .right-content {
+        width: 41.20%;
+      }
+    }
+
+    footer {
+      padding-top: 150px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.0275) !important;
+    width: 98.25% !important;
+    transform-origin: top left !important;
+    margin-top: -55px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1900px) and (max-width: 1920px) {
 
   .header .logo a {
     margin: 20px 0 0 210px !important;
