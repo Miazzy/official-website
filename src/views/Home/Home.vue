@@ -487,7 +487,7 @@ onMounted(() => {
   font-size: 16.5px;
 }
 
-@media only screen and (min-width: 3600px) and (max-width: 3840px) and (min-height: 1600px) and (max-height: 2160px) {
+@media only screen and (min-width: 3600px) and (max-width: 3840px) and (min-height: 1000px) and (max-height: 2160px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(1) {
@@ -529,7 +529,7 @@ onMounted(() => {
 
         .subTitle {
           top: calc(7vh) !important;
-          left: calc(-4vw) !important;
+          left: calc(-4.0vw) !important;
           font-size: 2vh !important;
           width: 38.5vw !important;
           letter-spacing: -2px !important;
@@ -605,6 +605,66 @@ onMounted(() => {
           .icon {
             font-size: 1.8vh !important;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 3600px) and (max-width: 3840px) and (min-height: 2000px) and (max-height: 2049px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        .subTitle {
+          left: calc(-5vw) !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 3600px) and (max-width: 3840px) and (min-height: 1950px) and (max-height: 1999px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        .subTitle {
+          left: calc(-5.5vw) !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 3600px) and (max-width: 3840px) and (min-height: 1900px) and (max-height: 1949px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        .subTitle {
+          left: calc(-6.0vw) !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 3600px) and (max-width: 3840px) and (min-height: 1850px) and (max-height: 1899px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        .subTitle {
+          left: calc(-6.5vw) !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 3600px) and (max-width: 3840px) and (min-height: 1000px) and (max-height: 1849px) {
+  .home .carousel-container .carousel-slide {
+    &:nth-child(1) {
+      .banner .banner-title {
+        .subTitle {
+          left: calc(-7.0vw) !important;
         }
       }
     }

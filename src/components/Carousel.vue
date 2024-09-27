@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { throttle } from '../utils/common';
 import { TaskExecutor } from '../executor/executor';
 import { TimeInterval } from '../constant/constant';

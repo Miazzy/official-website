@@ -113,7 +113,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 3700px) and (max-width: 3840px) {
+@media only screen and (min-width: 3800px) and (max-width: 3840px) {
   .header .navbar {
     margin-left: calc(51.5vw - 10px) !important;
     margin-top: 6.75vh !important;
@@ -228,7 +228,352 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 3600px) and (max-width: 3699px) {
+@media only screen and (min-width: 3700px) and (max-width: 3799px) {
+  .header .navbar {
+    margin-left: calc(51.5vw - 10px) !important;
+    margin-top: 6.75vh !important;
+    transform: scale(1.75) !important;
+  }
+
+  .header .logo a {
+    margin: 2.45vh 0 0 13.5vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.975) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 80px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section .business-container {
+      margin: 270px 80px 0px calc(15vw + 20px) !important;
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.975) !important;
+      transform-origin: top left !important;
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.975) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 52% !important;
+      }
+
+      .content-box {
+        width: 52% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.975) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .left-content,
+      .right-content {
+        width: 20.55%;
+      }
+    }
+
+    footer {
+      padding-top: 500px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.975) !important;
+    width: 52% !important;
+    transform-origin: top left !important;
+    margin-top: 1875px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 3700px) and (max-width: 3749px) {
+  .header .navbar {
+    margin-left: calc(51.5vw - 10px) !important;
+    margin-top: 6.75vh !important;
+    transform: scale(1.75) !important;
+  }
+
+  .header .logo a {
+    margin: 2.45vh 0 0 13.5vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.945) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 80px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section .business-container {
+      margin: 270px 80px 0px calc(15vw + 20px) !important;
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.945) !important;
+      transform-origin: top left !important;
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.945) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 52% !important;
+      }
+
+      .content-box {
+        width: 52% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.945) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .left-content,
+      .right-content {
+        width: 20.25%;
+      }
+    }
+
+    footer {
+      padding-top: 500px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.945) !important;
+    width: 52% !important;
+    transform-origin: top left !important;
+    margin-top: 1875px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 3650px) and (max-width: 3699px) {
+  .header .navbar {
+    margin-left: calc(51.5vw - 10px) !important;
+    margin-top: 6.75vh !important;
+    transform: scale(1.75) !important;
+  }
+
+  .header .logo a {
+    margin: 2.45vh 0 0 13.5vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.935) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 80px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section .business-container {
+      margin: 270px 80px 0px calc(15vw + 20px) !important;
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.935) !important;
+      transform-origin: top left !important;
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.935) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 53.5% !important;
+      }
+
+      .content-box {
+        width: 53.5% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.935) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .left-content,
+      .right-content {
+        width: 21.25%;
+      }
+    }
+
+    footer {
+      padding-top: 550px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.935) !important;
+    width: 53.5% !important;
+    transform-origin: top left !important;
+    margin-top: 1650px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 3600px) and (max-width: 3649px) {
   .header .navbar {
     margin-left: calc(51.5vw - 10px) !important;
     margin-top: 6.75vh !important;
@@ -335,7 +680,7 @@ div.plans {
     transform: scale(1.885) !important;
     width: 53.5% !important;
     transform-origin: top left !important;
-    margin-top: 1725px !important;
+    margin-top: 1650px !important;
 
     .footer-content-column:last-child {
       margin: 0 0 0 110px !important;
@@ -343,7 +688,122 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 3500px) and (max-width: 3599px) {
+@media only screen and (min-width: 3550px) and (max-width: 3599px) {
+  .header .navbar {
+    margin-left: calc(51.5vw - 10px) !important;
+    margin-top: 6.75vh !important;
+    transform: scale(1.75) !important;
+  }
+
+  .header .logo a {
+    margin: 2.45vh 0 0 13.5vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.875) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 80px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section .business-container {
+      margin: 270px 80px 0px calc(15vw + 20px) !important;
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.875) !important;
+      transform-origin: top left !important;
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.875) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 55% !important;
+      }
+
+      .content-box {
+        width: 55% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.875) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .left-content,
+      .right-content {
+        width: 22.05%;
+      }
+    }
+
+    footer {
+      padding-top: 420px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.875) !important;
+    width: 55% !important;
+    transform-origin: top left !important;
+    margin-top: 1605px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 3500px) and (max-width: 3549px) {
   .header .navbar {
     margin-left: calc(51.5vw - 10px) !important;
     margin-top: 6.75vh !important;
@@ -450,7 +910,7 @@ div.plans {
     transform: scale(1.835) !important;
     width: 55% !important;
     transform-origin: top left !important;
-    margin-top: 1675px !important;
+    margin-top: 1575px !important;
 
     .footer-content-column:last-child {
       margin: 0 0 0 110px !important;
@@ -458,7 +918,122 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 3400px) and (max-width: 3499px) {
+@media only screen and (min-width: 3450px) and (max-width: 3499px) {
+  .header .navbar {
+    margin-left: calc(47.5vw - 10px) !important;
+    margin-top: 6.05vh !important;
+    transform: scale(1.45) !important;
+  }
+
+  .header .logo a {
+    margin: 2.15vh 0 0 13.05vw !important;
+
+    .logo {
+      width: 7.5vw !important;
+
+      img {
+        width: 7.5vw !important;
+      }
+    }
+  }
+
+  .home .copyright {
+    bottom: 2vh !important;
+    right: 26vh !important;
+    font-size: 0.8vw !important;
+  }
+
+  .home .carousel-container .indicator {
+    right: 6.5vw !important;
+
+    .segment {
+      height: 6vh !important;
+    }
+  }
+
+  #container.plans {
+
+    main {
+      transform: scale(1.835) !important;
+      transform-origin: top left !important;
+    }
+
+    .plans.container .middle-content .index-container {
+      margin: 60px 0 0 80px !important;
+
+      .indicator-component {
+        margin: 20px 0 0 60px !important;
+        transform: scale(1.25) !important;
+      }
+    }
+
+    .plans.container .bottom-section .business-container {
+      margin: 270px 80px 0px calc(15vw + 20px) !important;
+    }
+  }
+
+  #container.projectCases {
+    main {
+      transform: scale(1.835) !important;
+      transform-origin: top left !important;
+    }
+  }
+
+  #container.informationCenter {
+    main {
+      transform: scale(1.835) !important;
+      transform-origin: top left !important;
+    }
+
+    .information-center {
+      .banner-box {
+        width: 60% !important;
+      }
+
+      .content-box {
+        width: 60% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #container.aboutus {
+    main {
+      transform: scale(1.835) !important;
+      transform-origin: top left !important;
+    }
+
+    .aboutus.container .submid-section {
+      width: 100% !important;
+    }
+
+    .aboutus.container .bottom-section {
+      overflow: hidden;
+
+      .left-content,
+      .right-content {
+        width: 22.75%;
+      }
+    }
+
+    footer {
+      padding-top: 375px !important;
+    }
+  }
+
+  .footer {
+    transform: scale(1.835) !important;
+    width: 58% !important;
+    transform-origin: top left !important;
+    margin-top: 1575px !important;
+
+    .footer-content-column:last-child {
+      margin: 0 0 0 110px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 3400px) and (max-width: 3449px) {
   .header .navbar {
     margin-left: calc(47.5vw - 10px) !important;
     margin-top: 6.05vh !important;
