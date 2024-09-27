@@ -1,5 +1,5 @@
 <template>
-  <div class="home" >
+  <div class="home">
     <Carousel @change="handleChange">
       <template #one>
         <div ref="banner" class="banner content-item-block">
@@ -37,10 +37,10 @@
             </div>
           </div>
           <div class="quota">
-            <Indicator :num="40" :unit="'个'" :descript="'在运城市'" ></Indicator>
-            <Indicator :num="40" :unit="'座'" :descript="'在运电站'" ></Indicator>
-            <Indicator :num="4.27" :unit="'Gw'" :descript="'在运维总容量'" ></Indicator>
-            <Indicator :num="3032" :unit="'天'" :descript="'安全生产天数'" ></Indicator>
+            <Indicator :num="40" :unit="'个'" :descript="'在运城市'"></Indicator>
+            <Indicator :num="40" :unit="'座'" :descript="'在运电站'"></Indicator>
+            <Indicator :num="4.27" :unit="'Gw'" :descript="'在运维总容量'"></Indicator>
+            <Indicator :num="3032" :unit="'天'" :descript="'安全生产天数'"></Indicator>
             <div class="segment"></div>
             <div class="segment" style=""></div>
           </div>
@@ -178,19 +178,22 @@ onMounted(() => {
     &.banner {
       :deep(.indicator-component) {
         &:nth-child(1) {
-          top: calc(40vh - 12px); 
+          top: calc(40vh - 12px);
           right: calc(20vw + 72px);
         }
+
         &:nth-child(2) {
-          top: calc(40vh - 12px); 
+          top: calc(40vh - 12px);
           right: calc(10vw + 35px);
         }
+
         &:nth-child(3) {
-          top: calc(40vh + 98px); 
+          top: calc(40vh + 98px);
           right: calc(20vw + 50px);
         }
+
         &:nth-child(4) {
-          top: calc(40vh + 98px); 
+          top: calc(40vh + 98px);
           right: calc(10vw + 7px);
         }
       }
@@ -371,11 +374,11 @@ onMounted(() => {
 
 
 .home .carousel-container .indicator {
-  right: 120px ;
-  top: calc(50% + 0px) ;
+  right: 120px;
+  top: calc(50% + 0px);
 
   .segment {
-    height: 64px ;
+    height: 64px;
   }
 }
 
@@ -395,7 +398,10 @@ onMounted(() => {
 
 .home .carousel-container {
   .carousel-slide {
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title .subTitle {
         left: -182px;
         top: 118px;
@@ -416,8 +422,8 @@ onMounted(() => {
 
 .home .carousel-container .banner .banner-title {
   font-size: 50px;
-  left: 269px ;
-  top: 395px ;
+  left: 269px;
+  top: 395px;
 
   .subTitle {
     left: -33px;
@@ -429,50 +435,54 @@ onMounted(() => {
 }
 
 .home .carousel-container .carousel-slide {
-  &:first-child, &:last-child {
+
+  &:first-child,
+  &:last-child {
     .banner .tooltip {
-      font-size: 11.5px ;
-      right: 95px ;
-      top: calc(50vh - 108px) ;
+      font-size: 11.5px;
+      right: 95px;
+      top: calc(50vh - 108px);
     }
   }
 
   &:nth-child(2) {
     .banner .tooltip {
-      right: 95px ;
-      top: calc(50vh - 55.5px) ;
+      right: 95px;
+      top: calc(50vh - 55.5px);
     }
   }
 
   &:nth-child(3) {
     .banner .tooltip {
-      right: 95px ;
-      top: calc(50vh + 10px) ;
+      right: 95px;
+      top: calc(50vh + 10px);
     }
   }
 
   &:nth-child(4) {
     .banner .tooltip {
-      right: 95px ;
-      top: calc(50vh + 78px) ;
+      right: 95px;
+      top: calc(50vh + 78px);
     }
   }
 
-  &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4) {
     .banner-title {
-      left: 202px ;
-      top: 399px ;
+      left: 202px;
+      top: 399px;
     }
   }
 }
 
 .home .copyright {
-  bottom: 11px ;
-  right: 194px ;
-  font-size: 16.5px ;
+  bottom: 11px;
+  right: 194px;
+  font-size: 16.5px;
 }
 
-@media only screen and (min-width: 3400px) and (max-width: 3840px) and (min-height: 1800px) and (max-height: 2160px) {
+@media only screen and (min-width: 3600px) and (max-width: 3840px) and (min-height: 1600px) and (max-height: 2160px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(1) {
@@ -596,131 +606,627 @@ onMounted(() => {
   }
 }
 
-@media only screen and (min-width: 3000px) and (max-width: 3399px) and (min-height: 1800px) and (max-height: 2160px) {
+@media only screen and (min-width: 3400px) and (max-width: 3599px) and (min-height: 1400px) and (max-height: 2160px) {
   .home .carousel-container .carousel-slide {
 
-.indicator-component:nth-child(1) {
-  right: calc(29.5vw);
-}
-
-.indicator-component:nth-child(2) {
-  right: calc(16.5vw);
-}
-
-.indicator-component:nth-child(3) {
-  right: calc(28vw);
-}
-
-.indicator-component:nth-child(4) {
-  right: calc(15.5vw);
-}
-
-.indicator-component:nth-child(1),
-.indicator-component:nth-child(2) {
-  margin-left: -5vh;
-  top: calc(38vh) !important;
-  transform: scale(2.5);
-  transform-origin: top left;
-}
-
-.indicator-component:nth-child(3),
-.indicator-component:nth-child(4) {
-  top: calc(49.75vh) !important;
-  transform: scale(2.5);
-  transform-origin: top left;
-}
-
-&:nth-child(1) {
-  .banner .banner-title {
-    top: calc(38.25vh) !important;
-    font-size: 2.8vw !important;
-    left: calc(11.25vw) !important;
-
-    .subTitle {
-      top: calc(7vh) !important;
-      left: calc(-4vw) !important;
-      font-size: 2vh !important;
-      width: 38.5vw !important;
-      letter-spacing: -2px !important;
+    .indicator-component:nth-child(1) {
+      right: calc(29.5vw);
     }
-  }
 
-  .banner .bg-button {
-    top: calc(56.7vh) !important;
-    left: calc(11.25vw) !important;
-    width: 7.6vw !important;
-    height: 4.1vh !important;
+    .indicator-component:nth-child(2) {
+      right: calc(16.5vw);
+    }
 
-    .content {
-      margin: 1.5vh 22px !important;
-      font-size: 1.8vh !important;
+    .indicator-component:nth-child(3) {
+      right: calc(28vw);
+    }
 
-      .icon {
-        font-size: 1.8vh !important;
+    .indicator-component:nth-child(4) {
+      right: calc(15.5vw);
+    }
+
+    .indicator-component:nth-child(1),
+    .indicator-component:nth-child(2) {
+      margin-left: -5vh;
+      top: calc(38vh) !important;
+      transform: scale(2.5);
+      transform-origin: top left;
+    }
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(49.75vh) !important;
+      transform: scale(2.5);
+      transform-origin: top left;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(38.25vh) !important;
+        font-size: 2.8vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7vh) !important;
+          left: calc(-5.6vw) !important;
+          font-size: 2vh !important;
+          width: 38.5vw !important;
+          letter-spacing: -2px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.7vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.45vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+
+    &:nth-child(1) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(40vh) !important;
+    }
+
+    &:nth-child(2) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(44.5vh) !important;
+    }
+
+    &:nth-child(3) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(50.75vh) !important;
+    }
+
+    &:nth-child(4) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(56.5vh) !important;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(39.25vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(7.85vh) !important;
+          font-size: 1.43vw !important;
+          left: calc(-2.95vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.45vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
       }
     }
   }
 }
 
-&:nth-child(1) .tooltip {
-  font-size: 0.6vw !important;
-  right: 5.2vw !important;
-  top: calc(40vh) !important;
-}
+@media only screen and (min-width: 3200px) and (max-width: 3399px) and (min-height: 1200px) and (max-height: 2160px) {
+  .home .carousel-container .carousel-slide {
 
-&:nth-child(2) .tooltip {
-  font-size: 0.6vw !important;
-  right: 5.2vw !important;
-  top: calc(44.5vh) !important;
-}
-
-&:nth-child(3) .tooltip {
-  font-size: 0.6vw !important;
-  right: 5.2vw !important;
-  top: calc(50.75vh) !important;
-}
-
-&:nth-child(4) .tooltip {
-  font-size: 0.6vw !important;
-  right: 5.2vw !important;
-  top: calc(56.5vh) !important;
-}
-
-&:nth-child(2),
-&:nth-child(3),
-&:nth-child(4) {
-  .banner .banner-title {
-    font-size: 2.8vw !important;
-    top: calc(39.5vh) !important;
-    left: calc(11.45vw) !important;
-
-    .subTitle {
-      top: calc(8vh) !important;
-      font-size: 1.35vw !important;
-      left: calc(-2.10vw) !important;
+    .indicator-component:nth-child(1) {
+      right: calc(28.75vw);
     }
-  }
 
-  .banner .bg-button {
-    top: calc(55.5vh) !important;
-    left: calc(11.25vw) !important;
-    width: 7.6vw !important;
-    height: 4.1vh !important;
+    .indicator-component:nth-child(2) {
+      right: calc(16.5vw);
+    }
 
-    .content {
-      margin: 1.5vh 22px !important;
-      font-size: 1.8vh !important;
+    .indicator-component:nth-child(3) {
+      right: calc(27.25vw);
+    }
 
-      .icon {
-        font-size: 1.8vh !important;
+    .indicator-component:nth-child(4) {
+      right: calc(15.0vw);
+    }
+
+    .indicator-component:nth-child(1),
+    .indicator-component:nth-child(2) {
+      margin-left: -5vh !important;
+      top: calc(38vh) !important;
+      transform: scale(2.0) !important;
+      transform-origin: top left !important;
+    }
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(49.75vh) !important;
+      transform: scale(2.0) !important;
+      transform-origin: top left !important;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(38.25vh) !important;
+        font-size: 2.8vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7vh) !important;
+          left: calc(-5vw) !important;
+          font-size: 2vh !important;
+          width: 38.5vw !important;
+          letter-spacing: -2px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.7vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.32vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+
+    &:nth-child(1) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(40vh) !important;
+    }
+
+    &:nth-child(2) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(44.5vh) !important;
+    }
+
+    &:nth-child(3) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(50.75vh) !important;
+    }
+
+    &:nth-child(4) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(56.5vh) !important;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(39.5vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8vh) !important;
+          font-size: 1.35vw !important;
+          left: calc(-4.10vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.32vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
       }
     }
   }
 }
-}
+
+@media only screen and (min-width: 3000px) and (max-width: 3199px) and (min-height: 1000px) and (max-height: 2160px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(1) {
+      right: calc(28.75vw);
+    }
+
+    .indicator-component:nth-child(2) {
+      right: calc(16.5vw);
+    }
+
+    .indicator-component:nth-child(3) {
+      right: calc(27.25vw);
+    }
+
+    .indicator-component:nth-child(4) {
+      right: calc(15.0vw);
+    }
+
+    .indicator-component:nth-child(1),
+    .indicator-component:nth-child(2) {
+      margin-left: -5vh !important;
+      top: calc(38vh) !important;
+      transform: scale(2.0) !important;
+      transform-origin: top left !important;
+    }
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(49.75vh) !important;
+      transform: scale(2.0) !important;
+      transform-origin: top left !important;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(38.25vh) !important;
+        font-size: 2.85vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7vh) !important;
+          left: calc(-5.5vw) !important;
+          font-size: 2vh !important;
+          width: 38.5vw !important;
+          letter-spacing: -2px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.7vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.32vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+
+    &:nth-child(1) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(40vh) !important;
+    }
+
+    &:nth-child(2) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(44.5vh) !important;
+    }
+
+    &:nth-child(3) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(50.75vh) !important;
+    }
+
+    &:nth-child(4) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(56.5vh) !important;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(38.75vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8.8vh) !important;
+          font-size: 1.35vw !important;
+          left: calc(-4.8vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.32vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (min-width: 2200px) and (max-width: 2560px) and (min-height: 1200px) and (max-height: 1440px) {
+@media only screen and (min-width: 2800px) and (max-width: 2999px) and (min-height: 1000px) and (max-height: 2160px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(1) {
+      right: calc(28.75vw);
+    }
+
+    .indicator-component:nth-child(2) {
+      right: calc(16.5vw);
+    }
+
+    .indicator-component:nth-child(3) {
+      right: calc(27.25vw);
+    }
+
+    .indicator-component:nth-child(4) {
+      right: calc(15.0vw);
+    }
+
+    .indicator-component:nth-child(1),
+    .indicator-component:nth-child(2) {
+      margin-left: -5vh !important;
+      top: calc(38vh) !important;
+      transform: scale(2.0) !important;
+      transform-origin: top left !important;
+    }
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(49.75vh) !important;
+      transform: scale(2.0) !important;
+      transform-origin: top left !important;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(38.25vh) !important;
+        font-size: 2.85vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7vh) !important;
+          left: calc(-5.5vw) !important;
+          font-size: 2vh !important;
+          width: 38.5vw !important;
+          letter-spacing: -2px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.7vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.32vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+
+    &:nth-child(1) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(40vh) !important;
+    }
+
+    &:nth-child(2) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(44.5vh) !important;
+    }
+
+    &:nth-child(3) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(50.75vh) !important;
+    }
+
+    &:nth-child(4) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(56.5vh) !important;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(38.75vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8.8vh) !important;
+          font-size: 1.35vw !important;
+          left: calc(-4.8vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.32vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2561px) and (max-width: 2799px) and (min-height: 900px) and (max-height: 2160px) {
+  .home .carousel-container .carousel-slide {
+
+    .indicator-component:nth-child(1) {
+      right: calc(28.75vw);
+    }
+
+    .indicator-component:nth-child(2) {
+      right: calc(16.5vw);
+    }
+
+    .indicator-component:nth-child(3) {
+      right: calc(27.25vw);
+    }
+
+    .indicator-component:nth-child(4) {
+      right: calc(15.0vw);
+    }
+
+    .indicator-component:nth-child(1),
+    .indicator-component:nth-child(2) {
+      margin-left: -5vh !important;
+      top: calc(38vh) !important;
+      transform: scale(2.0) !important;
+      transform-origin: top left !important;
+    }
+
+    .indicator-component:nth-child(3),
+    .indicator-component:nth-child(4) {
+      top: calc(49.75vh) !important;
+      transform: scale(2.0) !important;
+      transform-origin: top left !important;
+    }
+
+    &:nth-child(1) {
+      .banner .banner-title {
+        top: calc(38.25vh) !important;
+        font-size: 2.85vw !important;
+        left: calc(11.25vw) !important;
+
+        .subTitle {
+          top: calc(7vh) !important;
+          left: calc(-5.5vw) !important;
+          font-size: 2vh !important;
+          width: 38.5vw !important;
+          letter-spacing: -2px !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(56.7vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.32vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+
+    &:nth-child(1) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(40vh) !important;
+    }
+
+    &:nth-child(2) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(44.5vh) !important;
+    }
+
+    &:nth-child(3) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(50.75vh) !important;
+    }
+
+    &:nth-child(4) .tooltip {
+      font-size: 0.6vw !important;
+      right: 5.2vw !important;
+      top: calc(56.5vh) !important;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .banner .banner-title {
+        font-size: 2.8vw !important;
+        top: calc(38.75vh) !important;
+        left: calc(11.45vw) !important;
+
+        .subTitle {
+          top: calc(8.8vh) !important;
+          font-size: 1.35vw !important;
+          left: calc(-4.8vw) !important;
+        }
+      }
+
+      .banner .bg-button {
+        top: calc(55.5vh) !important;
+        left: calc(11.25vw) !important;
+        width: 7.6vw !important;
+        height: 4.1vh !important;
+
+        .content {
+          margin: 1.32vh 22px !important;
+          font-size: 1.8vh !important;
+
+          .icon {
+            font-size: 1.8vh !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2200px) and (max-width: 2560px) and (min-height: 900px) and (max-height: 1440px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(1) {
@@ -820,7 +1326,7 @@ onMounted(() => {
   }
 }
 
-@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 950px) and (max-height: 1080px) {
+@media only screen and (min-width: 1900px) and (max-width: 2000px) and (min-height: 900px) and (max-height: 1080px) {
   .home .carousel-container .carousel-slide {
 
     .indicator-component:nth-child(3),
@@ -1018,7 +1524,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1800px) and (max-width: 1900px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: 215px !important;
         top: 339px !important;
@@ -1038,7 +1546,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 350px !important;
@@ -1063,7 +1573,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1800px) and (max-width: 1900px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: 215px !important;
         top: 339px !important;
@@ -1083,7 +1595,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 350px !important;
@@ -1108,7 +1622,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1800px) and (max-width: 1900px) and (min-height: 0px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: 215px !important;
         top: 339px !important;
@@ -1128,7 +1644,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 350px !important;
@@ -1153,7 +1671,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1700px) and (max-width: 1799px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: 195px !important;
         top: 339px !important;
@@ -1173,7 +1693,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 350px !important;
@@ -1198,7 +1720,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1700px) and (max-width: 1799px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: 195px !important;
         top: 339px !important;
@@ -1218,7 +1742,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 350px !important;
@@ -1243,7 +1769,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1700px) and (max-width: 1799px) and (min-height: 0px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: 195px !important;
         top: 339px !important;
@@ -1263,7 +1791,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 50px !important;
         top: 350px !important;
@@ -1288,7 +1818,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1600px) and (max-width: 1699px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: calc(11.25vw) !important;
         top: calc(38.5vh) !important;
@@ -1309,7 +1841,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 45px !important;
         top: calc(39.75vh) !important;
@@ -1334,7 +1868,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1600px) and (max-width: 1699px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: calc(11.25vw) !important;
         top: calc(38.5vh) !important;
@@ -1355,7 +1891,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 45px !important;
         top: calc(39.75vh) !important;
@@ -1380,7 +1918,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1600px) and (max-width: 1699px) and (min-height: 0px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         left: calc(11.25vw) !important;
         top: calc(38.5vh) !important;
@@ -1401,7 +1941,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 45px !important;
         top: calc(39.75vh) !important;
@@ -1426,7 +1968,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1500px) and (max-width: 1599px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
@@ -1456,7 +2000,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
@@ -1490,7 +2036,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1500px) and (max-width: 1599px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
@@ -1520,7 +2068,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
@@ -1554,7 +2104,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1500px) and (max-width: 1599px) and (min-height: 0px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
@@ -1584,7 +2136,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
@@ -1618,7 +2172,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1400px) and (max-width: 1499px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
@@ -1648,7 +2204,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
@@ -1682,7 +2240,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1400px) and (max-width: 1499px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
@@ -1712,7 +2272,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
@@ -1746,7 +2308,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1400px) and (max-width: 1499px) and (min-height: 0px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 42px !important;
         top: 345px !important;
@@ -1776,7 +2340,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 42px !important;
         top: 355px !important;
@@ -1810,7 +2376,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1350px) and (max-width: 1399px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -1840,7 +2408,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 40px !important;
         top: 355px !important;
@@ -1874,7 +2444,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1350px) and (max-width: 1399px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -1904,7 +2476,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 40px !important;
         top: 355px !important;
@@ -1938,7 +2512,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1350px) and (max-width: 1399px) and (min-height: 0px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -1968,7 +2544,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 40px !important;
         top: 355px !important;
@@ -2002,7 +2580,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1300px) and (max-width: 1349px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -2032,7 +2612,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 40px !important;
         top: 355px !important;
@@ -2066,7 +2648,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1300px) and (max-width: 1349px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -2096,7 +2680,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 40px !important;
         top: 355px !important;
@@ -2130,7 +2716,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1300px) and (max-width: 1349px) and (min-height: 0px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -2160,7 +2748,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 40px !important;
         top: 355px !important;
@@ -2194,7 +2784,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1250px) and (max-width: 1299px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -2224,7 +2816,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 39px !important;
         top: 355px !important;
@@ -2258,7 +2852,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1250px) and (max-width: 1299px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -2288,7 +2884,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 39px !important;
         top: 355px !important;
@@ -2322,7 +2920,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1250px) and (max-width: 1299px) and (min-height: 700px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 40px !important;
         top: 345px !important;
@@ -2352,7 +2952,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 39px !important;
         top: 355px !important;
@@ -2386,7 +2988,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1250px) and (max-width: 1299px) and (min-height: 0px) and (max-height: 699px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner-title {
         font-size: 31.75px !important;
         left: 140px !important;
@@ -2466,7 +3070,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 900px) and (max-height: 1050px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 36px !important;
         top: 345px !important;
@@ -2496,7 +3102,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 36px !important;
         top: 360px !important;
@@ -2530,7 +3138,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 800px) and (max-height: 899px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 36px !important;
         top: 345px !important;
@@ -2560,7 +3170,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 36px !important;
         top: 360px !important;
@@ -2594,7 +3206,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 700px) and (max-height: 799px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner .banner-title {
         font-size: 36px !important;
         top: 345px !important;
@@ -2624,7 +3238,9 @@ onMounted(() => {
       }
     }
 
-    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
       .banner .banner-title {
         font-size: 36px !important;
         top: 360px !important;
@@ -2658,7 +3274,9 @@ onMounted(() => {
 
 @media only screen and (min-width: 1200px) and (max-width: 1249px) and (min-height: 0px) and (max-height: 699px) {
   .home .carousel-container .carousel-slide {
-    &:first-child, &:last-child {
+
+    &:first-child,
+    &:last-child {
       .banner-title {
         font-size: 31.75px !important;
         left: 140px !important;
