@@ -228,7 +228,7 @@ div.plans {
   }
 }
 
-@media only screen and (min-width: 3700px) and (max-width: 3799px) {
+@media only screen and (min-width: 3750px) and (max-width: 3799px) {
   .header .navbar {
     margin-left: calc(51.5vw - 10px) !important;
     margin-top: 6.75vh !important;
