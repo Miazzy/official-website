@@ -13,18 +13,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const iframeURL = ref('http://www.ygwl.net/ms-mcms/html/1//150/151/index.html?onlyShowContent=true');
+const iframeURL = ref('http://www.ygwl.net/ms-mcms/html/1/150/151/index.html?onlyShowContent=true');
 const iframeRef = ref();;
-
-const minHeight = 1260;
-
-const checkHeight = () => {
-  const iframe = document.querySelector('.iframe');
-  const contentBox = document.querySelector('.content-box');
-  // if (iframe.contentWindow.document.body.scrollHeight > minHeight) {
-  //   contentBox.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-  // }
-};
 
 onMounted(() => {
   iframeURL.value = iframeURL.value + '&_t=' + new Date().getTime();

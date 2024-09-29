@@ -137,7 +137,7 @@ const updateHeights = () => {
   submidHeight.value = parseInt(submidBaseHeight * scaleFactor);
   bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
 
-  if (screenWidth >= 1920 && screenWidth <= 3840) {
+  if (screenWidth >= 1920) {
     topHeight.value = parseInt(topBaseHeight);
     middleHeight.value = parseInt(middleBaseHeight);
     submidHeight.value = parseInt(submidBaseHeight);
@@ -192,10 +192,6 @@ onBeforeUnmount(() => {
   height: calc(540px + 682px + 814px + 0px);
   overflow-x: scroll;
   overflow-y: scroll;
-  // height: calc(540px + 682px + 814px + 322px);
-  // background-image: url('../../assets/images/cases_bg.png');
-  // background-size: cover;
-  // background-position: center;
   transition: height 0.3s ease;
   position: relative;
   overflow-x: hidden;
