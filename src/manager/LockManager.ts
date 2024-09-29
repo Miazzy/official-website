@@ -10,7 +10,7 @@ export class LockManager implements LockInterface {
   private ls;
 
   constructor() {
-    this.ls = window.localStorage;
+    this.ls = window.sessionStorage;
   }
 
   // 获取示例函数

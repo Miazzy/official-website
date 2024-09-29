@@ -1,3 +1,5 @@
+import { SetManager } from '../manager/SetManager';
+
 /**
  * 防抖函数
  */
@@ -31,6 +33,157 @@ export const setTimexec = (callback: Function, intervals: number[]) => {
       callback();
     }, interval);
   });
+};
+
+/**
+ * 追加媒体查询
+ */
+export const addMediaQuery = async (widths: [number, number], heights: [number, number], cssContent: string) => {
+  // 校验参数长度
+  if (widths.length!== 2 || heights.length!== 2) {
+    throw new Error('Widths and heights arrays must contain exactly two numbers (min and max).');
+  }
+
+  // 设置媒体查询范围
+  const [maxWidth, minWidth] = widths;
+  const [maxHeight, minHeight] = heights;
+
+  // 校验参数类型
+  if (isNaN(minWidth) || isNaN(maxWidth) || isNaN(minHeight) || isNaN(maxHeight)) {
+    throw new Error('All width and height values must be valid numbers.');
+  }
+
+  // 设置样式 className
+  const className = `w-${minWidth}-${maxWidth} h-${minHeight}-${maxHeight}`;
+  const mediaQueryKey = `${minWidth}-${maxWidth}-${minHeight}-${maxHeight}`;
+
+  if (!SetManager.getInstance().has(mediaQueryKey)) {
+    const styleElement = document.createElement('style');
+    styleElement.textContent = `@media only screen and (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) and (min-height: ${minHeight}px) and (max-height: ${maxHeight}px) { ${cssContent} }`;
+    styleElement.className = className;
+    document.head.appendChild(styleElement);
+    SetManager.getInstance().add(mediaQueryKey);
+  }
+};
+
+/**
+ * 处理Resize导致屏幕长宽变化的样式媒体查询功能
+ */
+export const handleResize = (index, event) => {
+  const minWidth = parseInt(window.innerWidth / 5) * 5;
+  const maxWidth = minWidth + 5;
+  const minHeight = parseInt(window.innerHeight / 5) * 5;
+  const maxHeight = minHeight + 100;
+
+  if (minWidth > 1920) {
+    const scale = (minWidth / 1920).toFixed(6);
+    const wvalue = (100 / scale).toFixed(2);
+    const diff = (minWidth - 1920);
+    const ptop = ((0.234375) * diff + 50).toFixed(2);
+  
+    const cssContent = `
+      .header .navbar {
+        margin-left: calc(${(35 + diff/200).toFixed(2)}vw - 10px) !important;
+        margin-top: ${(3.40 + (0.7/400) * diff).toFixed(2)}vh !important;
+        transform: scale(${scale}) !important;
+        transform-origin: top left !important;
+      }
+  
+      .header .logo a {
+        margin: ${(1.01 + (0.3/400) * diff).toFixed(2)}vh 0 0 ${(11.34 + (0.3/400) * diff).toFixed(2)}vw !important;
+  
+        .logo {
+          width: 7.5vw !important;
+  
+          img {
+            width: 7.5vw !important;
+          }
+        }
+      }
+  
+      .home .carousel-container .indicator {
+        right: 6.5vw !important;
+  
+        .segment {
+          height: 6vh !important;
+        }
+      }
+  
+      .home .copyright {
+        bottom: 2vh !important;
+        right: 26vh !important;
+        font-size: 0.8vw !important;
+      }
+        
+      #container.plans {
+        main {
+          transform: scale(${scale}) !important;
+          transform-origin: top left !important;
+        }
+        .plans.container .middle-content .index-container {
+          margin: 60px 0 0 80px !important;
+          .indicator-component {
+            margin: 20px 0 0 60px !important;
+            transform: scale(1.25) !important;
+          }
+        }
+        .plans.container .bottom-section .business-container {
+          margin: ${(250 + (20/1920) * minWidth).toFixed(2)}px 80px 0px calc(${(25.25 - (10/1920) * (minWidth - 1920)).toFixed(2)}vw) !important;
+        }
+      }
+      #container.projectCases {
+        main {
+          transform: scale(${scale}) !important;
+          transform-origin: top left !important;
+        }
+      }
+      #container.informationCenter {
+        main {
+          transform: scale(${scale}) !important;
+          transform-origin: top left !important;
+        }
+        .information-center {
+          .banner-box {
+            width: ${wvalue}% !important;
+          }
+          .content-box {
+            width: ${wvalue}% !important;
+            margin: 0 !important;
+          }
+        }
+      }
+      #container.aboutus {
+        main {
+          transform: scale(${scale}) !important;
+          transform-origin: top left !important;
+        }
+        .aboutus.container .submid-section {
+          width: 100% !important;
+        }
+        .aboutus.container .bottom-section {
+          overflow: hidden;
+          .left-content,
+          .right-content {
+            width: ${((wvalue - 8) / 2).toFixed(2)}%;
+          }
+        }
+        footer {
+          padding-top: ${ptop}px !important;
+        }
+      }
+      .footer {
+        transform: scale(${scale}) !important;
+        width: ${wvalue}% !important;
+        transform-origin: top left !important;
+        margin-top: ${diff - 55}px !important;
+        .footer-content-column:last-child {
+          margin: 0 0 0 110px !important;
+        }
+      }`;
+      
+    // 追加媒体查询
+    addMediaQuery([maxWidth, minWidth], [maxHeight, minHeight], cssContent);
+  }
 };
 
 /**
