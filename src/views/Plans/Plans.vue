@@ -245,10 +245,6 @@ onBeforeUnmount(() => {
   width: 1920px;
   max-width: 1920px;
   height: calc(540px + 612px + 874px + 0px);
-  // height: calc(540px + 612px + 874px + 322px);
-  // background-image: url('../../assets/images/plan_bg.png');
-  // background-size: cover;
-  // background-position: center;
 
   &.yy {
     .top-section {

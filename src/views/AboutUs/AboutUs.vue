@@ -210,10 +210,6 @@ onBeforeUnmount(() => {
   height: calc(540px + 656px + 635px + 614px + 0px);
   overflow-x: scroll;
   overflow-y: scroll;
-
-  // background-image: url('../../assets/images/aboutus.png');
-  // background-size: cover;
-  // background-position: center;
   transition: height 0.3s ease;
   position: relative;
   overflow-x: hidden;

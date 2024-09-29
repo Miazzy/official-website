@@ -40,7 +40,7 @@ export const setTimexec = (callback: Function, intervals: number[]) => {
  */
 export const addMediaQuery = async (widths: [number, number], heights: [number, number], cssContent: string) => {
   // 校验参数长度
-  if (widths.length!== 2 || heights.length!== 2) {
+  if (widths.length !== 2 || heights.length !== 2) {
     throw new Error('Widths and heights arrays must contain exactly two numbers (min and max).');
   }
 
@@ -80,17 +80,17 @@ export const handleResize = (index, event) => {
     const wvalue = (100 / scale).toFixed(2);
     const diff = (minWidth - 1920);
     const ptop = ((0.234375) * diff + 50).toFixed(2);
-  
+
     const cssContent = `
       .header .navbar {
-        margin-left: calc(${(35 + diff/200).toFixed(2)}vw - 10px) !important;
-        margin-top: ${(3.40 + (0.7/400) * diff).toFixed(2)}vh !important;
+        margin-left: calc(${(35 + diff / 200).toFixed(2)}vw - 10px) !important;
+        margin-top: ${(3.40 + (0.7 / 400) * diff).toFixed(2)}vh !important;
         transform: scale(${scale}) !important;
         transform-origin: top left !important;
       }
   
       .header .logo a {
-        margin: ${(1.01 + (0.3/400) * diff).toFixed(2)}vh 0 0 ${(11.34 + (0.3/400) * diff).toFixed(2)}vw !important;
+        margin: ${(1.01 + (0.3 / 400) * diff).toFixed(2)}vh 0 0 ${(11.34 + (0.3 / 400) * diff).toFixed(2)}vw !important;
   
         .logo {
           width: 7.5vw !important;
@@ -128,7 +128,7 @@ export const handleResize = (index, event) => {
           }
         }
         .plans.container .bottom-section .business-container {
-          margin: ${(250 + (20/1920) * minWidth).toFixed(2)}px 80px 0px calc(${(25.25 - (10/1920) * (minWidth - 1920)).toFixed(2)}vw) !important;
+          margin: ${(250 + (20 / 1920) * minWidth).toFixed(2)}px 80px 0px calc(${(25.25 - (10 / 1920) * (minWidth - 1920)).toFixed(2)}vw) !important;
         }
       }
       #container.projectCases {
@@ -180,9 +180,14 @@ export const handleResize = (index, event) => {
           margin: 0 0 0 110px !important;
         }
       }`;
-      
-    // 追加媒体查询
-    addMediaQuery([maxWidth, minWidth], [maxHeight, minHeight], cssContent);
+
+    // 将编译后的 CSS 内容设置到<style>元素中
+    less.render(cssContent, function (error, output) {
+      if (!error) {
+        // 追加媒体查询
+        addMediaQuery([maxWidth, minWidth], [maxHeight, minHeight], output.css);
+      }
+    });
   }
 };
 
