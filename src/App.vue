@@ -1,5 +1,5 @@
 <template>
-  <div id="container" :class="$route.name" :style="{ height: height ? (height + 'px') : null , overflow: 'hidden' }">
+  <div id="container" :class="$route.name" :style="{ height: typeof height === 'number' ? (height + 'px') : height , overflow: typeof height === 'number' ? 'hidden' : null }">
     <header>
       <Header ref="headerRef" v-show="isHeaderShow" @enter.enter="onAnimationStart"
         :class="{ [animationName]: $route.name !== 'home' }" :fixedToTop="$route.path === '/'"

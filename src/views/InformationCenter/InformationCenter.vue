@@ -1,27 +1,65 @@
 <template>
   <div class="information-center">
-    <div class="banner-box">
+    <div class="banner-box" :style="{ height: topHeight + 'px' }">
       <h1 class="banner-title-ch">资讯中心</h1>
       <h2 class="banner-title-en">INFORMATION CENTER</h2>
     </div>
-    <div class="content-box" @click="checkHeight">
+    <div class="content-box" @click="checkHeight" :style="{ height: bottomHeight + 'px' }">
       <iframe ref="iframeRef" class="iframe" style="" :src="iframeURL" frameborder="0"></iframe>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { MsgManager } from "../../manager/MsgManager";
 
 const iframeURL = ref('http://www.ygwl.net/ms-mcms/html/1/150/151/index.html?onlyShowContent=true');
 const iframeRef = ref();;
 
+const topBaseHeight = 500;
+const bottomBaseHeight = 1288;
+const baseWidth = 1920; // 基准宽度
+
+const topHeight = ref(topBaseHeight);
+const bottomHeight = ref(bottomBaseHeight);
+const containerHeight = ref(topBaseHeight + bottomBaseHeight);
+
+// 动态计算区域高度的函数
+const updateHeights = () => {
+  const screenWidth = window.screen.width < window.innerWidth ? window.screen.width : window.innerWidth;
+  const scaleFactor = screenWidth / baseWidth;
+
+  // 根据比例缩放高度
+  if (screenWidth >= 0) {
+    topHeight.value = parseInt(topBaseHeight);
+    bottomHeight.value = parseInt(bottomBaseHeight);
+    if (screenWidth < 1920) {
+      containerHeight.value = (topBaseHeight + bottomBaseHeight + 220 - 68 / (scaleFactor*scaleFactor)) * scaleFactor;
+    } else {
+      containerHeight.value = (topBaseHeight + bottomBaseHeight + 220 - 68 + (scaleFactor > 1.10 ? 26 * scaleFactor * scaleFactor : 0)) * scaleFactor;
+    }
+    MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value });
+  }
+};
+
+const checkHeight = () => {
+  //
+};
+
 onMounted(() => {
+  updateHeights();
   iframeURL.value = iframeURL.value + '&_t=' + new Date().getTime();
+  window.addEventListener('resize', updateHeights); // 监听窗口变化
   setTimeout(() => {
     iframeRef.value.addEventListener('load', checkHeight);
   }, 100);
 });
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateHeights); // 页面销毁时移除监听器
+});
+
 </script>
 
 <style scoped lang="less">

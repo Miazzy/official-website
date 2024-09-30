@@ -130,7 +130,7 @@ export const handleResize = (index, event) => {
           }
         }
         .plans.container .bottom-section .business-container {
-          margin: ${(250 + (20 / 1920) * minWidth).toFixed(2)}px 80px 0px calc(${(25.25 - (10 / 1920) * (minWidth - 1920)).toFixed(2)}vw) !important;
+          margin: ${(250 + (20 / 1920) * minWidth).toFixed(2)}px 80px 0px calc(${(scale < 1 ? 30 : 25.5 - (10 / 1920) * (minWidth - 1920)).toFixed(2)}${scale < 1 ? '%' : 'vw'}) !important;
         }
       }
       #container.projectCases {
@@ -146,10 +146,10 @@ export const handleResize = (index, event) => {
         }
         .information-center {
           .banner-box {
-            width: ${wvalue}% !important;
+            width: ${(100 / scale)}% !important;
           }
           .content-box {
-            width: ${wvalue}% !important;
+            width: ${(100 / scale)}% !important;
             margin: 0 !important;
           }
         }
@@ -166,7 +166,7 @@ export const handleResize = (index, event) => {
           overflow: hidden;
           .left-content,
           .right-content {
-            width: ${((wvalue - 8) / 2).toFixed(2)}%;
+            width: ${((wvalue + 8) / 2).toFixed(2)}%;
           }
         }
         footer {
@@ -182,6 +182,9 @@ export const handleResize = (index, event) => {
           margin: 0 0 0 ${(110 * (minWidth / 1920)).toFixed(0)}px !important;
         }
       }
+      .informationCenter#container .footer {
+        margin-top: ${(diff - 55 + (ptop < 0 ? ptop : 0 )).toFixed(2)}px !important;
+      }  
       .aboutus#container .footer {
         margin-top: ${(diff - 55 + (ptop < 0 ? ptop : 0 )).toFixed(2)}px !important;
       }  

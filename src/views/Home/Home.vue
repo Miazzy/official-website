@@ -104,7 +104,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useRouter } from 'vue-router';
 import EventBus from '../../helper/EventBus';
 import Carousel from '../../components/Carousel.vue';
@@ -120,26 +120,49 @@ import home04 from '../../assets/images/home04.jpg';
 const imageURL = ref(home01);  // 默认显示的图片
 const router = useRouter();
 const banner = ref();
+const baseWidth = 1920;
+const containerHeight = ref(window.innerHeight);
 
 // 了解更多跳转
 const handleToAboutUs = (routePath) => {
   router.push(routePath);
 }
+
+// 跳转到解决方案
 const handleToPlan = (type) => {
   MsgManager.getInstance().sendMsg('pagechange', { route: 'plans', type });
   router.push('/plans?type=' + type);
 }
 
+// 处理最后一张背景图图片切换，最后一张图片会在动画切换时显示
 const handleChange = (index) => {
   const images = [home01, home02, home03, home04];
   imageURL.value = images[index];
 }
 
+// 动态计算区域高度的函数
+const updateHeights = () => {
+  const screenWidth = window.screen.width < window.innerWidth ? window.screen.width : window.innerWidth;
+  const scaleFactor = screenWidth / baseWidth;
+
+  // 根据比例缩放高度
+  if (screenWidth >= 0) {
+    containerHeight.value = window.innerHeight;
+    MsgManager.getInstance().sendMsg('container-height', { height: 'auto' });
+  }
+};
+
 onMounted(() => {
+  updateHeights();
+  window.addEventListener('resize', updateHeights); // 监听窗口变化
   EventBus.emit("home-scrolling",
     { x: document.body.scrollLeft, y: document.body.scrollTop }
   )
 })
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateHeights); // 页面销毁时移除监听器
+});
 </script>
 
 <style scoped lang="less">
