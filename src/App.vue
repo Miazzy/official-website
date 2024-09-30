@@ -1,5 +1,5 @@
 <template>
-  <div id="container" :class="$route.name">
+  <div id="container" :class="$route.name" :style="{ height: height ? (height + 'px') : null , overflow: 'hidden' }">
     <header>
       <Header ref="headerRef" v-show="isHeaderShow" @enter.enter="onAnimationStart"
         :class="{ [animationName]: $route.name !== 'home' }" :fixedToTop="$route.path === '/'"
@@ -26,6 +26,7 @@ import { ref, computed, watch, onMounted, onBeforeUnmount } from "vue";
 import { useRoute } from 'vue-router'
 import EventBus from './helper/EventBus'
 import { sleep, handleResize } from './utils/common';
+import { MsgManager } from "./manager/MsgManager";
 
 const route = useRoute();
 const animationName = ref("slideInDown");
@@ -34,6 +35,7 @@ const homeScrollY = ref(0);
 const headerRef = ref();
 const isHeaderShow = ref(true);
 const isFooterShow = ref(false);
+const height = ref();
 
 // 监听鼠标滚动事件
 const menu = () => {
@@ -68,6 +70,9 @@ onMounted(async () => {
   handleResize()
   window.addEventListener('scroll', menu);
   window.addEventListener('resize', handleResize);
+  MsgManager.getInstance().listen('container-height', (message) => {
+    height.value = message.height;
+  });
   await sleep(100);
   isFooterShow.value = true;
 })

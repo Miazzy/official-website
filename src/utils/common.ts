@@ -70,17 +70,17 @@ export const addMediaQuery = async (widths: [number, number], heights: [number, 
  * 处理Resize导致屏幕长宽变化的样式媒体查询功能
  */
 export const handleResize = (index, event) => {
-  const interval = 5;
-  const minWidth = Math.ceil(window.innerWidth / interval) * interval;
-  const maxWidth = minWidth + interval;
-  const minHeight = Math.ceil(window.innerHeight / interval) * interval;
-  const maxHeight = minHeight + 100;
+  const interval = 2;
+  const minWidth = Math.ceil(Math.ceil(window.innerWidth / interval) * interval - interval);
+  const maxWidth = Math.ceil(minWidth + interval * 2);
+  const minHeight = Math.ceil(Math.ceil(window.innerHeight / interval) * interval - interval);
+  const maxHeight = Math.ceil(minHeight + 100);
 
   if (minWidth > 0) {
     const scale = (minWidth / 1920);
     const wvalue = (100 / scale);
     const diff = (minWidth - 1920);
-    const ptop = ((0.234375) * diff + 50).toFixed(2);
+    const ptop = (0.234375) * diff + 50;
     const mgLeft = minWidth < 1920 ? 35 * (minWidth / 1920) + diff / 200 : 35  + diff / 200;
 
     const cssContent = `
@@ -170,18 +170,22 @@ export const handleResize = (index, event) => {
           }
         }
         footer {
-          padding-top: ${ptop}px !important;
+          padding-top: ${ptop.toFixed(2)}px !important;
         }
       }
       .footer {
         transform: scale(${scale}) !important;
         width: ${wvalue}% !important;
         transform-origin: top left !important;
-        margin-top: ${diff - 55}px !important;
+        margin-top: ${(diff - 55 + (ptop < 0 ? 0 : 0 )).toFixed(2)}px !important;
         .footer-content-column:last-child {
           margin: 0 0 0 ${(110 * (minWidth / 1920)).toFixed(0)}px !important;
         }
-      }`;
+      }
+      .aboutus#container .footer {
+        margin-top: ${(diff - 55 + (ptop < 0 ? ptop : 0 )).toFixed(2)}px !important;
+      }  
+      `;
 
     // 将编译后的 CSS 内容设置到<style>元素中
     less.render(cssContent, function (error, output) {

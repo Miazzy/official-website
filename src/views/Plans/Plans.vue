@@ -67,6 +67,7 @@ const baseWidth = 1920; // 基准宽度
 const topBaseHeight = 500; // 上部初始高度
 const middleBaseHeight = 612; // 中部初始高度
 const bottomBaseHeight = 874; // 下部初始高度
+const containerHeight = ref(topBaseHeight + middleBaseHeight + bottomBaseHeight - 68);
 const hType = "/src/assets/images/plan_header_{type}.jpg";
 const mType = "/src/assets/images/plan_middle_{type}.jpg";
 
@@ -176,10 +177,14 @@ const updateHeights = () => {
   const scaleFactor = screenWidth / baseWidth;
 
   // 根据比例缩放高度
-  if (screenWidth >= 100) {
+  if (screenWidth >= 0) {
     topHeight.value = parseInt(topBaseHeight);
     middleHeight.value = parseInt(middleBaseHeight);
     bottomHeight.value = parseInt(bottomBaseHeight);
+    if (screenWidth < 1920) {
+      containerHeight.value = (topBaseHeight + middleBaseHeight + bottomBaseHeight + 220 - 60) * scaleFactor;
+      MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value });
+    }
   }
 };
 

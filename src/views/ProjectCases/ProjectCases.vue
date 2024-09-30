@@ -59,6 +59,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
+import { MsgManager } from "../../manager/MsgManager";
 
 const router = useRouter();
 const baseWidth = 1920; // 基准宽度
@@ -133,12 +134,15 @@ const updateHeights = () => {
   const scaleFactor = screenWidth / baseWidth;
 
   // 根据比例缩放高度
-  if (screenWidth >= 100) {
+  if (screenWidth >= 0) {
     topHeight.value = parseInt(topBaseHeight);
     middleHeight.value = parseInt(middleBaseHeight);
     submidHeight.value = parseInt(submidBaseHeight);
     bottomHeight.value = parseInt(bottomBaseHeight);
-    containerHeight.value = (500 + 682 + 814 + 220 - 50) * scaleFactor;
+    if (screenWidth < 1920) {
+      containerHeight.value = (500 + 682 + 814 + 220 - 60) * scaleFactor;
+      MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value });
+    }
   }
   
   scaleRatio.value = scaleFactor;

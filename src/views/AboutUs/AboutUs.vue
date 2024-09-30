@@ -72,6 +72,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, reactive } from 'vue';
+import { MsgManager } from "../../manager/MsgManager";
 
 const baseWidth = 1920; // 基准宽度
 const topBaseHeight = 500; // 上部初始高度
@@ -89,6 +90,7 @@ const bottomHeight = ref(bottomBaseHeight);
 const imageWidth = ref(imageBaseWidth);
 const imageHeight = ref(imageBaseHeight);
 const bnrWidth = ref(bnrBaseWidth);
+const containerHeight = ref(topBaseHeight + middleBaseHeight + submidBaseHeight + bottomBaseHeight);
 const scaleRatio = ref(1);
 const mapObject = ref(null);
 
@@ -130,7 +132,10 @@ const updateHeights = () => {
   middleHeight.value = parseInt(middleBaseHeight);
   submidHeight.value = parseInt(submidBaseHeight);
   bottomHeight.value = parseInt(bottomBaseHeight);
-
+  if (screenWidth < 1920) {
+    containerHeight.value = (topBaseHeight + middleBaseHeight + submidBaseHeight + bottomBaseHeight + 220) * scaleFactor;
+    MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value });
+  }
   scaleRatio.value = scaleFactor;
 };
 
