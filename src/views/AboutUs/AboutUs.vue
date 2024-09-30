@@ -134,8 +134,10 @@ const updateHeights = () => {
   bottomHeight.value = parseInt(bottomBaseHeight);
   if (screenWidth < 1920) {
     containerHeight.value = (topBaseHeight + middleBaseHeight + submidBaseHeight + bottomBaseHeight + 220) * scaleFactor;
-    MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value });
+  } else {
+    containerHeight.value = (topBaseHeight + middleBaseHeight + submidBaseHeight + bottomBaseHeight + 220 - 20) * scaleFactor;
   }
+  MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value });
   scaleRatio.value = scaleFactor;
 };
 

@@ -78,7 +78,7 @@ export const handleResize = (index, event) => {
 
   if (minWidth > 0) {
     const scale = (minWidth / 1920);
-    const wvalue = (100 / scale);
+    const wvalue = scale < 1 ? (100 / scale): (100 * scale);
     const diff = (minWidth - 1920);
     const ptop = (0.234375) * diff + 50;
     const mgLeft = minWidth < 1920 ? 35 * (minWidth / 1920) + diff / 200 : 35  + diff / 200;
@@ -173,9 +173,9 @@ export const handleResize = (index, event) => {
           padding-top: ${ptop.toFixed(2)}px !important;
         }
       }
-      .footer {
+      :not(.aboutus#container) .footer {
         transform: scale(${scale}) !important;
-        width: ${wvalue}% !important;
+        width: ${(100 / scale)}% !important;
         transform-origin: top left !important;
         margin-top: ${(diff - 55 + (ptop < 0 ? 0 : 0 )).toFixed(2)}px !important;
         .footer-content-column:last-child {
