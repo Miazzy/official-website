@@ -276,13 +276,14 @@ onBeforeUnmount(() => {
   }
 
   &-title {
-    color: #fff;
-    font-size: 50px;
-    text-align: center;
-    position: relative;
+    color: #fff !important;
+    font-size: 50px !important;
+    text-align: center !important;
+    position: relative !important;
     top: calc(-8.45vh) !important;
     font-size: 2.8vw !important;
     left: calc(-24.85vw) !important;
+    font-weight: 500 !important;
 
     .subTitle {
       position: absolute !important;

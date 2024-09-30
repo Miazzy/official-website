@@ -189,10 +189,10 @@ export const handleResize = (index, event) => {
         }
       }
       .informationCenter#container .footer {
-        margin-top: ${(diff - 55 + (ptop < 0 ? ptop : 0 )).toFixed(2)}px !important;
+        margin-top: ${(diff - 55 + Math.abs(diff/75)).toFixed(2)}px !important;
       }  
       .aboutus#container .footer {
-        margin-top: ${(diff - 55 + (ptop < 0 ? ptop : 0 )).toFixed(2)}px !important;
+        margin-top: ${(diff - 55 + (ptop < 0 ? ptop : 0 ) - Math.abs(diff/100) + 5).toFixed(2)}px !important;
       }  
       `;
 

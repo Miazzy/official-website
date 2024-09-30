@@ -194,7 +194,7 @@ onBeforeUnmount(() => {
       position: absolute;
       text-align: center;
       width: 100%;
-      margin: 245px 0 0 0;
+      margin: 235px 0 0 0;
 
       .text {
         font-family: Source Han Sans CN;
@@ -451,15 +451,17 @@ onBeforeUnmount(() => {
 }
 
 .aboutus.container .top-section .banner {
-  margin: 271px 0 0 0;
+  margin: 235px 0 0 0;
 
   .text {
     font-size: 50px;
+    letter-spacing: 2px;
   }
 
   .text.en {
     font-weight: 600;
     font-size: 18px;
+    margin: 2px 0 0 0;
   }
 }
 

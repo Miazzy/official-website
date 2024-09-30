@@ -84,10 +84,7 @@ onBeforeUnmount(() => {
 
 </script>
 <style lang="less">
-html,
-body,
-div#app,
-div.plans {
+html, body, div#app, div.plans {
   overflow-x: hidden;
 }
 
@@ -151,7 +148,7 @@ div.plans {
 }
 
 #container {
-  min-width: 1200px;
+  min-width: 800px;
 }
 
 header {
