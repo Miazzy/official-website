@@ -139,6 +139,12 @@ export const handleResize = (index, event) => {
           transform-origin: top left !important;
         }
       }
+      #container.home .home{
+        main {
+          transform: scale(${scale}) !important;
+          transform-origin: top left !important;
+        }
+      }
       #container.informationCenter {
         main {
           transform: scale(${scale}) !important;
