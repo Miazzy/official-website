@@ -228,7 +228,7 @@ onMounted(() => {
 .banner {
   height: 100vh;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

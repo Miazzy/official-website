@@ -28,7 +28,7 @@ onMounted(() => {
 .information-center {
   .banner-box {
     width: 100%;
-    height: 540px;
+    height: 500px;
     background: url('../../assets/images/information-center-banner.jpg');
     background-size: cover;
     background-position: center;
@@ -55,7 +55,7 @@ onMounted(() => {
   }
 
   .content-box {
-    width: calc(100vw - 0px);
+    width: calc(100% - 0px);
     margin: 0 auto;
     padding-top: 24px;
     background-color: #fff;

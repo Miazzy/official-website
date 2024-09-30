@@ -64,7 +64,7 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 const baseWidth = 1920; // 基准宽度
-const topBaseHeight = 540; // 上部初始高度
+const topBaseHeight = 500; // 上部初始高度
 const middleBaseHeight = 612; // 中部初始高度
 const bottomBaseHeight = 874; // 下部初始高度
 const hType = "/src/assets/images/plan_header_{type}.jpg";
@@ -174,34 +174,9 @@ const options = reactive({
 const updateHeights = () => {
   const screenWidth = window.screen.width < window.innerWidth ? window.screen.width : window.innerWidth;
   const scaleFactor = screenWidth / baseWidth;
+
   // 根据比例缩放高度
-  topHeight.value = parseInt(topBaseHeight * scaleFactor);
-  middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
-  bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
-
-  if (screenWidth <= 1280) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.20);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.20);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.20);
-  } else if (screenWidth <= 1300) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.18);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.18);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.18);
-  } else if (screenWidth <= 1366) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.10);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.10);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.10);
-  } else if (screenWidth <= 1500) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.10);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.10);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.10);
-  } else if (screenWidth <= 1600) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.05);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.05);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.08);
-  }
-
-  if (screenWidth >= 1920) {
+  if (screenWidth >= 100) {
     topHeight.value = parseInt(topBaseHeight);
     middleHeight.value = parseInt(middleBaseHeight);
     bottomHeight.value = parseInt(bottomBaseHeight);
@@ -235,8 +210,8 @@ onBeforeUnmount(() => {
 .container {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   min-height: 100vh;
   overflow-x: hidden;
@@ -244,7 +219,7 @@ onBeforeUnmount(() => {
 
   width: 1920px;
   max-width: 1920px;
-  height: calc(540px + 612px + 874px + 0px);
+  height: calc(500px + 612px + 874px + 0px);
 
   &.yy {
     .top-section {
@@ -322,7 +297,7 @@ onBeforeUnmount(() => {
     background-image: url('../../assets/images/plan_wenli.jpg');
     background-size: cover;
     background-position: center;
-    top: 540px;
+    top: 500px;
     width: 1480px;
     height: 623px;
     margin: -68px 220px 0 220px;
@@ -417,7 +392,7 @@ onBeforeUnmount(() => {
   }
 
   .bottom-section {
-    width: 100vw;
+    width: 100%;
     background-image: url('../../assets/images/plan_middle_yy.jpg');
     background-size: cover;
     background-position: center;

@@ -74,7 +74,7 @@
 import { ref, onMounted, onBeforeUnmount, reactive } from 'vue';
 
 const baseWidth = 1920; // 基准宽度
-const topBaseHeight = 540; // 上部初始高度
+const topBaseHeight = 500; // 上部初始高度
 const middleBaseHeight = 656; // 中部初始高度
 const submidBaseHeight = 635; // 中部初始高度
 const bottomBaseHeight = 614; // 下部初始高度
@@ -126,50 +126,10 @@ const updateHeights = () => {
   const scaleFactor = screenWidth / baseWidth;
 
   // 根据比例缩放高度
-  topHeight.value = parseInt(topBaseHeight * scaleFactor);
-  middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
-  submidHeight.value = parseInt(submidBaseHeight * scaleFactor);
-  bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
-
-  if (screenWidth >= 1920) {
-    bnrWidth.value = parseInt(bnrBaseWidth);
-  } else if (screenWidth >= 1700) {
-    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor);
-  } else if (screenWidth >= 1600 & screenWidth < 1700) {
-    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor * 1.2);
-  }
-
-  if (screenWidth <= 1280) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.35);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 2);
-    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor * 1.5);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.30);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.30);
-  } else if (screenWidth <= 1300) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.30);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.95);
-    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor * 1.5);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.28);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.28);
-  } else if (screenWidth <= 1366) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.25);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.8);
-    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor * 1.65);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.175);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.375);
-  } else if (screenWidth <= 1500) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.25);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.8);
-    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor * 1.55);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.175);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.375);
-  } else if (screenWidth <= 1600) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.15);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.8);
-    bnrWidth.value = parseInt(bnrBaseWidth * scaleFactor * 1.55);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.175);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.325);
-  }
+  topHeight.value = parseInt(topBaseHeight);
+  middleHeight.value = parseInt(middleBaseHeight);
+  submidHeight.value = parseInt(submidBaseHeight);
+  bottomHeight.value = parseInt(bottomBaseHeight);
 
   scaleRatio.value = scaleFactor;
 };
@@ -207,7 +167,7 @@ onBeforeUnmount(() => {
   flex-direction: column;
   width: 1920px;
   max-width: 1920px;
-  height: calc(540px + 656px + 635px + 614px + 0px);
+  height: calc(500px + 656px + 635px + 614px + 0px);
   overflow-x: scroll;
   overflow-y: scroll;
   transition: height 0.3s ease;
@@ -322,7 +282,7 @@ onBeforeUnmount(() => {
   }
 
   .submid-section {
-    width: 100vw;
+    width: 100%;
     background-image: url('../../assets/images/aboutus_bg.jpg');
     background-size: cover;
     background-position: center;
@@ -385,7 +345,7 @@ onBeforeUnmount(() => {
   }
 
   .bottom-section {
-    width: 100vw;
+    width: 100%;
     background: #fefefe;
     transition: height 0.3s ease;
     overflow-x: hidden;

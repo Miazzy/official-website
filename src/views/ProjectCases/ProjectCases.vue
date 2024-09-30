@@ -1,5 +1,5 @@
 <template>
-  <div class="project-cases container">
+  <div class="project-cases container" >
 
     <div class="banner-box" :style="{ height: topHeight + 'px', }" >
       <h1 class="banner-title-ch">项目案例</h1>
@@ -63,7 +63,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 const baseWidth = 1920; // 基准宽度
 
-const topBaseHeight = 540; // 上部初始高度
+const topBaseHeight = 500; // 上部初始高度
 const middleBaseHeight = 682 + 68; // 中部初始高度
 const submidBaseHeight = 716; // 中部初始高度
 const bottomBaseHeight = 814; // 下部初始高度
@@ -72,6 +72,7 @@ const topHeight = ref(topBaseHeight);
 const middleHeight = ref(middleBaseHeight);
 const submidHeight = ref(submidBaseHeight);
 const bottomHeight = ref(bottomBaseHeight);
+const containerHeight = ref(topBaseHeight + middleBaseHeight + bottomBaseHeight - 68);
 
 const scaleRatio = ref(1);
 
@@ -132,45 +133,14 @@ const updateHeights = () => {
   const scaleFactor = screenWidth / baseWidth;
 
   // 根据比例缩放高度
-  topHeight.value = parseInt(topBaseHeight * scaleFactor);
-  middleHeight.value = parseInt(middleBaseHeight * scaleFactor);
-  submidHeight.value = parseInt(submidBaseHeight * scaleFactor);
-  bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor);
-
-  if (screenWidth >= 1920) {
+  if (screenWidth >= 100) {
     topHeight.value = parseInt(topBaseHeight);
     middleHeight.value = parseInt(middleBaseHeight);
     submidHeight.value = parseInt(submidBaseHeight);
     bottomHeight.value = parseInt(bottomBaseHeight);
+    containerHeight.value = (500 + 682 + 814 + 220 - 50) * scaleFactor;
   }
-
-  if (screenWidth <= 1280) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.175);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.28);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.35);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.22);
-  } else if (screenWidth <= 1300) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.175);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.22);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.30);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.20);
-  } else if (screenWidth <= 1366) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.105);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.15);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.20);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.11);
-  } else if (screenWidth <= 1500) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.105);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.15);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.20);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.20);
-  } else if (screenWidth <= 1600) {
-    topHeight.value = parseInt(topBaseHeight * scaleFactor * 1.055);
-    middleHeight.value = parseInt(middleBaseHeight * scaleFactor * 1.10);
-    submidHeight.value = parseInt(submidBaseHeight * scaleFactor * 1.15);
-    bottomHeight.value = parseInt(bottomBaseHeight * scaleFactor * 1.15);
-  }
-
+  
   scaleRatio.value = scaleFactor;
 };
 
@@ -189,7 +159,7 @@ onBeforeUnmount(() => {
 .project-cases {
   width: 1920px;
   max-width: 1920px;
-  height: calc(540px + 682px + 814px + 0px);
+  height: calc(500px + 682px + 814px + 0px);
   overflow-x: scroll;
   overflow-y: scroll;
   transition: height 0.3s ease;
@@ -198,7 +168,7 @@ onBeforeUnmount(() => {
 
   .banner-box {
     width: 100%;
-    height: 540px;
+    height: 500px;
     background: url('../../assets/images/project-case-banner.jpg');
     background-size: cover;
     background-position: center;

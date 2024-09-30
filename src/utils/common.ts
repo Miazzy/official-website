@@ -70,20 +70,22 @@ export const addMediaQuery = async (widths: [number, number], heights: [number, 
  * 处理Resize导致屏幕长宽变化的样式媒体查询功能
  */
 export const handleResize = (index, event) => {
-  const minWidth = parseInt(window.innerWidth / 5) * 5;
-  const maxWidth = minWidth + 5;
-  const minHeight = parseInt(window.innerHeight / 5) * 5;
+  const interval = 5;
+  const minWidth = Math.ceil(window.innerWidth / interval) * interval;
+  const maxWidth = minWidth + interval;
+  const minHeight = Math.ceil(window.innerHeight / interval) * interval;
   const maxHeight = minHeight + 100;
 
-  if (minWidth > 1920) {
-    const scale = (minWidth / 1920).toFixed(6);
-    const wvalue = (100 / scale).toFixed(2);
+  if (minWidth > 0) {
+    const scale = (minWidth / 1920);
+    const wvalue = (100 / scale);
     const diff = (minWidth - 1920);
     const ptop = ((0.234375) * diff + 50).toFixed(2);
+    const mgLeft = minWidth < 1920 ? 35 * (minWidth / 1920) + diff / 200 : 35  + diff / 200;
 
     const cssContent = `
       .header .navbar {
-        margin-left: calc(${(35 + diff / 200).toFixed(2)}vw - 10px) !important;
+        margin-left: calc(${(mgLeft).toFixed(2)}vw - 10px) !important;
         margin-top: ${(3.40 + (0.7 / 400) * diff).toFixed(2)}vh !important;
         transform: scale(${scale}) !important;
         transform-origin: top left !important;
@@ -177,7 +179,7 @@ export const handleResize = (index, event) => {
         transform-origin: top left !important;
         margin-top: ${diff - 55}px !important;
         .footer-content-column:last-child {
-          margin: 0 0 0 110px !important;
+          margin: 0 0 0 ${(110 * (minWidth / 1920)).toFixed(0)}px !important;
         }
       }`;
 
