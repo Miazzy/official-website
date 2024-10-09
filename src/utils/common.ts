@@ -112,9 +112,10 @@ export const handleResize = (index, event) => {
       }
   
       .home .copyright {
-        bottom: 2vh !important;
-        right: 26vh !important;
-        font-size: 0.8vw !important;
+        bottom: 1.05vh !important;
+        right: 16vw !important;
+        font-size: 0.75vw !important;
+        letter-spacing: 0px !important;
       }
         
       #container.plans {
@@ -139,10 +140,16 @@ export const handleResize = (index, event) => {
           transform-origin: top left !important;
         }
       }
-      #container.home .home{
+      #container.home {
         main {
-          transform: scale(${scale}) !important;
           transform-origin: top left !important;
+        }
+        .home .carousel-container .carousel-slide {
+          .banner .bg-button {
+            .content {
+              margin: ${(0.5 * scale * scale).toFixed(2)}vw 0.88vw !important;
+            }
+          } 
         }
       }
       #container.informationCenter {
