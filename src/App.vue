@@ -1,6 +1,6 @@
 <template>
   <div id="container" :class="$route.name" :style="{ height: typeof height === 'number' ? (height + 'px') : height , overflow: typeof height === 'number' ? 'hidden' : null }">
-    <header>
+    <header v-if="!$route.name.startsWith('mobile')">
       <Header ref="headerRef" v-show="isHeaderShow" @enter.enter="onAnimationStart"
         :class="{ [animationName]: $route.name !== 'home' }" :fixedToTop="$route.path === '/'"
         :theme-color="themeColor">
@@ -13,7 +13,7 @@
         </transition>
       </router-view>
     </main>
-    <footer v-if="$route.name !== 'home' && isFooterShow">
+    <footer v-if="$route.name !== 'home' && !$route.name.startsWith('mobile') && isFooterShow">
       <Footer></Footer>
     </footer>
   </div>
@@ -23,12 +23,13 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import { ref, computed, watch, onMounted, onBeforeUnmount } from "vue";
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import EventBus from './helper/EventBus'
-import { sleep, handleResize } from './utils/common';
+import { sleep, handleResize, isMobileDevice } from './utils/common';
 import { MsgManager } from "./manager/MsgManager";
 
 const route = useRoute();
+const router = useRouter();
 const animationName = ref("slideInDown");
 const pageTransitionName = ref("");
 const homeScrollY = ref(0);
@@ -56,6 +57,19 @@ const onAnimationStart = (e) => {
   }
 }
 
+const handleMobile = () => {
+  if (isMobileDevice()) {
+    router.push('/mobileHome');
+  } else if (route.name.startsWith('mobile')){
+    router.push('/');
+  }
+}
+
+const handleResizeListener = () => {
+  handleMobile();
+  handleResize();
+}
+
 EventBus.on("home-scrolling", (pos) => {
   homeScrollY.value = pos.y
 })
@@ -67,9 +81,9 @@ watch(route, (newValue, oldValue) => {
 })
 
 onMounted(async () => {
-  handleResize()
+  handleResizeListener();
   window.addEventListener('scroll', menu);
-  window.addEventListener('resize', handleResize);
+  window.addEventListener('resize', handleResizeListener);
   MsgManager.getInstance().listen('container-height', (message) => {
     height.value = message.height;
   });
@@ -78,8 +92,8 @@ onMounted(async () => {
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', handleResize);
   window.removeEventListener('scroll', menu);
+  window.removeEventListener('resize', handleResizeListener);
 });
 
 </script>

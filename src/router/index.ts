@@ -25,13 +25,21 @@ const routes = [
         path: '/informationCenter',
         name: 'informationCenter',
         component: () => import('../views/InformationCenter/InformationCenter.vue')
-    }
+    },
 ]
+
+const mobileRoutes = [
+    {
+        path: '/mobileHome',
+        name: 'mobileHome',
+        component: () => import('../mobile/Home/Home.vue')
+    },
+];
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes: [...routes, ...mobileRoutes],
 })
 
-export default router
+export default router;
 

@@ -276,3 +276,25 @@ export const message = {
     }, duration);
   },
 };
+
+/**
+ * 判断是否为移动端
+ */
+export const isMobileDevice = () => {
+  // 1. 使用 window.innerWidth 和 window.innerHeight 来判断宽高比
+  const aspectRatio = window.innerWidth / window.innerHeight;
+  const isNarrowAspectRatio = aspectRatio < 1.0;
+
+  // 使用 window.innerWidth 来判断屏幕宽度
+  const isSmallScreen = window.innerWidth <= 768;
+  
+  // 使用 navigator.userAgent 判断是否为移动设备
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isMobileUserAgent = /android|iphone|ipad|ipod|phone|mobile/.test(userAgent);
+  
+  // 判断设备是否支持触摸
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  
+  // 结合所有条件
+  return isSmallScreen && isMobileUserAgent && isTouchDevice && isNarrowAspectRatio;
+}
