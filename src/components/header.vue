@@ -12,7 +12,7 @@
         </li>
       </router-link>
       <router-link exact to="/plans?type=yy" v-slot="{ href, navigate, isActive }" >
-        <li class="navbar-item" :class="{ active: isActive }">
+        <li class="navbar-item" :class="{ active: isActive || $route.path.includes('plans')}">
           <ElTooltip
               placement="bottom"
               effect="light"
@@ -48,10 +48,11 @@
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { ElTooltip } from "element-plus";
 import { MsgManager } from "@/manager/MsgManager";
 
+const route = useRoute();
 const router = useRouter();
 const planType = ref('');
 

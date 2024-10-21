@@ -47,7 +47,7 @@
             <span class="title" v-for="(text, index) in item.title" :key="index">{{ text }}</span>
             <span class="text" v-for="(text, index) in item.text" :key="index" :style="{ lineHeight: item.line }">{{
               text }}</span>
-            <div class="btn" v-if="item.btn.show" ><span>了解详情</span></div>
+            <div class="btn" v-if="item.btn.show" @click="handleClick(item.btn.path)"><span>了解详情</span></div>
           </div>
         </div>
       </div>
@@ -60,9 +60,10 @@ import { ref, onMounted, onBeforeUnmount, reactive } from 'vue';
 import Indicator from '@/components/Indicator.vue';
 import Card from '@/components/Card.vue';
 import { MsgManager } from "@/manager/MsgManager";
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
+const router = useRouter();
 
 const baseWidth = 1920; // 基准宽度
 const topBaseHeight = 500; // 上部初始高度
@@ -109,7 +110,7 @@ const options = reactive({
       business: [
         { title: ['运行维护'], icon: 'iconyunyingfuwu operation', line: 1.3, text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'], btn: { show: false } },
         { title: ['专项服务'], icon: 'icondashuju operation', line: 1.3, text: ['设备抢检修技改', '电气试验', '设备专项排查与分析', '技术监督', '电站性能检测与质量评估', '防雷检测', '电力设备安装'], btn: { show: false } },
-        { title: ['增值服务'], icon: 'iconlianghaoderuanyingjianjianrongxing operation', line: 1.3, text: ['生产前准备', '电费结算', '关系协调', 'AI巡检', '智能光伏集中运营系统'], btn: { show: true } }
+        { title: ['增值服务'], icon: 'iconlianghaoderuanyingjianjianrongxing operation', line: 1.3, text: ['生产前准备', '电费结算', '关系协调', 'AI巡检', '智能光伏集中运营系统'], btn: { show: true, path: '/plans/photovoltaic' } }
       ],
     }
   },
@@ -193,6 +194,10 @@ const updateHeights = () => {
     }
     MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value });
   }
+};
+
+const handleClick = (path) => {
+  router.push(path);
 };
 
 const handleType = (type) => {

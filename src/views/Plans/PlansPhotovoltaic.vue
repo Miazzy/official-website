@@ -1,5 +1,5 @@
 <template>
-    <div class="page flex-col">
+    <div class="container flex-col">
         <div class="group_1 flex-col justify-between">
             <div class="block_1 flex-col">
                 <div class="section_1 flex-col">
@@ -119,7 +119,6 @@ const updateHeights = () => {
     }
 };
 
-
 // 挂载函数
 onMounted(() => {
     updateHeights();
@@ -133,7 +132,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="less" scoped>
-.page {
+.container {
     position: relative;
     width: 1920px;
     height: auto;
