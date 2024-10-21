@@ -1,6 +1,6 @@
 <template>
   <div id="container" :class="$route.name" :style="{ height: typeof height === 'number' ? (height + 'px') : height , overflow: typeof height === 'number' ? 'hidden' : null }">
-    <header v-if="!$route.name.startsWith('mobile')">
+    <header v-if="!($route?.name && $route.name.startsWith('mobile'))">
       <Header ref="headerRef" v-show="isHeaderShow" @enter.enter="onAnimationStart"
         :class="{ [animationName]: $route.name !== 'home' }" :fixedToTop="$route.path === '/'"
         :theme-color="themeColor">
@@ -13,7 +13,7 @@
         </transition>
       </router-view>
     </main>
-    <footer v-if="$route.name !== 'home' && !$route.name.startsWith('mobile') && isFooterShow">
+    <footer v-if="$route.name !== 'home' && !($route?.name && $route?.name?.startsWith('mobile')) && isFooterShow">
       <Footer></Footer>
     </footer>
   </div>
@@ -60,7 +60,7 @@ const onAnimationStart = (e) => {
 const handleMobile = () => {
   if (isMobileDevice()) {
     router.push('/mobileHome');
-  } else if (route.name.startsWith('mobile')){
+  } else if (route?.name && route?.name?.startsWith('mobile')){
     router.push('/');
   }
 }
