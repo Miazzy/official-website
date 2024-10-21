@@ -49,8 +49,8 @@
 <script setup>
 import { nextTick } from "vue";
 import { useRouter } from "vue-router";
-import { MsgManager } from "../manager/MsgManager";
-import { setTimexec } from "../utils/common";
+import { MsgManager } from "@/manager/MsgManager";
+import { setTimexec } from "@/utils/common";
 
 const router = useRouter();
 

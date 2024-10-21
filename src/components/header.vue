@@ -50,7 +50,7 @@
 import { ref, onMounted } from 'vue';
 import { useRouter } from "vue-router";
 import { ElTooltip } from "element-plus";
-import { MsgManager } from "../manager/MsgManager";
+import { MsgManager } from "@/manager/MsgManager";
 
 const router = useRouter();
 const planType = ref('');

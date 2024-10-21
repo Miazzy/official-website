@@ -59,7 +59,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
-import { MsgManager } from "../../manager/MsgManager";
+import { MsgManager } from "@/manager/MsgManager";
 
 const router = useRouter();
 const baseWidth = 1920; // 基准宽度

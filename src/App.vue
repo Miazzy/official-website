@@ -20,13 +20,13 @@
 </template>
 
 <script setup>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 import { ref, computed, watch, onMounted, onBeforeUnmount } from "vue";
 import { useRoute, useRouter } from 'vue-router'
-import EventBus from './helper/EventBus'
-import { sleep, handleResize, isMobileDevice } from './utils/common';
-import { MsgManager } from "./manager/MsgManager";
+import EventBus from '@/helper/EventBus'
+import { sleep, handleResize, isMobileDevice } from '@/utils/common';
+import { MsgManager } from "@/manager/MsgManager";
 
 const route = useRoute();
 const router = useRouter();

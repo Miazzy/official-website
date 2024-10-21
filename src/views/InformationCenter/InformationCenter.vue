@@ -12,7 +12,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { MsgManager } from "../../manager/MsgManager";
+import { MsgManager } from "@/manager/MsgManager";
 
 const iframeURL = ref('http://www.ygwl.net/ms-mcms/html/1/150/151/index.html?onlyShowContent=true');
 const iframeRef = ref();;

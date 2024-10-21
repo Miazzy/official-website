@@ -56,9 +56,9 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, reactive } from 'vue';
-import Indicator from '../../components/Indicator.vue';
-import Card from '../../components/Card.vue';
-import { MsgManager } from "../../manager/MsgManager";
+import Indicator from '@/components/Indicator.vue';
+import Card from '@/components/Card.vue';
+import { MsgManager } from "@/manager/MsgManager";
 import { useRoute } from 'vue-router';
 
 const route = useRoute();

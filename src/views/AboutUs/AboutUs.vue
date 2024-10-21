@@ -72,7 +72,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, reactive } from 'vue';
-import { MsgManager } from "../../manager/MsgManager";
+import { MsgManager } from "@/manager/MsgManager";
 
 const baseWidth = 1920; // 基准宽度
 const topBaseHeight = 500; // 上部初始高度

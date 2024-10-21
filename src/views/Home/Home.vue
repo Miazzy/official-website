@@ -106,16 +106,16 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useRouter } from 'vue-router';
-import EventBus from '../../helper/EventBus';
-import Carousel from '../../components/Carousel.vue';
-import Indicator from '../../components/Indicator.vue';
-import { MsgManager } from "../../manager/MsgManager";
+import EventBus from '@/helper/EventBus';
+import Carousel from '@/components/Carousel.vue';
+import Indicator from '@/components/Indicator.vue';
+import { MsgManager } from "@/manager/MsgManager";
 
 // 通过 import 引入图片
-import home01 from '../../assets/images/home01.jpg';
-import home02 from '../../assets/images/home02.jpg';
-import home03 from '../../assets/images/home03.jpg';
-import home04 from '../../assets/images/home04.jpg';
+import home01 from '@/assets/images/home01.jpg';
+import home02 from '@/assets/images/home02.jpg';
+import home03 from '@/assets/images/home03.jpg';
+import home04 from '@/assets/images/home04.jpg';
 
 const imageURL = ref(home01);  // 默认显示的图片
 const router = useRouter();
