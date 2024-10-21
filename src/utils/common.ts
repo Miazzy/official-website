@@ -143,6 +143,12 @@ export const handleResize = (index, event) => {
           transform-origin: top left !important;
         }
       }
+      #container.plansphotovoltaic {
+        main {
+          transform: scale(${scale}) !important;
+          transform-origin: top left !important;
+        }
+      }
       #container.home {
         main {
           transform-origin: top left !important;
@@ -204,6 +210,13 @@ export const handleResize = (index, event) => {
       .aboutus#container .footer {
         margin-top: ${(diff - 55 + (ptop < 0 ? ptop : 0 ) - Math.abs(diff/100) + 5).toFixed(2)}px !important;
       }  
+      .plansphotovoltaic#container {
+        position: relative;
+        .footer {
+          position: absolute;
+          bottom: ${(diff/8.8).toFixed(2)}px;
+        }  
+      }
       `;
 
     // 将编译后的 CSS 内容设置到<style>元素中
