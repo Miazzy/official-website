@@ -106,8 +106,8 @@ html, body, div#app, div.plans {
   margin: 5px 0 0 30px;
   color: #fefefe;
   background: #0f0f0f90;
-  padding: 10px 25px;
-  border-radius: 4px;
+  padding: 10px 14px;
+  border-radius: 2px;
   transform-origin: top center;
 
   span {

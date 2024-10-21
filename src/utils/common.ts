@@ -70,14 +70,14 @@ export const addMediaQuery = async (widths: [number, number], heights: [number, 
  * 处理Resize导致屏幕长宽变化的样式媒体查询功能
  */
 export const handleResize = (index, event) => {
-  const interval = 2;
+  const interval = 1;
   const minWidth = Math.ceil(Math.ceil(window.innerWidth / interval) * interval - interval);
-  const maxWidth = Math.ceil(minWidth + interval * 2);
+  const maxWidth = Math.ceil(minWidth + interval * 1);
   const minHeight = Math.ceil(Math.ceil(window.innerHeight / interval) * interval - interval);
   const maxHeight = Math.ceil(minHeight + 100);
 
   if (minWidth > 0) {
-    const scale = (minWidth / 1920);
+    const scale = parseFloat((Math.ceil(minWidth / 1920 * 10000)/10000 + 0.00035).toFixed(4));
     const wvalue = scale < 1 ? (100 / scale): (100 * scale);
     const diff = (minWidth - 1920);
     const ptop = (0.234375) * diff + 50;
@@ -132,6 +132,9 @@ export const handleResize = (index, event) => {
         }
         .plans.container .bottom-section .business-container {
           margin: ${(250 + (20 / 1920) * minWidth).toFixed(2)}px 80px 0px calc(${(scale < 1 ? 30 : 25.5 - (10 / 1920) * (minWidth - 1920)).toFixed(2)}${scale < 1 ? '%' : 'vw'}) !important;
+          &.agriculture {
+            margin: 270px 80px 0px 308px !important;
+          }
         }
       }
       #container.projectCases {

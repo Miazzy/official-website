@@ -40,13 +40,14 @@
         <h3 class="text indicate">{{ options[pageType].btmInfo.indicate }}</h3>
       </div>
 
-      <div class="business business-container">
+      <div class="business business-container" :class="options[pageType].btmInfo.name">
         <div class="box" v-for="(item, index) in options[pageType].btmInfo.business" :key="index" :class="item.icon">
           <span class="icon iconfont" :class="item.icon"></span>
           <div class="text-content">
             <span class="title" v-for="(text, index) in item.title" :key="index">{{ text }}</span>
             <span class="text" v-for="(text, index) in item.text" :key="index" :style="{ lineHeight: item.line }">{{
               text }}</span>
+            <div class="btn" v-if="item.btn.show" ><span>了解详情</span></div>
           </div>
         </div>
       </div>
@@ -104,10 +105,11 @@ const options = reactive({
       title: '渔光一体智能运营',
       btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
       indicate: '业务范围 >>',
+      name: 'operation',
       business: [
-        { title: ['运行维护'], icon: 'iconyunyingfuwu operation', line: 1.3, text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'] },
-        { title: ['专项服务'], icon: 'icondashuju operation', line: 1.3, text: ['设备抢检修技改', '电气试验', '设备专项排查与分析', '技术监督', '电站性能检测与质量评估', '防雷检测', '电力设备安装'] },
-        { title: ['增值服务'], icon: 'iconlianghaoderuanyingjianjianrongxing operation', line: 1.3, text: ['生产前准备', '电费结算', '关系协调', 'AI巡检'] }
+        { title: ['运行维护'], icon: 'iconyunyingfuwu operation', line: 1.3, text: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'], btn: { show: false } },
+        { title: ['专项服务'], icon: 'icondashuju operation', line: 1.3, text: ['设备抢检修技改', '电气试验', '设备专项排查与分析', '技术监督', '电站性能检测与质量评估', '防雷检测', '电力设备安装'], btn: { show: false } },
+        { title: ['增值服务'], icon: 'iconlianghaoderuanyingjianjianrongxing operation', line: 1.3, text: ['生产前准备', '电费结算', '关系协调', 'AI巡检', '智能光伏集中运营系统'], btn: { show: true } }
       ],
     }
   },
@@ -133,10 +135,12 @@ const options = reactive({
       title: '智慧农业',
       btmText: 'Smart agriculture'.toUpperCase(),
       indicate: '业务范围 >>',
+      name: 'agriculture',
       business: [
-        { title: ['现代化农业园区', '整体解决方案'], icon: 'iconzhiwuzhongzhi agriculture', line: 1.3, text: ['现代化水产产业园规划建设', '光伏农业园区规划建设', '园区智能化运营服务', '渔光一体整体解决方案'] },
-        { title: ['多元化养殖设施设备'], icon: 'iconyangzhishebei agriculture', line: 1.3, text: ['工厂化恒温养殖车间', '智能推水流水槽', '智能底排污系统', '智能投喂机器人'] },
-        { title: ['智能化软件系统'], icon: 'iconzhinengyangzhi agriculture', line: 1.3, text: ['智能投喂系统', '慧养鱼水质监测与管理', '水产物联网平台', '养殖过程管理系统'] }
+        { title: ['现代化农业园区', '整体解决方案'], icon: 'iconzhiwuzhongzhi agriculture', line: 1.3, text: ['现代化水产产业园规划建设', '光伏农业园区规划建设', '园区智能化运营服务', '渔光一体整体解决方案'], btn: { show: false } },
+        { title: ['设施化养殖系统'], icon: 'iconyangzhishebei agriculture', line: 1.3, text: ['池塘内循环养殖系统', '陆基高位池养殖系统', '工厂化车间养殖系统'], btn: { show: true } },
+        { title: ['智能化养殖系统'], icon: 'iconzhinengyangzhi agriculture', line: 1.3, text: ['智能塔料投喂系统', '智能机器人投喂系统', '多级运维系统', '养殖ERP系统'], btn: { show: true } },
+        { title: ['生态化尾水处理'], icon: 'iconchitangweishuichuli agriculture', line: 1.3, text: ['通威底排污技术', '模块化底排污设备', '尾水处理解决方案 '], btn: { show: false } }
       ],
     }
   },
@@ -162,10 +166,11 @@ const options = reactive({
       title: '渔光一体智能运营',
       btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
       indicate: '业务范围 >>',
+      name: 'inform',
       business: [
-        { title: ['企业信息化解决方案'], icon: 'iconhulianwang inform', line: 2.2, text: ['依托自主研发的业务架构平台，高效的开发团队，为企业建立业务分析模型，发现潜在问题，进行针对性地改善和规范，助力 管理升级，支撑。'] },
-        { title: ['物联网应用解决方案'], icon: 'iconxinxihua1 inform', line: 2.2, text: ['基于自主研发的数据采集器和通信平台，实现物联网与信息化的融合，提升生产过程的质量管控能力，实现质量安全的可追溯性，提高智能化水。'] },
-        { title: ['智慧电站运维解决方案'], icon: 'iconzhinengguangfu inform', line: 2.2, text: ['利用大数据、AI、5G等技术，通过智能IOT设备，实现对电站设备的统一监控，为电站管理业务建设全面、智能、高效的运维管理平台。'] }
+        { title: ['企业信息化解决方案'], icon: 'iconhulianwang inform', line: 2.2, text: ['依托自主研发的业务架构平台，高效的开发团队，为企业建立业务分析模型，发现潜在问题，进行针对性地改善和规范，助力 管理升级，支撑。'], btn: { show: false } },
+        { title: ['物联网应用解决方案'], icon: 'iconxinxihua1 inform', line: 2.2, text: ['基于自主研发的数据采集器和通信平台，实现物联网与信息化的融合，提升生产过程的质量管控能力，实现质量安全的可追溯性，提高智能化水。'], btn: { show: false } },
+        { title: ['智慧电站运维解决方案'], icon: 'iconzhinengguangfu inform', line: 2.2, text: ['利用大数据、AI、5G等技术，通过智能IOT设备，实现对电站设备的统一监控，为电站管理业务建设全面、智能、高效的运维管理平台。'], btn: { show: false } }
       ],
     }
   },
@@ -227,6 +232,9 @@ onBeforeUnmount(() => {
   width: 1920px;
   max-width: 1920px;
   height: calc(500px + 612px + 874px + 0px);
+  background: url('../../assets/template/template_pc_yunyin_00.jpg');
+  background-size: cover;
+  background-position: center;
 
   &.yy {
     .top-section {
@@ -446,10 +454,11 @@ onBeforeUnmount(() => {
       .box {
         margin-right: 50px;
         display: flex;
+        flex: 0 0 auto;
         flex-direction: column;
         justify-content: space-between;
         width: 322px;
-        height: 442px;
+        height: 482px;
         background: #FFFFFF;
         box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.3);
 
@@ -463,6 +472,9 @@ onBeforeUnmount(() => {
           .icon {
             color: #EF7D1B !important;
           }
+          .btn { 
+            background: #EF7D1B !important;
+          }
         }
 
         &.agriculture:hover {
@@ -470,6 +482,9 @@ onBeforeUnmount(() => {
           box-shadow: 0px 7px 13px 1px #318A3690;
           .icon {
             color: #318A36 !important;
+          }
+          .btn { 
+            background: #318A36 !important;
           }
         }
 
@@ -504,12 +519,19 @@ onBeforeUnmount(() => {
           margin: 80px 0 10px 38%;
           font-size: 60px;
           height: 60px;
+
+          &.iconchitangweishuichuli.agriculture {
+            transform: scaleX(1.5) scaleY(1.15);
+            transform-origin: top right;
+            margin: 70px 0 20px 53.5%;
+          }
         }
 
         .text-content {
           display: block;
           height: 330px;
           text-align: center;
+          position: relative;
 
           .title {
             display: block;
@@ -529,6 +551,24 @@ onBeforeUnmount(() => {
 
             &:first-child {
               margin-top: 10px;
+            }
+          }
+
+          .btn {
+            position: absolute;
+            width: 162px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            bottom: 30px;
+            right: calc(calc(100% - 162px) / 2);
+            background: #686868;
+
+            span {
+              font-family: Source Han Sans CN;
+              font-weight: 400;
+              font-size: 16px;
+              color: #FFFFFF;
             }
           }
         }
@@ -611,7 +651,7 @@ onBeforeUnmount(() => {
 
   .box {
     width: 322px;
-    height: 442px;
+    height: 482px;
 
     .icon {
       margin: 80px 0 10px 35%;
@@ -632,11 +672,30 @@ onBeforeUnmount(() => {
 
       .text {
         font-size: 13px;
-        margin: 15px 75px 10px 75px;
+        margin: 10px auto 0px auto;
         color: #999999;
         opacity: 1;
       }
+
+      span:nth-child(2) {
+        &.text {
+          margin: 22px auto 0px auto;
+        }
+        &.title {
+          margin: -10px auto 0px auto;
+        }
+      }
     }
+  }
+
+  &.agriculture {
+    margin: 270px 80px 0px 300px !important;
+
+    .box.agriculture {
+      width: 302px !important;
+      margin-right: 32px !important;
+    }
+
   }
 }
 
