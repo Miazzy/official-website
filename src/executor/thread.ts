@@ -1,6 +1,6 @@
-import { Lock } from '../constant/constant';
-import { sleep, throttle } from '../utils/common';
-import { LockManager } from '../manager/LockManager';
+import { Lock } from '@/constant/constant';
+import { sleep, throttle } from '@/utils/common';
+import { LockManager } from '@/manager/LockManager';
 
 /***
  * @description 线程基类

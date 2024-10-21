@@ -49,9 +49,9 @@
 
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { throttle } from '../utils/common';
-import { TaskExecutor } from '../executor/executor';
-import { TimeInterval } from '../constant/constant';
+import { throttle } from '@/utils/common';
+import { TaskExecutor } from '@/executor/executor';
+import { TimeInterval } from '@/constant/constant';
 
 const activeIndex = ref(0);
 const totalSlides = 4; // 总共4个轮播项

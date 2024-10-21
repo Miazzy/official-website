@@ -33,7 +33,7 @@
     </div>
     <div class="footer-content-column">
       <div class="image">
-        <img src="../assets/images/weixin.png" />
+        <img src="@/assets/images/weixin.png" />
       </div>
       <div class="descript">扫一扫，关注渔光物联</div>
     </div>

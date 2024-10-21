@@ -1,4 +1,4 @@
-import { LogManager } from '../manager/LogManager';
+import { LogManager } from '@/manager/LogManager';
 
 /**
  * 获取页面标识函数

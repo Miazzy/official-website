@@ -1,5 +1,5 @@
-import { TimeInterval } from '../constant/constant';
-import { Thread } from './thread';
+import { TimeInterval } from '@/constant/constant';
+import { Thread } from '@/executor/thread';
 
 /***
  * @description 任务线程

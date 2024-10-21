@@ -1,4 +1,4 @@
-import { SetManager } from '../manager/SetManager';
+import { SetManager } from '@/manager/SetManager';
 
 /**
  * 防抖函数

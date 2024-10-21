@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="image">
-        <img src="../../assets/images/aboutus_company.jpg" alt="公司照片"
+        <img src="@/assets/images/aboutus_company.jpg" alt="公司照片"
           :style="{ width: imageWidth + 'px', height: imageHeight + 'px' }">
       </div>
     </div>

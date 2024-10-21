@@ -1,6 +1,6 @@
 import axios from "axios";
-import config from "./config/index";
-import store from "../store/index";
+import config from "@/api/config/index";
+import store from "@/store/index";
 
 // 引入进度条
 // import nprogress from 'nprogress'

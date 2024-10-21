@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import { StoreName } from '../constant/constant';
+import { StoreName } from '@/constant/constant';
 
 interface LogInterface {
   log(text: string, error: any): Promise<void>;

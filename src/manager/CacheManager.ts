@@ -1,5 +1,5 @@
-import { LogManager } from '../manager/LogManager';
-import { StoreName } from '../constant/constant';
+import { LogManager } from '@/manager/LogManager';
+import { StoreName } from '@/constant/constant';
 
 const STRING_PREFIX = '__s__';
 const OBJECT_PREFIX = '__o__';
