@@ -103,11 +103,12 @@ html, body, div#app, div.plans {
 }
 
 .tooltips-text {
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 30px;
   color: #fefefe;
   background: #0f0f0f90;
   padding: 10px 25px;
   border-radius: 4px;
+  transform-origin: top center;
 
   span {
     margin: 0 15px 0 0;
@@ -115,6 +116,10 @@ html, body, div#app, div.plans {
 
     &:first-child {
       margin: 0px 15px 0px 15px;
+    }
+
+    &:last-child {
+      margin: 0px 0px 0px 15px;
     }
 
     &:hover {
@@ -128,6 +133,10 @@ html, body, div#app, div.plans {
 
     &.agriculture.active {
       color: #43A438;
+    }
+
+    &.information {
+      display: none;
     }
 
     &.information.active {
