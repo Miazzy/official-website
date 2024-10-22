@@ -1,6 +1,6 @@
 <template>
     <div class="container flex-col">
-        <div class="header-section flex-col justify-between">
+        <div class="section flex-col justify-between">
             <div class="header-banner flex-col">
                 <div class="header-content flex-col">
                     <div class="title-section flex-col">
@@ -137,7 +137,7 @@ onBeforeUnmount(() => {
     overflow: hidden;
 }
 
-.header-section {
+.section {
     background-color: rgba(255, 255, 255, 1);
     position: relative;
     width: 1920px;
@@ -621,7 +621,6 @@ onBeforeUnmount(() => {
             margin: 102px 0 23px 788px;
         }
     }
-    
 }
 
 </style>

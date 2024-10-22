@@ -1,162 +1,108 @@
 <template>
-    <div class="container flex-col">
-      <div class="section_1 flex-col justify-between">
-        <div class="group_1 flex-col">
-          <div class="group_2 flex-col">
-            <div class="group_3 flex-row" style="opacity: 0;">
-            </div>
-            <div class="text-wrapper_1 flex-row">
-              <span class="text_6">智能化养殖系统</span>
-            </div>
-            <div class="text-wrapper_2 flex-row">
-              <span class="text_7">
-                Intelligent&nbsp;aquaculture&nbsp;system
-              </span>
-            </div>
+  <div class="container flex-col">
+    <div class="aquaculture section flex-col justify-between">
+      <div class="header-section flex-col">
+        <div class="title-wrapper flex-col">
+          <div class="header flex-row">
+          </div>
+          <div class="title-text flex-row">
+            <span class="main-title">{{ title }}</span>
+          </div>
+          <div class="subtitle-text flex-row">
+            <span class="subtitle">{{ subTitle }}</span>
           </div>
         </div>
-        <div class="group_6 flex-col">
-          <div class="group_7 flex-col">
-            <div class="block_1 flex-col"></div>
-          </div>
-          <span class="text_15">多级运维平台</span>
-          <span class="text_16"
-            >实时展示养殖水体的水质指标和视频影像，保证整个养殖园区24小时内处于监护状态，避免财产损失和保障人员安全</span
-          >
-          <div class="image-wrapper_1 flex-row justify-between">
-            <img
-              class="image_3"
-              referrerpolicy="no-referrer"
-              src="../../assets/images/intel_222_03.png"
-            />
-            <img
-              class="image_4"
-              referrerpolicy="no-referrer"
-              src="../../assets/images/intel_222_01.png"
-            />
-          </div>
-          <div class="group_8 flex-col">
-            <div class="box_1 flex-col"></div>
-            <span class="text_17">养殖ERP系统</span>
-            <span class="text_18"
-              >养渔家——主要实现人、财、物、产、供、销的管理，实现实时、动态的成本管理；实现养殖计划的管理和周期的管理。</span
-            >
-            <div class="box_2 flex-row justify-between">
-              <img
-                class="box_3 flex-col"
-                referrerpolicy="no-referrer"
-                src="../../assets/images/intel_222_07.png"
-              />
-              <img
-                class="box_4 flex-col"
-                referrerpolicy="no-referrer"
-                src="../../assets/images/intel_222_06.png"
-              />
+      </div>
+      <div class="operations-section flex-col">
+
+        <div class="feeding-system flex-col">
+          <div class="feeding-header flex-row">
+            <div class="feeding-banner flex-col">
+              <div class="feeding-title-wrapper flex-col"></div>
             </div>
-            <div class="box_5 flex-col"></div>
           </div>
-          <div class="group_9 flex-col">
-            <div class="section_3 flex-row">
-              <div class="block_2 flex-col">
-                <div class="group_10 flex-col"></div>
+          <div class="feeding-title flex-row">
+            <span class="feeding-main-title">智能料塔投喂系统</span>
+          </div>
+          <div class="feeding-description flex-row">
+            <span class="feeding-subtitle">流水槽养殖：采用模块化结构,方便运输、安装、拆卸。安装效率可提高50%以上。</span>
+          </div>
+
+          <div class="feeding-content flex-row">
+            <div class="content flex-col justify-between">
+              <div class="text-wrapper flex-col">
+                <span class="text">系统功能</span>
               </div>
-            </div>
-            <div class="text-wrapper_8 flex-row">
-              <span class="text_19">智能料塔投喂系统</span>
-            </div>
-            <div class="text-wrapper_9 flex-row">
-              <span class="text_20"
-                >流水槽养殖：采用模块化结构,方便运输、安装、拆卸。安装效率可提高50%以上。</span
-              >
-            </div>
-            <div class="section_4 flex-row">
-              <div class="section_5 flex-col justify-between">
-                <div class="text-wrapper_10 flex-col">
-                  <span class="text_21">系统功能</span>
+              <div class="sub-wrapper flex-row">
+                <div class="image-wrapper-one flex-col justify-between">
+                  <img class="thumbnail-arrow thumbnail" referrerpolicy="no-referrer"
+                    src="../../assets/images/arrow-grey-right.png" />
+                  <img class="thumbnail-arrow thumbnail" referrerpolicy="no-referrer"
+                    src="../../assets/images/arrow-grey-right.png" />
+                  <img class="thumbnail-arrow thumbnail" referrerpolicy="no-referrer"
+                    src="../../assets/images/arrow-grey-right.png" />
                 </div>
-                <div class="group_11 flex-row">
-                  <div class="image-wrapper_2 flex-col justify-between">
-                    <img
-                      class="thumbnail-arrow thumbnail_4"
-                      referrerpolicy="no-referrer"
-                      src="../../assets/images/arrow-grey-right.png"
-                    />
-                    <img
-                      class="thumbnail-arrow thumbnail_5"
-                      referrerpolicy="no-referrer"
-                      src="../../assets/images/arrow-grey-right.png"
-                    />
-                    <img
-                      class="thumbnail-arrow thumbnail_6"
-                      referrerpolicy="no-referrer"
-                      src="../../assets/images/arrow-grey-right.png"
-                    />
-                  </div>
-                  <span class="paragraph_6"
-                    >本地控制投喂<br />远程控制投喂<br />定时投喂设定</span
-                  >
-                  <div class="image-wrapper_3 flex-col justify-between">
-                    <img
-                      class="thumbnail-arrow thumbnail_7"
-                      referrerpolicy="no-referrer"
-                      src="../../assets/images/arrow-grey-right.png"
-                    />
-                    <img
-                      class="thumbnail-arrow thumbnail_8"
-                      referrerpolicy="no-referrer"
-                      src="../../assets/images/arrow-grey-right.png"
-                    />
-                    <img
-                      class="thumbnail-arrow thumbnail_9"
-                      referrerpolicy="no-referrer"
-                      src="../../assets/images/arrow-grey-right.png"
-                    />
-                  </div>
-                  <span class="paragraph_7"
-                    >智能投喂模型<br />投喂速率控制<br />投喂数据记录</span
-                  >
+                <span class="paragraph-one">本地控制投喂<br />远程控制投喂<br />定时投喂设定</span>
+                <div class="image-wrapper-two flex-col justify-between">
+                  <img class="thumbnail-arrow thumbnail" referrerpolicy="no-referrer"
+                    src="../../assets/images/arrow-grey-right.png" />
+                  <img class="thumbnail-arrow thumbnail" referrerpolicy="no-referrer"
+                    src="../../assets/images/arrow-grey-right.png" />
+                  <img class="thumbnail-arrow thumbnail" referrerpolicy="no-referrer"
+                    src="../../assets/images/arrow-grey-right.png" />
                 </div>
+                <span class="paragraph-two">智能投喂模型<br />投喂速率控制<br />投喂数据记录</span>
               </div>
-              <img
-                class="image_5"
-                referrerpolicy="no-referrer"
-                src="../../assets/images/intel_222_05.png"
-              />
-              <img
-                class="section_6 flex-col"
-                referrerpolicy="no-referrer"
-                src="../../assets/images/intel_221_07.png"
-              />
+            </div>
+            <img class="image" referrerpolicy="no-referrer" src="../../assets/images/intel_222_05.png" />
+            <img class="image flex-col" referrerpolicy="no-referrer" src="../../assets/images/intel_221_07.png" />
+          </div>
+        </div>
+
+        <div class="group_12 flex-col">
+          <div class="group_13 flex-row">
+            <div class="section_7 flex-col">
+              <div class="group_14 flex-col"></div>
             </div>
           </div>
-          <div class="group_12 flex-col">
-            <div class="group_13 flex-row">
-              <div class="section_7 flex-col">
-                <div class="group_14 flex-col"></div>
-              </div>
-            </div>
-            <div class="text-wrapper_11 flex-row">
-              <span class="text_22">智能机器人投喂系统</span>
-            </div>
-            <div class="text-wrapper_12 flex-row">
-              <span class="text_23">定时、定点、定量&nbsp;</span>
-            </div>
-            <div class="group_15 flex-row justify-between">
-              <img
-                class="group_16 flex-col"
-                referrerpolicy="no-referrer"
-                src="../../assets/images/intel_222_02.png"
-              />
-              <img
-                class="image_6"
-                referrerpolicy="no-referrer"
-                src="../../assets/images/intel_222_04.png"
-              />
-            </div>
+          <div class="text-wrapper_11 flex-row">
+            <span class="text_22">智能机器人投喂系统</span>
+          </div>
+          <div class="text-wrapper_12 flex-row">
+            <span class="text_23">定时、定点、定量&nbsp;</span>
+          </div>
+          <div class="group_15 flex-row justify-between">
+            <img class="group_16 flex-col" referrerpolicy="no-referrer" src="../../assets/images/intel_222_02.png" />
+            <img class="image_6" referrerpolicy="no-referrer" src="../../assets/images/intel_222_04.png" />
+          </div>
+        </div>
+
+        <div class="wrapper flex-col">
+          <div class="platform-wrapper flex-col">
+            <div class="platform-banner flex-col"></div>
+          </div>
+          <span class="platform-title">多级运维平台</span>
+          <span class="platform-description">实时展示养殖水体的水质指标和视频影像，保证整个养殖园区24小时内处于监护状态，避免财产损失和保障人员安全</span>
+
+          <div class="image-wrapper flex-row justify-between">
+            <img class="image" referrerpolicy="no-referrer" src="../../assets/images/intel_222_03.png" />
+            <img class="image" referrerpolicy="no-referrer" src="../../assets/images/intel_222_01.png" />
+          </div>
+        </div>
+
+        <div class="group_8 flex-col">
+          <div class="box_1 flex-col"></div>
+          <div class="box_5 flex-col"></div>
+          <span class="text_17">养殖ERP系统</span>
+          <span class="text_18">养渔家——主要实现人、财、物、产、供、销的管理，实现实时、动态的成本管理；实现养殖计划的管理和周期的管理。</span>
+          <div class="box_2 flex-row justify-between">
+            <img class="box_3 flex-col" referrerpolicy="no-referrer" src="../../assets/images/intel_222_07.png" />
+            <img class="box_4 flex-col" referrerpolicy="no-referrer" src="../../assets/images/intel_222_06.png" />
           </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script setup>
@@ -167,26 +113,29 @@ const baseWidth = 1920; // 基准宽度
 const baseHeight = 2690;
 const containerHeight = ref(baseHeight);
 
+const title = ref('智能化养殖系统');
+const subTitle = ref('Intelligent aquaculture system');
+
 // 动态计算区域高度的函数
 const updateHeights = () => {
-    const screenWidth = window.screen.width < window.innerWidth ? window.screen.width : window.innerWidth;
-    const scaleFactor = screenWidth / baseWidth;
-    // 根据比例缩放高度
-    if (screenWidth >= 0) {
-        containerHeight.value = baseHeight * scaleFactor;
-        MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value + 220 * scaleFactor});
-    }
+  const screenWidth = window.screen.width < window.innerWidth ? window.screen.width : window.innerWidth;
+  const scaleFactor = screenWidth / baseWidth;
+  // 根据比例缩放高度
+  if (screenWidth >= 0) {
+    containerHeight.value = baseHeight * scaleFactor;
+    MsgManager.getInstance().sendMsg('container-height', { height: containerHeight.value + 220 * scaleFactor });
+  }
 };
 
 // 挂载函数
 onMounted(() => {
-    updateHeights();
-    window.addEventListener('resize', updateHeights); // 监听窗口变化
+  updateHeights();
+  window.addEventListener('resize', updateHeights); // 监听窗口变化
 });
 
 // 卸载函数
 onBeforeUnmount(() => {
-    window.removeEventListener('resize', updateHeights); // 页面销毁时移除监听器
+  window.removeEventListener('resize', updateHeights); // 页面销毁时移除监听器
 });
 </script>
 
@@ -198,160 +147,74 @@ onBeforeUnmount(() => {
   width: 1920px;
   height: 3021px;
   overflow: hidden;
+
+  .section {
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+    width: 1920px;
+    height: 3021px;
+  }
 }
 
-.section_1 {
-  background-color: rgba(255, 255, 255, 1);
-  position: relative;
-  width: 1920px;
-  height: 3021px;
-}
-
-.group_1 {
+.header-section {
   background-color: rgba(255, 255, 255, 1);
   height: 400px;
   width: 1920px;
-}
 
-.group_2 {
-  height: 400px;
-  width: 1920px;
-  background-image: url('../../assets/images/plan_header_yz.jpg');
-  background-size: cover;
-  background-position: center;
-}
+  .title-wrapper {
+    height: 400px;
+    width: 1920px;
+    background-image: url('../../assets/images/plan_header_yz.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 
-.group_3 {
-  width: 1298px;
-  height: 42px;
-  margin: 29px 0 0 310px;
-}
+  .header {
+    width: 1298px;
+    height: 42px;
+    margin: 29px 0 0 310px;
+    opacity: 0;
+  }
 
-.image_1 {
-  width: 139px;
-  height: 42px;
-}
+  .title-text {
+    width: 348px;
+    height: 48px;
+    margin: 122px 0 0 787px;
+  }
 
-.text_1 {
-  width: 34px;
-  height: 17px;
-  overflow-wrap: break-word;
-  color: rgba(255, 255, 255, 1);
-  font-size: 18px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 36px;
-  margin: 13px 0 0 584px;
-}
+  .subtitle-text {
+    width: 307px;
+    height: 18px;
+    margin: 17px 0 124px 806px;
+  }
 
-.group_4 {
-  width: 72px;
-  height: 31px;
-  margin: 11px 0 0 65px;
-}
+  .main-title {
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+    width: 348px;
+    height: 48px;
+    overflow-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-size: 49px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 49px;
+  }
 
-.text_2 {
-  width: 71px;
-  height: 18px;
-  overflow-wrap: break-word;
-  color: rgba(255, 255, 255, 1);
-  font-size: 18px;
-  font-family: SourceHanSansCN-Medium;
-  font-weight: 500;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 36px;
-}
-
-.section_2 {
-  background-color: rgba(239, 125, 27, 1);
-  width: 72px;
-  height: 3px;
-  margin-top: 10px;
-}
-
-.text_3 {
-  width: 71px;
-  height: 18px;
-  overflow-wrap: break-word;
-  color: rgba(255, 255, 255, 1);
-  font-size: 18px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 36px;
-  margin: 12px 0 0 63px;
-}
-
-.text_4 {
-  width: 71px;
-  height: 18px;
-  overflow-wrap: break-word;
-  color: rgba(255, 255, 255, 1);
-  font-size: 18px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 36px;
-  margin: 12px 0 0 65px;
-}
-
-.text_5 {
-  width: 70px;
-  height: 17px;
-  overflow-wrap: break-word;
-  color: rgba(255, 255, 255, 1);
-  font-size: 18px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 36px;
-  margin: 13px 0 0 64px;
-}
-
-.text-wrapper_1 {
-  width: 348px;
-  height: 48px;
-  margin: 122px 0 0 787px;
-}
-
-.text_6 {
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
-  width: 348px;
-  height: 48px;
-  overflow-wrap: break-word;
-  color: rgba(255, 255, 255, 1);
-  font-size: 49px;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: center;
-  white-space: nowrap;
-  line-height: 49px;
-}
-
-.text-wrapper_2 {
-  width: 307px;
-  height: 18px;
-  margin: 17px 0 124px 806px;
-}
-
-.text_7 {
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
-  width: 307px;
-  height: 18px;
-  overflow-wrap: break-word;
-  color: rgba(255, 255, 255, 1);
-  font-size: 17px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: center;
-  white-space: nowrap;
-  line-height: 17px;
+  .subtitle {
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+    width: 307px;
+    height: 18px;
+    overflow-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-size: 17px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 17px;
+  }
 }
 
 .group_5 {
@@ -616,28 +479,30 @@ onBeforeUnmount(() => {
   margin: 71px 392px 0 -405px;
 }
 
-.group_6 {
+.operations-section {
   position: absolute;
   left: 0;
   top: 400px;
   width: 1920px;
   height: 2300px;
+
+  .platform-wrapper {
+    background-color: rgba(67, 164, 56, 0.34);
+    height: 4px;
+    width: 138px;
+    margin: 1128px 0 0 312px;
+
+    .platform-banner {
+      background-color: rgba(67, 164, 56, 1);
+      width: 48px;
+      height: 4px;
+    }
+  }
 }
 
-.group_7 {
-  background-color: rgba(67, 164, 56, 0.34);
-  height: 4px;
-  width: 138px;
-  margin: 1128px 0 0 312px;
-}
 
-.block_1 {
-  background-color: rgba(67, 164, 56, 1);
-  width: 48px;
-  height: 4px;
-}
 
-.text_15 {
+.platform-title {
   width: 142px;
   height: 24px;
   overflow-wrap: break-word;
@@ -651,7 +516,7 @@ onBeforeUnmount(() => {
   margin: 14px 0 0 310px;
 }
 
-.text_16 {
+.platform-description {
   width: 817px;
   height: 16px;
   overflow-wrap: break-word;
@@ -665,21 +530,22 @@ onBeforeUnmount(() => {
   margin: 31px 0 0 309px;
 }
 
-.image-wrapper_1 {
+.image-wrapper {
   width: 1249px;
   height: 318px;
   margin: 53px 0 0 310px;
+
+  .image:first-child {
+    width: 584px;
+    height: 318px;
+  }
+
+  .image:last-child {
+    width: 610px;
+    height: 318px;
+  }
 }
 
-.image_3 {
-  width: 584px;
-  height: 318px;
-}
-
-.image_4 {
-  width: 610px;
-  height: 318px;
-}
 
 .group_8 {
   background-color: rgba(247, 247, 247, 1);
@@ -752,7 +618,7 @@ onBeforeUnmount(() => {
   height: 4px;
 }
 
-.group_9 {
+.feeding-system {
   background-color: rgba(255, 255, 255, 1);
   height: 736px;
   width: 1652px;
@@ -761,31 +627,31 @@ onBeforeUnmount(() => {
   top: -64px;
 }
 
-.section_3 {
+.feeding-header {
   width: 191px;
   height: 4px;
   margin: 64px 0 0 180px;
 }
 
-.block_2 {
+.feeding-banner {
   background-color: rgba(67, 164, 56, 0.34);
   height: 4px;
   width: 191px;
 }
 
-.group_10 {
+.feeding-title-wrapper {
   background-color: rgba(67, 164, 56, 1);
   width: 48px;
   height: 4px;
 }
 
-.text-wrapper_8 {
+.feeding-title {
   width: 191px;
   height: 24px;
   margin: 14px 0 0 180px;
 }
 
-.text_19 {
+.feeding-main-title {
   width: 191px;
   height: 24px;
   overflow-wrap: break-word;
@@ -798,13 +664,13 @@ onBeforeUnmount(() => {
   line-height: 48px;
 }
 
-.text-wrapper_9 {
+.feeding-description {
   width: 551px;
   height: 17px;
   margin: 31px 0 0 180px;
 }
 
-.text_20 {
+.feeding-subtitle {
   width: 551px;
   height: 17px;
   overflow-wrap: break-word;
@@ -817,122 +683,123 @@ onBeforeUnmount(() => {
   line-height: 36px;
 }
 
-.section_4 {
+.feeding-content {
   width: 1203px;
   height: 232px;
   margin: 56px 0 294px 225px;
-}
 
-.section_5 {
-  width: 344px;
-  height: 183px;
-}
+  .content {
+    width: 344px;
+    height: 183px;
 
-.text-wrapper_10 {
-  background-color: rgba(67, 164, 56, 0.154);
-  height: 46px;
-  border: 1px solid rgba(67, 164, 56, 0.7);
-  width: 344px;
-}
+    .text-wrapper {
+      background-color: rgba(67, 164, 56, 0.154);
+      height: 46px;
+      border: 1px solid rgba(67, 164, 56, 0.7);
+      width: 344px;
 
-.text_21 {
-  width: 79px;
-  height: 20px;
-  overflow-wrap: break-word;
-  color: rgba(51, 51, 51, 1);
-  font-size: 20px;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: center;
-  white-space: nowrap;
-  line-height: 41px;
-  margin: 3px 0 0 132px;
-}
+      .text {
+        width: 79px;
+        height: 20px;
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 20px;
+        font-family: SourceHanSansCN-Bold;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 41px;
+        margin: 3px 0 0 132px;
+      }
+    }
 
-.group_11 {
-  width: 296px;
-  height: 108px;
-  margin: 29px 0 0 21px;
-}
+    .sub-wrapper {
+      width: 296px;
+      height: 108px;
+      margin: 29px 0 0 21px;
 
-.image-wrapper_2 {
-  width: 9px;
-  height: 104px;
-  margin-top: 2px;
-}
+      .image-wrapper-one {
+        width: 9px;
+        height: 104px;
+        margin-top: 2px;
 
-.thumbnail-arrow {
-  width: 8px;
-  height: 14px;
-}
+        .thumbnail:nth-child(1) {
+          margin-left: 1px;
+        }
 
-.thumbnail_4 {
-  margin-left: 1px;
-}
+        .thumbnail:nth-child(2) {
+          margin-top: 31px;
+        }
 
-.thumbnail_5 {
-  margin-top: 31px;
-}
+        .thumbnail:nth-child(3) {
+          margin-top: 31px;
+        }
+      }
 
-.thumbnail_6 {
-  margin-top: 31px;
-}
+      .thumbnail-arrow {
+        width: 8px;
+        height: 14px;
+      }
 
-.paragraph_6 {
-  width: 98px;
-  height: 107px;
-  overflow-wrap: break-word;
-  color: rgba(119, 119, 119, 1);
-  font-size: 16px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: justifyLeft;
-  line-height: 45px;
-  margin: -12px 0 0 10px;
-}
+      .paragraph-one {
+        width: 98px;
+        height: 107px;
+        overflow-wrap: break-word;
+        color: rgba(119, 119, 119, 1);
+        font-size: 16px;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: justifyLeft;
+        line-height: 45px;
+        margin: -12px 0 0 10px;
+      }
 
-.image-wrapper_3 {
-  width: 9px;
-  height: 104px;
-  margin: 2px 0 0 63px;
-}
+      .image-wrapper-two {
+        width: 9px;
+        height: 104px;
+        margin: 2px 0 0 63px;
 
-.thumbnail_7 {
-  margin-left: 1px;
-}
+        .thumbnail:nth-child(1) {
+          margin-left: 1px;
+        }
 
-.thumbnail_8 {
-  margin-top: 31px;
-}
+        .thumbnail:nth-child(2) {
+          margin-top: 31px;
+        }
 
-.thumbnail_9 {
-  margin-top: 31px;
-}
+        .thumbnail:nth-child(3) {
+          margin-top: 31px;
+        }
+      }
 
-.paragraph_7 {
-  width: 98px;
-  height: 107px;
-  overflow-wrap: break-word;
-  color: rgba(119, 119, 119, 1);
-  font-size: 16px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: justifyLeft;
-  line-height: 45px;
-  margin: -13px 0 0 9px;
-}
+      .paragraph-two {
+        width: 98px;
+        height: 107px;
+        overflow-wrap: break-word;
+        color: rgba(119, 119, 119, 1);
+        font-size: 16px;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: justifyLeft;
+        line-height: 45px;
+        margin: -13px 0 0 9px;
+      }
+    }
+  }
 
-.image_5 {
-  width: 495px;
-  height: 232px;
-  margin-left: 21px;
-}
+  .image {
+    width: 495px;
+    height: 232px;
+    margin-left: 21px;
 
-.section_6 {
-  background-color: rgba(204, 204, 204, 1);
-  width: 345px;
-  height: 232px;
-  margin-left: -2px;
+    &:last-child {
+      background-color: rgba(204, 204, 204, 1);
+      width: 345px;
+      height: 232px;
+      margin-left: -2px;
+    }
+  }
+
 }
 
 .group_12 {
