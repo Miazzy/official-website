@@ -17,13 +17,13 @@
             </div>
             <div class="main-section flex-col">
                 <div class="description flex-col">
-                    <img class="description-image" referrerpolicy="no-referrer"
+                    <img class="description-image" 
                         src="../../assets/images/intel_211_02.png" />
                     <span class="description-text">平台功能</span>
                 </div>
-                <img class="icon-arrow" referrerpolicy="no-referrer"
+                <img class="icon-arrow" 
                     src="../../assets/images/arrow-orange-down-one.png" />
-                <img class="icon-arrow-two" referrerpolicy="no-referrer"
+                <img class="icon-arrow-two" 
                     src="../../assets/images/arrow-orange-down-two.png" />
                 <template v-for="(item, index) in data" :key="index" >
                     <template v-if="index % 2 == 0">
@@ -32,12 +32,12 @@
                                 <span class="text text-title">{{ item.title }}</span>
                                 <span class="text text-detail">{{ item.detail }}</span>
                             </div>
-                            <img class="image" referrerpolicy="no-referrer" :src="item.src" />
+                            <img class="image"  :src="item.src" />
                         </div>
                     </template>
                     <template v-if="index % 2 == 1">
                         <div class="flex-row justify-between" :class="`content-section-${index + 1}`">
-                            <img class="image" referrerpolicy="no-referrer" :src="item.src" />
+                            <img class="image"  :src="item.src" />
                             <div class="text-wrapper flex-col justify-between">
                                 <span class="text text-title">{{ item.title }}</span>
                                 <span class="text text-detail">{{ item.detail }}</span>
@@ -622,5 +622,4 @@ onBeforeUnmount(() => {
         }
     }
 }
-
 </style>
