@@ -18,9 +18,9 @@
             </div>
             <div class="group_4 flex-col">
                 <img class="thumbnail_4" referrerpolicy="no-referrer"
-                    src="https://lanhu-oss.lanhuapp.com/psclegm5fszqgeu63y6luyotj7wubydu7hgd31dbf4e-250e-415a-b766-744c1a5f261c" />
+                    src="../../assets/images/arrow-orange-down-one.png" />
                 <img class="thumbnail_5" referrerpolicy="no-referrer"
-                    src="https://lanhu-oss.lanhuapp.com/pswzgfr06s1xjn52ndt5c7i6f7yoz3x0e0b9a5b65-9b71-4fb7-84ed-3927b37b83e9" />
+                    src="../../assets/images/arrow-orange-down-two.png" />
                 <div class="block_5 flex-row">
                     <div class="text-wrapper_21 flex-col justify-between">
                         <span class="text_15">1、7*24小时全站远程实时监测</span>
