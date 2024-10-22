@@ -330,3 +330,8 @@ export const isMobileDevice = () => {
   // 结合所有条件
   return isSmallScreen && isMobileUserAgent && isTouchDevice && isNarrowAspectRatio;
 }
+
+export const getImgUrl = (url) => {
+  const path = new URL(`../assets/images/${url}`, import.meta.url);
+  return path.href;
+};

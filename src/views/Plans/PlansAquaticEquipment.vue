@@ -158,6 +158,8 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="less" scoped>
+@import '../../assets/style/common.css';
+
 .container {
   position: relative;
   width: 1920px;
@@ -1103,26 +1105,5 @@ onBeforeUnmount(() => {
   white-space: nowrap;
   line-height: 36px;
   margin-left: 322px;
-}
-
-body * {
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
-body {
-  font-family: PingFangSC-Regular, Roboto, Helvetica Neue, Helvetica, Tahoma,
-    Arial, PingFang SC-Light, Microsoft YaHei;
-}
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-.justify-between {
-  display: flex;
-  justify-content: space-between;
 }
 </style>

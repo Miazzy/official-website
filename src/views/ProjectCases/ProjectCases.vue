@@ -60,6 +60,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
 import { MsgManager } from "@/manager/MsgManager";
+import { getImgUrl } from '@/utils/common';
 
 const router = useRouter();
 const baseWidth = 1920; // 基准宽度
@@ -76,11 +77,6 @@ const bottomHeight = ref(bottomBaseHeight);
 const containerHeight = ref(topBaseHeight + middleBaseHeight + bottomBaseHeight - 68);
 
 const scaleRatio = ref(1);
-
-const getImgUrl = (url) => {
-  const path = new URL(`../../assets/images/${url}`, import.meta.url);
-  return path.href;
-};
 
 const intelligentOperationList = ref([
   {
