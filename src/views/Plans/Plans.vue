@@ -139,39 +139,9 @@ const options = reactive({
       name: 'agriculture',
       business: [
         { title: ['现代化农业园区', '整体解决方案'], icon: 'iconzhiwuzhongzhi agriculture', line: 1.3, text: ['现代化水产产业园规划建设', '光伏农业园区规划建设', '园区智能化运营服务', '渔光一体整体解决方案'], btn: { show: false } },
-        { title: ['设施化养殖系统'], icon: 'iconyangzhishebei agriculture', line: 1.3, text: ['池塘内循环养殖系统', '陆基高位池养殖系统', '工厂化车间养殖系统'], btn: { show: true } },
-        { title: ['智能化养殖系统'], icon: 'iconzhinengyangzhi agriculture', line: 1.3, text: ['智能塔料投喂系统', '智能机器人投喂系统', '多级运维系统', '养殖ERP系统'], btn: { show: true } },
+        { title: ['设施化养殖系统'], icon: 'iconyangzhishebei agriculture', line: 1.3, text: ['池塘内循环养殖系统', '陆基高位池养殖系统', '工厂化车间养殖系统'], btn: { show: true, path: '/plans/aquatic/equipment' } },
+        { title: ['智能化养殖系统'], icon: 'iconzhinengyangzhi agriculture', line: 1.3, text: ['智能塔料投喂系统', '智能机器人投喂系统', '多级运维系统', '养殖ERP系统'], btn: { show: true, path: '/plans/aquatic/intel' } },
         { title: ['生态化尾水处理'], icon: 'iconchitangweishuichuli agriculture', line: 1.3, text: ['通威底排污技术', '模块化底排污设备', '尾水处理解决方案 '], btn: { show: false } }
-      ],
-    }
-  },
-  xx: {
-    banner: {
-      title: '平台化、多行业、一站式',
-      btmText: 'Platform, multi-industry, one-stop'.toUpperCase(),
-    },
-    mainInfo: {
-      title: '信息化解决方案服务提供商',
-      shadowText: 'Information'.toUpperCase(),
-      btmText: 'solution'.toUpperCase(),
-      description: [
-        '依托20年信息化方面的经验积累，为企业提供整体的信息化解决方案，利用物联网、大数据、云计算、人工智能等技术，实现信息化与传统产。',
-      ]
-    },
-    indexs: [
-      { icon: 'iconduohangye', iconColor: '#30A8E6', labelCh: '平台化', labelEn: 'Platform'.toUpperCase(), labelColor: '#30A8E6' },
-      { icon: 'iconzichan', iconColor: '#30A8E6', labelCh: '多行业', labelEn: 'multi-industry'.toUpperCase(), labelColor: '#30A8E6' },
-      { icon: 'iconhangzheng', iconColor: '#30A8E6', labelCh: '一站式', labelEn: 'one-stop'.toUpperCase(), labelColor: '#30A8E6' },
-    ],
-    btmInfo: {
-      title: '渔光一体智能运营',
-      btmText: 'Yu guang integrated intelligent operation'.toUpperCase(),
-      indicate: '业务范围 >>',
-      name: 'inform',
-      business: [
-        { title: ['企业信息化解决方案'], icon: 'iconhulianwang inform', line: 2.2, text: ['依托自主研发的业务架构平台，高效的开发团队，为企业建立业务分析模型，发现潜在问题，进行针对性地改善和规范，助力 管理升级，支撑。'], btn: { show: false } },
-        { title: ['物联网应用解决方案'], icon: 'iconxinxihua1 inform', line: 2.2, text: ['基于自主研发的数据采集器和通信平台，实现物联网与信息化的融合，提升生产过程的质量管控能力，实现质量安全的可追溯性，提高智能化水。'], btn: { show: false } },
-        { title: ['智慧电站运维解决方案'], icon: 'iconzhinengguangfu inform', line: 2.2, text: ['利用大数据、AI、5G等技术，通过智能IOT设备，实现对电站设备的统一监控，为电站管理业务建设全面、智能、高效的运维管理平台。'], btn: { show: false } }
       ],
     }
   },

@@ -149,6 +149,12 @@ export const handleResize = (index, event) => {
           transform-origin: top left !important;
         }
       }
+      #container.plansaquaticintel, #container.plansaquaticequipment {
+        main {
+          transform: scale(${scale}) !important;
+          transform-origin: top left !important;
+        }
+      }
       #container.home {
         main {
           transform-origin: top left !important;
@@ -195,7 +201,7 @@ export const handleResize = (index, event) => {
           padding-top: ${ptop.toFixed(2)}px !important;
         }
       }
-      :not(.aboutus#container) .footer {
+      :not(#container.aboutus) .footer {
         transform: scale(${scale}) !important;
         width: ${(100 / scale)}% !important;
         transform-origin: top left !important;
@@ -204,18 +210,28 @@ export const handleResize = (index, event) => {
           margin: 0 0 0 ${(110 * (minWidth / 1920)).toFixed(0)}px !important;
         }
       }
-      .informationCenter#container .footer {
+      #container.informationCenter .footer {
         margin-top: ${(diff - 55 + Math.abs(diff/75)).toFixed(2)}px !important;
       }  
-      .aboutus#container .footer {
+      #container.aboutus .footer {
         margin-top: ${(diff - 55 + (ptop < 0 ? ptop : 0 ) - Math.abs(diff/100) + 5).toFixed(2)}px !important;
-      }  
-      .plansphotovoltaic#container {
+      }
+      #container.plansphotovoltaic {
         position: relative;
         .footer {
           position: absolute;
           bottom: ${(diff/8.8).toFixed(2)}px;
         }  
+      }
+      #container.plansaquaticintel, #container.plansaquaticequipment {
+        position: relative;
+        .footer {
+          position: absolute;
+          bottom: ${(diff/8.8).toFixed(2)}px;
+        }  
+      }
+      .tooltips-text {
+          transform: scale(${scale});
       }
       `;
 

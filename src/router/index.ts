@@ -17,6 +17,16 @@ const routes = [
         component: () => import('@/views/Plans/PlansPhotovoltaic.vue')
     },
     {
+        path: '/plans/aquatic/equipment',
+        name: 'plansaquaticequipment',
+        component: () => import('@/views/Plans/PlansAquaticEquipment.vue')
+    },
+    {
+        path: '/plans/aquatic/intel',
+        name: 'plansaquaticintel',
+        component: () => import('@/views/Plans/PlansAquaticIntel.vue')
+    },
+    {
         path: '/aboutus',
         name: 'aboutus',
         component: () => import('@/views/AboutUs/AboutUs.vue')
