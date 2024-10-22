@@ -6,12 +6,10 @@
             <div class="group_1 flex-row" style="opacity: 0;">
             </div>
             <div class="text-wrapper-title flex-row">
-              <span class="text_6">设施化养殖系统</span>
+              <span class="text_6">{{ title }}</span>
             </div>
             <div class="text-wrapper-text flex-row">
-              <span class="text_7">
-                Set&nbsp;up&nbsp;aquaculture&nbsp;system
-              </span>
+              <span class="text_7">{{ subTitle }}</span>
             </div>
           </div>
         </div>
@@ -133,6 +131,9 @@ import { MsgManager } from "@/manager/MsgManager";
 const baseWidth = 1920; // 基准宽度
 const baseHeight = 2350;
 const containerHeight = ref(baseHeight);
+
+const title = ref('设施化养殖系统');
+const subTitle = ref('Set up aquaculture system');
 
 // 动态计算区域高度的函数
 const updateHeights = () => {
