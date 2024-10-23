@@ -49,6 +49,11 @@ const mobileRoutes = [
         name: 'mobileHome',
         component: () => import('@/mobile/Home/Home.vue')
     },
+    {
+        path: '/mobilePlans',
+        name: 'mobilePlans',
+        component: () => import('@/mobile/Plans/Plans.vue')
+    },
 ];
 
 const router = createRouter({
