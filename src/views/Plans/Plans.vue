@@ -61,6 +61,7 @@ import Indicator from '@/components/Indicator.vue';
 import Card from '@/components/Card.vue';
 import { MsgManager } from "@/manager/MsgManager";
 import { useRoute, useRouter } from 'vue-router';
+import { setTimexec } from '@/utils/common';
 
 const route = useRoute();
 const router = useRouter();
@@ -166,8 +167,12 @@ const updateHeights = () => {
   }
 };
 
-const handleClick = (path) => {
+const handleClick = (path, y = 0) => {
+  window.scrollTo(0, y);
   router.push(path);
+  setTimexec(() => {
+    window.scrollTo(0, y);
+  }, [0, 50, 100]);
 };
 
 const handleType = (type) => {
