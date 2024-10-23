@@ -1,7 +1,9 @@
 <template>
   <div class="container flex-col">
-    <div class="intelligent-system flex-col justify-between">
-      <div class="header-section flex-col">
+    <!-- 页面容器 -->
+    <div class="aquatic-equipment-container main-container intelligent-system flex-col justify-between">
+      <!-- 设施化养殖系统顶部标题 -->
+      <div class="header-section header-container flex-col">
         <div class="content-wrapper flex-col">
           <div class="block flex-row">
           </div>
@@ -13,57 +15,9 @@
           </div>
         </div>
       </div>
-
-      <div class="factory-system flex-col">
-        <div class="system-description flex-col">
-          <div class="description flex-col"></div>
-        </div>
-        <span class="system-title">工厂化车间养殖系统</span>
-        <div class="system-details">
-          <span class="system-features">无人值守模式<br /></span>
-          <span
-            class="system-description-text">实现对整个工厂化智能养殖进行数据采集、指令调度和流程控制，诊断告警功能，软硬件共同调度，实现报警功能和流程控制包括恒温系统、恒压系统和水处理等流程控制配置，建立通畅的信息反馈机制和自动化的处理措施，自动处理，把风险控制在苗头状态，从而达到自动化无人值守的工厂化养殖模式<br /></span>
-        </div>
-
-        <div class="monitor-system flex-col">
-          <div class="monitoring-system flex-col">
-            <div class="group-one flex-row justify-between">
-              <div class="block flex-col justify-between">
-                <div class="block-detail flex-col"></div>
-                <div class="block-detail flex-col"></div>
-              </div>
-              <div class="block flex-col">
-                <div class="block-detail flex-col"></div>
-                <div class="block-detail flex-col"></div>
-                <div class="block-detail flex-col"></div>
-              </div>
-            </div>
-            <div class="group-two flex-row justify-between">
-              <div class="block-detail flex-col"></div>
-              <div class="block-detail flex-col"></div>
-            </div>
-            <div class="group-three flex-row justify-between">
-              <div class="block-detail flex-col"></div>
-              <div class="block-detail flex-col"></div>
-            </div>
-            <div class="group-four flex-row">
-              <div class="block-detail flex-col"></div>
-            </div>
-            <div class="monitoring-controls flex-row">
-              <div class="section control-section flex-col"><span>恒压供水</span></div>
-              <div class="section flex-col"><span>恒温供水</span></div>
-              <div class="section flex-col"><span>循环水处理</span></div>
-              <div class="section flex-col"><span>尾水处理</span></div>
-            </div>
-            <span class="metric-text">
-              视频监控<br />PH值、水位<br />自动投喂<br />温度和溶氧
-            </span>
-            <span class="metric-text paragraph">
-              自动增氧<br />自动加温<br />自动水处理<br />自动供水<br />自动投喂<br />......
-            </span>
-          </div>
-        </div>
-
+      <!-- 设施化养殖系统内容容器 -->
+      <div class="factory-system content-container flex-col">
+        <!-- 池塘内循环养殖系统 -->
         <div class="ponds-system flex-col">
           <div class="pond-system flex-row">
             <div class="system-description flex-col">
@@ -81,7 +35,7 @@
             <img class="pond-image" referrerpolicy="no-referrer" src="../../assets/images/intel_221_05.png" />
           </div>
         </div>
-
+        <!-- 陆基高位池养殖系统 -->
         <div class="high-level-pond-system flex-col">
           <div class="high-description flex-row">
             <div class="wrapper flex-col">
@@ -100,6 +54,55 @@
             <span class="high-level-subtitle">漂浮式圈养池</span>
             <span class="high-level-subtitle">玻璃钢陆基圆形池</span>
             <span class="high-level-subtitle">水泥结构高位池养殖系统</span>
+          </div>
+        </div>
+        <!-- 工厂化车间养殖系统 -->
+        <div class="factory-farm-system">
+          <div class="system-description flex-col">
+            <div class="description flex-col"></div>
+          </div>
+          <span class="system-title">工厂化车间养殖系统</span>
+          <div class="system-details">
+            <span class="system-features">无人值守模式<br /></span>
+            <span class="system-description-text">实现对整个工厂化智能养殖进行数据采集、指令调度和流程控制，诊断告警功能，软硬件共同调度，实现报警功能和流程控制包括恒温系统、恒压系统和水处理等流程控制配置，建立通畅的信息反馈机制和自动化的处理措施，自动处理，把风险控制在苗头状态，从而达到自动化无人值守的工厂化养殖模式<br /></span>
+          </div>
+          <div class="monitor-system flex-col">
+            <div class="monitoring-system flex-col">
+              <div class="group-one flex-row justify-between">
+                <div class="block flex-col justify-between">
+                  <div class="block-detail flex-col"></div>
+                  <div class="block-detail flex-col"></div>
+                </div>
+                <div class="block flex-col">
+                  <div class="block-detail flex-col"></div>
+                  <div class="block-detail flex-col"></div>
+                  <div class="block-detail flex-col"></div>
+                </div>
+              </div>
+              <div class="group-two flex-row justify-between">
+                <div class="block-detail flex-col"></div>
+                <div class="block-detail flex-col"></div>
+              </div>
+              <div class="group-three flex-row justify-between">
+                <div class="block-detail flex-col"></div>
+                <div class="block-detail flex-col"></div>
+              </div>
+              <div class="group-four flex-row">
+                <div class="block-detail flex-col"></div>
+              </div>
+              <div class="monitoring-controls flex-row">
+                <div class="section control-section flex-col"><span>恒压供水</span></div>
+                <div class="section flex-col"><span>恒温供水</span></div>
+                <div class="section flex-col"><span>循环水处理</span></div>
+                <div class="section flex-col"><span>尾水处理</span></div>
+              </div>
+              <span class="metric-text">
+                视频监控<br />PH值、水位<br />自动投喂<br />温度和溶氧
+              </span>
+              <span class="metric-text paragraph">
+                自动增氧<br />自动加温<br />自动水处理<br />自动供水<br />自动投喂<br />......
+              </span>
+            </div>
           </div>
         </div>
       </div>

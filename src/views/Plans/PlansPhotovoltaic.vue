@@ -1,7 +1,9 @@
 <template>
     <div class="container flex-col">
-        <div class="section flex-col justify-between">
-            <div class="header-banner flex-col">
+        <!-- 页面容器 -->
+        <div class="main-container photovoltaic section flex-col justify-between">
+            <!-- 智能光伏集中运维系统顶部标题 -->
+            <div class="header-section header-container flex-col">
                 <div class="header-content flex-col">
                     <div class="title-section flex-col">
                         <div class="title-header flex-row">
@@ -15,7 +17,8 @@
                     </div>
                 </div>
             </div>
-            <div class="main-section flex-col">
+            <!-- 智能光伏集中运维系统内容容器 -->
+            <div class="main-section content-container flex-col">
                 <div class="description flex-col">
                     <img class="description-image" 
                         src="../../assets/images/intel_211_02.png" />
@@ -143,7 +146,7 @@ onBeforeUnmount(() => {
     width: 1920px;
     height: 4954px;
 
-    .header-banner {
+    .header-section {
         background-image: url('../../assets/images/plan_header_yy.jpg');
         height: 400px;
         width: 1920px;

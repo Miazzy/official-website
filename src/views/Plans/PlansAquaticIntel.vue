@@ -1,7 +1,9 @@
 <template>
   <div class="container flex-col">
-    <div class="aquaculture section flex-col justify-between">
-      <div class="header-section flex-col">
+    <!-- 页面容器 -->
+    <div class="aquatic-intel-container main-container aquaculture section flex-col justify-between">
+      <!-- 智能化养殖系统顶部标题 -->
+      <div class="header-section header-container flex-col">
         <div class="title-wrapper flex-col">
           <div class="header flex-row">
           </div>
@@ -13,7 +15,9 @@
           </div>
         </div>
       </div>
-      <div class="main-section flex-col">
+      <!-- 智能化养殖系统内容容器 -->
+      <div class="main-section content-container flex-col">
+        <!-- 智能塔料投喂系统 -->
         <div class="feeding-system flex-col">
           <div class="feeding-header flex-row">
             <div class="feeding-banner flex-col">
@@ -57,7 +61,7 @@
             <img class="image flex-col"  src="../../assets/images/intel_221_07.png" />
           </div>
         </div>
-
+        <!-- 智能机器人投喂系统 -->
         <div class="robotic-system flex-col">
           <div class="robotic-header flex-row">
             <div class="section flex-col">
@@ -75,7 +79,7 @@
             <img class="image two"  src="../../assets/images/intel_222_04.png" />
           </div>
         </div>
-
+        <!-- 多级运维平台 -->
         <div class="platform-system wrapper flex-col">
           <div class="platform-wrapper flex-col">
             <div class="platform-banner flex-col"></div>
@@ -88,7 +92,7 @@
             <img class="image"  src="../../assets/images/intel_222_01.png" />
           </div>
         </div>
-
+        <!-- 养殖ERP系统 -->
         <div class="erp-system flex-col">
           <div class="erp-header flex-col"></div>
           <div class="erp-sub-header flex-col"></div>
@@ -147,7 +151,7 @@ onBeforeUnmount(() => {
   height: 3021px;
   overflow: hidden;
 
-  .section {
+  .main-container.section {
     background-color: rgba(255, 255, 255, 1);
     position: relative;
     width: 1920px;
