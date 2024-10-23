@@ -233,6 +233,9 @@ export const handleResize = (index, event) => {
       .tooltips-text {
           transform: scale(${scale});
       }
+      .anchorBL {
+        display: none; /*** 隐藏地图标识信息 ***/
+      }
       `;
 
     // 将编译后的 CSS 内容设置到<style>元素中
