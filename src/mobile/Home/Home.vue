@@ -47,6 +47,7 @@
                     </div>
                 </div>
 
+                <!-- index-container -->
                 <div class="index-container">
                     <div class="index-wrapper flex-row">
                         <div class="index-text-wrapper  flex-col justify-between">
@@ -60,7 +61,7 @@
                         <div class="block-partition flex-col"></div>
                         <div class="index-text-wrapper flex-col justify-between">
                             <div class="index-text-box right">
-                                <span class="text">40</span> 
+                                <span class="text">40</span>
                                 <span class="text middle"></span>
                                 <span class="text mini">+座</span>
                             </div>
@@ -70,7 +71,7 @@
                     <div class="index-wrapper flex-row">
                         <div class="index-text-wrapper flex-col justify-between">
                             <div class="index-text-box">
-                                <span class="text">4.27</span> 
+                                <span class="text">4.27</span>
                                 <span class="text middle"></span>
                                 <span class="text mini">Gw+</span>
                             </div>
@@ -79,7 +80,7 @@
                         <div class="block-partition flex-col"></div>
                         <div class="index-text-wrapper flex-col justify-between">
                             <div class="index-text-box">
-                                <span class="text">3032</span> 
+                                <span class="text">3032</span>
                                 <span class="text middle"></span>
                                 <span class="text mini">+天</span>
                             </div>
@@ -205,6 +206,91 @@ onBeforeUnmount(() => {
     &.index-2-bg {
         background: url('../../assets/images/home_mobile_02.jpg') 0 0 no-repeat;
         background-size: 100% 100%;
+
+        .index-container {
+            margin: 5vh 0 0 0;
+
+            .index-wrapper {
+                width: 55.34vw;
+                height: 12vw;
+                margin: 18.4vw 0 0 17.46vw;
+
+                .index-text-wrapper {
+                    width: 18vw;
+                    height: 12vw;
+
+                    .index-text-box {
+                        width: 16vw;
+                        height: 6.27vw;
+                        overflow-wrap: break-word;
+                        font-size: 0;
+                        font-family: SourceHanSansCN-Bold;
+                        font-weight: 700;
+                        text-align: left;
+                        white-space: nowrap;
+                        line-height: 6.27vw;
+
+                        .text {
+                            width: 16vw;
+                            height: 6.27vw;
+                            overflow-wrap: break-word;
+                            color: rgba(255, 255, 255, 1);
+                            font-size: 7.86vw;
+                            font-family: SourceHanSansCN-Bold;
+                            font-weight: 700;
+                            text-align: left;
+                            line-height: 2.67vw;
+
+                            &.middle {
+                                margin-left: 5px;
+                            }
+
+                            &.mini {
+                                font-size: 3.06vw;
+                            }
+                        }
+
+                        &.right {
+                            width: 16vw;
+                        }
+
+                    }
+
+                    .text-title {
+                        width: 12.8vw;
+                        height: 3.2vw;
+                        overflow-wrap: break-word;
+                        color: rgba(255, 255, 255, 1);
+                        font-size: 3.06vw;
+                        font-family: SourceHanSansCN-Regular;
+                        font-weight: normal;
+                        text-align: left;
+                        white-space: nowrap;
+                        line-height: 3.07vw;
+                        margin-top: 2.54vw;
+                    }
+
+                    &:last-child {
+                        width: 15.87vw;
+                        height: 12vw;
+                        margin-left: 7.34vw;
+                    }
+                }
+
+                .block-partition {
+                    background-color: rgba(255, 255, 255, 0.6);
+                    width: 0.45vw;
+                    height: 6.8vw;
+                    margin: 0 0 0 15.86vw;
+                }
+
+                &:last-child {
+                    width: 64.94vw;
+                    height: 12.14vw;
+                    margin: 8.66vw 0 0 17.46vw;
+                }
+            }
+        }
     }
 
     &.index-3-bg {
@@ -272,7 +358,6 @@ onBeforeUnmount(() => {
         }
     }
 
-
     .content-container {
         width: 22.4vw;
         height: 3.1vh;
@@ -311,88 +396,5 @@ onBeforeUnmount(() => {
     }
 }
 
-.index-container {
-    margin: 5vh 0 0 0;
 
-    .index-wrapper {
-        width: 55.34vw;
-        height: 12vw;
-        margin: 18.4vw 0 0 17.46vw;
-    
-        .index-text-wrapper {
-            width: 18vw;
-            height: 12vw;
-    
-            .index-text-box {
-                width: 16vw;
-                height: 6.27vw;
-                overflow-wrap: break-word;
-                font-size: 0;
-                font-family: SourceHanSansCN-Bold;
-                font-weight: 700;
-                text-align: left;
-                white-space: nowrap;
-                line-height: 6.27vw;
-    
-                .text {
-                    width: 16vw;
-                    height: 6.27vw;
-                    overflow-wrap: break-word;
-                    color: rgba(255, 255, 255, 1);
-                    font-size: 7.86vw;
-                    font-family: SourceHanSansCN-Bold;
-                    font-weight: 700;
-                    text-align: left;
-                    line-height: 2.67vw;
-    
-                    &.middle {
-                        margin-left: 5px;
-                    }
-    
-                    &.mini {
-                        font-size: 3.06vw;
-                    }
-                }
-    
-                &.right {
-                    width: 16vw;
-                }
-    
-            }
-    
-            .text-title {
-                width: 12.8vw;
-                height: 3.2vw;
-                overflow-wrap: break-word;
-                color: rgba(255, 255, 255, 1);
-                font-size: 3.06vw;
-                font-family: SourceHanSansCN-Regular;
-                font-weight: normal;
-                text-align: left;
-                white-space: nowrap;
-                line-height: 3.07vw;
-                margin-top: 2.54vw;
-            }
-    
-            &:last-child {
-                width: 15.87vw;
-                height: 12vw;
-                margin-left: 7.34vw;
-            }
-        }
-    
-        .block-partition {
-            background-color: rgba(255, 255, 255, 0.6);
-            width: 0.45vw;
-            height: 6.8vw;
-            margin: 0 0 0 15.86vw;
-        }
-        
-        &:last-child {
-            width: 64.94vw;
-            height: 12.14vw;
-            margin: 8.66vw 0 0 17.46vw;
-        }
-    }
-}
 </style>

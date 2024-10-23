@@ -1,5 +1,5 @@
 <template>
-  <div id="container" :class="$route.name" :style="{ height: typeof height === 'number' ? (height + 'px') : height , overflow: typeof height === 'number' ? 'hidden' : null }">
+  <div id="container" @click="handleMobileClick" :class="$route.name" :style="{ height: typeof height === 'number' ? (height + 'px') : height , overflow: typeof height === 'number' ? 'hidden' : null }">
     <header v-if="!($route?.name && $route.name.startsWith('mobile'))">
       <Header ref="headerRef" v-show="isHeaderShow" @enter.enter="onAnimationStart"
         :class="{ [animationName]: $route.name !== 'home' }" :fixedToTop="$route.path === '/'"
@@ -64,6 +64,10 @@ const handleMobile = () => {
     router.push('/');
   }
 }
+
+const handleMobileClick = () => {
+  debugger;
+};
 
 const handleResizeListener = () => {
   handleMobile();
