@@ -171,7 +171,7 @@ html, body, div#app, div.plans {
 }
 
 #container {
-  min-width: 800px;
+  min-width: 400px;
 }
 
 header {

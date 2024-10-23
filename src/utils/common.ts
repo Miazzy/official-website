@@ -331,6 +331,9 @@ export const isMobileDevice = () => {
   return isSmallScreen && isMobileUserAgent && isTouchDevice && isNarrowAspectRatio;
 }
 
+/**
+ * 获取图片的地址
+ */
 export const getImgUrl = (url) => {
   const path = new URL(`../assets/images/${url}`, import.meta.url);
   return path.href;

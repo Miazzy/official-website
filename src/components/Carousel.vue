@@ -40,7 +40,7 @@
           disabled: isRestatus }" v-if="!isRefresh">
       <slot name="five"></slot>
     </div>
-    <div class="indicator">
+    <div class="indicator" v-show="isIndicatorShow">
       <div v-for="(segment, index) in 4" :key="index" :class="{ active: activeIndex === index }" class="segment"
         @click="handleClick(index)"></div>
     </div>
@@ -49,7 +49,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { throttle } from '@/utils/common';
+import { throttle, isMobileDevice } from '@/utils/common';
 import { TaskExecutor } from '@/executor/executor';
 import { TimeInterval } from '@/constant/constant';
 
@@ -59,6 +59,7 @@ const isLock = ref(false);
 const isRefresh = ref(true);
 const isRestatus = ref(true);
 const direct = ref(false);
+const isIndicatorShow = ref(true);
 
 const emit = defineEmits(['change']);
 
@@ -113,6 +114,7 @@ const handleClick = (index) => {
 const handleScrollFn = throttle(handleScroll, 250, 1000);
 
 onMounted(() => {
+  isIndicatorShow.value = !(isMobileDevice());
   isRefresh.value = false;
   TaskExecutor.getInstance().start();
   startAutoScroll();
