@@ -140,7 +140,7 @@ import { ref, onMounted } from 'vue';
 
 </script>
 <style lang="less" scoped>
-@import '../assets/style/common.css';
+@import '@/assets/style/common.css';
 
 .page {
     background-color: rgba(255, 255, 255, 1);

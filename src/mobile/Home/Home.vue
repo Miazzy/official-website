@@ -168,7 +168,7 @@ onBeforeUnmount(() => {
 });
 </script>
 <style scoped lang="less">
-@import '../../assets/style/common.css';
+@import '@/assets/style/common.css';
 
 .container {
     background-color: rgba(255, 255, 255, 1);

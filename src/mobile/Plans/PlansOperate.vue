@@ -1,6 +1,9 @@
 <template>
-  <div class="page flex-col">
-    <div class="block_1 flex-col">
+  <div class="container flex-col">
+    <!-- mobile-header -->
+    <MHeader></MHeader>
+    <!-- title-container -->
+    <div class="title-container flex-col">
       <div class="group_5 flex-row">
         <div class="text-group_7 flex-col justify-between">
           <span class="text_1">专业化·智能化·一体化</span>
@@ -8,35 +11,88 @@
         </div>
       </div>
     </div>
-    <div class="block_2 flex-col">
-      <div class="group_1 flex-col">
-        <div class="group_7 flex-row">
-          <span class="text_3">Yu&nbsp;guang&nbsp;integrated&nbsp;intelligent&nbsp;operation</span>
-          <span class="text_4">Yu&nbsp;guang&nbsp;integrated&nbsp;intelligent&nbsp;operation</span>
-          <span class="text_5">业务范围&gt;&gt;</span>
-          <div class="box_3 flex-col">
-            <div class="image-wrapper_2 flex-col">
-              <img class="image_2" referrerpolicy="no-referrer"
-                src="https://lanhu-oss.lanhuapp.com/pscctc9k0rltryrefwds6k9yg7q4evnxxe7a95771b-e65e-4891-baca-f7697209c016" />
-            </div>
-            <div class="text-group_8 flex-col justify-between">
-              <span class="text_6">运行维护</span>
-              <span class="paragraph_1">安全管理<br />电站巡检<br />设备运行监控<br />维护消缺<br />台账管理<br />除草清洗</span>
+    <!-- main-container -->
+    <div class="main-container">
+      <!-- description-container -->
+      <div class="description-container flex-col">
+        <span class="text_10">Intelligent</span>
+        <span class="text_11">渔光一体智能运营专家</span>
+        <span class="text_12">Operation</span>
+        <span
+          class="paragraph_3">秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。<br />线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源，形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。<br /></span>
+        <div class="block_7 flex-row justify-between">
+          <div class="group_3 flex-row">
+            <div class="text-group_9 flex-col justify-between">
+              <div class="text-wrapper_1">
+                <span class="text_13">40</span> <span class="text_14"></span>
+                <span class="text_15">+个</span>
+              </div>
+              <span class="text_16">在运城市</span>
             </div>
           </div>
-          <img class="image_3" referrerpolicy="no-referrer"
-            src="https://lanhu-oss.lanhuapp.com/ps6qdos86rimdbjes315rmb37f874lf3xdc1ac091c-ca69-43d9-9f59-752987578f28" />
+          <div class="group_4 flex-row">
+            <div class="text-group_10 flex-col justify-between">
+              <div class="text-wrapper_2">
+                <span class="text_17">50</span> <span class="text_18"></span>
+                <span class="text_19">+座</span>
+              </div>
+              <span class="text_20">在运电站</span>
+            </div>
+          </div>
         </div>
-        <div class="image-wrapper_6 flex-row justify-between">
-          <img class="image_4" referrerpolicy="no-referrer"
-            src="https://lanhu-oss.lanhuapp.com/psv314pkm1cmk1av4epqvepxqr9gdamcb74b43c75-dbab-4cc8-aeab-fe2915240a21" />
-          <img class="image_5" referrerpolicy="no-referrer"
-            src="https://lanhu-oss.lanhuapp.com/pscd5nkphp2la77u9zmfcbtfomq59nlyh6cf1d9cf-d51f-4da3-bb5d-5a8ad8ed8e52" />
+        <div class="block_8 flex-row justify-between">
+          <div class="box_9 flex-row">
+            <div class="text-group_11 flex-col justify-between">
+              <div class="text-wrapper_3">
+                <span class="text_21">4.27</span> <span class="text_22"></span>
+                <span class="text_23">Gw+</span>
+              </div>
+              <span class="text_24">在运维总容量</span>
+            </div>
+          </div>
+          <div class="box_10 flex-row">
+            <div class="text-group_12 flex-col justify-between">
+              <div class="text-wrapper_4">
+                <span class="text_25">3170</span>
+                <span class="text_26">+天</span>
+              </div>
+              <span class="text_27">安全生产天数</span>
+            </div>
+          </div>
         </div>
-        <span class="text_7">渔光一体智能运营</span>
+      </div>
+      <!-- content-container -->
+      <div class="content-container flex-col">
+        <div class="group_1 flex-col">
+          <div class="group_7 flex-row">
+            <span class="text_3">Yu&nbsp;guang&nbsp;integrated&nbsp;intelligent&nbsp;operation</span>
+            <span class="text_4">Yu&nbsp;guang&nbsp;integrated&nbsp;intelligent&nbsp;operation</span>
+            <span class="text_5">业务范围&gt;&gt;</span>
+            <div class="box_3 flex-col">
+              <div class="image-wrapper_2 flex-col">
+                <img class="image_2" referrerpolicy="no-referrer"
+                  src="https://lanhu-oss.lanhuapp.com/pscctc9k0rltryrefwds6k9yg7q4evnxxe7a95771b-e65e-4891-baca-f7697209c016" />
+              </div>
+              <div class="text-group_8 flex-col justify-between">
+                <span class="text_6">运行维护</span>
+                <span class="paragraph_1">安全管理<br />电站巡检<br />设备运行监控<br />维护消缺<br />台账管理<br />除草清洗</span>
+              </div>
+            </div>
+            <img class="image_3" referrerpolicy="no-referrer"
+              src="https://lanhu-oss.lanhuapp.com/ps6qdos86rimdbjes315rmb37f874lf3xdc1ac091c-ca69-43d9-9f59-752987578f28" />
+          </div>
+          <div class="image-wrapper_6 flex-row justify-between">
+            <img class="image_4" referrerpolicy="no-referrer"
+              src="https://lanhu-oss.lanhuapp.com/psv314pkm1cmk1av4epqvepxqr9gdamcb74b43c75-dbab-4cc8-aeab-fe2915240a21" />
+            <img class="image_5" referrerpolicy="no-referrer"
+              src="https://lanhu-oss.lanhuapp.com/pscd5nkphp2la77u9zmfcbtfomq59nlyh6cf1d9cf-d51f-4da3-bb5d-5a8ad8ed8e52" />
+          </div>
+          <span class="text_7">渔光一体智能运营</span>
+        </div>
       </div>
     </div>
-    <div class="block_3 flex-col">
+    <!-- footer-container -->
+    <div class="footer-container flex-col">
       <div class="group_8 flex-row justify-between">
         <div class="block_6 flex-col justify-between">
           <img class="image_6" referrerpolicy="no-referrer"
@@ -63,57 +119,11 @@
         class="text_9">Copyright&nbsp;©渔光物联（www.ygwl.net）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蜀ICP备16026089号</span>
       <div class="box_6 flex-col"></div>
     </div>
-    <div class="block_4 flex-col">
-      <span class="text_10">Intelligent</span>
-      <span class="text_11">渔光一体智能运营专家</span>
-      <span class="text_12">Operation</span>
-      <span
-        class="paragraph_3">秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。<br />线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源，形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。<br /></span>
-      <div class="block_7 flex-row justify-between">
-        <div class="group_3 flex-row">
-          <div class="text-group_9 flex-col justify-between">
-            <div class="text-wrapper_1">
-              <span class="text_13">40</span> <span class="text_14"></span>
-              <span class="text_15">+个</span>
-            </div>
-            <span class="text_16">在运城市</span>
-          </div>
-        </div>
-        <div class="group_4 flex-row">
-          <div class="text-group_10 flex-col justify-between">
-            <div class="text-wrapper_2">
-              <span class="text_17">50</span> <span class="text_18"></span>
-              <span class="text_19">+座</span>
-            </div>
-            <span class="text_20">在运电站</span>
-          </div>
-        </div>
-      </div>
-      <div class="block_8 flex-row justify-between">
-        <div class="box_9 flex-row">
-          <div class="text-group_11 flex-col justify-between">
-            <div class="text-wrapper_3">
-              <span class="text_21">4.27</span> <span class="text_22"></span>
-              <span class="text_23">Gw+</span>
-            </div>
-            <span class="text_24">在运维总容量</span>
-          </div>
-        </div>
-        <div class="box_10 flex-row">
-          <div class="text-group_12 flex-col justify-between">
-            <div class="text-wrapper_4">
-              <span class="text_25">3170</span>
-              <span class="text_26">+天</span>
-            </div>
-            <span class="text_27">安全生产天数</span>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import MHeader from "@/components/MHeader.vue";
 
 onMounted(() => {
     //
@@ -124,9 +134,9 @@ onBeforeUnmount(() => {
 });
 </script>
 <style lang="less" scoped>
-@import '../../assets/style/common.css';
+@import '@/assets/style/common.css';
 
-.page {
+.container {
   background-color: rgba(255, 255, 255, 1);
   position: relative;
   width: 100vw;
@@ -134,7 +144,7 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
-.block_1 {
+.title-container {
   background-image: linear-gradient(90deg,
       rgba(0, 22, 46, 1) 0,
       rgba(0, 22, 46, 1) 0,
@@ -201,7 +211,7 @@ onBeforeUnmount(() => {
   margin: 2.66vw 0 0 5.2vw;
 }
 
-.block_2 {
+.content-container {
   background-color: rgba(255, 255, 255, 1);
   height: 122.4vw;
   margin-top: 112vw;
@@ -295,7 +305,7 @@ onBeforeUnmount(() => {
   width: 36.4vw;
   height: 48.8vw;
   background: url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/4d18be5e6c984ab7a59d48b8b3917c33_mergeImage.png) 100% no-repeat;
-  background-size: 100% 100%;
+  background-size: 110% 110%;
   margin: 24.93vw 0 0 -10.4vw;
 }
 
@@ -381,7 +391,7 @@ onBeforeUnmount(() => {
   line-height: 5.47vw;
 }
 
-.block_3 {
+.footer-container {
   background-color: rgba(35, 36, 41, 1);
   position: relative;
   width: 100vw;
@@ -498,7 +508,7 @@ onBeforeUnmount(() => {
   height: 1.6vw;
 }
 
-.block_4 {
+.description-container {
   background-color: rgba(249, 250, 252, 1);
   position: absolute;
   left: 4vw;
@@ -577,7 +587,7 @@ onBeforeUnmount(() => {
 .text-group_9 {
   width: 12.4vw;
   height: 9.2vw;
-  margin: 4.8vw 0 0 6.93vw;
+  margin: -3vw 0 0 12vw;
 }
 
 .text-wrapper_1 {
@@ -653,7 +663,7 @@ onBeforeUnmount(() => {
 .text-group_10 {
   width: 12.27vw;
   height: 9.2vw;
-  margin: 4.8vw 0 0 6.93vw;
+  margin: -3vw 0 0 12vw;
 }
 
 .text-wrapper_2 {
@@ -735,7 +745,7 @@ onBeforeUnmount(() => {
 .text-group_11 {
   width: 19.34vw;
   height: 9.07vw;
-  margin: 4.93vw 0 0 6.8vw;
+  margin: -3vw 0 0 9.5vw;
 }
 
 .text-wrapper_3 {
@@ -812,7 +822,7 @@ onBeforeUnmount(() => {
 .text-group_12 {
   width: 19.47vw;
   height: 9.07vw;
-  margin: 4.93vw 0 0 6.93vw;
+  margin: -3vw 0 0 9.5vw;
 }
 
 .text-wrapper_4 {

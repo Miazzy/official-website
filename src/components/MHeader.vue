@@ -8,16 +8,15 @@
     <!-- menu-box -->
     <div v-if="isMenuShow" class="menu-box flex-col">
         <div class="menu-wrapper">
-            <span class="paragraph active ">
-                <span @click="handleRoutePush('/mobile/home')">首页</span>
-                <br />
+            <span class="paragraph grey">
+                <span class="item" :class="{ active: cpath === PathEnum.Home }" @click="handleRoutePush(PathEnum.Home)">首页</span>
             </span>
             <span class="paragraph grey">
-                <span class="item" @click="handleRoutePush('/mobile/plans/operate')">智能运营</span>
-                <span class="item" @click="handleRoutePush('/mobile/plans/farm')">智慧农业</span>
-                <span class="item" @click="handleRoutePush('/mobile/cases')">项目案例</span>
-                <span class="item" @click="handleRoutePush('/mobile/inform')">资讯中心</span>
-                <span class="item" @click="handleRoutePush('/mobile/aboutus')">关于我们</span>
+                <span class="item" :class="{ active: cpath === PathEnum.Operate }" @click="handleRoutePush(PathEnum.Operate)">智能运营</span>
+                <span class="item" :class="{ active: cpath === PathEnum.Farm }" @click="handleRoutePush(PathEnum.Farm)">智慧农业</span>
+                <span class="item" :class="{ active: cpath === PathEnum.Cases }" @click="handleRoutePush(PathEnum.Cases)">项目案例</span>
+                <span class="item" :class="{ active: cpath === PathEnum.Inform }" @click="handleRoutePush(PathEnum.Inform)">资讯中心</span>
+                <span class="item" :class="{ active: cpath === PathEnum.Aboutus }" @click="handleRoutePush(PathEnum.Aboutus)">关于我们</span>
             </span>
         </div>
     </div>
@@ -27,10 +26,12 @@ import { ref, onMounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router'
 import { MsgManager } from "@/manager/MsgManager";
 import { setTimexec } from '@/utils/common';
+import { PathEnum } from '@/constant/constant';
 
 const router = useRouter();
 const isMenuShow = ref(false);
 const emit = defineEmits(['popup']);
+const cpath = ref('/mobile/home');
 
 const handleClick = () => {
     isMenuShow.value = !isMenuShow.value;
@@ -39,6 +40,7 @@ const handleClick = () => {
 
 const handleRoutePush = (path, y = 0) => {
     window.scrollTo(0, y);
+    cpath.value = path;
     router.push(path);
     setTimexec(() => {
         window.scrollTo(0, y);
@@ -46,6 +48,7 @@ const handleRoutePush = (path, y = 0) => {
 }
 
 onMounted(() => {
+    cpath.value = window.location.hash.replace('#/', '/');
     MsgManager.getInstance().listen('mobileclick', (message) => {
         const { className } = message;
         if (className.includes('setup-image')) {
@@ -59,8 +62,8 @@ onMounted(() => {
 });
 </script>
 <style lang="less" scoped>
-@import '../assets/style/common.css';
-@import '../assets/style/base.less';
+@import '@/assets/style/common.css';
+@import '@/assets/style/base.less';
 
 .menu-box {
     position: absolute;
@@ -68,6 +71,7 @@ onMounted(() => {
     height: 62.54vw;
     width: 89.47vw;
     margin: 12.8vw 0 0 5.2vw;
+    z-index: 10000;
 
     .menu-wrapper {
         width: 30.8vw;
@@ -96,9 +100,9 @@ onMounted(() => {
                 margin: 1.2vw 0;
             }
 
-            &.active {
+            &.active, .active {
                 color: rgba(221, 120, 22, 1);
-                font-weight: blod;
+                font-weight: 700;
             }
 
             &.grey {

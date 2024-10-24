@@ -59,7 +59,9 @@ const onAnimationStart = (e) => {
 
 const handleMobile = () => {
   if (isMobileDevice()) {
-    router.push('/mobile/home');
+    if (!window.location.hash.replace('#/', '/').startsWith('/mobile/')) {
+      router.push('/mobile/home');
+    }
   } else if (route?.name && route?.name?.startsWith('mobile')){
     router.push('/');
   }

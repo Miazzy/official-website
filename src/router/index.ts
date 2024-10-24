@@ -52,12 +52,47 @@ const mobileRoutes = [
     {
         path: '/mobile/plans/operate',
         name: 'mobileplansoperate',
-        component: () => import('@/mobile/Plans/PlansOperate..vue')
+        component: () => import('@/mobile/Plans/PlansOperate.vue')
+    },
+    {
+        path: '/mobile/plans/operate/photovoltaic',
+        name: 'mobileplansoperatephotovoltaic',
+        component: () => import('@/mobile/Plans/PlansOperatePhotovoltaic.vue')
     },
     {
         path: '/mobile/plans/farm',
         name: 'mobileplansfarm',
-        component: () => import('@/mobile/Plans/PlansFarm..vue')
+        component: () => import('@/mobile/Plans/PlansFarm.vue')
+    },
+    {
+        path: '/mobile/plans/farm/equipment',
+        name: 'mobileplansfarmequipment',
+        component: () => import('@/mobile/Plans/PlansFarmEquipment.vue')
+    },
+    {
+        path: '/mobile/plans/farm/intel',
+        name: 'mobileplansfarmintel',
+        component: () => import('@/mobile/Plans/PlansFarmIntel.vue')
+    },
+    {
+        path: '/mobile/cases',
+        name: 'mobilecases',
+        component: () => import('@/mobile/Cases/Cases.vue')
+    },
+    {
+        path: '/mobile/inform',
+        name: 'mobileinform',
+        component: () => import('@/mobile/Inform/Inform.vue')
+    },
+    {
+        path: '/mobile/inform/detail',
+        name: 'mobileinformdetail',
+        component: () => import('@/mobile/Inform/InformDetail.vue')
+    },
+    {
+        path: '/mobile/aboutus',
+        name: 'mobileaboutus',
+        component: () => import('@/mobile/Aboutus/Aboutus.vue')
     },
 ];
 

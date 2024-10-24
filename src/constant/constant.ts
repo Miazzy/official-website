@@ -16,6 +16,16 @@ export enum TimeInterval {
   TEN_HOUR = 3600000 * 10,
 }
 
+// 路由常量
+export enum PathEnum {
+  Home = '/mobile/home',
+  Operate = '/mobile/plans/operate',
+  Farm = '/mobile/plans/farm',
+  Cases = '/mobile/cases',
+  Inform = '/mobile/inform',
+  Aboutus = '/mobile/aboutus',
+}
+
 // 锁名称
 export enum Lock {
   CommonLock = 'COMMON_LOCK',
