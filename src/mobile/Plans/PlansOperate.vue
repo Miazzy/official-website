@@ -402,117 +402,81 @@ onBeforeUnmount(() => {
   position: relative;
   width: 100vw;
   height: 25.2vw;
-}
 
-.footer-wrapper {
-  width: 71.74vw;
-  height: 11.6vw;
-  margin: 3.73vw 0 0 14.13vw;
-}
-
-.company-wrapper {
-  width: 16vw;
-  height: 11.2vw;
-  margin-top: 0.27vw;
-}
-
-.company-code-image {
-  width: 8.54vw;
-  height: 8.54vw;
-  margin-left: 3.74vw;
-}
-
-.company-code-text {
-  width: 16vw;
-  height: 1.6vw;
-  overflow-wrap: break-word;
-  color: rgba(153, 153, 153, 1);
-  font-size: 1.6vw;
-  font-family: MicrosoftYaHei;
-  font-weight: normal;
-  text-align: center;
-  white-space: nowrap;
-  line-height: 4vw;
-  margin-top: 1.07vw;
-}
-
-.contact-wrapper {
-  position: relative;
-  width: 53.74vw;
-  height: 11.6vw;
-  margin: -1.0vw 0 0 6vw;
-}
-
-.contact-content {
-  width: 53.74vw;
-  height: 11.6vw;
-}
-
-.image-wrapper_7 {
-  width: 1.87vw;
-  height: 6.67vw;
-  margin-top: 4.94vw;
-}
-
-.thumbnail_1 {
-  width: 1.87vw;
-  height: 1.47vw;
-}
-
-.thumbnail_2 {
-  width: 1.74vw;
-  height: 2.14vw;
-  margin: 3.06vw 0 0 0.13vw;
-}
-
-.contact-content-paragraph {
-  width: 51.2vw;
-  height: 11.6vw;
-  overflow-wrap: break-word;
-  color: rgba(217, 217, 217, 1);
-  font-size: 1.86vw;
-  font-family: MicrosoftYaHei;
-  font-weight: normal;
-  text-align: left;
-  line-height: 4.8vw;
-}
-
-.thumbnail_3 {
-  position: absolute;
-  left: 0;
-  top: 0.14vw;
-  width: 2vw;
-  height: 1.6vw;
-}
-
-.line-box {
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 89.34vw;
-  height: 0.14vw;
-  margin: 3.73vw 0 0 5.33vw;
-}
-
-.text-copyright {
-  width: 45.74vw;
-  height: 1.87vw;
-  overflow-wrap: break-word;
-  color: #d9d9d9;
-  font-size: 1.6vw;
-  font-family: SourceHanSansCN-Normal;
-  font-weight: normal;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 1.87vw;
-  margin: 2vw auto 2.13vw auto;
-}
-
-.box_6 {
-  background-color: rgba(217, 217, 217, 1);
-  position: absolute;
-  left: 52.8vw;
-  top: 21.34vw;
-  width: 0.14vw;
-  height: 1.6vw;
+  .footer-wrapper {
+    width: 71.74vw;
+    height: 11.6vw;
+    margin: 3.73vw 0 0 14.13vw;
+    .company-wrapper {
+      width: 16vw;
+      height: 11.2vw;
+      margin-top: 0.27vw;
+      .company-code-image {
+        width: 8.54vw;
+        height: 8.54vw;
+        margin-left: 3.74vw;
+      }
+      
+      .company-code-text {
+        width: 16vw;
+        height: 1.6vw;
+        overflow-wrap: break-word;
+        color: rgba(153, 153, 153, 1);
+        font-size: 1.6vw;
+        font-family: MicrosoftYaHei;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 4vw;
+        margin-top: 1.07vw;
+      }
+    }
+    
+    .contact-wrapper {
+      position: relative;
+      width: 53.74vw;
+      height: 11.6vw;
+      margin: -0.75vw 0 0 6vw;
+      .contact-content {
+        width: 53.74vw;
+        height: 11.6vw;
+      }
+      
+      .contact-content-paragraph {
+        width: 51.2vw;
+        height: 11.6vw;
+        overflow-wrap: break-word;
+        color: rgba(217, 217, 217, 1);
+        font-size: 1.86vw;
+        font-family: MicrosoftYaHei;
+        font-weight: normal;
+        text-align: left;
+        line-height: 4.8vw;
+      }
+      
+    }
+  }
+  
+  .line-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 89.34vw;
+    height: 0.14vw;
+    margin: 3.73vw 0 0 5.33vw;
+  }
+  
+  .text-copyright {
+    width: 45.74vw;
+    height: 1.87vw;
+    overflow-wrap: break-word;
+    color: #d9d9d9;
+    font-size: 1.6vw;
+    font-family: SourceHanSansCN-Normal;
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 1.87vw;
+    margin: 2vw auto 2.13vw auto;
+  }
 }
 
 .description-container {
@@ -656,193 +620,5 @@ onBeforeUnmount(() => {
       }
     }
   }
-}
-
-
-
-.text_14 {
-  width: 12.4vw;
-  height: 4.94vw;
-  overflow-wrap: break-word;
-  color: rgba(239, 125, 27, 1);
-
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 2.67vw;
-}
-
-.text_15 {
-  width: 12.4vw;
-  height: 4.94vw;
-  overflow-wrap: break-word;
-  color: rgba(239, 125, 27, 1);
-
-  font-family: SourceHanSansCN-Medium;
-  font-weight: 500;
-  text-align: left;
-  line-height: 2.67vw;
-}
-
-
-
-
-
-
-
-.text-wrapper_2 {
-  width: 12.27vw;
-  height: 4.94vw;
-  overflow-wrap: break-word;
-  font-size: 0;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 34.8vw;
-}
-
-.text_17 {
-  width: 12.27vw;
-  height: 4.94vw;
-  overflow-wrap: break-word;
-  color: rgba(239, 125, 27, 1);
-  font-size: 6.13vw;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 2.67vw;
-}
-
-.text_18 {
-  width: 12.27vw;
-  height: 4.94vw;
-  overflow-wrap: break-word;
-  color: rgba(239, 125, 27, 1);
-  font-size: 6.13vw;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 2.67vw;
-}
-
-.text_19 {
-  width: 12.27vw;
-  height: 4.94vw;
-  overflow-wrap: break-word;
-  color: rgba(239, 125, 27, 1);
-  font-size: 2.4vw;
-  font-family: SourceHanSansCN-Medium;
-  font-weight: 500;
-  text-align: left;
-  line-height: 2.67vw;
-}
-
-
-
-
-
-.box_9 {
-  background-color: rgba(255, 255, 255, 1);
-  width: 33.87vw;
-  height: 17.6vw;
-}
-
-.text-group_11 {
-  width: 19.34vw;
-  height: 9.07vw;
-  margin: -3vw 0 0 9.5vw;
-}
-
-.text-wrapper_3 {
-  width: 19.2vw;
-  height: 4.8vw;
-  overflow-wrap: break-word;
-  font-size: 0;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 34.8vw;
-  margin-left: 0.14vw;
-}
-
-.text_21 {
-  width: 19.2vw;
-  height: 4.8vw;
-  overflow-wrap: break-word;
-  color: rgba(239, 125, 27, 1);
-  font-size: 6.13vw;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 2.67vw;
-}
-
-.text_22 {
-  width: 19.2vw;
-  height: 4.8vw;
-  overflow-wrap: break-word;
-  color: rgba(239, 125, 27, 1);
-  font-size: 6.13vw;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 2.67vw;
-}
-
-.text_23 {
-  width: 19.2vw;
-  height: 4.8vw;
-  overflow-wrap: break-word;
-  color: rgba(239, 125, 27, 1);
-  font-size: 2.4vw;
-  font-family: SourceHanSansCN-Medium;
-  font-weight: 500;
-  text-align: left;
-  line-height: 2.67vw;
-}
-
-.text_24 {
-  width: 14.54vw;
-  height: 2.4vw;
-  overflow-wrap: break-word;
-  color: rgba(136, 136, 136, 1);
-  font-size: 2.4vw;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 2.4vw;
-  margin-top: 1.87vw;
-}
-
-.box_10 {
-  background-color: rgba(255, 255, 255, 1);
-  width: 33.87vw;
-  height: 17.6vw;
-}
-
-.text-group_12 {
-  width: 19.47vw;
-  height: 9.07vw;
-  margin: -3vw 0 0 9.5vw;
-}
-
-.text-wrapper_4 {
-  width: 19.47vw;
-  height: 4.8vw;
-  overflow-wrap: break-word;
-  font-size: 0;
-  font-family: SourceHanSansCN-Bold;
-  font-weight: 700;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 34.8vw;
 }
 </style>
