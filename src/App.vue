@@ -66,7 +66,7 @@ const handleMobile = () => {
 }
 
 const handleMobileClick = () => {
-  MsgManager.getInstance().sendMsg('mobileclick', { target: window.event.target, ctarget: window.event.currentTarget, class: window.event.target.className });
+  MsgManager.getInstance().sendMsg('mobileclick', { ctgClassName: window.event.currentTarget.className, className: window.event.target.className });
 };
 
 const handleResizeListener = () => {

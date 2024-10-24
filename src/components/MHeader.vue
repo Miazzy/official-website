@@ -2,7 +2,7 @@
     <!-- header-container -->
     <div class="header-container header-wrapper flex-row justify-between">
         <img class="image logo-image logo" src="../assets/images/logo.jpeg" />
-        <img class="label setup-image" src="../assets/images/label.png" @click="handleClick"/>
+        <img class="label setup-image" src="../assets/images/label.png" @click="handleClick" />
     </div>
 
     <!-- menu-box -->
@@ -13,21 +13,17 @@
                 <br />
             </span>
             <span class="paragraph grey">
-                <span @click="handleRoutePush('/mobile/plans/operate')">智能运营</span>
-                <br />
-                <span @click="handleRoutePush('/mobile/plans/farm')">智慧农业</span>
-                <br />
-                <span @click="handleRoutePush('/mobile/cases')">项目案例</span>
-                <br />
-                <span @click="handleRoutePush('/mobile/inform')">资讯中心</span>
-                <br />
-                <span @click="handleRoutePush('/mobile/aboutus')">关于我们</span>
+                <span class="item" @click="handleRoutePush('/mobile/plans/operate')">智能运营</span>
+                <span class="item" @click="handleRoutePush('/mobile/plans/farm')">智慧农业</span>
+                <span class="item" @click="handleRoutePush('/mobile/cases')">项目案例</span>
+                <span class="item" @click="handleRoutePush('/mobile/inform')">资讯中心</span>
+                <span class="item" @click="handleRoutePush('/mobile/aboutus')">关于我们</span>
             </span>
         </div>
     </div>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router'
 import { MsgManager } from "@/manager/MsgManager";
 import { setTimexec } from '@/utils/common';
@@ -41,17 +37,24 @@ const handleClick = () => {
     emit('popup');
 }
 
-const handleRoutePush = () => {
+const handleRoutePush = (path, y = 0) => {
     window.scrollTo(0, y);
-  router.push(path);
-  setTimexec(() => {
-    window.scrollTo(0, y);
-  }, [0, 50, 100]);
+    router.push(path);
+    setTimexec(() => {
+        window.scrollTo(0, y);
+    }, [0, 50, 100]);
 }
 
 onMounted(() => {
     MsgManager.getInstance().listen('mobileclick', (message) => {
-
+        const { className } = message;
+        if (className.includes('setup-image')) {
+            return;
+        } else {
+            nextTick(() => {
+                isMenuShow.value = false;
+            });
+        }
     });
 });
 </script>
@@ -76,7 +79,7 @@ onMounted(() => {
         text-align: center;
         line-height: 8.5vw;
         margin: 10px auto;
-    
+
         .paragraph {
             width: 16.8vw;
             height: 52.14vw;
@@ -85,12 +88,19 @@ onMounted(() => {
             font-family: SourceHanSansCN-Bold;
             text-align: left;
             line-height: 8vw;
-        
+
+            .item {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 1.2vw 0;
+            }
+
             &.active {
                 color: rgba(221, 120, 22, 1);
                 font-weight: blod;
             }
-        
+
             &.grey {
                 color: rgba(51, 51, 51, 1);
                 font-family: SourceHanSansCN-Regular;

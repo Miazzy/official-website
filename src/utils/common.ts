@@ -236,6 +236,36 @@ export const handleResize = (index, event) => {
       .anchorBL {
         display: none; /*** 隐藏地图标识信息 ***/
       }
+      .home .carousel-container .carousel-slide {
+        .banner .tooltip {
+            font-size: ${(scale * 11.5).toFixed(2)}px  !important;
+        }
+        &:first-child,
+        &:last-child {
+          .banner .tooltip {
+            right: ${scale * 95}px !important;
+            top: calc(50vh - ${(scale * 100).toFixed(2)}px) !important;
+          }
+        }
+        &:nth-child(2) {
+          .banner .tooltip {
+            right: 95px;
+            top: calc(50vh - 55.5px);
+          }
+        }
+        &:nth-child(3) {
+          .banner .tooltip {
+            right: 95px;
+            top: calc(50vh + 10px);
+          }
+        }
+        &:nth-child(4) {
+          .banner .tooltip {
+            right: 95px;
+            top: calc(50vh + 78px);
+          }
+        }
+      }
       `;
 
     // 将编译后的 CSS 内容设置到<style>元素中

@@ -104,8 +104,15 @@
     </div>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
+onMounted(() => {
+    //
+});
+
+onBeforeUnmount(() => {
+    //
+});
 </script>
 <style lang="less" scoped>
 @import '../assets/style/common.css';
