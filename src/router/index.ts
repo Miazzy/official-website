@@ -32,27 +32,32 @@ const routes = [
         component: () => import('@/views/AboutUs/AboutUs.vue')
     },
     {
-        path: '/projectCases',
-        name: 'projectCases',
-        component: () => import('@/views/ProjectCases/ProjectCases.vue')
+        path: '/cases',
+        name: 'cases',
+        component: () => import('@/views/Cases/ProjectCases.vue')
     },
     {
-        path: '/informationCenter',
-        name: 'informationCenter',
-        component: () => import('@/views/InformationCenter/InformationCenter.vue')
+        path: '/inform',
+        name: 'inform',
+        component: () => import('@/views/Inform/InformationCenter.vue')
     },
 ]
 
 const mobileRoutes = [
     {
-        path: '/mobileHome',
-        name: 'mobileHome',
+        path: '/mobile/home',
+        name: 'mobilehome',
         component: () => import('@/mobile/Home/Home.vue')
     },
     {
-        path: '/mobilePlans',
-        name: 'mobilePlans',
-        component: () => import('@/mobile/Plans/Plans.vue')
+        path: '/mobile/plans/operate',
+        name: 'mobileplansoperate',
+        component: () => import('@/mobile/Plans/PlansOperate..vue')
+    },
+    {
+        path: '/mobile/plans/farm',
+        name: 'mobileplansfarm',
+        component: () => import('@/mobile/Plans/PlansFarm..vue')
     },
 ];
 

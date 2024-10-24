@@ -59,14 +59,14 @@ const onAnimationStart = (e) => {
 
 const handleMobile = () => {
   if (isMobileDevice()) {
-    router.push('/mobileHome');
+    router.push('/mobile/home');
   } else if (route?.name && route?.name?.startsWith('mobile')){
     router.push('/');
   }
 }
 
 const handleMobileClick = () => {
-  debugger;
+  MsgManager.getInstance().sendMsg('mobileclick', { target: window.event.target, ctarget: window.event.currentTarget, class: window.event.target.className });
 };
 
 const handleResizeListener = () => {

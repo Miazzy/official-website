@@ -8,14 +8,31 @@
     <!-- menu-box -->
     <div v-if="isMenuShow" class="menu-box flex-col">
         <div class="menu-wrapper">
-            <span class="paragraph active ">首页<br /></span>
-            <span class="paragraph grey">智能运营<br />智慧农业<br />项目案例<br />资讯中心<br />关于我们</span>
+            <span class="paragraph active ">
+                <span @click="handleRoutePush('/mobile/home')">首页</span>
+                <br />
+            </span>
+            <span class="paragraph grey">
+                <span @click="handleRoutePush('/mobile/plans/operate')">智能运营</span>
+                <br />
+                <span @click="handleRoutePush('/mobile/plans/farm')">智慧农业</span>
+                <br />
+                <span @click="handleRoutePush('/mobile/cases')">项目案例</span>
+                <br />
+                <span @click="handleRoutePush('/mobile/inform')">资讯中心</span>
+                <br />
+                <span @click="handleRoutePush('/mobile/aboutus')">关于我们</span>
+            </span>
         </div>
     </div>
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router'
+import { MsgManager } from "@/manager/MsgManager";
+import { setTimexec } from '@/utils/common';
 
+const router = useRouter();
 const isMenuShow = ref(false);
 const emit = defineEmits(['popup']);
 
@@ -24,8 +41,18 @@ const handleClick = () => {
     emit('popup');
 }
 
-onMounted(() => {
+const handleRoutePush = () => {
+    window.scrollTo(0, y);
+  router.push(path);
+  setTimexec(() => {
+    window.scrollTo(0, y);
+  }, [0, 50, 100]);
+}
 
+onMounted(() => {
+    MsgManager.getInstance().listen('mobileclick', (message) => {
+
+    });
 });
 </script>
 <style lang="less" scoped>

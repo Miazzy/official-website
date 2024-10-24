@@ -137,7 +137,7 @@ export const handleResize = (index, event) => {
           }
         }
       }
-      #container.projectCases {
+      #container.cases {
         main {
           transform: scale(${scale}) !important;
           transform-origin: top left !important;
@@ -167,7 +167,7 @@ export const handleResize = (index, event) => {
           } 
         }
       }
-      #container.informationCenter {
+      #container.inform {
         main {
           transform: scale(${scale}) !important;
           transform-origin: top left !important;
@@ -210,7 +210,7 @@ export const handleResize = (index, event) => {
           margin: 0 0 0 ${(110 * (minWidth / 1920)).toFixed(0)}px !important;
         }
       }
-      #container.informationCenter .footer {
+      #container.inform .footer {
         margin-top: ${(diff - 55 + Math.abs(diff/75)).toFixed(2)}px !important;
       }  
       #container.aboutus .footer {

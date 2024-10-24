@@ -1,151 +1,116 @@
 <template>
-<div class="page flex-col">
-      <div class="block_1 flex-col">
-        <div class="group_5 flex-row">
-          <div class="text-group_7 flex-col justify-between">
-            <span class="text_1">专业化·智能化·一体化</span>
-            <span class="text_2"
-              >Specialization,&nbsp;intelligence&nbsp;and&nbsp;integration</span
-            >
+  <div class="page flex-col">
+    <div class="block_1 flex-col">
+      <div class="group_5 flex-row">
+        <div class="text-group_7 flex-col justify-between">
+          <span class="text_1">专业化·智能化·一体化</span>
+          <span class="text_2">Specialization,&nbsp;intelligence&nbsp;and&nbsp;integration</span>
+        </div>
+      </div>
+    </div>
+    <div class="block_2 flex-col">
+      <div class="group_1 flex-col">
+        <div class="group_7 flex-row">
+          <span class="text_3">Yu&nbsp;guang&nbsp;integrated&nbsp;intelligent&nbsp;operation</span>
+          <span class="text_4">Yu&nbsp;guang&nbsp;integrated&nbsp;intelligent&nbsp;operation</span>
+          <span class="text_5">业务范围&gt;&gt;</span>
+          <div class="box_3 flex-col">
+            <div class="image-wrapper_2 flex-col">
+              <img class="image_2" referrerpolicy="no-referrer"
+                src="https://lanhu-oss.lanhuapp.com/pscctc9k0rltryrefwds6k9yg7q4evnxxe7a95771b-e65e-4891-baca-f7697209c016" />
+            </div>
+            <div class="text-group_8 flex-col justify-between">
+              <span class="text_6">运行维护</span>
+              <span class="paragraph_1">安全管理<br />电站巡检<br />设备运行监控<br />维护消缺<br />台账管理<br />除草清洗</span>
+            </div>
+          </div>
+          <img class="image_3" referrerpolicy="no-referrer"
+            src="https://lanhu-oss.lanhuapp.com/ps6qdos86rimdbjes315rmb37f874lf3xdc1ac091c-ca69-43d9-9f59-752987578f28" />
+        </div>
+        <div class="image-wrapper_6 flex-row justify-between">
+          <img class="image_4" referrerpolicy="no-referrer"
+            src="https://lanhu-oss.lanhuapp.com/psv314pkm1cmk1av4epqvepxqr9gdamcb74b43c75-dbab-4cc8-aeab-fe2915240a21" />
+          <img class="image_5" referrerpolicy="no-referrer"
+            src="https://lanhu-oss.lanhuapp.com/pscd5nkphp2la77u9zmfcbtfomq59nlyh6cf1d9cf-d51f-4da3-bb5d-5a8ad8ed8e52" />
+        </div>
+        <span class="text_7">渔光一体智能运营</span>
+      </div>
+    </div>
+    <div class="block_3 flex-col">
+      <div class="group_8 flex-row justify-between">
+        <div class="block_6 flex-col justify-between">
+          <img class="image_6" referrerpolicy="no-referrer"
+            src="https://lanhu-oss.lanhuapp.com/ps5c5obha6ixjleqf1b9ny9jbtrrhkmadqs897a4dda-3cf8-4968-b193-1d9eee3a8121" />
+          <span class="text_8">扫一扫，关注渔光物联</span>
+        </div>
+        <div class="image-text_3 flex-row">
+          <div class="image-text_4 flex-row justify-between">
+            <div class="image-wrapper_7 flex-col justify-between">
+              <img class="thumbnail_1" referrerpolicy="no-referrer"
+                src="https://lanhu-oss.lanhuapp.com/ps37e7rghqe798fqphy85pzx6vcsl8ca185a7500594-80eb-410e-aeb1-f3c2cf8b304b" />
+              <img class="thumbnail_2" referrerpolicy="no-referrer"
+                src="https://lanhu-oss.lanhuapp.com/psyo4jk44r3cfk2r8zjt174ovb5xqm8575d0841ab87-14c4-4571-b1c0-12e7b40bea34" />
+            </div>
+            <span
+              class="paragraph_2">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
+          </div>
+          <img class="thumbnail_3" referrerpolicy="no-referrer"
+            src="https://lanhu-oss.lanhuapp.com/psiw2m8ynuheulnsmot8vhmjtn9jmot3047c7ad9-e3e1-4960-b8c0-9f6cbf3bb9d8" />
+        </div>
+      </div>
+      <div class="box_5 flex-col"></div>
+      <span
+        class="text_9">Copyright&nbsp;©渔光物联（www.ygwl.net）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蜀ICP备16026089号</span>
+      <div class="box_6 flex-col"></div>
+    </div>
+    <div class="block_4 flex-col">
+      <span class="text_10">Intelligent</span>
+      <span class="text_11">渔光一体智能运营专家</span>
+      <span class="text_12">Operation</span>
+      <span
+        class="paragraph_3">秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。<br />线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源，形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。<br /></span>
+      <div class="block_7 flex-row justify-between">
+        <div class="group_3 flex-row">
+          <div class="text-group_9 flex-col justify-between">
+            <div class="text-wrapper_1">
+              <span class="text_13">40</span> <span class="text_14"></span>
+              <span class="text_15">+个</span>
+            </div>
+            <span class="text_16">在运城市</span>
+          </div>
+        </div>
+        <div class="group_4 flex-row">
+          <div class="text-group_10 flex-col justify-between">
+            <div class="text-wrapper_2">
+              <span class="text_17">50</span> <span class="text_18"></span>
+              <span class="text_19">+座</span>
+            </div>
+            <span class="text_20">在运电站</span>
           </div>
         </div>
       </div>
-      <div class="block_2 flex-col">
-        <div class="group_1 flex-col">
-          <div class="group_7 flex-row">
-            <span class="text_3"
-              >Yu&nbsp;guang&nbsp;integrated&nbsp;intelligent&nbsp;operation</span
-            >
-            <span class="text_4"
-              >Yu&nbsp;guang&nbsp;integrated&nbsp;intelligent&nbsp;operation</span
-            >
-            <span class="text_5">业务范围&gt;&gt;</span>
-            <div class="box_3 flex-col">
-              <div class="image-wrapper_2 flex-col">
-                <img
-                  class="image_2"
-                  referrerpolicy="no-referrer"
-                  src="https://lanhu-oss.lanhuapp.com/pscctc9k0rltryrefwds6k9yg7q4evnxxe7a95771b-e65e-4891-baca-f7697209c016"
-                />
-              </div>
-              <div class="text-group_8 flex-col justify-between">
-                <span class="text_6">运行维护</span>
-                <span class="paragraph_1"
-                  >安全管理<br />电站巡检<br />设备运行监控<br />维护消缺<br />台账管理<br />除草清洗</span
-                >
-              </div>
+      <div class="block_8 flex-row justify-between">
+        <div class="box_9 flex-row">
+          <div class="text-group_11 flex-col justify-between">
+            <div class="text-wrapper_3">
+              <span class="text_21">4.27</span> <span class="text_22"></span>
+              <span class="text_23">Gw+</span>
             </div>
-            <img
-              class="image_3"
-              referrerpolicy="no-referrer"
-              src="https://lanhu-oss.lanhuapp.com/ps6qdos86rimdbjes315rmb37f874lf3xdc1ac091c-ca69-43d9-9f59-752987578f28"
-            />
-          </div>
-          <div class="image-wrapper_6 flex-row justify-between">
-            <img
-              class="image_4"
-              referrerpolicy="no-referrer"
-              src="https://lanhu-oss.lanhuapp.com/psv314pkm1cmk1av4epqvepxqr9gdamcb74b43c75-dbab-4cc8-aeab-fe2915240a21"
-            />
-            <img
-              class="image_5"
-              referrerpolicy="no-referrer"
-              src="https://lanhu-oss.lanhuapp.com/pscd5nkphp2la77u9zmfcbtfomq59nlyh6cf1d9cf-d51f-4da3-bb5d-5a8ad8ed8e52"
-            />
-          </div>
-          <span class="text_7">渔光一体智能运营</span>
-        </div>
-      </div>
-      <div class="block_3 flex-col">
-        <div class="group_8 flex-row justify-between">
-          <div class="block_6 flex-col justify-between">
-            <img
-              class="image_6"
-              referrerpolicy="no-referrer"
-              src="https://lanhu-oss.lanhuapp.com/ps5c5obha6ixjleqf1b9ny9jbtrrhkmadqs897a4dda-3cf8-4968-b193-1d9eee3a8121"
-            />
-            <span class="text_8">扫一扫，关注渔光物联</span>
-          </div>
-          <div class="image-text_3 flex-row">
-            <div class="image-text_4 flex-row justify-between">
-              <div class="image-wrapper_7 flex-col justify-between">
-                <img
-                  class="thumbnail_1"
-                  referrerpolicy="no-referrer"
-                  src="https://lanhu-oss.lanhuapp.com/ps37e7rghqe798fqphy85pzx6vcsl8ca185a7500594-80eb-410e-aeb1-f3c2cf8b304b"
-                />
-                <img
-                  class="thumbnail_2"
-                  referrerpolicy="no-referrer"
-                  src="https://lanhu-oss.lanhuapp.com/psyo4jk44r3cfk2r8zjt174ovb5xqm8575d0841ab87-14c4-4571-b1c0-12e7b40bea34"
-                />
-              </div>
-              <span class="paragraph_2"
-                >Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span
-              >
-            </div>
-            <img
-              class="thumbnail_3"
-              referrerpolicy="no-referrer"
-              src="https://lanhu-oss.lanhuapp.com/psiw2m8ynuheulnsmot8vhmjtn9jmot3047c7ad9-e3e1-4960-b8c0-9f6cbf3bb9d8"
-            />
+            <span class="text_24">在运维总容量</span>
           </div>
         </div>
-        <div class="box_5 flex-col"></div>
-        <span class="text_9"
-          >Copyright&nbsp;©渔光物联（www.ygwl.net）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蜀ICP备16026089号</span
-        >
-        <div class="box_6 flex-col"></div>
-      </div>
-      <div class="block_4 flex-col">
-        <span class="text_10">Intelligent</span>
-        <span class="text_11">渔光一体智能运营专家</span>
-        <span class="text_12">Operation</span>
-        <span class="paragraph_3"
-          >秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。<br />线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源，形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。<br
-        /></span>
-        <div class="block_7 flex-row justify-between">
-          <div class="group_3 flex-row">
-            <div class="text-group_9 flex-col justify-between">
-              <div class="text-wrapper_1">
-                <span class="text_13">40</span> <span class="text_14"></span>
-                <span class="text_15">+个</span>
-              </div>
-              <span class="text_16">在运城市</span>
+        <div class="box_10 flex-row">
+          <div class="text-group_12 flex-col justify-between">
+            <div class="text-wrapper_4">
+              <span class="text_25">3170</span>
+              <span class="text_26">+天</span>
             </div>
-          </div>
-          <div class="group_4 flex-row">
-            <div class="text-group_10 flex-col justify-between">
-              <div class="text-wrapper_2">
-                <span class="text_17">50</span> <span class="text_18"></span>
-                <span class="text_19">+座</span>
-              </div>
-              <span class="text_20">在运电站</span>
-            </div>
-          </div>
-        </div>
-        <div class="block_8 flex-row justify-between">
-          <div class="box_9 flex-row">
-            <div class="text-group_11 flex-col justify-between">
-              <div class="text-wrapper_3">
-                <span class="text_21">4.27</span> <span class="text_22"></span>
-                <span class="text_23">Gw+</span>
-              </div>
-              <span class="text_24">在运维总容量</span>
-            </div>
-          </div>
-          <div class="box_10 flex-row">
-            <div class="text-group_12 flex-col justify-between">
-              <div class="text-wrapper_4">
-                <span class="text_25">3170</span>
-                <span class="text_26">+天</span>
-              </div>
-              <span class="text_27">安全生产天数</span>
-            </div>
+            <span class="text_27">安全生产天数</span>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
@@ -153,6 +118,7 @@ import { ref, onMounted } from 'vue';
 </script>
 <style lang="less" scoped>
 @import '../../assets/style/common.css';
+
 .page {
   background-color: rgba(255, 255, 255, 1);
   position: relative;
@@ -162,13 +128,11 @@ import { ref, onMounted } from 'vue';
 }
 
 .block_1 {
-  background-image: linear-gradient(
-    90deg,
-    rgba(0, 22, 46, 1) 0,
-    rgba(0, 22, 46, 1) 0,
-    rgba(2, 57, 98, 1) 100%,
-    rgba(2, 57, 98, 1) 100%
-  );
+  background-image: linear-gradient(90deg,
+      rgba(0, 22, 46, 1) 0,
+      rgba(0, 22, 46, 1) 0,
+      rgba(2, 57, 98, 1) 100%,
+      rgba(2, 57, 98, 1) 100%);
   height: 66vw;
   width: 100vw;
 }
@@ -254,8 +218,7 @@ import { ref, onMounted } from 'vue';
 
 .section_1 {
   height: 8.4vw;
-  background: url(https://lanhu-oss.lanhuapp.com/pswl90lvq9vftr4rsv604fs3fikzvm1zd21a5a7157-913d-4579-8e6b-0ddbff87907a)
-    100% no-repeat;
+  background: url(https://lanhu-oss.lanhuapp.com/pswl90lvq9vftr4rsv604fs3fikzvm1zd21a5a7157-913d-4579-8e6b-0ddbff87907a) 100% no-repeat;
   background-size: 100% 100%;
   width: 27.47vw;
   margin: 3.73vw 0 0 4.13vw;
@@ -324,8 +287,7 @@ import { ref, onMounted } from 'vue';
 .box_3 {
   width: 36.4vw;
   height: 48.8vw;
-  background: url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/4d18be5e6c984ab7a59d48b8b3917c33_mergeImage.png)
-    100% no-repeat;
+  background: url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/4d18be5e6c984ab7a59d48b8b3917c33_mergeImage.png) 100% no-repeat;
   background-size: 100% 100%;
   margin: 24.93vw 0 0 -10.4vw;
 }
@@ -896,5 +858,4 @@ import { ref, onMounted } from 'vue';
   line-height: 2.4vw;
   margin-top: 1.87vw;
 }
-
 </style>

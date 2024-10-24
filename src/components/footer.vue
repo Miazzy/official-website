@@ -17,13 +17,13 @@
       <p class="title"><a @click="handleClick('xx')" target="_self">信息化服务</a></p>
     </div>
     <div class="footer-content-column">
-      <div class="title type"><a @click="handleRoute('/projectCases')">项目案例</a></div>
+      <div class="title type"><a @click="handleRoute('/cases')">项目案例</a></div>
       <p class="title"></p>
     </div>
     <div class="footer-content-column">
-      <div class="title type"><a @click="handleRoute('/informationCenter')">资讯中心</a></div>
-      <p class="title"><a @click="handleRoute('/informationCenter', 600)">行业动态</a></p>
-      <p class="title"><a @click="handleRoute('/informationCenter', 600)">公司动态</a></p>
+      <div class="title type"><a @click="handleRoute('/inform')">资讯中心</a></div>
+      <p class="title"><a @click="handleRoute('/inform', 600)">行业动态</a></p>
+      <p class="title"><a @click="handleRoute('/inform', 600)">公司动态</a></p>
     </div>
     <div class="footer-content-column">
       <div class="title type"><a @click="handleRoute('/aboutus')">关于我们</a></div>
