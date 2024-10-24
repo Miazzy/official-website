@@ -2,9 +2,9 @@
   <div class="page flex-col">
     <div class="box_1 flex-col">
       <div class="image-wrapper_1 flex-row justify-between">
-        <img class="image_1" referrerpolicy="no-referrer"
+        <img class="image_1" 
           src="https://lanhu-oss.lanhuapp.com/pskem07lat9vgtmdebqhpcao4z96p4n4n8g3c97f19e-dd44-48b2-921f-3032b3d80e7c" />
-        <img class="label_1" referrerpolicy="no-referrer"
+        <img class="label_1" 
           src="https://lanhu-oss.lanhuapp.com/ps3rvqt0inn7oh4dc7sul8wjv6nqde2u3h1821704d-46b5-4adf-b61d-7177828150b4" />
       </div>
       <div class="block_1 flex-row">
@@ -29,9 +29,9 @@
     <div class="box_3 flex-col">
       <span
         class="paragraph_1">今年4月22日是第51个世界地球日<br />今年世界地球日宣传主题为<br />“珍爱地球，人与自然和谐共生”<br /><br />我们的生产活动源于自然<br />我们的生产行为回馈自然<br />“渔光一体”，与自然和谐共生<br /><br />4月9日，太阳同往常一样烈，和同事一起完成了上午阶段的组件更换和日常巡检工作，划着小船往回走的途中，我又一次眼疾手快地从水库里救起来一只落水的“水晃晃”，这已经是我们这个月救起来的第4只了。<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Tip&nbsp;“水晃晃”<br /><br />是雀形目鹡鸰科的鸟类，学名白鹡鸰，“水晃晃”是当地的一种叫法，也叫“点水雀”，在中国有广泛分布。<br />主要栖息于河流、湖泊、水库、水塘等水域岸边，觅食时主要地上行走。繁殖期在3-7月，新出的白鹡鸰生命力较为脆弱。<br /><br />最近天气暖和了，水库边新出生了很多小家伙，像这种刚出生不久的，还不太会飞，不慎落水后要是得不到人为帮助，可能只有淹死在水里了。我们日常巡检时，碰到了都会把他们救到岸边。<br /><br />户外工作，条件艰苦，有时候工作累了，看到白鹤、野鸭这些在我们的水库里嬉戏，也能感到一丝丝放松。<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />保障电站安全高效生产是运维人的本职工作，野生动物的救助和保护其实只是举手之劳，但我们只要遇到了，都会去做。偶尔遇到白色垃圾，也会第一时间清理，我认为水库的生态保持工作，同运维工作一样重要。<br /><br />如果说通威“渔光一体”模式是助力清洁能源发展的一大步，那我们始终坚持的水库生态保持工作是助力可持续发展的一小步。<br /><br />谢谢你们<br />有责任心、有爱心的渔光物联人<br /><br /><br /><br /><br /></span>
-      <img class="image_2" referrerpolicy="no-referrer"
+      <img class="image_2" 
         src="https://lanhu-oss.lanhuapp.com/psoh6pffaozyo36mna9a5dqhetdftmnag0840ee46-690a-43b4-a18b-9866236db9a0" />
-      <img class="image_3" referrerpolicy="no-referrer"
+      <img class="image_3" 
         src="https://lanhu-oss.lanhuapp.com/psn1rpn0pj06g8h61i0q9gxnnepe9257nreb780db0-8281-4d68-a865-d39b6849750d" />
     </div>
     <div class="box_4 flex-col">
@@ -44,22 +44,22 @@
       <div class="box_5 flex-col">
         <div class="section_1 flex-row justify-between">
           <div class="box_6 flex-col justify-between">
-            <img class="image_4" referrerpolicy="no-referrer"
+            <img class="image_4" 
               src="https://lanhu-oss.lanhuapp.com/psb5fl6am51yfy1cnuqabg0mrh974dccyk8d6bd9d0-1e07-4bf5-802d-cd974bc37972" />
             <span class="text_11">扫一扫，关注渔光物联</span>
           </div>
           <div class="image-text_1 flex-row">
             <div class="image-text_2 flex-row justify-between">
               <div class="image-wrapper_2 flex-col justify-between">
-                <img class="thumbnail_1" referrerpolicy="no-referrer"
+                <img class="thumbnail_1" 
                   src="https://lanhu-oss.lanhuapp.com/psemzo5woprkmha11bi4j4nsofvj7ryoaa47c5c4-718a-491e-92a4-e9e7caf02abd" />
-                <img class="thumbnail_2" referrerpolicy="no-referrer"
+                <img class="thumbnail_2" 
                   src="https://lanhu-oss.lanhuapp.com/psefz3tlyim7swzj9jqxkidu08i9u9okt0f7200f6-1fea-4d6b-b404-4bace92249ec" />
               </div>
               <span
                 class="paragraph_3">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
             </div>
-            <img class="thumbnail_3" referrerpolicy="no-referrer"
+            <img class="thumbnail_3" 
               src="https://lanhu-oss.lanhuapp.com/psts00o56hhfstd074prtiqihiuwyhd4i23e9cbe2-7e94-4a0e-a858-86b0417ba47c" />
           </div>
         </div>

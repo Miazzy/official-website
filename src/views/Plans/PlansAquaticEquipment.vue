@@ -31,8 +31,8 @@
             <span class="pond-subtitle">流水槽养殖：采用模块化结构,方便运输、安装、拆卸。安装效率可提高50%以上。</span>
           </div>
           <div class="pond-images flex-row justify-between">
-            <img class="pond-image flex-col" referrerpolicy="no-referrer" src="../../assets/images/intel_221_04.png" />
-            <img class="pond-image" referrerpolicy="no-referrer" src="../../assets/images/intel_221_05.png" />
+            <img class="pond-image flex-col"  src="../../assets/images/intel_221_04.png" />
+            <img class="pond-image"  src="../../assets/images/intel_221_05.png" />
           </div>
         </div>
         <!-- 陆基高位池养殖系统 -->

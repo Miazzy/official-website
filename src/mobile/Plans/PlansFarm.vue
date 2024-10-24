@@ -2,9 +2,9 @@
     <div class="page flex-col">
         <div class="group_1 flex-col">
             <div class="image-wrapper_1 flex-row justify-between">
-                <img class="image_1" referrerpolicy="no-referrer"
+                <img class="image_1" 
                     src="https://lanhu-oss.lanhuapp.com/psvwaob6izlg529balvyrmvr7j3m3a3x964968a5b-b53e-47dd-b326-27d6a30f395e" />
-                <img class="label_1" referrerpolicy="no-referrer"
+                <img class="label_1" 
                     src="https://lanhu-oss.lanhuapp.com/psa9pc53558pt6euxs77cf628ixzqkifj0d2e38da6a-9c31-4224-b65e-8d56c389e73d" />
             </div>
             <div class="box_1 flex-row">
@@ -23,7 +23,7 @@
                     <span class="text_5">业务范围&gt;&gt;</span>
                     <div class="group_5 flex-col">
                         <div class="image-wrapper_2 flex-col">
-                            <img class="image_2" referrerpolicy="no-referrer"
+                            <img class="image_2" 
                                 src="https://lanhu-oss.lanhuapp.com/psob6g7x6ogslte8ye6thsfukamkv840998d30d61-8faa-4f7e-9ae0-e756ad01026b" />
                         </div>
                         <div class="text-group_2 flex-col justify-between">
@@ -35,13 +35,13 @@
                             <span class="paragraph_2">现代化水产产业园规划建设<br />光伏农业园区规划建设<br />园区智能化运营服务<br />渔光一体整体解决方案</span>
                         </div>
                     </div>
-                    <img class="image_3" referrerpolicy="no-referrer"
+                    <img class="image_3" 
                         src="https://lanhu-oss.lanhuapp.com/psn87qz2ajo9n0h4y6uj0b1vwx42axmlw85dc196404-2e7b-4121-949d-99b85d8eb918" />
                 </div>
                 <div class="image-wrapper_3 flex-row justify-between">
-                    <img class="image_4" referrerpolicy="no-referrer"
+                    <img class="image_4" 
                         src="https://lanhu-oss.lanhuapp.com/ps1ioy7p7t7au58dbz8gb6q3g1znipyouqe9898f97-b43d-4b9b-a9e7-c3a6b1edd504" />
-                    <img class="image_5" referrerpolicy="no-referrer"
+                    <img class="image_5" 
                         src="https://lanhu-oss.lanhuapp.com/psrd28t6bxv6yk9bmfbu0m2zrb520gev5c054057d-f7c3-4ac0-8670-842d2137d114" />
                 </div>
                 <span class="text_6">智慧农业</span>
@@ -50,22 +50,22 @@
         <div class="group_6 flex-col">
             <div class="block_2 flex-row justify-between">
                 <div class="block_3 flex-col justify-between">
-                    <img class="image_6" referrerpolicy="no-referrer"
+                    <img class="image_6" 
                         src="https://lanhu-oss.lanhuapp.com/psz3knyx5o2eyy22pxns3r4tt87d6ek73737bdac4-ef73-4f1c-8265-d001177c1e3f" />
                     <span class="text_7">扫一扫，关注渔光物联</span>
                 </div>
                 <div class="image-text_1 flex-row">
                     <div class="image-text_2 flex-row justify-between">
                         <div class="image-wrapper_4 flex-col justify-between">
-                            <img class="thumbnail_1" referrerpolicy="no-referrer"
+                            <img class="thumbnail_1" 
                                 src="https://lanhu-oss.lanhuapp.com/psh230wzlro2hu65kv4b03bdz55is06xyt8fa0ba04f-ae5b-4fc4-9edc-e8850af164c5" />
-                            <img class="thumbnail_2" referrerpolicy="no-referrer"
+                            <img class="thumbnail_2" 
                                 src="https://lanhu-oss.lanhuapp.com/ps2z3vyqd60xc30kd3c3dd76alkr7wztlumdddb85e6-8f52-4601-b779-cb69bdbdc9bb" />
                         </div>
                         <span
                             class="paragraph_3">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
                     </div>
-                    <img class="thumbnail_3" referrerpolicy="no-referrer"
+                    <img class="thumbnail_3" 
                         src="https://lanhu-oss.lanhuapp.com/ps8o82gq4v08ympqbgvw8wrcol3asxaidu3ab03669-0451-47ee-aef3-79c08795f81b" />
                 </div>
             </div>
@@ -82,19 +82,19 @@
                 class="text_12">运用物联网技术来解决现代农业生产中的问题，将现代智慧农业和光伏产业科学、专业、有机结合，推动农业生产、农产品经营、农业信息服务三大领域改造升级，实现数字化、科学化、智能化、生态化的现代化养殖，助推农业产业高效可持续发展。</span>
             <div class="box_2 flex-row justify-between">
                 <div class="group_8 flex-col">
-                    <img class="image_7" referrerpolicy="no-referrer"
+                    <img class="image_7" 
                         src="https://lanhu-oss.lanhuapp.com/pshdim85myv4v6c2rtq16m3spfl8bj7fmvb83a9b62f-6034-4a00-87e0-5445ffda8d36" />
                     <span class="text_13">集约化</span>
                     <span class="text_14">intensification</span>
                 </div>
                 <div class="group_9 flex-col">
-                    <img class="image_8" referrerpolicy="no-referrer"
+                    <img class="image_8" 
                         src="https://lanhu-oss.lanhuapp.com/psbv2hxo6ltu6wrzxymdtxgjztgfhkn4fb42ade3cd-6266-4dfa-8050-cb1846a873c0" />
                     <span class="text_15">智能化</span>
                     <span class="text_16">intelligentize</span>
                 </div>
                 <div class="group_10 flex-col">
-                    <img class="image_9" referrerpolicy="no-referrer"
+                    <img class="image_9" 
                         src="https://lanhu-oss.lanhuapp.com/pssruq03u0o63a2tvvsuaf94sjkenfjfqv76ff352b-de8e-46f5-bd94-df8f54360a5f" />
                     <span class="text_17">高效化</span>
                     <span class="text_18">High&nbsp;efficiency</span>

@@ -2,9 +2,9 @@
     <div class="page flex-col">
         <div class="box_1 flex-col">
             <div class="image-wrapper_1 flex-row justify-between">
-                <img class="image_1" referrerpolicy="no-referrer"
+                <img class="image_1" 
                     src="https://lanhu-oss.lanhuapp.com/pss5i5o22nplux6csue1fcwtu4x587q56b7a553-5700-4bbf-a0d2-fa25416527a0" />
-                <img class="label_1" referrerpolicy="no-referrer"
+                <img class="label_1" 
                     src="https://lanhu-oss.lanhuapp.com/psykbct1t5svhrvnluows3unqqfopfps40330c43-feb7-4d13-b92f-12d6466c9950" />
             </div>
             <div class="section_1 flex-row">
@@ -30,20 +30,20 @@
                     </div>
                     <div class="section_2 flex-row">
                         <div class="image-wrapper_2 flex-col justify-between">
-                            <img class="thumbnail_1" referrerpolicy="no-referrer"
+                            <img class="thumbnail_1" 
                                 src="https://lanhu-oss.lanhuapp.com/ps78r9osn97gt94oy2483a4n55x416k3r45dc90f371-abc0-4583-9cb2-bfa101ebf9df" />
-                            <img class="thumbnail_2" referrerpolicy="no-referrer"
+                            <img class="thumbnail_2" 
                                 src="https://lanhu-oss.lanhuapp.com/psukno0d0eai5o1nmk8v393alrv71fm7hnd3db2056-4120-4fd1-9024-bb4ea2145c24" />
-                            <img class="thumbnail_3" referrerpolicy="no-referrer"
+                            <img class="thumbnail_3" 
                                 src="https://lanhu-oss.lanhuapp.com/psw1hd6fncvx9iirdvqkm1sr5x0hvkmarpc982bf62-9987-4d9b-9795-98bea48fc676" />
                         </div>
                         <span class="paragraph_4">本地控制投喂<br />远程控制投喂<br />定时投喂设定</span>
                         <div class="image-wrapper_3 flex-col justify-between">
-                            <img class="thumbnail_4" referrerpolicy="no-referrer"
+                            <img class="thumbnail_4" 
                                 src="https://lanhu-oss.lanhuapp.com/pss67dstumwuee11pdaavce90hfhrx1ktk650db9e9-d4c3-4228-8465-204ef67fa583" />
-                            <img class="thumbnail_5" referrerpolicy="no-referrer"
+                            <img class="thumbnail_5" 
                                 src="https://lanhu-oss.lanhuapp.com/pseuq7aeyb984j2bgy3ygu78xm5siznkpsbfe69750-92b8-4204-8e63-7a12675be320" />
-                            <img class="thumbnail_6" referrerpolicy="no-referrer"
+                            <img class="thumbnail_6" 
                                 src="https://lanhu-oss.lanhuapp.com/ps8hviz1tun05ltzmykddzxwr8xehuuas29bc966c-f8ef-4017-a288-ad9015f2753e" />
                         </div>
                         <span class="paragraph_5">智能投喂模型<br />投喂速率控制<br />投喂数据记录</span>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="block_2 flex-col"></div>
             </div>
-            <img class="image_2" referrerpolicy="no-referrer"
+            <img class="image_2" 
                 src="https://lanhu-oss.lanhuapp.com/ps83939cywbplt5x3sfiyrkoi2fu24jlfvc7434893b-7287-404e-8393-41a141018059" />
         </div>
         <div class="box_3 flex-col">
@@ -69,7 +69,7 @@
             </div>
             <div class="group_7 flex-row justify-between">
                 <div class="group_8 flex-col"></div>
-                <img class="image_3" referrerpolicy="no-referrer"
+                <img class="image_3" 
                     src="https://lanhu-oss.lanhuapp.com/psyuqyxmw8j5853zdvqy1y6wqfvenz9myfh0d872586-4ee1-4285-9ef5-0e6518181ec1" />
             </div>
         </div>
@@ -84,9 +84,9 @@
                     class="paragraph_11">实时展示养殖水体的水质指标和视频影像，保证整个养殖园区24小时内处于监护状态，避免财产损失和保障人员安全。&nbsp;&nbsp;<br /></span>
             </div>
             <div class="image-wrapper_4 flex-row justify-between">
-                <img class="image_4" referrerpolicy="no-referrer"
+                <img class="image_4" 
                     src="https://lanhu-oss.lanhuapp.com/ps29p3t72rx22mbex9506p9nc4wazt5mvgl4384ae7a-1800-4903-b371-e745131e7dbf" />
-                <img class="image_5" referrerpolicy="no-referrer"
+                <img class="image_5" 
                     src="https://lanhu-oss.lanhuapp.com/psd47vkm3ojr9p446beussnfgmebyeiwqq96939eda-1fa6-4a44-bcf0-7d898284ebe4" />
             </div>
         </div>
@@ -104,22 +104,22 @@
         <div class="box_7 flex-col">
             <div class="group_13 flex-row justify-between">
                 <div class="block_4 flex-col justify-between">
-                    <img class="image_6" referrerpolicy="no-referrer"
+                    <img class="image_6" 
                         src="https://lanhu-oss.lanhuapp.com/pskjluzr9g0083ay3fk26xfpjy08xrgzx6l1ff162a7-6579-4ee4-8a3b-3afd7480e249" />
                     <span class="text_4">扫一扫，关注渔光物联</span>
                 </div>
                 <div class="image-text_1 flex-row">
                     <div class="image-text_2 flex-row justify-between">
                         <div class="image-wrapper_5 flex-col justify-between">
-                            <img class="thumbnail_7" referrerpolicy="no-referrer"
+                            <img class="thumbnail_7" 
                                 src="https://lanhu-oss.lanhuapp.com/pszqvf3t42jzpu8gpn0ywydbxa9ircjodf2b69f56d-9f94-4f33-b268-96eea91cea95" />
-                            <img class="thumbnail_8" referrerpolicy="no-referrer"
+                            <img class="thumbnail_8" 
                                 src="https://lanhu-oss.lanhuapp.com/psrhs3o6dll3rzsiq1oru8ktn1ucq9dz8sr79858aa8-6b74-4d62-9e39-11cea0c09840" />
                         </div>
                         <span
                             class="paragraph_15">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
                     </div>
-                    <img class="thumbnail_9" referrerpolicy="no-referrer"
+                    <img class="thumbnail_9" 
                         src="https://lanhu-oss.lanhuapp.com/psv1960vi4919rdi267m7kkj3h74ngif0j8ae2e6cb-7374-4b48-8f7b-5bc814bef501" />
                 </div>
             </div>

@@ -2,9 +2,9 @@
     <div class="page flex-col">
         <div class="section_1 flex-col">
             <div class="image-wrapper_1 flex-row justify-between">
-                <img class="image_1" referrerpolicy="no-referrer"
+                <img class="image_1" 
                     src="https://lanhu-oss.lanhuapp.com/psa3nfwesf9lqks0eii7q9m7qg8li1he37648e9b2-f437-4ea3-801c-e21736950e44" />
-                <img class="label_1" referrerpolicy="no-referrer"
+                <img class="label_1" 
                     src="https://lanhu-oss.lanhuapp.com/ps8jq1q68lpbxv9rdx8m1j2isoc88di76ye70b7b20-2ebc-440c-9485-8344cd9c3edc" />
             </div>
             <div class="group_1 flex-row">
@@ -21,7 +21,7 @@
             <span
                 class="paragraph_1">四川渔光物联技术有限公司是通威股份旗下科技创新型公司，成立于2016年5月。共有员工500+名，拥有一支由国务院津贴专家、四川省“千人计划”专家、通威信息化标杆打造核心成员等多类型高端人才组成的队伍。<br />四川渔光物联技术有限公司是国家高新技术企业，业务涉及渔光一体光伏电站在内的电站智能运维、智慧农业、信息化技术服务。公司被评定为全国智慧渔业领军企业，成都市企业技术中心，具有两化融合管理体系评定等资质，经过8年的技术研发和创新，形成了3项国内领先成果、32项专利、18项软件著作权。参与了国家科技部“蓝色粮仓科技创新项目”，多项省、市级科技项目。公司被评为“物联网行业应用优秀企业”、成都新经济双百企业，连续两年获得“单项顶级光伏智能运维品牌”，取得“水产养殖智能化突出贡献奖”、“中国农牧行业年度创新品牌”、2023年度数字化转型灯塔案例金数奖等荣誉，“智能光伏集中运维平台实践案例”项目被评定为“2020年度成都市工业互联网优秀应用案例”。<br />进入“十四五”时期，公司将持续创新，全方位提升资源利用效率、多层面提高投资收益，在实现客户利润最大化的同时助力国家减排目标的实现，着力打造“渔光一体智能运营专家”品牌形象。</span>
         </div>
-        <img class="image_2" referrerpolicy="no-referrer"
+        <img class="image_2" 
             src="https://lanhu-oss.lanhuapp.com/pslrrysdk3qyh5hmabvy1z3t626w95x8857f3daaaf6-22a7-46c9-b67a-9d9f5e321b23" />
         <div class="section_2 flex-col">
             <span class="text_6">con</span> <span class="text_7">联系我们</span>
@@ -29,36 +29,36 @@
             <div class="image-text_1 flex-row">
                 <div class="image-text_2 flex-row">
                     <div class="image-text_3 flex-row justify-between">
-                        <img class="image_3" referrerpolicy="no-referrer"
+                        <img class="image_3" 
                             src="https://lanhu-oss.lanhuapp.com/pso910rk5pedhztyz0ubc9qeqkgwa8ujt44130b0d1-10a1-4002-8c91-21a898b5becd" />
                         <span
                             class="paragraph_2">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
                     </div>
-                    <img class="image_4" referrerpolicy="no-referrer"
+                    <img class="image_4" 
                         src="https://lanhu-oss.lanhuapp.com/ps8uir8h0lm3bzt6p5obgdaphz8t8ui0xxrc5242c3e-65cb-42f2-b3db-1148185182c0" />
                 </div>
-                <img class="label_2" referrerpolicy="no-referrer"
+                <img class="label_2" 
                     src="https://lanhu-oss.lanhuapp.com/psaymrfz9kpv7bay6icvhhntc89q0idai9m411b72e3-ac0b-465c-9b0c-619b65aa6d0c" />
             </div>
             <div class="block_1 flex-col">
                 <div class="box_1 flex-row justify-between">
                     <div class="group_2 flex-col justify-between">
-                        <img class="image_5" referrerpolicy="no-referrer"
+                        <img class="image_5" 
                             src="https://lanhu-oss.lanhuapp.com/psff1famj6hglxcqembioyyxmy9kiop4ye7e3c6915-7273-4644-86c4-49166182c423" />
                         <span class="text_9">扫一扫，关注渔光物联</span>
                     </div>
                     <div class="image-text_4 flex-row">
                         <div class="image-text_5 flex-row justify-between">
                             <div class="image-wrapper_2 flex-col justify-between">
-                                <img class="thumbnail_1" referrerpolicy="no-referrer"
+                                <img class="thumbnail_1" 
                                     src="https://lanhu-oss.lanhuapp.com/psat91ix49ugrbcf9tqynrfvchxb55kiybda3affe1-1bf6-4aab-94e2-25f458663a5e" />
-                                <img class="thumbnail_2" referrerpolicy="no-referrer"
+                                <img class="thumbnail_2" 
                                     src="https://lanhu-oss.lanhuapp.com/ps8nb22tkyll9m75i10ie94m9k3vrppp6xj3deaca6b-f01a-45d1-8de2-26dba77f3d59" />
                             </div>
                             <span
                                 class="paragraph_3">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
                         </div>
-                        <img class="thumbnail_3" referrerpolicy="no-referrer"
+                        <img class="thumbnail_3" 
                             src="https://lanhu-oss.lanhuapp.com/psda1jvary2qabpq1i8m1rtv1hrmw0ard23488f94-3340-4273-a6cc-a95d30002ca2" />
                     </div>
                 </div>
@@ -80,16 +80,16 @@
                 <div class="group_3 flex-row">
                     <span class="text_13">Qual</span>
                     <div class="image-wrapper_3 flex-col">
-                        <img class="image_6" referrerpolicy="no-referrer"
+                        <img class="image_6" 
                             src="https://lanhu-oss.lanhuapp.com/psmtjhwzop56ezf8wfnitvddt1skdtwltccd1cd16ea-92bc-451e-b959-3109e5b8adf6" />
                     </div>
-                    <img class="image_7" referrerpolicy="no-referrer"
+                    <img class="image_7" 
                         src="https://lanhu-oss.lanhuapp.com/psgj5e74usjustip6ntle96d5kpi30zjhje335bc8cb-8259-4ad8-9848-2f3fbe512fb7" />
                 </div>
                 <div class="image-wrapper_4 flex-row justify-between">
-                    <img class="image_8" referrerpolicy="no-referrer"
+                    <img class="image_8" 
                         src="https://lanhu-oss.lanhuapp.com/psfehbjdaj2ruv7eipxj56atzk5avkvpf968b15f8-e473-4978-9ee0-551b21bce4e0" />
-                    <img class="image_9" referrerpolicy="no-referrer"
+                    <img class="image_9" 
                         src="https://lanhu-oss.lanhuapp.com/ps6v7lzzmlz6uxvh2r8pijzc8usmzp0p64w7988c33f-6caa-4a6d-90c4-5fe9d0ef04fc" />
                 </div>
             </div>

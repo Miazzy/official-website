@@ -2,9 +2,9 @@
     <div class="page flex-col">
         <div class="section_1 flex-col">
             <div class="image-wrapper_1 flex-row justify-between">
-                <img class="image_1" referrerpolicy="no-referrer"
+                <img class="image_1" 
                     src="https://lanhu-oss.lanhuapp.com/psnmzlp5v3ody98w0dlx9nouicsst2puym11c852d2-4f67-4a63-8403-0a86dd28f2f5" />
-                <img class="label_1" referrerpolicy="no-referrer"
+                <img class="label_1" 
                     src="https://lanhu-oss.lanhuapp.com/psuea7xoy30nho655uhsrjff4suix58bg0f2ebe6f3e-2f03-4ea0-a795-ffebef37e15e" />
             </div>
             <div class="group_1 flex-row">
@@ -109,22 +109,22 @@
         <div class="section_3 flex-col">
             <div class="group_7 flex-row justify-between">
                 <div class="box_7 flex-col justify-between">
-                    <img class="image_2" referrerpolicy="no-referrer"
+                    <img class="image_2" 
                         src="https://lanhu-oss.lanhuapp.com/pszdkcfv1oxwx8t06y7wmwitoiity39bw73c66d33-0170-47be-81b1-bc0d36b2544c" />
                     <span class="text_14">扫一扫，关注渔光物联</span>
                 </div>
                 <div class="image-text_9 flex-row">
                     <div class="image-text_10 flex-row justify-between">
                         <div class="image-wrapper_2 flex-col justify-between">
-                            <img class="thumbnail_1" referrerpolicy="no-referrer"
+                            <img class="thumbnail_1" 
                                 src="https://lanhu-oss.lanhuapp.com/ps9monvp7u3gl7s6xxatu9vjwhwnlogv0me4b853a5-d00e-4983-9d2c-00fbb1906c82" />
-                            <img class="thumbnail_2" referrerpolicy="no-referrer"
+                            <img class="thumbnail_2" 
                                 src="https://lanhu-oss.lanhuapp.com/ps8614xfmad8be5pl5dfgni5ukvsp55713rc21a6454-1651-475c-94ea-fd20112f3c4c" />
                         </div>
                         <span
                             class="paragraph_1">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
                     </div>
-                    <img class="thumbnail_3" referrerpolicy="no-referrer"
+                    <img class="thumbnail_3" 
                         src="https://lanhu-oss.lanhuapp.com/ps35wtn3xmie5ekapwuloagmpzyvafcx1p6895b9be-56a8-436b-8fec-664f82d662d7" />
                 </div>
             </div>

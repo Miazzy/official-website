@@ -2,9 +2,9 @@
     <div class="page flex-col">
         <div class="box_1 flex-col">
             <div class="image-wrapper_1 flex-row justify-between">
-                <img class="image_1" referrerpolicy="no-referrer"
+                <img class="image_1" 
                     src="https://lanhu-oss.lanhuapp.com/ps4x8atxlhgopeq91tjsjr6q5gl2n1b8yutc8dc399c-a560-45ef-a756-24530f15b2db" />
-                <img class="label_1" referrerpolicy="no-referrer"
+                <img class="label_1" 
                     src="https://lanhu-oss.lanhuapp.com/ps7f782jkh2bfd0ekcat5kabis1ul7pbtc57f56689-1428-4592-b14e-23418b06a1a6" />
             </div>
             <div class="box_2 flex-row">
@@ -98,30 +98,30 @@
                 </div>
             </div>
             <div class="image-wrapper_2 flex-row justify-between">
-                <img class="image_2" referrerpolicy="no-referrer"
+                <img class="image_2" 
                     src="https://lanhu-oss.lanhuapp.com/psfdtbzcrnxvjkuq62tws1b016g4932qt23dce9243ac-581e-4e1c-804b-430ec5e30bcc" />
-                <img class="image_3" referrerpolicy="no-referrer"
+                <img class="image_3" 
                     src="https://lanhu-oss.lanhuapp.com/pswjmtwfjxmgqf7674j59vx4ncdjlg6cht21a759c1-d56d-467d-9116-0ea0ee285a52" />
             </div>
             <div class="section_14 flex-col">
                 <div class="group_1 flex-row justify-between">
                     <div class="box_5 flex-col justify-between">
-                        <img class="image_4" referrerpolicy="no-referrer"
+                        <img class="image_4" 
                             src="https://lanhu-oss.lanhuapp.com/psp1msl7yrtyp7epxq0sdhf3ooezutub8vh5b9e69d7-2451-48fe-a2f7-48cc7fa6c61c" />
                         <span class="text_30">扫一扫，关注渔光物联</span>
                     </div>
                     <div class="image-text_1 flex-row">
                         <div class="image-text_2 flex-row justify-between">
                             <div class="image-wrapper_3 flex-col justify-between">
-                                <img class="thumbnail_1" referrerpolicy="no-referrer"
+                                <img class="thumbnail_1" 
                                     src="https://lanhu-oss.lanhuapp.com/pscltiace5mp6vhhen4mmjq1yce9vjb7db2d0c3b8-7ce0-43b1-bbea-4071ce6da384" />
-                                <img class="thumbnail_2" referrerpolicy="no-referrer"
+                                <img class="thumbnail_2" 
                                     src="https://lanhu-oss.lanhuapp.com/psv14vjo45l4h5i6ic6bf3gns3kuatv4hgl053c1b76-610c-406f-9ef6-ee61363110db" />
                             </div>
                             <span
                                 class="paragraph_2">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
                         </div>
-                        <img class="thumbnail_3" referrerpolicy="no-referrer"
+                        <img class="thumbnail_3" 
                             src="https://lanhu-oss.lanhuapp.com/psq8nkhz18pbaojsr8m58c3nc6tfa7v22aa510d2081-565f-401b-bd86-f614d9164250" />
                     </div>
                 </div>
