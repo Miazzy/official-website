@@ -211,13 +211,14 @@ import MFooter from "@/components/MFooter.vue";
         background-color: rgba(255, 255, 255, 1);
         width: 89.34vw;
         height: 49.87vw;
-        margin: 5.73vw 0 0 5.33vw;
+        margin: 4.73vw 0 0 5.33vw;
 
         .blog-image-box {
             box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.11);
-            background-color: rgba(127, 127, 127, 1);
             width: 89.34vw;
-            height: 38.94vw;
+            height: 40.20vw;
+            background: url('../../assets/images/project-case-ahhx.jpg');
+            background-size: 100% 100%;
         }
 
         .blog-text {
@@ -231,7 +232,7 @@ import MFooter from "@/components/MFooter.vue";
             text-align: justifyLeft;
             white-space: nowrap;
             line-height: 5.2vw;
-            margin: 3.73vw 0 3.86vw 3.86vw;
+            margin: 2.73vw 0 3.86vw 3.86vw;
         }
     }
 
@@ -334,9 +335,10 @@ import MFooter from "@/components/MFooter.vue";
 }
 
 .blog-block {
-    background-color: rgba(127, 127, 127, 1);
     width: 23.2vw;
     height: 16vw;
+    background: url('../../assets/images/project-case-ahhx.jpg');
+    background-size: 100% 100%;
 }
 
 .blog-section-text-wrapper {
