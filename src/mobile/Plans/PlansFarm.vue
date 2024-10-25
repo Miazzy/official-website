@@ -24,20 +24,17 @@
         <!-- metrics-container -->
         <div class="metric-box-container flex-row justify-between">
           <div class="metric-box flex-col">
-            <img class="metric-image" 
-              src="../../assets/images/metric-icon-01.png" />
+            <img class="metric-image" src="../../assets/images/metric-icon-01.png" />
             <span class="metric-text-title">集约化</span>
             <span class="metric-text-description">INTENSIFICATION</span>
           </div>
           <div class="metric-box flex-col">
-            <img class="metric-image" 
-              src="../../assets/images/metric-icon-02.png" />
+            <img class="metric-image" src="../../assets/images/metric-icon-02.png" />
             <span class="metric-text-title">智能化</span>
             <span class="metric-text-description">INTELLIGENTIZE</span>
           </div>
           <div class="metric-box flex-col">
-            <img class="metric-image" 
-              src="../../assets/images/metric-icon-03.png" />
+            <img class="metric-image" src="../../assets/images/metric-icon-03.png" />
             <span class="metric-text-title">高效化</span>
             <span class="metric-text-description">HIGH EFFICIENCY</span>
           </div>
@@ -54,7 +51,7 @@
             <div class="operation-box">
               <div class="operation-services flex-col">
                 <div class="service-image-wrapper flex-col">
-                  <img class="service-image" src="../../assets/images/icon-operation.png" />
+                  <span class="icon iconfont service-image iconzhiwuzhongzhi"></span>
                 </div>
                 <div class="service-details flex-col justify-between">
                   <span class="service-title">现代化农业园区 </span>
@@ -64,12 +61,14 @@
               </div>
               <div class="operation-services flex-col">
                 <div class="service-image-wrapper flex-col">
-                  <img class="service-image" src="../../assets/images/icon-operation.png" />
+                  <span class="icon iconfont service-image iconyangzhishebei"
+                    style="font-size: 8.2vw; margin: 4.35vw auto;"></span>
                 </div>
                 <div class="service-details flex-col justify-between">
                   <span class="service-title">设施化养殖系统</span>
                   <span class="service-description"
                     style="margin-top: 8px;">池塘内循环养殖系统<br />陆基高位池养殖系统<br />工厂化车间养殖系统</span>
+                  <span class="service-btn" style>了解详情</span>
                 </div>
               </div>
             </div>
@@ -306,6 +305,17 @@ onBeforeUnmount(() => {
             line-height: 2.94vw;
             margin: 1.73vw auto 0 auto;
           }
+
+          .service-btn {
+            color: #fefefe;
+            background: #999;
+            display: block;
+            text-align: center;
+            font-size: 10px;
+            padding: 3px 5px;
+            width: 18vw;
+            margin: -2vw auto;
+          }
         }
       }
     }
@@ -317,8 +327,10 @@ onBeforeUnmount(() => {
 
       .service-image {
         width: 7.6vw;
-        height: 7.74vw;
-        margin: 4.13vw 0 0 14.26vw;
+        height: 7.6vw;
+        font-size: 7.5vw;
+        color: #fefefe;
+        margin: 4.13vw auto 0 auto;
       }
     }
 

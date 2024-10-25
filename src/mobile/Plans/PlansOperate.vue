@@ -76,7 +76,7 @@
             <div class="operation-box">
               <div class="operation-services flex-col">
                 <div class="service-image-wrapper flex-col">
-                  <img class="service-image" src="../../assets/images/icon-operation.png" />
+                  <span class="icon iconfont service-image iconyunyingfuwu" ></span>
                 </div>
                 <div class="service-details flex-col justify-between">
                   <span class="service-title">运行维护</span>
@@ -85,7 +85,7 @@
               </div>
               <div class="operation-services flex-col">
                 <div class="service-image-wrapper flex-col">
-                  <img class="service-image" src="../../assets/images/icon-operation.png" />
+                  <span class="icon iconfont service-image icondashuju" ></span>
                 </div>
                 <div class="service-details flex-col justify-between">
                   <span class="service-title">专项服务</span>
@@ -340,8 +340,10 @@ onBeforeUnmount(() => {
 
       .service-image {
         width: 7.6vw;
-        height: 7.74vw;
-        margin: 4.13vw 0 0 14.26vw;
+        height: 7.6vw;
+        font-size: 7.5vw;
+        color: #fefefe;
+        margin: 4.13vw auto 0 auto;
       }
     }
 
