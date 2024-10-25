@@ -311,10 +311,10 @@ onBeforeUnmount(() => {
             background: #999;
             display: block;
             text-align: center;
-            font-size: 10px;
-            padding: 3px 5px;
+            font-size: 2vw;
+            padding: 4px 5px;
             width: 18vw;
-            margin: -2vw auto;
+            margin: -1.0vw auto 0 auto;
           }
         }
       }
