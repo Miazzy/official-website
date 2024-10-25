@@ -15,13 +15,11 @@
     <div class="main-container">
       <!-- description-container -->
       <div class="description-container flex-col">
-        <span class="text-en">INTELLIGENT</span>
-        <span class="text-title">渔光一体智能运营专家</span>
-        <span class="text-descript">OPERATION</span>
+        <span class="text-en">{{ opTextEn }}</span>
+        <span class="text-title">{{ opTextTitle }}</span>
+        <span class="text-descript">{{ opTextDescription }}</span>
         <span class="description-paragraph">
-          <span style="display: block; text-indent: 2em;">秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。</span>
-          <span
-            style="display: block; text-indent: 2em;">线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源，形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。</span>
+          <span class="paragraph-text" v-for="(text, index) in opParagraph" :key="index">{{ text }}</span>
         </span>
         <div class="description-block flex-row justify-between">
           <div class="description-box flex-row">
@@ -71,10 +69,10 @@
       <div class="content-container flex-col">
         <div class="intelligent-operation flex-col">
           <div class="operation-header flex-row">
-            <span class="operation-title">渔光一体智能运营</span>
-            <span class="operation-main-text">YU GUANG</span>
+            <span class="operation-title">{{ opTitle }}</span>
+            <span class="operation-main-text">{{ opText }}</span>
             <span class="operation-secondary-text">{{ description }}</span>
-            <span class="operation-link">业务范围&gt;&gt;</span>
+            <span class="operation-link">{{ opLink }}&gt;&gt;</span>
             <div class="operation-box">
               <div class="operation-services flex-col">
                 <div class="service-image-wrapper flex-col">
@@ -90,8 +88,10 @@
                   <img class="service-image" src="../../assets/images/icon-operation.png" />
                 </div>
                 <div class="service-details flex-col justify-between">
-                  <span class="service-title">运行维护</span>
-                  <span class="service-description">安全管理<br />电站巡检<br />设备运行监控<br />维护消缺<br />台账管理<br />除草清洗</span>
+                  <span class="service-title">专项服务</span>
+
+                  <span
+                    class="service-description">设备抢检修技改<br />电气试验<br />设备专项排查与分析<br />技术监督<br />电站性能检测与质量评估<br />防雷检测<br />电力设备安装</span>
                 </div>
               </div>
             </div>
@@ -103,33 +103,31 @@
         </div>
       </div>
     </div>
-    <!-- footer-container -->
-    <div class="footer-container flex-col">
-      <div class="footer-wrapper flex-row justify-between">
-        <div class="company-wrapper flex-col justify-between">
-          <img class="company-code-image"
-            src="https://lanhu-oss.lanhuapp.com/ps5c5obha6ixjleqf1b9ny9jbtrrhkmadqs897a4dda-3cf8-4968-b193-1d9eee3a8121" />
-          <span class="company-code-text">扫一扫，关注渔光物联</span>
-        </div>
-        <div class="contact-wrapper flex-row">
-          <div class="contact-content flex-row justify-between">
-            <span
-              class="contact-content-paragraph">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
-          </div>
-        </div>
-      </div>
-      <div class="line-box flex-col"></div>
-      <span class="text-copyright">Copyright ©渔光物联（www.ygwl.net） 蜀ICP备16026089号</span>
-    </div>
+    <!-- mobile-footer -->
+    <MFooter></MFooter>
   </div>
 </template>
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import MHeader from "@/components/MHeader.vue";
+import MFooter from "@/components/MFooter.vue";
 
 const title = ref('专业化·智能化·一体化');
-const subTitle = ref('Specialization, intelligence and integration'.toLocaleUpperCase());
-const description = ref('Yu guang integrated intelligent operation'.toLocaleUpperCase());
+const subTitle = ref('SPECIALIZATION, INTELLIGENCE AND INTEGRATION');
+const description = ref('YU GUANG INTEGRATED INTELLIGENT OPERATION');
+
+const opTitle = ref('渔光一体智能运营');
+const opText = ref('YU GUANG');
+const opLink = ref('业务范围');
+
+const opTextEn = ref('INTELLIGENT');
+const opTextTitle = ref('渔光一体智能运营专家');
+const opTextDescription = ref('OPERATION');
+
+const opParagraph = ref([
+  '秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。',
+  '线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源，形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。'
+]);
 
 onMounted(() => {
   //
@@ -146,7 +144,7 @@ onBeforeUnmount(() => {
   background-color: rgba(255, 255, 255, 1);
   position: relative;
   width: 100vw;
-  height: 308.6vw;
+  height: 318.6vw;
   overflow: hidden;
 }
 
@@ -200,7 +198,7 @@ onBeforeUnmount(() => {
 .content-container {
   position: relative;
   background-color: rgba(255, 255, 255, 1);
-  height: 105.45vw;
+  height: 115.45vw;
   margin-top: 112vw;
   width: 100vw;
 
@@ -208,7 +206,7 @@ onBeforeUnmount(() => {
     background-color: rgba(29, 15, 12, 0.5);
     position: relative;
     width: 100vw;
-    height: 122.4vw;
+    height: 132.4vw;
     flex-direction: row;
     background: url(../../assets/images/mobile_plans_02.jpg) no-repeat;
     background-size: 100% 100%;
@@ -216,12 +214,12 @@ onBeforeUnmount(() => {
     .operation-header {
       width: 100vw;
       height: 73.74vw;
-      margin-top: 6.4vw;
+      margin-top: 16.4vw;
 
       .operation-title {
         position: absolute;
         left: 5.34vw;
-        top: 3.5vw;
+        top: 13.5vw;
         width: 44.4vw;
         height: 5.34vw;
         overflow-wrap: break-word;
@@ -284,21 +282,30 @@ onBeforeUnmount(() => {
         .operation-services {
           width: 36.4vw;
           height: 48.8vw;
-          background: #fefefe;
+          background: url(/src/assets/images/plans-box-transparent-01.jpg);
+          background-size: 150% 100%;
           margin: 24.93vw 0 0 -11.5vw;
+          box-shadow: 0px 4px 10px 0px #EF7D1B60;
 
           &:last-child {
+            background: url('../../assets/images/plans-box-transparent-01.jpg');
+            background-size: 100% 100%;
             margin: 24.93vw 0 0 5.5vw;
+            box-shadow: 0 0 0 0 transparent;
+          }
+
+          .service-image-wrapper {
+            background: transparent;
           }
         }
 
         .service-details {
-          width: 11.47vw;
+          width: 25vw;
           height: 21.34vw;
-          margin: 4.66vw 0 7.06vw 12.66vw;
+          margin: 4.66vw auto 7.06vw auto;
 
           .service-title {
-            width: 11.47vw;
+            width: 25vw;
             height: 2.94vw;
             overflow-wrap: break-word;
             color: rgba(51, 51, 51, 1);
@@ -311,7 +318,7 @@ onBeforeUnmount(() => {
           }
 
           .service-description {
-            width: 11.34vw;
+            width: 25vw;
             height: 16.67vw;
             overflow-wrap: break-word;
             color: rgba(153, 153, 153, 1);
@@ -320,7 +327,7 @@ onBeforeUnmount(() => {
             font-weight: normal;
             text-align: center;
             line-height: 2.94vw;
-            margin: 1.73vw 0 0 0.13vw;
+            margin: 1.73vw auto 0 auto;
           }
         }
       }
@@ -343,23 +350,23 @@ onBeforeUnmount(() => {
       height: 48.94vw;
       margin: 24.66vw 5.86vw 0 9.2vw;
     }
+  }
 
-    .operation-icon-wrapper {
-      position: absolute;
-      width: 20.4vw;
+  .operation-icon-wrapper {
+    position: absolute;
+    width: 20.4vw;
+    height: 7.47vw;
+    left: 10.5vw;
+    bottom: 8vw;
+
+    .arrow-circle-left {
+      width: 7.47vw;
       height: 7.47vw;
-      left: 10.5vw;
-      bottom: 8vw;
+    }
 
-      .arrow-circle-left {
-        width: 7.47vw;
-        height: 7.47vw;
-      }
-
-      .arrow-circle-right {
-        width: 7.47vw;
-        height: 7.47vw;
-      }
+    .arrow-circle-right {
+      width: 7.47vw;
+      height: 7.47vw;
     }
   }
 }
@@ -427,6 +434,11 @@ onBeforeUnmount(() => {
     text-align: justifyLeft;
     line-height: 5.34vw;
     margin: 5.06vw 0 0 4vw;
+
+    .paragraph-text {
+      display: block;
+      text-indent: 2em;
+    }
   }
 
   .description-block {
@@ -451,6 +463,7 @@ onBeforeUnmount(() => {
       background-color: rgba(255, 255, 255, 1);
       width: 33.87vw;
       height: 17.6vw;
+      box-shadow: -1px 4px 10px 0px rgba(24, 24, 24, 0.11);
 
       .description-content {
         width: 12.4vw;
@@ -504,91 +517,6 @@ onBeforeUnmount(() => {
         }
       }
     }
-  }
-}
-
-.footer-container {
-  background-color: rgba(35, 36, 41, 1);
-  position: relative;
-  width: 100vw;
-  height: 25.2vw;
-
-  .footer-wrapper {
-    width: 71.74vw;
-    height: 11.6vw;
-    margin: 3.73vw 0 0 14.13vw;
-
-    .company-wrapper {
-      width: 16vw;
-      height: 11.2vw;
-      margin-top: 0.27vw;
-
-      .company-code-image {
-        width: 8.54vw;
-        height: 8.54vw;
-        margin-left: 3.74vw;
-      }
-
-      .company-code-text {
-        width: 16vw;
-        height: 1.6vw;
-        overflow-wrap: break-word;
-        color: rgba(153, 153, 153, 1);
-        font-size: 1.6vw;
-        font-family: MicrosoftYaHei;
-        font-weight: normal;
-        text-align: center;
-        white-space: nowrap;
-        line-height: 4vw;
-        margin-top: 1.07vw;
-      }
-    }
-
-    .contact-wrapper {
-      position: relative;
-      width: 53.74vw;
-      height: 11.6vw;
-      margin: -0.75vw 0 0 6vw;
-
-      .contact-content {
-        width: 53.74vw;
-        height: 11.6vw;
-      }
-
-      .contact-content-paragraph {
-        width: 51.2vw;
-        height: 11.6vw;
-        overflow-wrap: break-word;
-        color: rgba(217, 217, 217, 1);
-        font-size: 1.86vw;
-        font-family: MicrosoftYaHei;
-        font-weight: normal;
-        text-align: left;
-        line-height: 4.8vw;
-      }
-
-    }
-  }
-
-  .line-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 89.34vw;
-    height: 0.14vw;
-    margin: 3.73vw 0 0 5.33vw;
-  }
-
-  .text-copyright {
-    width: 45.74vw;
-    height: 1.87vw;
-    overflow-wrap: break-word;
-    color: #d9d9d9;
-    font-size: 1.6vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 1.87vw;
-    margin: 2vw auto 2.13vw auto;
   }
 }
 </style>
