@@ -267,7 +267,7 @@ onBeforeUnmount(() => {
           &:last-child {
             background: url('../../assets/images/plans-box-transparent-02.jpg');
             background-size: 100% 100%;
-            margin: 24.93vw 0 0 5.5vw;
+            margin: 24.93vw 0 0 7.8vw;
             box-shadow: none;
           }
 
