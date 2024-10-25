@@ -98,9 +98,9 @@
           </div>
         </div>
         <div class="operation-icon-wrapper flex-row justify-between">
-            <img class="arrow-circle-left" src="../../assets/images/arrow-circle-left.png" />
-            <img class="arrow-circle-right" src="../../assets/images/arrow-circle-right.png" />
-          </div>
+          <img class="arrow-circle-left" src="../../assets/images/arrow-circle-left.png" />
+          <img class="arrow-circle-right" src="../../assets/images/arrow-circle-right.png" />
+        </div>
       </div>
     </div>
     <!-- footer-container -->
@@ -197,291 +197,176 @@ onBeforeUnmount(() => {
   }
 }
 
-
 .content-container {
   position: relative;
   background-color: rgba(255, 255, 255, 1);
   height: 105.45vw;
   margin-top: 112vw;
   width: 100vw;
-}
 
-.intelligent-operation {
-  background-color: rgba(29, 15, 12, 0.5);
-  position: relative;
-  width: 100vw;
-  height: 122.4vw;
-  flex-direction: row;
-  background: url(../../assets/images/mobile_plans_02.jpg) no-repeat;
-  background-size: 100% 100%;
-
-  .operation-header {
+  .intelligent-operation {
+    background-color: rgba(29, 15, 12, 0.5);
+    position: relative;
     width: 100vw;
-    height: 73.74vw;
-    margin-top: 6.4vw;
-  }
-
-  .operation-main-text {
-    width: 100vw;
-    height: 36.27vw;
-    overflow-wrap: break-word;
-    color: rgba(255, 255, 255, 1);
-    font-size: 47.46vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 39.47vw;
-    opacity: 0.03;
-  }
-
-  .operation-secondary-text {
-    width: 62vw;
-    height: 2vw;
-    overflow-wrap: break-word;
-    color: #ffffff60;
-    font-size: 2.66vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 5.47vw;
-    margin: 3.86vw 0 0 -94.66vw;
-  }
-
-  .operation-link {
-    width: 16.14vw;
-    height: 3.07vw;
-    overflow-wrap: break-word;
-    color: rgba(255, 255, 255, 1);
-    font-size: 3.2vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: justifyLeft;
-    white-space: nowrap;
-    line-height: 5.34vw;
-    margin: 12.26vw 0 0 -61.73vw;
-  }
-
-  .operation-box {
-    display: flex;
+    height: 122.4vw;
     flex-direction: row;
-    justify-content: flex-start;
+    background: url(../../assets/images/mobile_plans_02.jpg) no-repeat;
+    background-size: 100% 100%;
 
-    .operation-services {
-      width: 36.4vw;
-      height: 48.8vw;
-      background: #fefefe;
-      margin: 24.93vw 0 0 -11.5vw;
+    .operation-header {
+      width: 100vw;
+      height: 73.74vw;
+      margin-top: 6.4vw;
 
-      &:last-child {
-        margin: 24.93vw 0 0 5.5vw;
-      }
-    }
-  }
-}
-
-.group_6 {
-  box-shadow: 0px 2px 7px 0px rgba(128, 128, 128, 0.25);
-  background-color: rgba(255, 255, 255, 1);
-  width: 100vw;
-  height: 16vw;
-  margin-top: -0.26vw;
-}
-
-.section_1 {
-  height: 8.4vw;
-  background: url(https://lanhu-oss.lanhuapp.com/pswl90lvq9vftr4rsv604fs3fikzvm1zd21a5a7157-913d-4579-8e6b-0ddbff87907a) 100% no-repeat;
-  background-size: 100% 100%;
-  width: 27.47vw;
-  margin: 3.73vw 0 0 4.13vw;
-}
-
-.block_5 {
-  background-color: rgba(0, 0, 0, 1);
-  width: 17.6vw;
-  height: 8.4vw;
-  margin-left: 9.87vw;
-}
-
-.label_2 {
-  width: 5.87vw;
-  height: 4vw;
-  margin: 6vw 4.13vw 0 0;
-}
-
-
-
-
-.service-image-wrapper {
-  background-color: rgba(239, 125, 27, 1);
-  height: 15.74vw;
-  width: 36.4vw;
-}
-
-.service-image {
-  width: 7.6vw;
-  height: 7.74vw;
-  margin: 4.13vw 0 0 14.26vw;
-}
-
-.service-details {
-  width: 11.47vw;
-  height: 21.34vw;
-  margin: 4.66vw 0 7.06vw 12.66vw;
-}
-
-.service-title {
-  width: 11.47vw;
-  height: 2.94vw;
-  overflow-wrap: break-word;
-  color: rgba(51, 51, 51, 1);
-  font-size: 2.93vw;
-  font-family: SourceHanSansCN-Medium;
-  font-weight: 500;
-  text-align: center;
-  white-space: nowrap;
-  line-height: 2.94vw;
-}
-
-.service-description {
-  width: 11.34vw;
-  height: 16.67vw;
-  overflow-wrap: break-word;
-  color: rgba(153, 153, 153, 1);
-  font-size: 1.86vw;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: center;
-  line-height: 2.94vw;
-  margin: 1.73vw 0 0 0.13vw;
-}
-
-.operation-main-image {
-  width: 37.2vw;
-  height: 48.94vw;
-  margin: 24.66vw 5.86vw 0 9.2vw;
-}
-
-.operation-icon-wrapper{
-  position: absolute;
-  width: 20.4vw;
-  height: 7.47vw;
-  left: 10.5vw;
-  bottom: 8vw;
-}
-
-.arrow-circle-left {
-  width: 7.47vw;
-  height: 7.47vw;
-}
-
-.arrow-circle-right {
-  width: 7.47vw;
-  height: 7.47vw;
-}
-
-.operation-title {
-  position: absolute;
-  left: 5.34vw;
-  top: 3.5vw;
-  width: 44.4vw;
-  height: 5.34vw;
-  overflow-wrap: break-word;
-  color: rgba(255, 255, 255, 1);
-  font-size: 5.6vw;
-  font-family: SourceHanSansCN-Medium;
-  font-weight: 500;
-  text-align: left;
-  white-space: nowrap;
-  line-height: 5.47vw;
-}
-
-.footer-container {
-  background-color: rgba(35, 36, 41, 1);
-  position: relative;
-  width: 100vw;
-  height: 25.2vw;
-
-  .footer-wrapper {
-    width: 71.74vw;
-    height: 11.6vw;
-    margin: 3.73vw 0 0 14.13vw;
-    .company-wrapper {
-      width: 16vw;
-      height: 11.2vw;
-      margin-top: 0.27vw;
-      .company-code-image {
-        width: 8.54vw;
-        height: 8.54vw;
-        margin-left: 3.74vw;
-      }
-      
-      .company-code-text {
-        width: 16vw;
-        height: 1.6vw;
+      .operation-title {
+        position: absolute;
+        left: 5.34vw;
+        top: 3.5vw;
+        width: 44.4vw;
+        height: 5.34vw;
         overflow-wrap: break-word;
-        color: rgba(153, 153, 153, 1);
-        font-size: 1.6vw;
-        font-family: MicrosoftYaHei;
-        font-weight: normal;
-        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        font-size: 5.6vw;
+        font-family: SourceHanSansCN-Medium;
+        font-weight: 500;
+        text-align: left;
         white-space: nowrap;
-        line-height: 4vw;
-        margin-top: 1.07vw;
+        line-height: 5.47vw;
       }
-    }
-    
-    .contact-wrapper {
-      position: relative;
-      width: 53.74vw;
-      height: 11.6vw;
-      margin: -0.75vw 0 0 6vw;
-      .contact-content {
-        width: 53.74vw;
-        height: 11.6vw;
-      }
-      
-      .contact-content-paragraph {
-        width: 51.2vw;
-        height: 11.6vw;
+
+      .operation-main-text {
+        width: 100vw;
+        height: 36.27vw;
         overflow-wrap: break-word;
-        color: rgba(217, 217, 217, 1);
-        font-size: 1.86vw;
-        font-family: MicrosoftYaHei;
+        color: rgba(255, 255, 255, 1);
+        font-size: 47.46vw;
+        font-family: SourceHanSansCN-Normal;
         font-weight: normal;
         text-align: left;
-        line-height: 4.8vw;
+        white-space: nowrap;
+        line-height: 39.47vw;
+        opacity: 0.03;
       }
-      
+
+      .operation-secondary-text {
+        width: 62vw;
+        height: 2vw;
+        overflow-wrap: break-word;
+        color: #ffffff60;
+        font-size: 2.66vw;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 5.47vw;
+        margin: 3.86vw 0 0 -94.66vw;
+      }
+
+      .operation-link {
+        width: 16.14vw;
+        height: 3.07vw;
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 3.2vw;
+        font-family: SourceHanSansCN-Normal;
+        font-weight: normal;
+        text-align: justifyLeft;
+        white-space: nowrap;
+        line-height: 5.34vw;
+        margin: 12.26vw 0 0 -61.73vw;
+      }
+
+      .operation-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .operation-services {
+          width: 36.4vw;
+          height: 48.8vw;
+          background: #fefefe;
+          margin: 24.93vw 0 0 -11.5vw;
+
+          &:last-child {
+            margin: 24.93vw 0 0 5.5vw;
+          }
+        }
+
+        .service-details {
+          width: 11.47vw;
+          height: 21.34vw;
+          margin: 4.66vw 0 7.06vw 12.66vw;
+
+          .service-title {
+            width: 11.47vw;
+            height: 2.94vw;
+            overflow-wrap: break-word;
+            color: rgba(51, 51, 51, 1);
+            font-size: 2.93vw;
+            font-family: SourceHanSansCN-Medium;
+            font-weight: 500;
+            text-align: center;
+            white-space: nowrap;
+            line-height: 2.94vw;
+          }
+
+          .service-description {
+            width: 11.34vw;
+            height: 16.67vw;
+            overflow-wrap: break-word;
+            color: rgba(153, 153, 153, 1);
+            font-size: 1.86vw;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: normal;
+            text-align: center;
+            line-height: 2.94vw;
+            margin: 1.73vw 0 0 0.13vw;
+          }
+        }
+      }
     }
-  }
-  
-  .line-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 89.34vw;
-    height: 0.14vw;
-    margin: 3.73vw 0 0 5.33vw;
-  }
-  
-  .text-copyright {
-    width: 45.74vw;
-    height: 1.87vw;
-    overflow-wrap: break-word;
-    color: #d9d9d9;
-    font-size: 1.6vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 1.87vw;
-    margin: 2vw auto 2.13vw auto;
+
+    .service-image-wrapper {
+      background-color: rgba(239, 125, 27, 1);
+      height: 15.74vw;
+      width: 36.4vw;
+
+      .service-image {
+        width: 7.6vw;
+        height: 7.74vw;
+        margin: 4.13vw 0 0 14.26vw;
+      }
+    }
+
+    .operation-main-image {
+      width: 37.2vw;
+      height: 48.94vw;
+      margin: 24.66vw 5.86vw 0 9.2vw;
+    }
+
+    .operation-icon-wrapper {
+      position: absolute;
+      width: 20.4vw;
+      height: 7.47vw;
+      left: 10.5vw;
+      bottom: 8vw;
+
+      .arrow-circle-left {
+        width: 7.47vw;
+        height: 7.47vw;
+      }
+
+      .arrow-circle-right {
+        width: 7.47vw;
+        height: 7.47vw;
+      }
+    }
   }
 }
 
 .description-container {
   background-color: rgba(249, 250, 252, 1);
-  background: url(/src/assets/images/plan_wenli.jpg) repeat;
+  background: url(../../assets/images/plan_wenli.jpg) repeat;
   background-size: cover;
   position: absolute;
   left: 4vw;
@@ -530,95 +415,180 @@ onBeforeUnmount(() => {
     line-height: 6.94vw;
     margin: 1.5vw 0 0 4vw;
   }
-}
 
-.description-paragraph {
-  width: 83.87vw;
-  height: 29.87vw;
-  overflow-wrap: break-word;
-  color: rgba(68, 68, 68, 1);
-  font-size: 3.2vw;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: normal;
-  text-align: justifyLeft;
-  line-height: 5.34vw;
-  margin: 5.06vw 0 0 4vw;
-}
-
-.description-block {
-  width: 72.67vw;
-  height: 17.6vw;
-  margin: 8.53vw 0 0 9.6vw;
-
-  &:last-child {
-    margin: 2.8vw 0 8vw 9.86vw;
-
-    .text-title {
-      text-align: left !important;
-      margin: 1.87vw auto 0 -1.5vw !important;
-    }
-
-    .text-wrapper {
-      margin: auto 0 auto -2.5vw;
-    }
+  .description-paragraph {
+    width: 83.87vw;
+    height: 29.87vw;
+    overflow-wrap: break-word;
+    color: rgba(68, 68, 68, 1);
+    font-size: 3.2vw;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: normal;
+    text-align: justifyLeft;
+    line-height: 5.34vw;
+    margin: 5.06vw 0 0 4vw;
   }
 
-  .description-box {
-    background-color: rgba(255, 255, 255, 1);
-    width: 33.87vw;
+  .description-block {
+    width: 72.67vw;
     height: 17.6vw;
+    margin: 8.53vw 0 0 9.6vw;
 
-    .description-content {
-      width: 12.4vw;
-      height: 9.2vw;
-      margin: 5vw 0 0 12vw;
+    &:last-child {
+      margin: 2.8vw 0 8vw 9.86vw;
+
+      .text-title {
+        text-align: left !important;
+        margin: 1.87vw auto 0 -1.5vw !important;
+      }
 
       .text-wrapper {
-        width: 12.4vw;
-        height: 4.94vw;
-        overflow-wrap: break-word;
-        font-size: 0;
-        font-family: SourceHanSansCN-Bold;
-        font-weight: 700;
-        text-align: left;
-        white-space: nowrap;
-        line-height: 4.94vw;
+        margin: auto 0 auto -2.5vw;
+      }
+    }
 
-        .text {
+    .description-box {
+      background-color: rgba(255, 255, 255, 1);
+      width: 33.87vw;
+      height: 17.6vw;
+
+      .description-content {
+        width: 12.4vw;
+        height: 9.2vw;
+        margin: 5vw 0 0 12vw;
+
+        .text-wrapper {
           width: 12.4vw;
           height: 4.94vw;
           overflow-wrap: break-word;
-          color: rgba(239, 125, 27, 1);
-          font-size: 6.13vw;
+          font-size: 0;
           font-family: SourceHanSansCN-Bold;
           font-weight: 700;
           text-align: left;
           white-space: nowrap;
-          line-height: 2.67vw;
+          line-height: 4.94vw;
 
-          &:last-child {
-            margin-left: 0.5vw;
-            font-family: SourceHanSansCN-Medium;
-            font-weight: 500;
-            font-size: 2.4vw;
+          .text {
+            width: 12.4vw;
+            height: 4.94vw;
+            overflow-wrap: break-word;
+            color: rgba(239, 125, 27, 1);
+            font-size: 6.13vw;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: 700;
+            text-align: left;
+            white-space: nowrap;
+            line-height: 2.67vw;
+
+            &:last-child {
+              margin-left: 0.5vw;
+              font-family: SourceHanSansCN-Medium;
+              font-weight: 500;
+              font-size: 2.4vw;
+            }
           }
         }
+
+        .text-title {
+          width: 100%;
+          height: 2.4vw;
+          overflow-wrap: break-word;
+          color: #888888;
+          font-size: 2.4vw;
+          font-family: SourceHanSansCN-Regular;
+          font-weight: normal;
+          text-align: center;
+          white-space: nowrap;
+          line-height: 2.4vw;
+          margin: 1.87vw auto 0 -0.5vw;
+        }
+      }
+    }
+  }
+}
+
+.footer-container {
+  background-color: rgba(35, 36, 41, 1);
+  position: relative;
+  width: 100vw;
+  height: 25.2vw;
+
+  .footer-wrapper {
+    width: 71.74vw;
+    height: 11.6vw;
+    margin: 3.73vw 0 0 14.13vw;
+
+    .company-wrapper {
+      width: 16vw;
+      height: 11.2vw;
+      margin-top: 0.27vw;
+
+      .company-code-image {
+        width: 8.54vw;
+        height: 8.54vw;
+        margin-left: 3.74vw;
       }
 
-      .text-title {
-        width: 100%;
-        height: 2.4vw;
+      .company-code-text {
+        width: 16vw;
+        height: 1.6vw;
         overflow-wrap: break-word;
-        color: #888888;
-        font-size: 2.4vw;
-        font-family: SourceHanSansCN-Regular;
+        color: rgba(153, 153, 153, 1);
+        font-size: 1.6vw;
+        font-family: MicrosoftYaHei;
         font-weight: normal;
         text-align: center;
         white-space: nowrap;
-        line-height: 2.4vw;
-        margin: 1.87vw auto 0 -0.5vw;
+        line-height: 4vw;
+        margin-top: 1.07vw;
       }
     }
+
+    .contact-wrapper {
+      position: relative;
+      width: 53.74vw;
+      height: 11.6vw;
+      margin: -0.75vw 0 0 6vw;
+
+      .contact-content {
+        width: 53.74vw;
+        height: 11.6vw;
+      }
+
+      .contact-content-paragraph {
+        width: 51.2vw;
+        height: 11.6vw;
+        overflow-wrap: break-word;
+        color: rgba(217, 217, 217, 1);
+        font-size: 1.86vw;
+        font-family: MicrosoftYaHei;
+        font-weight: normal;
+        text-align: left;
+        line-height: 4.8vw;
+      }
+
+    }
+  }
+
+  .line-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 89.34vw;
+    height: 0.14vw;
+    margin: 3.73vw 0 0 5.33vw;
+  }
+
+  .text-copyright {
+    width: 45.74vw;
+    height: 1.87vw;
+    overflow-wrap: break-word;
+    color: #d9d9d9;
+    font-size: 1.6vw;
+    font-family: SourceHanSansCN-Normal;
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 1.87vw;
+    margin: 2vw auto 2.13vw auto;
   }
 }
 </style>
