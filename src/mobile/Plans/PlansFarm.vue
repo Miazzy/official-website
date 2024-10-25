@@ -22,24 +22,24 @@
           <span class="paragraph-text" v-for="(text, index) in opParagraph" :key="index">{{ text }}</span>
         </span>
         <!-- metrics-container -->
-        <div class="box_2 flex-row justify-between">
-          <div class="group_8 flex-col">
-            <img class="image_7" referrerpolicy="no-referrer"
-              src="https://lanhu-oss.lanhuapp.com/pshdim85myv4v6c2rtq16m3spfl8bj7fmvb83a9b62f-6034-4a00-87e0-5445ffda8d36" />
-            <span class="text_13">集约化</span>
-            <span class="text_14">intensification</span>
+        <div class="metric-box-container flex-row justify-between">
+          <div class="metric-box flex-col">
+            <img class="metric-image" 
+              src="../../assets/images/metric-icon-01.png" />
+            <span class="metric-text-title">集约化</span>
+            <span class="metric-text-description">INTENSIFICATION</span>
           </div>
-          <div class="group_9 flex-col">
-            <img class="image_8" referrerpolicy="no-referrer"
-              src="https://lanhu-oss.lanhuapp.com/psbv2hxo6ltu6wrzxymdtxgjztgfhkn4fb42ade3cd-6266-4dfa-8050-cb1846a873c0" />
-            <span class="text_15">智能化</span>
-            <span class="text_16">intelligentize</span>
+          <div class="metric-box flex-col">
+            <img class="metric-image" 
+              src="../../assets/images/metric-icon-02.png" />
+            <span class="metric-text-title">智能化</span>
+            <span class="metric-text-description">INTELLIGENTIZE</span>
           </div>
-          <div class="group_10 flex-col">
-            <img class="image_9" referrerpolicy="no-referrer"
-              src="https://lanhu-oss.lanhuapp.com/pssruq03u0o63a2tvvsuaf94sjkenfjfqv76ff352b-de8e-46f5-bd94-df8f54360a5f" />
-            <span class="text_17">高效化</span>
-            <span class="text_18">High&nbsp;efficiency</span>
+          <div class="metric-box flex-col">
+            <img class="metric-image" 
+              src="../../assets/images/metric-icon-03.png" />
+            <span class="metric-text-title">高效化</span>
+            <span class="metric-text-description">HIGH EFFICIENCY</span>
           </div>
         </div>
       </div>
@@ -418,26 +418,42 @@ onBeforeUnmount(() => {
     }
   }
 
-  .box_2 {
+  .metric-box-container {
     width: 84.27vw;
     height: 38.67vw;
     margin: 8.5vw 0 8.66vw 3.73vw;
 
-    .group_8 {
+    .metric-box {
       box-shadow: -1px 4px 10px 0px rgba(24, 24, 24, 0.11);
       background-color: rgba(255, 255, 255, 1);
       width: 26.14vw;
       height: 38.67vw;
       justify-content: flex-center;
+
+      &:not(:nth-child(1)) {
+        margin-left: 2.94vw;
+      }
     }
 
-    .image_7 {
+    .metric-image {
       width: 10.4vw;
       height: 10.4vw;
       margin: 7.86vw 0 0 7.86vw;
+
+      &:nth-child(2) {
+        width: 9.74vw;
+        height: 10.4vw;
+        margin: 7.86vw 0 0 8.26vw;
+      }
+
+      &:nth-child(3) {
+        width: 8vw;
+        height: 10.67vw;
+        margin: 7.73vw 0 0 9.06vw;
+      }
     }
 
-    .text_13 {
+    .metric-text-title {
       width: 10.4vw;
       height: 3.34vw;
       overflow-wrap: break-word;
@@ -451,7 +467,7 @@ onBeforeUnmount(() => {
       margin: 5.2vw 0 0 7.86vw;
     }
 
-    .text_14 {
+    .metric-text-description {
       width: 17.2vw;
       height: 1.6vw;
       overflow-wrap: break-word;
@@ -463,91 +479,6 @@ onBeforeUnmount(() => {
       white-space: nowrap;
       line-height: 2.14vw;
       margin: 2.53vw 0 7.73vw 4.53vw;
-    }
-
-    .group_9 {
-      box-shadow: -1px 4px 10px 0px rgba(24, 24, 24, 0.11);
-      background-color: rgba(255, 255, 255, 1);
-      width: 26.14vw;
-      height: 38.67vw;
-      margin-left: 2.94vw;
-    }
-
-    .image_8 {
-      width: 9.74vw;
-      height: 10.4vw;
-      margin: 7.86vw 0 0 8.26vw;
-    }
-
-    .text_15 {
-      width: 10.4vw;
-      height: 3.34vw;
-      overflow-wrap: break-word;
-      color: rgba(67, 164, 56, 1);
-      font-size: 3.46vw;
-      font-family: SourceHanSansCN-Medium;
-      font-weight: 500;
-      text-align: left;
-      white-space: nowrap;
-      line-height: 3.47vw;
-      margin: 5.2vw 0 0 7.86vw;
-    }
-
-    .text_16 {
-      width: 16.14vw;
-      height: 1.6vw;
-      overflow-wrap: break-word;
-      color: rgba(153, 153, 153, 1);
-      font-size: 2.13vw;
-      font-family: SourceHanSansCN-Regular;
-      font-weight: normal;
-      text-align: left;
-      white-space: nowrap;
-      line-height: 2.14vw;
-      margin: 2.66vw 0 7.6vw 5.06vw;
-    }
-
-    .group_10 {
-      box-shadow: -1px 4px 10px 0px rgba(24, 24, 24, 0.11);
-      background-color: rgba(255, 255, 255, 1);
-      width: 26.14vw;
-      height: 38.67vw;
-      margin-left: 2.94vw;
-      justify-content: flex-center;
-    }
-
-    .image_9 {
-      width: 8vw;
-      height: 10.67vw;
-      margin: 7.73vw 0 0 9.06vw;
-    }
-
-    .text_17 {
-      width: 10.27vw;
-      height: 3.34vw;
-      overflow-wrap: break-word;
-      color: rgba(67, 164, 56, 1);
-      font-size: 3.46vw;
-      font-family: SourceHanSansCN-Medium;
-      font-weight: 500;
-      text-align: left;
-      white-space: nowrap;
-      line-height: 3.47vw;
-      margin: 5.06vw 0 0 7.86vw;
-    }
-
-    .text_18 {
-      width: 17.07vw;
-      height: 1.6vw;
-      overflow-wrap: break-word;
-      color: rgba(153, 153, 153, 1);
-      font-size: 2.13vw;
-      font-family: SourceHanSansCN-Regular;
-      font-weight: normal;
-      text-align: left;
-      white-space: nowrap;
-      line-height: 2.14vw;
-      margin: 2.66vw 0 7.6vw 4.53vw;
     }
   }
 }
