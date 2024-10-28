@@ -12,11 +12,11 @@
                 <span class="item" :class="{ active: cpath === PathEnum.Home }" @click="handleRoutePush(PathEnum.Home)">首页</span>
             </span>
             <span class="paragraph grey">
-                <span class="item" :class="{ active: cpath === PathEnum.Operate }" @click="handleRoutePush(PathEnum.Operate)">智能运营</span>
-                <span class="item" :class="{ active: cpath === PathEnum.Farm }" @click="handleRoutePush(PathEnum.Farm)">智慧农业</span>
-                <span class="item" :class="{ active: cpath === PathEnum.Cases }" @click="handleRoutePush(PathEnum.Cases)">项目案例</span>
-                <span class="item" :class="{ active: cpath === PathEnum.Inform }" @click="handleRoutePush(PathEnum.Inform)">资讯中心</span>
-                <span class="item" :class="{ active: cpath === PathEnum.Aboutus }" @click="handleRoutePush(PathEnum.Aboutus)">关于我们</span>
+                <span class="item" :class="{ active: cpath.includes(PathEnum.Operate) }" @click="handleRoutePush(PathEnum.Operate)">智能运营</span>
+                <span class="item" :class="{ active: cpath.includes(PathEnum.Farm) }" @click="handleRoutePush(PathEnum.Farm)">智慧农业</span>
+                <span class="item" :class="{ active: cpath.includes(PathEnum.Cases) }" @click="handleRoutePush(PathEnum.Cases)">项目案例</span>
+                <span class="item" :class="{ active: cpath.includes(PathEnum.Inform) }" @click="handleRoutePush(PathEnum.Inform)">资讯中心</span>
+                <span class="item" :class="{ active: cpath.includes(PathEnum.Aboutus) }" @click="handleRoutePush(PathEnum.Aboutus)">关于我们</span>
             </span>
         </div>
     </div>

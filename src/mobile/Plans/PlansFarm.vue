@@ -68,7 +68,7 @@
                   <span class="service-title">设施化养殖系统</span>
                   <span class="service-description"
                     style="margin-top: 8px;">池塘内循环养殖系统<br />陆基高位池养殖系统<br />工厂化车间养殖系统</span>
-                  <span class="service-btn" style>了解详情</span>
+                  <span class="service-btn" style @click="handleClick('/mobile/plans/farm/intel')">了解详情</span>
                 </div>
               </div>
             </div>
@@ -88,6 +88,8 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import MHeader from "@/components/MHeader.vue";
 import MFooter from "@/components/MFooter.vue";
+import { useRouter } from 'vue-router';
+import { setTimexec } from '@/utils/common';
 
 const title = ref('集约化·智能化·高效化');
 const subTitle = ref('INTENSIVE, INTELLIGENT AND EFFICIENT');
@@ -104,6 +106,16 @@ const opTextDescription = ref('OPERATION');
 const opParagraph = ref([
   '运用物联网技术来解决现代农业生产中的问题，将现代智慧农业和光伏产业科学、专业、有机结合，推动农业生产、农产品经营、农业信息服务三大领域改造升级，实现数字化、科学化、智能化、生态化的现代化养殖，助推农业产业高效可持续发展。'
 ]);
+
+const router = useRouter();
+
+const handleClick = (path, y = 0) => {
+    window.scrollTo(0, y);
+    router.push(path);
+    setTimexec(() => {
+        window.scrollTo(0, y);
+    }, [0, 50, 100]);
+}
 
 onMounted(() => {
   //

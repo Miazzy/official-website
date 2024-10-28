@@ -26,7 +26,7 @@
                 <span class="blog-text">运维一线｜那天，我在水库救起来一只“水晃晃”</span>
             </div>
 
-            <div class="blog-box active flex-row justify-between">
+            <div class="blog-box active flex-row justify-between" @click="handleClick('/mobile/inform/detail')">
                 <div class="blog-date-box flex-col justify-between">
                     <span class="text-month">08-29</span> <span class="text-year">2020</span>
                 </div>
@@ -37,7 +37,7 @@
             </div>
             <div class="space-curve-line flex-col"></div>
 
-            <div class="blog-box flex-row justify-between">
+            <div class="blog-box flex-row justify-between" @click="handleClick('/mobile/inform/detail')">
                 <div class="blog-date-box flex-col justify-between">
                     <span class="text-month">08-29</span> <span class="text-year">2020</span>
                 </div>
@@ -48,7 +48,7 @@
             </div>
             <div class="space-curve-line flex-col"></div>
 
-            <div class="blog-box flex-row justify-between">
+            <div class="blog-box flex-row justify-between" @click="handleClick('/mobile/inform/detail')">
                 <div class="blog-date-box flex-col justify-between">
                     <span class="text-month">08-29</span> <span class="text-year">2020</span>
                 </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="space-curve-line flex-col"></div>
 
-            <div class="blog-box flex-row justify-between">
+            <div class="blog-box flex-row justify-between" @click="handleClick('/mobile/inform/detail')">
                 <div class="blog-date-box flex-col justify-between">
                     <span class="text-month">08-29</span> <span class="text-year">2020</span>
                 </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="space-curve-line flex-col"></div>
 
-            <div class="blog-section-box flex-row justify-between" style="margin-top: 3vw;">
+            <div class="blog-section-box flex-row justify-between" style="margin-top: 3vw;" @click="handleClick('/mobile/inform/detail')">
                 <div class="blog-block flex-col"></div>
                 <div class="blog-section-text-wrapper flex-col">
                     <span class="blog-section-text-title">春节我在岗丨共抓安全生产，同庆新春佳节</span>
@@ -80,7 +80,7 @@
             </div>
             <div class="space-curve-line flex-col"></div>
 
-            <div class="blog-section-box flex-row justify-between" style="margin-top: 3vw;">
+            <div class="blog-section-box flex-row justify-between" style="margin-top: 3vw;" @click="handleClick('/mobile/inform/detail')">
                 <div class="blog-block flex-col"></div>
                 <div class="blog-section-text-wrapper flex-col">
                     <span class="blog-section-text-title">春节我在岗丨共抓安全生产，同庆新春佳节</span>
@@ -90,7 +90,7 @@
             </div>
             <div class="space-curve-line flex-col"></div>
 
-            <div class="blog-section-box flex-row justify-between" style="margin-top: 3vw;">
+            <div class="blog-section-box flex-row justify-between" style="margin-top: 3vw;" @click="handleClick('/mobile/inform/detail')">
                 <div class="blog-block flex-col"></div>
                 <div class="blog-section-text-wrapper flex-col">
                     <span class="blog-section-text-title">春节我在岗丨共抓安全生产，同庆新春佳节</span>
@@ -116,6 +116,18 @@
 import { ref, onMounted } from 'vue';
 import MHeader from "@/components/MHeader.vue";
 import MFooter from "@/components/MFooter.vue";
+import { useRouter } from 'vue-router';
+import { setTimexec } from '@/utils/common';
+
+const router = useRouter();
+
+const handleClick = (path, y = 0) => {
+    window.scrollTo(0, y);
+    router.push(path);
+    setTimexec(() => {
+        window.scrollTo(0, y);
+    }, [0, 50, 100]);
+}
 
 </script>
 <style lang="less" scoped>
@@ -130,7 +142,6 @@ import MFooter from "@/components/MFooter.vue";
 }
 
 .title-container {
-    background-color: rgba(255, 255, 255, 1);
     height: 66vw;
     width: 100vw;
     background: url('../../assets/images/mobile-inform-banner.jpg');
