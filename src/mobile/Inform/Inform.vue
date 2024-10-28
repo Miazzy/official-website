@@ -345,51 +345,53 @@ import MFooter from "@/components/MFooter.vue";
     width: 61.34vw;
     height: 11.87vw;
     margin-top: 1.22vw;
+
+    .blog-section-text-title {
+        width: 60.54vw;
+        height: 3.2vw;
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 3.2vw;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 3.2vw;
+        margin-left: 0.14vw;
+    }
+
+    .blog-section-paragraph {
+        width: 61.34vw;
+        height: 3.27vw;
+        overflow-wrap: break-word;
+        color: #666666;
+        font-size: 2.66vw;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: left;
+        line-height: 3.27vw;
+        margin-top: 1.75vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .blog-section-description {
+        width: 34.27vw;
+        height: 2.4vw;
+        overflow-wrap: break-word;
+        color: rgba(102, 102, 102, 1);
+        font-size: 2.4vw;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 2.4vw;
+        margin: 1.86vw 0 0 0.4vw;
+    }
 }
 
-.blog-section-text-title {
-    width: 60.54vw;
-    height: 3.2vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 3.2vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 3.2vw;
-    margin-left: 0.14vw;
-}
 
-.blog-section-paragraph {
-    width: 61.34vw;
-    height: 3.27vw;
-    overflow-wrap: break-word;
-    color: #666666;
-    font-size: 2.66vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    line-height: 3.27vw;
-    margin-top: 1.75vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.blog-section-description {
-    width: 34.27vw;
-    height: 2.4vw;
-    overflow-wrap: break-word;
-    color: rgba(102, 102, 102, 1);
-    font-size: 2.4vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 2.4vw;
-    margin: 1.86vw 0 0 0.4vw;
-}
 
 .space-line {
     background-color: rgba(238, 238, 238, 1);
