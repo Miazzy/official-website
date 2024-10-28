@@ -1,9 +1,9 @@
 <template>
     <div class="container flex-col">
-         <!-- mobile-header -->
-         <MHeader></MHeader>
+        <!-- mobile-header -->
+        <MHeader></MHeader>
 
-         <!-- title-container -->
+        <!-- title-container -->
         <div class="title-container flex-col">
             <div class="title-wrapper flex-row">
                 <div class="text-title-wrapper flex-col justify-between">
@@ -46,10 +46,8 @@
                 </div>
                 <!-- arrow-wrapper -->
                 <div class="honor-arrow-wrapper flex-row justify-between">
-                    <img class="honor-arrow-left" 
-                        src="../../assets/images/arrow-circle-left.png" />
-                    <img class="honor-arrow-right" 
-                        src="../../assets/images/arrow-circle-right.png" />
+                    <img class="honor-arrow-left" src="../../assets/images/arrow-circle-left.png" />
+                    <img class="honor-arrow-right" src="../../assets/images/arrow-circle-right.png" />
                 </div>
             </div>
         </div>
@@ -59,26 +57,21 @@
             <span class="contact-text-bg">CONTACT US</span>
             <span class="contact-text-title">联系我们</span>
             <span class="contact-text-subtitle">CONTACT US</span>
-            <div class="contact-map-wrapper flex-col"></div>
+            <div class="contact-map-wrapper map-container flex-col" id="map-container"></div>
             <div class="image-htext-title flex-row">
                 <div class="contact-image-text-wrapper flex-row">
-                    <div class="image-text_3 flex-row justify-between">
-                        <img class="image_3" 
-                            src="https://lanhu-oss.lanhuapp.com/pso910rk5pedhztyz0ubc9qeqkgwa8ujt44130b0d1-10a1-4002-8c91-21a898b5becd" />
-                        <span
-                            class="paragraph_2">
+                    <div class="contact-image-text flex-row justify-between">
+                        <span class="icon iconfont image tel icondianhua" ></span>
+                        <span class="icon iconfont image email iconyouxiang" ></span>
+                        <span class="icon iconfont image addr iconzhengqimenhu_dizhixinxi1" ></span>
+                        <span class="contact-image-text-paragraph">
                             Tel： 028-86168758<br />
                             E-mail： WEIH02@tongwei.com<br />
                             Addr： 四川省成都市高新区天府大道中段588号通威国际中心
                         </span>
                     </div>
-                    <img class="image_4" 
-                        src="https://lanhu-oss.lanhuapp.com/ps8uir8h0lm3bzt6p5obgdaphz8t8ui0xxrc5242c3e-65cb-42f2-b3db-1148185182c0" />
                 </div>
-                <img class="label_2" 
-                    src="https://lanhu-oss.lanhuapp.com/psaymrfz9kpv7bay6icvhhntc89q0idai9m411b72e3-ac0b-465c-9b0c-619b65aa6d0c" />
             </div>
-            
         </div>
 
         <!-- mobile-footer -->
@@ -92,12 +85,28 @@ import MFooter from "@/components/MFooter.vue";
 
 const title = ref('关于我们');
 const subTitle = ref('ABOUT US');
+const mapObject = ref();
+
+// 初始化地图
+const initMap = () => {
+  mapObject.value = new BMapGL.Map('map-container'); // 创建Map实例
+  mapObject.value.setMapType(BMAP_NORMAL_MAP); // 设置地图类型为地球模式
+  mapObject.value.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+  mapObject.value.centerAndZoom(new BMapGL.Point(104.074384, 30.556542), 16); // 初始化地图,设置中心点坐标和地图级别
+  let marker = new BMapGL.Marker(new BMapGL.Point(104.074384, 30.556542));
+  mapObject.value.addOverlay(marker);
+};
+
+// 挂载函数
+onMounted(() => {
+    initMap();
+});
 
 </script>
 <style lang="less" scoped>
 @import '@/assets/style/common.css';
 
-.container  {
+.container {
     background-color: rgba(255, 255, 255, 1);
     position: relative;
     width: 100vw;
@@ -115,11 +124,11 @@ const subTitle = ref('ABOUT US');
         width: 26.14vw;
         height: 10.94vw;
         margin: 18.4vw 0 24.4vw 37.86vw;
-    
+
         .text-title-wrapper {
             width: 26.14vw;
             height: 10.94vw;
-    
+
             .htext-title {
                 text-shadow: -1px 5px 5px rgba(0, 0, 0, 0.36);
                 width: 26.14vw;
@@ -133,7 +142,7 @@ const subTitle = ref('ABOUT US');
                 white-space: nowrap;
                 line-height: 6.54vw;
                 margin-top: 12vw;
-    
+
                 &.mini {
                     height: 1.87vw;
                     font-size: 2.26vw;
@@ -146,7 +155,7 @@ const subTitle = ref('ABOUT US');
     }
 }
 
-.company-container{
+.company-container {
     width: 100vw;
     height: 145.6vw;
     background: #fefefe;
@@ -165,7 +174,7 @@ const subTitle = ref('ABOUT US');
         line-height: 8.54vw;
         margin: 7.2vw 0 0 5.6vw;
     }
-    
+
     .company-title {
         width: 24.14vw;
         height: 5.74vw;
@@ -179,7 +188,7 @@ const subTitle = ref('ABOUT US');
         line-height: 6.94vw;
         margin: -4.26vw 0 0 5.46vw;
     }
-    
+
     .company-profile {
         width: 11.2vw;
         height: 2.4vw;
@@ -193,7 +202,7 @@ const subTitle = ref('ABOUT US');
         line-height: 6.94vw;
         margin: 3.2vw 0 0 5.46vw;
     }
-    
+
     .company-paragraph {
         width: 89.47vw;
         overflow-wrap: break-word;
@@ -213,227 +222,118 @@ const subTitle = ref('ABOUT US');
     }
 }
 
-
 .contact-container {
     position: relative;
     width: 100vw;
     height: 99.2vw;
     margin-bottom: 0.14vw;
-}
+    z-index: 1000;
 
-.contact-text-bg {
-    width: 91.74vw;
-    height: 39.27vw;
-    overflow-wrap: break-word;
-    color: rgba(0, 0, 0, 0.05);
-    font-size: 47.46vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 48.54vw;
-    margin: 7.6vw 0 0 0.53vw;
-}
+    .contact-text-bg {
+        width: 91.74vw;
+        height: 39.27vw;
+        overflow-wrap: break-word;
+        color: rgba(0, 0, 0, 0.015);
+        font-size: 47.46vw;
+        font-family: SourceHanSansCN-Normal;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 48.54vw;
+        margin: 7.6vw 0 0 0.53vw;
+    }
 
-.contact-text-title {
-    width: 21.87vw;
-    height: 5.2vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 5.6vw;
-    font-family: SourceHanSansCN-Medium;
-    font-weight: 500;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 5.2vw;
-    margin: -36.13vw 0 0 5.06vw;
-}
+    .contact-text-title {
+        width: 21.87vw;
+        height: 5.2vw;
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 5.6vw;
+        font-family: SourceHanSansCN-Medium;
+        font-weight: 500;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 5.2vw;
+        margin: -36.13vw 0 0 5.06vw;
+    }
 
-.contact-text-subtitle {
-    width: 16vw;
-    height: 2.14vw;
-    overflow-wrap: break-word;
-    color: rgba(204, 204, 204, 1);
-    font-size: 2.66vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 5.2vw;
-    margin: 2.93vw 0 0 5.2vw;
-}
+    .contact-text-subtitle {
+        width: 16vw;
+        height: 2.14vw;
+        overflow-wrap: break-word;
+        color: rgba(204, 204, 204, 1);
+        font-size: 2.66vw;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 5.2vw;
+        margin: 2.93vw 0 0 5.2vw;
+    }
 
-.image-htext-title {
-    width: 84.54vw;
-    height: 18vw;
-    margin: 51.46vw 0 0 5.46vw;
-}
+    .image-htext-title {
+        width: 84.54vw;
+        height: 18vw;
+        margin: 51.46vw 0 0 5.46vw;
 
-.contact-image-text-wrapper{
-    position: relative;
-    width: 84.54vw;
-    height: 18vw;
-}
+        .contact-image-text-wrapper {
+            position: relative;
+            width: 84.54vw;
+            height: 18vw;
 
-.image-text_3 {
-    width: 84.54vw;
-    height: 18vw;
-}
+            .contact-image-text {
+                width: 84.54vw;
+                height: 18vw;
 
-.image_3 {
-    width: 2.94vw;
-    height: 2.27vw;
-    margin-top: 7.6vw;
-}
+                .image {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: #DD7816;
 
-.paragraph_2 {
-    width: 80.4vw;
-    height: 18vw;
-    overflow-wrap: break-word;
-    color: rgba(31, 33, 36, 1);
-    font-size: 2.93vw;
-    font-family: MicrosoftYaHei;
-    font-weight: normal;
-    text-align: left;
-    line-height: 7.47vw;
-    margin-top: -2.25vw;
-    margin-left: 2vw;
-}
+                    &.email {
+                        width: 2.94vw;
+                        height: 2.27vw;
+                        margin-top: 7.6vw;
+                    }
 
-.image_4 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3.07vw;
-    height: 2.54vw;
-}
+                    &.tel {
+                        width: 3.07vw;
+                        height: 2.54vw;
+                    }
 
-.label_2 {
-    width: 2.8vw;
-    height: 3.2vw;
-    margin: 14.8vw 81.6vw 0 -84.4vw;
-}
+                    &.addr {
+                        width: 2.8vw;
+                        height: 3.2vw;
+                        margin-top: 14.5vw;
+                    }
+                }
 
-.block_1 {
-    background-color: rgba(35, 36, 41, 1);
-    width: 100vw;
-    height: 25.2vw;
-    margin: 10.4vw 0 0.13vw 0;
-}
+                .contact-image-text-paragraph {
+                    width: 80.4vw;
+                    height: 18vw;
+                    overflow-wrap: break-word;
+                    color: rgba(31, 33, 36, 1);
+                    font-size: 2.93vw;
+                    font-family: MicrosoftYaHei;
+                    font-weight: normal;
+                    text-align: left;
+                    line-height: 7.47vw;
+                    margin-top: -1.65vw;
+                    margin-left: 6vw;
+                }
+            }
+        }
+    }
 
-.box_1 {
-    width: 71.74vw;
-    height: 11.6vw;
-    margin: 3.73vw 0 0 14.13vw;
-}
-
-.group_2 {
-    width: 16vw;
-    height: 11.2vw;
-    margin-top: 0.27vw;
-}
-
-.image_5 {
-    width: 8.54vw;
-    height: 8.54vw;
-    margin-left: 3.74vw;
-}
-
-.text_9 {
-    width: 16vw;
-    height: 1.6vw;
-    overflow-wrap: break-word;
-    color: rgba(153, 153, 153, 1);
-    font-size: 1.6vw;
-    font-family: MicrosoftYaHei;
-    font-weight: normal;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 4vw;
-    margin-top: 1.07vw;
-}
-
-.image-text_4 {
-    position: relative;
-    width: 53.74vw;
-    height: 11.6vw;
-}
-
-.image-company-profile {
-    width: 53.74vw;
-    height: 11.6vw;
-}
-
-.image-wrapper_2 {
-    width: 1.87vw;
-    height: 6.67vw;
-    margin-top: 4.94vw;
-}
-
-.thumbnail_1 {
-    width: 1.87vw;
-    height: 1.47vw;
-}
-
-.thumbnail_2 {
-    width: 1.74vw;
-    height: 2.14vw;
-    margin: 3.06vw 0 0 0.13vw;
-}
-
-.paragraph_3 {
-    width: 51.2vw;
-    height: 11.6vw;
-    overflow-wrap: break-word;
-    color: rgba(217, 217, 217, 1);
-    font-size: 1.86vw;
-    font-family: MicrosoftYaHei;
-    font-weight: normal;
-    text-align: left;
-    line-height: 4.8vw;
-}
-
-.thumbnail_3 {
-    position: absolute;
-    left: 0;
-    top: 0.14vw;
-    width: 2vw;
-    height: 1.6vw;
-}
-
-.box_2 {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 89.34vw;
-    height: 0.14vw;
-    margin: 3.73vw 0 0 5.33vw;
-}
-
-.box_3 {
-    width: 45.74vw;
-    height: 1.87vw;
-    margin: 2vw 0 2.13vw 23.06vw;
-}
-
-.htext-title0 {
-    width: 45.74vw;
-    height: 1.87vw;
-    overflow-wrap: break-word;
-    color: rgba(217, 217, 217, 1);
-    font-size: 1.6vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 4.8vw;
-}
-
-.contact-map-wrapper {
-    background: transparent;
-    position: absolute;
-    left: 5.34vw;
-    top: 25.2vw;
-    width: 89.34vw;
-    height: 40vw;
+    .contact-map-wrapper {
+        background: transparent;
+        position: absolute;
+        left: 5.34vw;
+        top: 25.2vw;
+        width: 89.34vw;
+        height: 40vw;
+    }
 }
 
 .honor-container {
@@ -443,17 +343,18 @@ const subTitle = ref('ABOUT US');
     z-index: 1000;
     background: url('../../assets/images/mobile_aboutus_bg.png');
     background-size: 100% 100%;
+    z-index: 1000;
 
     .honor-wrapper {
         background-color: rgba(238, 238, 238, 0.1);
         width: 100vw;
         height: 112.14vw;
-    
-        .honor-title-wrapper{
+
+        .honor-title-wrapper {
             width: 29.6vw;
             height: 10.67vw;
             margin: 7.6vw 0 0 5.2vw;
-        
+
             .htext-title {
                 width: 22vw;
                 height: 5.2vw;
@@ -465,7 +366,7 @@ const subTitle = ref('ABOUT US');
                 text-align: left;
                 white-space: nowrap;
                 line-height: 5.2vw;
-            
+
                 &.mini {
                     width: 29.6vw;
                     height: 2.54vw;
@@ -481,14 +382,14 @@ const subTitle = ref('ABOUT US');
                 }
             }
         }
-        
-        
-        
+
+
+
         .honor-image-wrapper {
             width: 99.74vw;
             height: 63.07vw;
             margin: 0vw 0 0 0.26vw;
-        
+
             .image-wrapper {
                 background-color: transparent;
                 height: 63.07vw;
@@ -497,21 +398,21 @@ const subTitle = ref('ABOUT US');
                 flex-direction: row;
                 align-items: flex-end;
                 margin: 0 5vw;
-            
+
                 .image {
                     margin: 0;
                     width: 43.5vw;
                     height: auto !important;
                     object-fit: contain !important;
                     margin-right: 3vw;
-            
+
                     &.other {
                         width: 43.5vw;
                         height: auto !important;
                         object-fit: contain !important;
                     }
                 }
-                
+
             }
         }
     }
@@ -520,12 +421,12 @@ const subTitle = ref('ABOUT US');
         width: 19.87vw;
         height: 7.47vw;
         margin: 8.53vw 0 9.6vw 5.8vw;
-    
+
         .honor-arrow-left {
             width: 7.47vw;
             height: 7.47vw;
         }
-        
+
         .honor-arrow-right {
             width: 7.47vw;
             height: 7.47vw;
