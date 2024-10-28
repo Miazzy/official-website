@@ -1,38 +1,76 @@
 <template>
-    <div class="page flex-col">
-        <div class="section_1 flex-col">
-            <div class="image-wrapper_1 flex-row justify-between">
-                <img class="image_1" 
-                    src="https://lanhu-oss.lanhuapp.com/psa3nfwesf9lqks0eii7q9m7qg8li1he37648e9b2-f437-4ea3-801c-e21736950e44" />
-                <img class="label_1" 
-                    src="https://lanhu-oss.lanhuapp.com/ps8jq1q68lpbxv9rdx8m1j2isoc88di76ye70b7b20-2ebc-440c-9485-8344cd9c3edc" />
-            </div>
-            <div class="group_1 flex-row">
-                <div class="text-group_1 flex-col justify-between">
-                    <span class="text_1">关于我们</span>
-                    <span class="text_2">about&nbsp;us</span>
+    <div class="container flex-col">
+         <!-- mobile-header -->
+         <MHeader></MHeader>
+
+         <!-- title-container -->
+        <div class="title-container flex-col">
+            <div class="title-wrapper flex-row">
+                <div class="text-title-wrapper flex-col justify-between">
+                    <span class="htext-title">{{ title }}</span>
+                    <span class="htext-title mini">{{ subTitle }}</span>
                 </div>
             </div>
         </div>
-        <div class="text-wrapper_1 flex-col">
-            <span class="text_3">Company</span>
-            <span class="text_4">公司简介</span>
-            <span class="text_5">profile</span>
-            <span
-                class="paragraph_1">四川渔光物联技术有限公司是通威股份旗下科技创新型公司，成立于2016年5月。共有员工500+名，拥有一支由国务院津贴专家、四川省“千人计划”专家、通威信息化标杆打造核心成员等多类型高端人才组成的队伍。<br />四川渔光物联技术有限公司是国家高新技术企业，业务涉及渔光一体光伏电站在内的电站智能运维、智慧农业、信息化技术服务。公司被评定为全国智慧渔业领军企业，成都市企业技术中心，具有两化融合管理体系评定等资质，经过8年的技术研发和创新，形成了3项国内领先成果、32项专利、18项软件著作权。参与了国家科技部“蓝色粮仓科技创新项目”，多项省、市级科技项目。公司被评为“物联网行业应用优秀企业”、成都新经济双百企业，连续两年获得“单项顶级光伏智能运维品牌”，取得“水产养殖智能化突出贡献奖”、“中国农牧行业年度创新品牌”、2023年度数字化转型灯塔案例金数奖等荣誉，“智能光伏集中运维平台实践案例”项目被评定为“2020年度成都市工业互联网优秀应用案例”。<br />进入“十四五”时期，公司将持续创新，全方位提升资源利用效率、多层面提高投资收益，在实现客户利润最大化的同时助力国家减排目标的实现，着力打造“渔光一体智能运营专家”品牌形象。</span>
+
+        <!-- company-container -->
+        <div class="company-container flex-col">
+            <span class="company-description">COMPANY</span>
+            <span class="company-title">公司简介</span>
+            <span class="company-profile">PROFILE</span>
+            <span class="company-paragraph margin">
+                四川渔光物联技术有限公司是通威股份旗下科技创新型公司，成立于2016年5月。共有员工500+名，拥有一支由国务院津贴专家、四川省“千人计划”专家、通威信息化标杆打造核心成员等多类型高端人才组成的队伍。
+            </span>
+            <span class="company-paragraph">
+                四川渔光物联技术有限公司是国家高新技术企业，业务涉及渔光一体光伏电站在内的电站智能运维、智慧农业、信息化技术服务。公司被评定为全国智慧渔业领军企业，成都市企业技术中心，具有两化融合管理体系评定等资质，经过8年的技术研发和创新，形成了3项国内领先成果、32项专利、18项软件著作权。参与了国家科技部“蓝色粮仓科技创新项目”，多项省、市级科技项目。公司被评为“物联网行业应用优秀企业”、成都新经济双百企业，连续两年获得“单项顶级光伏智能运维品牌”，取得“水产养殖智能化突出贡献奖”、“中国农牧行业年度创新品牌”、2023年度数字化转型灯塔案例金数奖等荣誉，“智能光伏集中运维平台实践案例”项目被评定为“2020年度成都市工业互联网优秀应用案例”。
+            </span>
+            <span class="company-paragraph">
+                进入“十四五”时期，公司将持续创新，全方位提升资源利用效率、多层面提高投资收益，在实现客户利润最大化的同时助力国家减排目标的实现，着力打造“渔光一体智能运营专家”品牌形象。
+            </span>
         </div>
-        <img class="image_2" 
-            src="https://lanhu-oss.lanhuapp.com/pslrrysdk3qyh5hmabvy1z3t626w95x8857f3daaaf6-22a7-46c9-b67a-9d9f5e321b23" />
-        <div class="section_2 flex-col">
-            <span class="text_6">con</span> <span class="text_7">联系我们</span>
-            <span class="text_8">contact&nbsp;us</span>
-            <div class="image-text_1 flex-row">
-                <div class="image-text_2 flex-row">
+
+        <!-- honor-container -->
+        <div class="honor-container flex-col">
+            <div class="honor-wrapper flex-col">
+                <!-- title-wrapper -->
+                <div class="honor-title-wrapper flex-col justify-between">
+                    <span class="htext-title">资质荣誉</span>
+                    <span class="htext-title mini">QUALIFICATION HONOR</span>
+                </div>
+                <!-- image-wrapper -->
+                <div class="honor-image-wrapper flex-row">
+                    <div class="image-wrapper flex-col">
+                        <img class="image" src="@/assets/images/honor-15.png" />
+                        <img class="image other" src="@/assets/images/honor-9.png" />
+                    </div>
+                </div>
+                <!-- arrow-wrapper -->
+                <div class="honor-arrow-wrapper flex-row justify-between">
+                    <img class="honor-arrow-left" 
+                        src="../../assets/images/arrow-circle-left.png" />
+                    <img class="honor-arrow-right" 
+                        src="../../assets/images/arrow-circle-right.png" />
+                </div>
+            </div>
+        </div>
+
+        <!-- contact-container -->
+        <div class="contact-container flex-col">
+            <span class="contact-text-bg">CONTACT US</span>
+            <span class="contact-text-title">联系我们</span>
+            <span class="contact-text-subtitle">CONTACT US</span>
+            <div class="contact-map-wrapper flex-col"></div>
+            <div class="image-htext-title flex-row">
+                <div class="contact-image-text-wrapper flex-row">
                     <div class="image-text_3 flex-row justify-between">
                         <img class="image_3" 
                             src="https://lanhu-oss.lanhuapp.com/pso910rk5pedhztyz0ubc9qeqkgwa8ujt44130b0d1-10a1-4002-8c91-21a898b5becd" />
                         <span
-                            class="paragraph_2">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
+                            class="paragraph_2">
+                            Tel： 028-86168758<br />
+                            E-mail： WEIH02@tongwei.com<br />
+                            Addr： 四川省成都市高新区天府大道中段588号通威国际中心
+                        </span>
                     </div>
                     <img class="image_4" 
                         src="https://lanhu-oss.lanhuapp.com/ps8uir8h0lm3bzt6p5obgdaphz8t8ui0xxrc5242c3e-65cb-42f2-b3db-1148185182c0" />
@@ -40,70 +78,26 @@
                 <img class="label_2" 
                     src="https://lanhu-oss.lanhuapp.com/psaymrfz9kpv7bay6icvhhntc89q0idai9m411b72e3-ac0b-465c-9b0c-619b65aa6d0c" />
             </div>
-            <div class="block_1 flex-col">
-                <div class="box_1 flex-row justify-between">
-                    <div class="group_2 flex-col justify-between">
-                        <img class="image_5" 
-                            src="https://lanhu-oss.lanhuapp.com/psff1famj6hglxcqembioyyxmy9kiop4ye7e3c6915-7273-4644-86c4-49166182c423" />
-                        <span class="text_9">扫一扫，关注渔光物联</span>
-                    </div>
-                    <div class="image-text_4 flex-row">
-                        <div class="image-text_5 flex-row justify-between">
-                            <div class="image-wrapper_2 flex-col justify-between">
-                                <img class="thumbnail_1" 
-                                    src="https://lanhu-oss.lanhuapp.com/psat91ix49ugrbcf9tqynrfvchxb55kiybda3affe1-1bf6-4aab-94e2-25f458663a5e" />
-                                <img class="thumbnail_2" 
-                                    src="https://lanhu-oss.lanhuapp.com/ps8nb22tkyll9m75i10ie94m9k3vrppp6xj3deaca6b-f01a-45d1-8de2-26dba77f3d59" />
-                            </div>
-                            <span
-                                class="paragraph_3">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
-                        </div>
-                        <img class="thumbnail_3" 
-                            src="https://lanhu-oss.lanhuapp.com/psda1jvary2qabpq1i8m1rtv1hrmw0ard23488f94-3340-4273-a6cc-a95d30002ca2" />
-                    </div>
-                </div>
-                <div class="box_2 flex-col"></div>
-                <div class="box_3 flex-row">
-                    <span
-                        class="text_10">Copyright&nbsp;©渔光物联（www.ygwl.net）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蜀ICP备16026089号</span>
-                    <div class="block_2 flex-col"></div>
-                </div>
-            </div>
-            <div class="block_3 flex-col"></div>
+            
         </div>
-        <div class="section_3 flex-col">
-            <div class="box_4 flex-col">
-                <div class="text-group_2 flex-col justify-between">
-                    <span class="text_11">资质荣誉</span>
-                    <span class="text_12">Qualification&nbsp;Honor</span>
-                </div>
-                <div class="group_3 flex-row">
-                    <span class="text_13">Qual</span>
-                    <div class="image-wrapper_3 flex-col">
-                        <img class="image_6" 
-                            src="https://lanhu-oss.lanhuapp.com/psmtjhwzop56ezf8wfnitvddt1skdtwltccd1cd16ea-92bc-451e-b959-3109e5b8adf6" />
-                    </div>
-                    <img class="image_7" 
-                        src="https://lanhu-oss.lanhuapp.com/psgj5e74usjustip6ntle96d5kpi30zjhje335bc8cb-8259-4ad8-9848-2f3fbe512fb7" />
-                </div>
-                <div class="image-wrapper_4 flex-row justify-between">
-                    <img class="image_8" 
-                        src="https://lanhu-oss.lanhuapp.com/psfehbjdaj2ruv7eipxj56atzk5avkvpf968b15f8-e473-4978-9ee0-551b21bce4e0" />
-                    <img class="image_9" 
-                        src="https://lanhu-oss.lanhuapp.com/ps6v7lzzmlz6uxvh2r8pijzc8usmzp0p64w7988c33f-6caa-4a6d-90c4-5fe9d0ef04fc" />
-                </div>
-            </div>
-        </div>
+
+        <!-- mobile-footer -->
+        <MFooter></MFooter>
     </div>
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
+import MHeader from "@/components/MHeader.vue";
+import MFooter from "@/components/MFooter.vue";
+
+const title = ref('关于我们');
+const subTitle = ref('ABOUT US');
 
 </script>
 <style lang="less" scoped>
 @import '@/assets/style/common.css';
 
-.page {
+.container  {
     background-color: rgba(255, 255, 255, 1);
     position: relative;
     width: 100vw;
@@ -111,157 +105,137 @@ import { ref, onMounted } from 'vue';
     overflow: hidden;
 }
 
-.section_1 {
-    background-color: rgba(255, 255, 255, 1);
+.title-container {
     height: 66vw;
     width: 100vw;
+    background: url(/src/assets/images/mobile_aboutus_01.jpg) 0 -2vw no-repeat;
+    background-size: 100% calc(100% + 2vw);
+
+    .title-wrapper {
+        width: 26.14vw;
+        height: 10.94vw;
+        margin: 18.4vw 0 24.4vw 37.86vw;
+    
+        .text-title-wrapper {
+            width: 26.14vw;
+            height: 10.94vw;
+    
+            .htext-title {
+                text-shadow: -1px 5px 5px rgba(0, 0, 0, 0.36);
+                width: 26.14vw;
+                height: 6.4vw;
+                overflow-wrap: break-word;
+                color: rgba(255, 255, 255, 1);
+                font-size: 6.53vw;
+                font-family: SourceHanSansCN-Bold;
+                font-weight: 700;
+                text-align: center;
+                white-space: nowrap;
+                line-height: 6.54vw;
+                margin-top: 12vw;
+    
+                &.mini {
+                    height: 1.87vw;
+                    font-size: 2.26vw;
+                    line-height: 2.26vw;
+                    margin: 2.66vw auto 0 auto;
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
 }
 
-.image-wrapper_1 {
-    width: 91.74vw;
-    height: 8.4vw;
-    margin: 3.86vw 0 0 4.13vw;
-}
-
-.image_1 {
-    width: 27.47vw;
-    height: 8.4vw;
-}
-
-.label_1 {
-    width: 5.87vw;
-    height: 4vw;
-    margin-top: 2.14vw;
-}
-
-.group_1 {
-    width: 26.14vw;
-    height: 10.94vw;
-    margin: 18.4vw 0 24.4vw 37.86vw;
-}
-
-.text-group_1 {
-    width: 26.14vw;
-    height: 10.94vw;
-}
-
-.text_1 {
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
-    width: 26.14vw;
-    height: 6.27vw;
-    overflow-wrap: break-word;
-    color: rgba(255, 255, 255, 1);
-    font-size: 6.53vw;
-    font-family: SourceHanSansCN-Bold;
-    font-weight: 700;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 6.54vw;
-}
-
-.text_2 {
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
-    width: 11.6vw;
-    height: 1.87vw;
-    overflow-wrap: break-word;
-    color: rgba(255, 255, 255, 1);
-    font-size: 2.26vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 2.27vw;
-    margin: 2.8vw 0 0 7.33vw;
-}
-
-.text-wrapper_1 {
+.company-container{
     width: 100vw;
     height: 145.6vw;
+    background: #fefefe;
+    z-index: 1000;
+
+    .company-description {
+        width: 58.8vw;
+        height: 9.74vw;
+        overflow-wrap: break-word;
+        color: #99999930;
+        font-size: 12.8vw;
+        font-family: SourceHanSansCN-Normal;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 8.54vw;
+        margin: 7.2vw 0 0 5.6vw;
+    }
+    
+    .company-title {
+        width: 24.14vw;
+        height: 5.74vw;
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 6.13vw;
+        font-family: SourceHanSansCN-Medium;
+        font-weight: 500;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 6.94vw;
+        margin: -4.26vw 0 0 5.46vw;
+    }
+    
+    .company-profile {
+        width: 11.2vw;
+        height: 2.4vw;
+        overflow-wrap: break-word;
+        color: rgba(204, 204, 204, 1);
+        font-size: 2.8vw;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 6.94vw;
+        margin: 3.2vw 0 0 5.46vw;
+    }
+    
+    .company-paragraph {
+        width: 89.47vw;
+        overflow-wrap: break-word;
+        color: rgba(68, 68, 68, 1);
+        font-size: 3.2vw;
+        font-family: SourceHanSansCN-Regular;
+        font-weight: normal;
+        text-align: justifyLeft;
+        margin: 0vw 0 0vw 5.6vw;
+        letter-spacing: 0.38px;
+        text-indent: 2em;
+        line-height: 1.75;
+
+        &.margin {
+            margin-top: 5.6vw;
+        }
+    }
 }
 
-.text_3 {
-    width: 58.8vw;
-    height: 9.74vw;
-    overflow-wrap: break-word;
-    color: rgba(153, 153, 153, 1);
-    font-size: 12.8vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 8.54vw;
-    margin: 7.2vw 0 0 5.6vw;
-}
 
-.text_4 {
-    width: 24.14vw;
-    height: 5.74vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 6.13vw;
-    font-family: SourceHanSansCN-Medium;
-    font-weight: 500;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 6.94vw;
-    margin: -4.26vw 0 0 5.46vw;
-}
-
-.text_5 {
-    width: 11.2vw;
-    height: 2.4vw;
-    overflow-wrap: break-word;
-    color: rgba(204, 204, 204, 1);
-    font-size: 2.8vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 6.94vw;
-    margin: 3.2vw 0 0 5.46vw;
-}
-
-.paragraph_1 {
-    width: 89.47vw;
-    height: 104.4vw;
-    overflow-wrap: break-word;
-    color: rgba(68, 68, 68, 1);
-    font-size: 3.2vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: justifyLeft;
-    line-height: 5.34vw;
-    margin: 5.06vw 0 12.13vw 5.6vw;
-}
-
-.image_2 {
-    width: 99.2vw;
-    height: 108.27vw;
-    margin-top: -0.13vw;
-}
-
-.section_2 {
+.contact-container {
     position: relative;
     width: 100vw;
-    height: 121.2vw;
+    height: 99.2vw;
     margin-bottom: 0.14vw;
 }
 
-.text_6 {
+.contact-text-bg {
     width: 91.74vw;
-    height: 36.27vw;
+    height: 39.27vw;
     overflow-wrap: break-word;
-    color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 0.05);
     font-size: 47.46vw;
     font-family: SourceHanSansCN-Normal;
     font-weight: normal;
     text-align: left;
     white-space: nowrap;
     line-height: 48.54vw;
-    margin: 5.6vw 0 0 0.53vw;
+    margin: 7.6vw 0 0 0.53vw;
 }
 
-.text_7 {
+.contact-text-title {
     width: 21.87vw;
     height: 5.2vw;
     overflow-wrap: break-word;
@@ -275,7 +249,7 @@ import { ref, onMounted } from 'vue';
     margin: -36.13vw 0 0 5.06vw;
 }
 
-.text_8 {
+.contact-text-subtitle {
     width: 16vw;
     height: 2.14vw;
     overflow-wrap: break-word;
@@ -289,13 +263,13 @@ import { ref, onMounted } from 'vue';
     margin: 2.93vw 0 0 5.2vw;
 }
 
-.image-text_1 {
+.image-htext-title {
     width: 84.54vw;
     height: 18vw;
     margin: 51.46vw 0 0 5.46vw;
 }
 
-.image-text_2 {
+.contact-image-text-wrapper{
     position: relative;
     width: 84.54vw;
     height: 18vw;
@@ -322,6 +296,8 @@ import { ref, onMounted } from 'vue';
     font-weight: normal;
     text-align: left;
     line-height: 7.47vw;
+    margin-top: -2.25vw;
+    margin-left: 2vw;
 }
 
 .image_4 {
@@ -383,7 +359,7 @@ import { ref, onMounted } from 'vue';
     height: 11.6vw;
 }
 
-.image-text_5 {
+.image-company-profile {
     width: 53.74vw;
     height: 11.6vw;
 }
@@ -438,7 +414,7 @@ import { ref, onMounted } from 'vue';
     margin: 2vw 0 2.13vw 23.06vw;
 }
 
-.text_10 {
+.htext-title0 {
     width: 45.74vw;
     height: 1.87vw;
     overflow-wrap: break-word;
@@ -451,122 +427,109 @@ import { ref, onMounted } from 'vue';
     line-height: 4.8vw;
 }
 
-.block_2 {
-    background-color: rgba(217, 217, 217, 1);
-    width: 0.14vw;
-    height: 1.6vw;
-    margin: 0.13vw 15.86vw 0 -16vw;
-}
-
-.block_3 {
-    background-color: rgba(53, 193, 255, 1);
+.contact-map-wrapper {
+    background: transparent;
     position: absolute;
     left: 5.34vw;
-    top: 21.2vw;
+    top: 25.2vw;
     width: 89.34vw;
     height: 40vw;
 }
 
-.section_3 {
-    background-color: rgba(233, 233, 234, 1);
-    height: 112.14vw;
+.honor-container {
+    background-color: rgba(233, 233, 234, 0.1);
+    height: 105vw;
     width: 100vw;
-    position: absolute;
-    left: 0;
-    top: 204.8vw;
-}
+    z-index: 1000;
+    background: url('../../assets/images/mobile_aboutus_bg.png');
+    background-size: 100% 100%;
 
-.box_4 {
-    background-color: rgba(238, 238, 238, 0.82);
-    width: 100vw;
-    height: 112.14vw;
-}
+    .honor-wrapper {
+        background-color: rgba(238, 238, 238, 0.1);
+        width: 100vw;
+        height: 112.14vw;
+    
+        .honor-title-wrapper{
+            width: 29.6vw;
+            height: 10.67vw;
+            margin: 7.6vw 0 0 5.2vw;
+        
+            .htext-title {
+                width: 22vw;
+                height: 5.2vw;
+                overflow-wrap: break-word;
+                color: rgba(51, 51, 51, 1);
+                font-size: 5.6vw;
+                font-family: SourceHanSansCN-Medium;
+                font-weight: 500;
+                text-align: left;
+                white-space: nowrap;
+                line-height: 5.2vw;
+            
+                &.mini {
+                    width: 29.6vw;
+                    height: 2.54vw;
+                    overflow-wrap: break-word;
+                    color: #cccccc;
+                    font-size: 2.66vw;
+                    font-family: SourceHanSansCN-Regular;
+                    font-weight: normal;
+                    text-align: left;
+                    white-space: nowrap;
+                    line-height: 3.2vw;
+                    margin-top: 0vw;
+                }
+            }
+        }
+        
+        
+        
+        .honor-image-wrapper {
+            width: 99.74vw;
+            height: 63.07vw;
+            margin: 0vw 0 0 0.26vw;
+        
+            .image-wrapper {
+                background-color: transparent;
+                height: 63.07vw;
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                margin: 0 5vw;
+            
+                .image {
+                    margin: 0;
+                    width: 43.5vw;
+                    height: auto !important;
+                    object-fit: contain !important;
+                    margin-right: 3vw;
+            
+                    &.other {
+                        width: 43.5vw;
+                        height: auto !important;
+                        object-fit: contain !important;
+                    }
+                }
+                
+            }
+        }
+    }
 
-.text-group_2 {
-    width: 29.6vw;
-    height: 10.67vw;
-    margin: 7.6vw 0 0 5.2vw;
-}
-
-.text_11 {
-    width: 22vw;
-    height: 5.2vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 5.6vw;
-    font-family: SourceHanSansCN-Medium;
-    font-weight: 500;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 5.2vw;
-}
-
-.text_12 {
-    width: 29.6vw;
-    height: 2.54vw;
-    overflow-wrap: break-word;
-    color: rgba(204, 204, 204, 1);
-    font-size: 2.66vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 5.2vw;
-    margin-top: 2.94vw;
-}
-
-.group_3 {
-    width: 99.74vw;
-    height: 63.07vw;
-    margin: 5.2vw 0 0 0.26vw;
-}
-
-.text_13 {
-    width: 99.74vw;
-    height: 42.94vw;
-    overflow-wrap: break-word;
-    color: rgba(0, 0, 0, 1);
-    font-size: 46.13vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 52.94vw;
-    margin-top: 15.34vw;
-}
-
-.image-wrapper_3 {
-    background-color: rgba(48, 170, 224, 1);
-    height: 63.07vw;
-    margin-left: -94.53vw;
-    width: 47.47vw;
-}
-
-.image_6 {
-    width: 25.74vw;
-    height: 18vw;
-    margin: 22.66vw 0 0 11.2vw;
-}
-
-.image_7 {
-    width: 44vw;
-    height: 40.54vw;
-    margin: 22.53vw 0 0 3.06vw;
-}
-
-.image-wrapper_4 {
-    width: 19.87vw;
-    height: 7.47vw;
-    margin: 8.53vw 0 9.6vw 5.46vw;
-}
-
-.image_8 {
-    width: 7.47vw;
-    height: 7.47vw;
-}
-
-.image_9 {
-    width: 7.47vw;
-    height: 7.47vw;
+    .honor-arrow-wrapper {
+        width: 19.87vw;
+        height: 7.47vw;
+        margin: 8.53vw 0 9.6vw 5.8vw;
+    
+        .honor-arrow-left {
+            width: 7.47vw;
+            height: 7.47vw;
+        }
+        
+        .honor-arrow-right {
+            width: 7.47vw;
+            height: 7.47vw;
+        }
+    }
 }
 </style>
