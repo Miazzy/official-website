@@ -117,7 +117,7 @@ onMounted(() => {
 .title-container {
     height: 66vw;
     width: 100vw;
-    background: url(/src/assets/images/mobile_aboutus_01.jpg) 0 -2vw no-repeat;
+    background: url(/src/assets/images/mobile_aboutus_01.png) 0 -2vw no-repeat;
     background-size: 100% calc(100% + 2vw);
 
     .title-wrapper {

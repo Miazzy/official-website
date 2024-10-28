@@ -149,7 +149,7 @@ onBeforeUnmount(() => {
 }
 
 .title-container {
-  background: url('../../assets/images/mobile_plans_01.jpg') 100% no-repeat;
+  background: url('../../assets/images/mobile_plans_01.png') 100% no-repeat;
   background-size: 100% 100%;
   height: 66vw;
   width: 100vw;
@@ -208,7 +208,7 @@ onBeforeUnmount(() => {
     width: 100vw;
     height: 132.4vw;
     flex-direction: row;
-    background: url(../../assets/images/mobile_plans_02.jpg) no-repeat;
+    background: url(../../assets/images/mobile_plans_02.png) no-repeat;
     background-size: 100% 100%;
 
     .operation-header {
@@ -282,13 +282,13 @@ onBeforeUnmount(() => {
         .operation-services {
           width: 36.4vw;
           height: 48.8vw;
-          background: url(/src/assets/images/plans-box-transparent-01.jpg);
+          background: url(/src/assets/images/plans-box-transparent-01.png);
           background-size: 150% 100%;
           margin: 24.93vw 0 0 -11.5vw;
           box-shadow: 0px 4px 10px 0px #EF7D1B60;
 
           &:last-child {
-            background: url('../../assets/images/plans-box-transparent-01.jpg');
+            background: url('../../assets/images/plans-box-transparent-01.png');
             background-size: 100% 100%;
             margin: 24.93vw 0 0 7.8vw;
             box-shadow: 0 0 0 0 transparent;

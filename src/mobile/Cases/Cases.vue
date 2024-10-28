@@ -160,7 +160,7 @@ import MFooter from "@/components/MFooter.vue";
     background-color: rgba(255, 255, 255, 1);
     height: 66vw;
     width: 100vw;
-    background: url('../../assets/images/mobile-cases-banner.jpg');
+    background: url('../../assets/images/mobile-cases-banner.png');
     background-size: 100% 100%;
 
     .title-wrapper {
@@ -465,7 +465,7 @@ import MFooter from "@/components/MFooter.vue";
         top: 0;
         width: 100vw;
         height: 162.8vw;
-        background: url('../../assets/images/mobile_plans_bg_02.jpg');
+        background: url('../../assets/images/mobile_plans_bg_02.png');
         background-size: 100% 100%;
 
         .agriculture-title-wrapper {

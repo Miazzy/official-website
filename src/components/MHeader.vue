@@ -1,7 +1,7 @@
 <template>
     <!-- header-container -->
     <div class="header-container header-wrapper flex-row justify-between">
-        <img class="image logo-image logo" src="../assets/images/logo.jpeg" />
+        <img class="image logo-image logo" src="../assets/images/logo.png" />
         <img class="label setup-image" src="../assets/images/label.png" @click="handleClick" />
     </div>
 

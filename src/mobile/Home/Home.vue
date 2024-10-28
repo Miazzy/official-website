@@ -199,12 +199,12 @@ onBeforeUnmount(() => {
     }
 
     &.index-1-bg {
-        background: url('../../assets/images/home_mobile_01.jpg') 0 0 no-repeat;
+        background: url('../../assets/images/home_mobile_01.png') 0 0 no-repeat;
         background-size: 115% 100%;
     }
 
     &.index-2-bg {
-        background: url('../../assets/images/home_mobile_02.jpg') 0 0 no-repeat;
+        background: url('../../assets/images/home_mobile_02.png') 0 0 no-repeat;
         background-size: 115% 100%;
 
         .index-container {
@@ -294,12 +294,12 @@ onBeforeUnmount(() => {
     }
 
     &.index-3-bg {
-        background: url(../../assets/images/home_mobile_03.jpg) 0 0 no-repeat;
+        background: url(../../assets/images/home_mobile_03.png) 0 0 no-repeat;
         background-size: 102% 100%;
     }
 
     &.index-0-bg {
-        background: url('../../assets/images/home_mobile_04.jpg') 0 0 no-repeat;
+        background: url('../../assets/images/home_mobile_04.png') 0 0 no-repeat;
         background-size: 115% auto;
     }
 
