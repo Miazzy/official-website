@@ -1,9 +1,7 @@
 <template>
-    <div class="page flex-col">
-
+    <div class="container flex-col">
         <!-- mobile-header -->
         <MHeader></MHeader>
-
         <!-- title-container -->
         <div class="title-container flex-col">
             <div class="title-wrapper flex-row">
@@ -13,7 +11,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- main-container -->
         <div class="main-container">
             <div class="box-wrapper flex-col">
                 <div class="box-group-wrapper flex-col">
@@ -96,7 +94,6 @@
                 </div>
             </div>
         </div>
-
         <!-- mobile-footer -->
         <MFooter></MFooter>
     </div>
@@ -113,7 +110,7 @@ const subTitle = ref('INTELLIGENT AQUACULTURE SYSTEM');
 <style lang="less" scoped>
 @import '@/assets/style/common.css';
 
-.page {
+.container {
     background-color: rgba(255, 255, 255, 1);
     position: relative;
     width: 100vw;
@@ -171,592 +168,253 @@ const subTitle = ref('INTELLIGENT AQUACULTURE SYSTEM');
 .main-container {
     background: #fefefe;
     z-index: 1000;
-}
 
-.box-wrapper {
-    width: 100vw;
-    height: 116vw;
-
-    .box-group-wrapper {
-        background-color: rgba(67, 164, 56, 0.34);
-        height: 0.54vw;
-        width: 28.4vw;
-        margin: 6.4vw 0 0 5.33vw;
-
-        .box-group {
-            background-color: rgba(67, 164, 56, 1);
-            width: 6.4vw;
+    .box-wrapper {
+        width: 100vw;
+        height: 116vw;
+    
+        .box-group-wrapper {
+            background-color: rgba(67, 164, 56, 0.34);
             height: 0.54vw;
+            width: 28.4vw;
+            margin: 6.4vw 0 0 5.33vw;
+    
+            .box-group {
+                background-color: rgba(67, 164, 56, 1);
+                width: 6.4vw;
+                height: 0.54vw;
+            }
         }
-    }
-
-
-    .box-text-wrapper {
-        width: 89.34vw;
-        height: 19.2vw;
-        overflow-wrap: break-word;
-        font-size: 0;
-        font-family: SourceHanSansCN-Regular;
-        font-weight: normal;
-        text-align: left;
-        line-height: 5.07vw;
-        margin: 1.86vw 0 0 5.33vw;
-
-        .paragraph-title {
+    
+    
+        .box-text-wrapper {
             width: 89.34vw;
             height: 19.2vw;
             overflow-wrap: break-word;
-            color: rgba(51, 51, 51, 1);
-            font-size: 3.46vw;
+            font-size: 0;
             font-family: SourceHanSansCN-Regular;
             font-weight: normal;
             text-align: left;
             line-height: 5.07vw;
-
-            &.space {
-                height: 12.2vw;
-                line-height: 0vw;
-            }
-
-            &.description {
-                height: 5.34vw;
-                color: rgba(102, 102, 102, 1);
-                font-size: 3.06vw;
-                font-family: SourceHanSansCN-Normal;
-                line-height: 5.34vw;
-            }
-        }
-
-    }
-
-    .box-content-wrapper {
-        width: 89.2vw;
-        height: 30.94vw;
-        margin: 8.33vw 0 0 5.33vw;
-
-        .box-content {
-            width: 41.87vw;
-            height: 24.27vw;
-
-            .tbox-content-wrapper {
-                background-color: rgba(67, 164, 56, 0.154);
-                height: 6.14vw;
-                border: 1px solid rgba(67, 164, 56, 0.7);
-                width: 41.87vw;
-
-                .box-content-title {
-                    width: 10.54vw;
-                    height: 2.67vw;
-                    overflow-wrap: break-word;
-                    color: rgba(51, 51, 51, 1);
-                    font-size: 2.53vw;
-                    font-family: SourceHanSansCN-Bold;
-                    font-weight: 700;
-                    text-align: center;
-                    white-space: nowrap;
-                    line-height: 2.67vw;
-                    margin: 1.6vw 0 0 15.6vw;
+            margin: 1.86vw 0 0 5.33vw;
+    
+            .paragraph-title {
+                width: 89.34vw;
+                height: 19.2vw;
+                overflow-wrap: break-word;
+                color: rgba(51, 51, 51, 1);
+                font-size: 3.46vw;
+                font-family: SourceHanSansCN-Regular;
+                font-weight: normal;
+                text-align: left;
+                line-height: 5.07vw;
+    
+                &.space {
+                    height: 12.2vw;
+                    line-height: 0vw;
+                }
+    
+                &.description {
+                    height: 5.34vw;
+                    color: rgba(102, 102, 102, 1);
+                    font-size: 3.06vw;
+                    font-family: SourceHanSansCN-Normal;
+                    line-height: 5.34vw;
                 }
             }
-
-            .box-content-section {
-                width: 39.47vw;
-                height: 14.27vw;
-                margin: 3.86vw 0 0 0.93vw;
-
-                .box-content-image-wrapper {
-                    width: 1.2vw;
-                    height: 13.87vw;
-                    margin-top: 0.27vw;
-
-                    &.right {
-                        margin: 0.26vw 0 0 8.4vw;
-
-                        .thumbnail_4 {
+    
+        }
+    
+        .box-content-wrapper {
+            width: 89.2vw;
+            height: 30.94vw;
+            margin: 8.33vw 0 0 5.33vw;
+    
+            .box-content {
+                width: 41.87vw;
+                height: 24.27vw;
+    
+                .tbox-content-wrapper {
+                    background-color: rgba(67, 164, 56, 0.154);
+                    height: 6.14vw;
+                    border: 1px solid rgba(67, 164, 56, 0.7);
+                    width: 41.87vw;
+    
+                    .box-content-title {
+                        width: 10.54vw;
+                        height: 2.67vw;
+                        overflow-wrap: break-word;
+                        color: rgba(51, 51, 51, 1);
+                        font-size: 2.53vw;
+                        font-family: SourceHanSansCN-Bold;
+                        font-weight: 700;
+                        text-align: center;
+                        white-space: nowrap;
+                        line-height: 2.67vw;
+                        margin: 1.6vw 0 0 15.6vw;
+                    }
+                }
+    
+                .box-content-section {
+                    width: 39.47vw;
+                    height: 14.27vw;
+                    margin: 3.86vw 0 0 0.93vw;
+    
+                    .box-content-image-wrapper {
+                        width: 1.2vw;
+                        height: 13.87vw;
+                        margin-top: 0.27vw;
+    
+                        &.right {
+                            margin: 0.26vw 0 0 8.4vw;
+    
+                            .thumbnail_4 {
+                                width: 1.07vw;
+                                height: 1.87vw;
+                                margin-left: 0.14vw;
+                            }
+    
+                            .thumbnail_5 {
+                                width: 1.07vw;
+                                height: 1.87vw;
+                                margin-top: 4.14vw;
+                            }
+    
+                            .thumbnail_6 {
+                                width: 1.07vw;
+                                height: 1.87vw;
+                                margin-top: 4.14vw;
+                            }
+                        }
+    
+                        .thumbnail {
                             width: 1.07vw;
                             height: 1.87vw;
                             margin-left: 0.14vw;
-                        }
-
-                        .thumbnail_5 {
-                            width: 1.07vw;
-                            height: 1.87vw;
-                            margin-top: 4.14vw;
-                        }
-
-                        .thumbnail_6 {
-                            width: 1.07vw;
-                            height: 1.87vw;
-                            margin-top: 4.14vw;
+    
+                            &.margin {
+                                margin-top: 4.14vw;
+                            }
                         }
                     }
-
-                    .thumbnail {
-                        width: 1.07vw;
-                        height: 1.87vw;
-                        margin-left: 0.14vw;
-
-                        &.margin {
-                            margin-top: 4.14vw;
+    
+                    .paragraph {
+                        width: 13.07vw;
+                        height: 6.14vw;
+                        overflow-wrap: break-word;
+                        color: #777777;
+                        font-size: 2vw;
+                        font-family: SourceHanSansCN-Regular;
+                        font-weight: normal;
+                        text-align: left;
+                        line-height: 6vw;
+                        margin: -1.8vw 0 0 1.33vw;
+    
+                        &.right {
+                            height: 14.14vw;
+                            margin-left: 1.2vw;
+                            margin-top: -1.8vw;
                         }
-                    }
-                }
-
-                .paragraph {
-                    width: 13.07vw;
-                    height: 6.14vw;
-                    overflow-wrap: break-word;
-                    color: #777777;
-                    font-size: 2vw;
-                    font-family: SourceHanSansCN-Regular;
-                    font-weight: normal;
-                    text-align: left;
-                    line-height: 6vw;
-                    margin: -1.8vw 0 0 1.33vw;
-
-                    &.right {
-                        height: 14.14vw;
-                        margin-left: 1.2vw;
-                        margin-top: -1.8vw;
                     }
                 }
             }
+    
+            .box-block-image {
+                background-color: rgba(204, 204, 204, 1);
+                width: 46vw;
+                height: 30.94vw;
+                background: url('@/assets/images/intel_221_07.png');
+                background-size: 100% 100%;
+            }
+    
+            &.box-two-group {
+                width: 89.34vw;
+                height: 28vw;
+                margin: 5.33vw 0 8.4vw 5.33vw;
+    
+                .left {
+                    width: 37.6vw;
+                    height: 28vw;
+                    background: url('@/assets/images/intel_222_02.png');
+                    background-size: 100% 100%;
+                }
+    
+                .right {
+                    width: 50.4vw;
+                    height: 28vw;
+                    background: url('@/assets/images/intel_222_04.png');
+                    background-size: 100% 100%;
+                }
+            }
+    
+            &.box-three-group {
+                width: 89.47vw;
+                height: 26vw;
+                margin: 9.2vw 0 8.53vw 5.2vw;
+    
+                .left {
+                    width: 44vw;
+                    height: 25vw;
+                    background: url('@/assets/images/intel_222_03.png');
+                    background-size: 100% 100%;
+                }
+    
+                .right {
+                    width: 44vw;
+                    height: 25vw;
+                    background: url('@/assets/images/intel_222_01.png');
+                    background-size: 100% 100%;
+                }
+            }
+    
+            &.box-four-group {
+                width: 89.47vw;
+                height: 26vw;
+                margin: 9.2vw 0 8.53vw 5.2vw;
+    
+                .left {
+                    width: 44vw;
+                    height: 25vw;
+                    background: url('@/assets/images/intel_222_07.png');
+                    background-size: 100% 100%;
+                }
+    
+                .right {
+                    width: 44vw;
+                    height: 25vw;
+                    background: url('@/assets/images/intel_222_06.png');
+                    background-size: 100% 100%;
+                }
+            }
         }
-
-        .box-block-image {
-            background-color: rgba(204, 204, 204, 1);
-            width: 46vw;
-            height: 30.94vw;
-            background: url('@/assets/images/intel_221_07.png');
-            background-size: 100% 100%;
+    
+        &.box-two {
+            background-color: rgba(247, 247, 247, 1);
+            height: 66.54vw;
+            margin-top: -0.13vw;
+            width: 100vw;
+            justify-content: flex-center;
         }
-
-        &.box-two-group {
+    
+        &.box-three {
+            width: 100vw;
+            height: 70vw;
+            justify-content: flex-center;
+        }
+    
+        &.box-four {
+            background-color: rgba(247, 247, 247, 1);
+            width: 100vw;
+            height: 68vw;
+            margin-top: -0.13vw;
+            justify-content: flex-center;
+        }
+    
+        .box-bottom-image {
             width: 89.34vw;
-            height: 28vw;
-            margin: 5.33vw 0 8.4vw 5.33vw;
-
-            .left {
-                width: 37.6vw;
-                height: 28vw;
-                background: url('@/assets/images/intel_222_02.png');
-                background-size: 100% 100%;
-            }
-
-            .right {
-                width: 50.4vw;
-                height: 28vw;
-                background: url('@/assets/images/intel_222_04.png');
-                background-size: 100% 100%;
-            }
-        }
-
-        &.box-three-group {
-            width: 89.47vw;
-            height: 26vw;
-            margin: 9.2vw 0 8.53vw 5.2vw;
-
-            .left {
-                width: 44vw;
-                height: 25vw;
-                background: url('@/assets/images/intel_222_03.png');
-                background-size: 100% 100%;
-            }
-
-            .right {
-                width: 44vw;
-                height: 25vw;
-                background: url('@/assets/images/intel_222_01.png');
-                background-size: 100% 100%;
-            }
-        }
-
-        &.box-four-group {
-            width: 89.47vw;
-            height: 26vw;
-            margin: 9.2vw 0 8.53vw 5.2vw;
-
-            .left {
-                width: 44vw;
-                height: 25vw;
-                background: url('@/assets/images/intel_222_07.png');
-                background-size: 100% 100%;
-            }
-
-            .right {
-                width: 44vw;
-                height: 25vw;
-                background: url('@/assets/images/intel_222_06.png');
-                background-size: 100% 100%;
-            }
+            height: 41.87vw;
+            margin: 1.2vw 0 8.66vw 5.33vw;
         }
     }
-
-    &.box-two {
-        background-color: rgba(247, 247, 247, 1);
-        height: 66.54vw;
-        margin-top: -0.13vw;
-        width: 100vw;
-        justify-content: flex-center;
-    }
-
-    &.box-three {
-        width: 100vw;
-        height: 70vw;
-        justify-content: flex-center;
-    }
-
-    &.box-four {
-        background-color: rgba(247, 247, 247, 1);
-        width: 100vw;
-        height: 68vw;
-        margin-top: -0.13vw;
-        justify-content: flex-center;
-    }
-
-    .box-bottom-image {
-        width: 89.34vw;
-        height: 41.87vw;
-        margin: 1.2vw 0 8.66vw 5.33vw;
-    }
-}
-
-
-
-
-.group_4 {
-    width: 32vw;
-    height: 0.54vw;
-    margin: 8.53vw 0 0 5.33vw;
-}
-
-.box_4 {
-    background-color: rgba(67, 164, 56, 0.34);
-    height: 0.54vw;
-    width: 32vw;
-}
-
-.group_5 {
-    background-color: rgba(67, 164, 56, 1);
-    width: 6.4vw;
-    height: 0.54vw;
-}
-
-.group_6 {
-    width: 31.87vw;
-    height: 13.87vw;
-    margin: 1.86vw 0 0 5.33vw;
-}
-
-.text-wrapper_3 {
-    width: 31.87vw;
-    height: 13.87vw;
-    overflow-wrap: break-word;
-    font-size: 0;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.07vw;
-}
-
-.paragraph_6 {
-    width: 31.87vw;
-    height: 13.87vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 3.46vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.07vw;
-}
-
-.paragraph_7 {
-    width: 31.87vw;
-    height: 13.87vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 3.06vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.34vw;
-}
-
-.paragraph_8 {
-    width: 31.87vw;
-    height: 13.87vw;
-    overflow-wrap: break-word;
-    color: rgba(102, 102, 102, 1);
-    font-size: 3.06vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.34vw;
-}
-
-
-
-
-
-
-
-.group_9 {
-    background-color: rgba(67, 164, 56, 0.34);
-    height: 0.54vw;
-    width: 21.07vw;
-    margin: 8.53vw 0 0 5.33vw;
-}
-
-.group_10 {
-    background-color: rgba(67, 164, 56, 1);
-    width: 6.4vw;
-    height: 0.54vw;
-}
-
-.text-wrapper_4 {
-    width: 89.47vw;
-    height: 19.34vw;
-    overflow-wrap: break-word;
-    font-size: 0;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.07vw;
-    margin: 1.86vw 0 0 5.33vw;
-}
-
-.paragraph_9 {
-    width: 89.47vw;
-    height: 19.34vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 3.46vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.07vw;
-}
-
-.paragraph_10 {
-    width: 89.47vw;
-    height: 19.34vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 3.06vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.34vw;
-}
-
-.paragraph_11 {
-    width: 89.47vw;
-    height: 19.34vw;
-    overflow-wrap: break-word;
-    color: rgba(102, 102, 102, 1);
-    font-size: 3.06vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.34vw;
-}
-
-
-
-.image_4 {
-    width: 44vw;
-    height: 24vw;
-}
-
-.image_5 {
-    width: 44.14vw;
-    height: 23.87vw;
-}
-
-
-
-.group_11 {
-    background-color: rgba(67, 164, 56, 0.34);
-    height: 0.54vw;
-    width: 20.8vw;
-    margin: 8.53vw 0 0 5.33vw;
-}
-
-.block_3 {
-    background-color: rgba(67, 164, 56, 1);
-    width: 6.4vw;
-    height: 0.54vw;
-}
-
-.text-wrapper_5 {
-    width: 87.47vw;
-    height: 19.47vw;
-    overflow-wrap: break-word;
-    font-size: 0;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.07vw;
-    margin: 1.86vw 0 0 5.33vw;
-}
-
-.paragraph_12 {
-    width: 87.47vw;
-    height: 19.47vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 3.46vw;
-    font-family: SourceHanSansCN-Regular;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.07vw;
-}
-
-.paragraph_13 {
-    width: 87.47vw;
-    height: 19.47vw;
-    overflow-wrap: break-word;
-    color: rgba(51, 51, 51, 1);
-    font-size: 3.06vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.34vw;
-}
-
-.paragraph_14 {
-    width: 87.47vw;
-    height: 19.47vw;
-    overflow-wrap: break-word;
-    color: rgba(102, 102, 102, 1);
-    font-size: 3.06vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    line-height: 5.34vw;
-}
-
-.group_12 {
-    width: 89.07vw;
-    height: 24vw;
-    margin: 5.06vw 0 8.53vw 5.33vw;
-}
-
-.box_7 {
-    background-color: rgba(35, 36, 41, 1);
-    position: relative;
-    width: 100vw;
-    height: 25.2vw;
-}
-
-.group_13 {
-    width: 71.74vw;
-    height: 11.6vw;
-    margin: 3.73vw 0 0 14.13vw;
-}
-
-.block_4 {
-    width: 16vw;
-    height: 11.2vw;
-    margin-top: 0.27vw;
-}
-
-.image_6 {
-    width: 8.54vw;
-    height: 8.54vw;
-    margin-left: 3.74vw;
-}
-
-.text_4 {
-    width: 16vw;
-    height: 1.6vw;
-    overflow-wrap: break-word;
-    color: rgba(153, 153, 153, 1);
-    font-size: 1.6vw;
-    font-family: MicrosoftYaHei;
-    font-weight: normal;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 4vw;
-    margin-top: 1.07vw;
-}
-
-.image-text_1 {
-    position: relative;
-    width: 53.74vw;
-    height: 11.6vw;
-}
-
-.image-text_2 {
-    width: 53.74vw;
-    height: 11.6vw;
-}
-
-.image-wrapper_5 {
-    width: 1.87vw;
-    height: 6.67vw;
-    margin-top: 4.94vw;
-}
-
-.thumbnail_7 {
-    width: 1.87vw;
-    height: 1.47vw;
-}
-
-.thumbnail_8 {
-    width: 1.74vw;
-    height: 2.14vw;
-    margin: 3.06vw 0 0 0.13vw;
-}
-
-.paragraph_15 {
-    width: 51.2vw;
-    height: 11.6vw;
-    overflow-wrap: break-word;
-    color: rgba(217, 217, 217, 1);
-    font-size: 1.86vw;
-    font-family: MicrosoftYaHei;
-    font-weight: normal;
-    text-align: left;
-    line-height: 4.8vw;
-}
-
-.thumbnail_9 {
-    position: absolute;
-    left: 0;
-    top: 0.14vw;
-    width: 2vw;
-    height: 1.6vw;
-}
-
-.group_14 {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 89.34vw;
-    height: 0.14vw;
-    margin: 3.73vw 0 0 5.33vw;
-}
-
-.text_5 {
-    width: 45.74vw;
-    height: 1.87vw;
-    overflow-wrap: break-word;
-    color: rgba(217, 217, 217, 1);
-    font-size: 1.6vw;
-    font-family: SourceHanSansCN-Normal;
-    font-weight: normal;
-    text-align: left;
-    white-space: nowrap;
-    line-height: 4.8vw;
-    margin: 2vw 0 2.13vw 23.06vw;
-}
-
-.group_15 {
-    background-color: rgba(217, 217, 217, 1);
-    position: absolute;
-    left: 52.8vw;
-    top: 21.34vw;
-    width: 0.14vw;
-    height: 1.6vw;
 }
 </style>
