@@ -5,6 +5,9 @@
         <img class="label setup-image" src="../assets/images/label.png" @click="handleClick" />
     </div>
 
+    <!-- 全屏遮罩 -->
+    <div v-if="isMenuShow" class="full-screen-mask"></div>
+
     <!-- menu-box -->
     <div v-if="isMenuShow" class="menu-box flex-col">
         <div class="menu-wrapper">
@@ -112,5 +115,17 @@ onMounted(() => {
             }
         }
     }
+}
+
+.full-screen-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: block;
+  overflow: hidden;
 }
 </style>
