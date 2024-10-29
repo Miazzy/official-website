@@ -1,19 +1,51 @@
 /** 顶部 Header **/
 .header-container {
   position: fixed;
-  width: 89.2vw;
-  height: 4vh;
-  margin: 1.75vh 0 0 5.45vw;
+  width: 100vw;
+  height: 15vw;
+  background: transparent;
+  z-index: 10001;
+  
 
-  .logo-image {
-    width: 27.47vw;
-    height: 8.4vw;
+  &.leave,
+  &.mini {
+    background: #fefefe !important;
+    box-shadow: -1px 7px 13px 0px rgba(50, 50, 50, 0.05);
+
+    .header-wrapper {
+      .logo-image {
+        /** 浅色模式图片 **/
+      }
+
+      .setup-image {
+        width: 5.87vw;
+        height: 4vw;
+        margin-top: 2.27vw;
+        background: url(/src/assets/images/label_dark.png) 0 0 no-repeat;
+        background-size: 100% 100%;
+      }
+    }
   }
 
-  .setup-image {
-    width: 5.87vw;
-    height: 4vw;
-    margin-top: 2.27vw;
+  .header-wrapper {
+    position: fixed;
+    width: 89.2vw;
+    height: 4vh;
+    margin: 1.75vh 0 0 5.45vw;
+
+    .logo-image {
+      width: 27.47vw;
+      height: 8.4vw;
+      background: transparent;
+    }
+
+    .setup-image {
+      width: 5.87vw;
+      height: 4vw;
+      margin-top: 2.27vw;
+      background: url(/src/assets/images/label.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
   }
 }
 
@@ -55,12 +87,13 @@
 
 /** 顶部 菜单及遮罩 **/
 .menu-box {
-  position: absolute;
+  position: fixed;
   background-color: rgba(247, 247, 247, 0.96);
   height: 62.54vw;
   width: 89.47vw;
   margin: 12.8vw 0 0 5.2vw;
   z-index: 10000;
+  box-shadow: -1px 7px 13px 0px rgba(50, 50, 50, 0.05);
 
   &.full-screen-mask {
     background-color: rgba(0, 0, 0, 0.5) !important;
@@ -114,5 +147,39 @@
         font-weight: normal;
       }
     }
+  }
+}
+
+.header-container.mini {
+  opacity: 1;
+  transition: opacity ease-out 1s;
+  animation: headerEnter 0.1s ease-out;
+}
+
+.header-container.leave {
+  opacity: 0;
+  transition: opacity ease-out 1s;
+  animation: headerLeave 0.75s ease-out;
+}
+
+@keyframes headerEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes headerLeave {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
   }
 }

@@ -43,7 +43,7 @@ const menu = () => {
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   homeScrollY.value = scrollTop;
   isHeaderShow.value = scrollTop < 50 ? true : false;
-  MsgManager.getInstance().sendMsg('mobilemove', { ctgClassName: window.event.currentTarget.className, className: window.event.target.className });
+  MsgManager.getInstance().sendMsg('mobilemove', { scrollTop });
 }
 
 const themeColor = computed(() => {

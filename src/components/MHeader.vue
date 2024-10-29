@@ -1,8 +1,10 @@
 <template>
     <!-- header-container -->
-    <div class="header-container header-wrapper flex-row justify-between">
-        <img class="image logo-image logo" src="../assets/images/logo.png" />
-        <img class="label setup-image" src="../assets/images/label.png" @click="handleClick" />
+    <div class="header-container" :class="headClassName">
+        <div class="header-wrapper flex-row justify-between">
+            <img class="image logo-image logo" src="../assets/images/logo.png" />
+            <div class="label setup-image" @click="handleClick" ></div> 
+        </div>
     </div>
 
     <!-- 全屏遮罩 -->
@@ -35,6 +37,8 @@ const router = useRouter();
 const isMenuShow = ref(false);
 const emit = defineEmits(['popup']);
 const cpath = ref('/mobile/home');
+const headClassName = ref('');
+const lastScrollTop = ref(0);
 
 const handleClick = () => {
     isMenuShow.value = !isMenuShow.value;
@@ -63,6 +67,21 @@ onMounted(() => {
         }
     });
     MsgManager.getInstance().listen('mobilemove', (message) => {
+        const { scrollTop } = message;
+        let isDownFlag = true;
+        if (lastScrollTop.value - scrollTop > 0) {
+            isDownFlag = false;
+        }
+        lastScrollTop.value = scrollTop;
+        if ((scrollTop <= 15 && isDownFlag) || scrollTop <= 0) {
+            headClassName.value = '';
+        } else if (scrollTop <= 15 && !isDownFlag) {
+            headClassName.value = 'mini leave';
+        } else if (scrollTop > 15 && scrollTop < 150 && isDownFlag){
+            headClassName.value = 'mini';
+        } else if (scrollTop >= 150) {
+            headClassName.value = 'mini leave';
+        }
         nextTick(() => {
             isMenuShow.value = false;
         });
