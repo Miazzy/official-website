@@ -1,53 +1,118 @@
-
+/** 顶部 Header **/
 .header-container {
-    position: fixed;
-    width: 89.2vw;
-    height: 4vh;
-    margin: 1.75vh 0 0 5.45vw;
+  position: fixed;
+  width: 89.2vw;
+  height: 4vh;
+  margin: 1.75vh 0 0 5.45vw;
 
-    .logo-image {
-        width: 27.47vw;
-        height: 8.4vw;
-    }
+  .logo-image {
+    width: 27.47vw;
+    height: 8.4vw;
+  }
 
-    .setup-image {
-        width: 5.87vw;
-        height: 4vw;
-        margin-top: 2.27vw;
-    }
+  .setup-image {
+    width: 5.87vw;
+    height: 4vw;
+    margin-top: 2.27vw;
+  }
 }
 
+/** 底部 Footer **/
 .footer-container {
-    position: fixed;
-    bottom: 10px;
+  position: fixed;
+  bottom: 10px;
 
-    .image-wrapper {
-        width: 5.87vw;
-        height: 5.6vw;
-        margin: 49.25vh 0 0 47.60vw;
-    }
-    
-    .label {
-        width: 4.8vw;
-        height: auto;
-    }
-    
-    .text-wrapper {
-        width: 58.8vw;
-        height: 2.54vw;
-        margin: 2.5vh 0 5.33vw 19.73vw;
-    }
-    
-    .text {
-        width: 58.8vw;
-        height: 2.54vw;
-        overflow-wrap: break-word;
-        color: rgba(255, 255, 255, 1);
-        font-size: 2.13vw;
+  .image-wrapper {
+    width: 5.87vw;
+    height: 5.6vw;
+    margin: 49.25vh 0 0 47.6vw;
+  }
+
+  .label {
+    width: 4.8vw;
+    height: auto;
+  }
+
+  .text-wrapper {
+    width: 58.8vw;
+    height: 2.54vw;
+    margin: 2.5vh 0 5.33vw 19.73vw;
+  }
+
+  .text {
+    width: 58.8vw;
+    height: 2.54vw;
+    overflow-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-size: 2.13vw;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 6.94vw;
+  }
+}
+
+/** 顶部 菜单及遮罩 **/
+.menu-box {
+  position: absolute;
+  background-color: rgba(247, 247, 247, 0.96);
+  height: 62.54vw;
+  width: 89.47vw;
+  margin: 12.8vw 0 0 5.2vw;
+  z-index: 10000;
+
+  &.full-screen-mask {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important;
+    display: block !important;
+    overflow: hidden !important;
+    margin: 0 0 !important;
+  }
+
+  .menu-wrapper {
+    width: 30.8vw;
+    height: 52.14vw;
+    overflow-wrap: break-word;
+    font-size: 0;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: 700;
+    text-align: center;
+    line-height: 8.5vw;
+    margin: 10px auto;
+
+    .paragraph {
+      width: 16.8vw;
+      height: 52.14vw;
+      overflow-wrap: break-word;
+      font-size: 4.26vw;
+      font-family: SourceHanSansCN-Bold;
+      text-align: left;
+      line-height: 8vw;
+
+      .item {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 1.2vw 0;
+      }
+
+      &.active,
+      .active {
+        color: rgba(221, 120, 22, 1);
+        font-weight: 700;
+      }
+
+      &.grey {
+        color: rgba(51, 51, 51, 1);
         font-family: SourceHanSansCN-Regular;
         font-weight: normal;
-        text-align: left;
-        white-space: nowrap;
-        line-height: 6.94vw;
+      }
     }
+  }
 }

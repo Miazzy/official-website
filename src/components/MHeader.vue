@@ -6,7 +6,7 @@
     </div>
 
     <!-- 全屏遮罩 -->
-    <div v-if="isMenuShow" class="full-screen-mask"></div>
+    <div v-if="isMenuShow" class="menu-box full-screen-mask"></div>
 
     <!-- menu-box -->
     <div v-if="isMenuShow" class="menu-box flex-col">
@@ -72,65 +72,4 @@ onMounted(() => {
 <style lang="less" scoped>
 @import '@/assets/style/common.css';
 @import '@/assets/style/base.less';
-
-.menu-box {
-    position: absolute;
-    background-color: rgba(247, 247, 247, 0.96);
-    height: 62.54vw;
-    width: 89.47vw;
-    margin: 12.8vw 0 0 5.2vw;
-    z-index: 10000;
-
-    .menu-wrapper {
-        width: 30.8vw;
-        height: 52.14vw;
-        overflow-wrap: break-word;
-        font-size: 0;
-        font-family: SourceHanSansCN-Bold;
-        font-weight: 700;
-        text-align: center;
-        line-height: 8.5vw;
-        margin: 10px auto;
-
-        .paragraph {
-            width: 16.8vw;
-            height: 52.14vw;
-            overflow-wrap: break-word;
-            font-size: 4.26vw;
-            font-family: SourceHanSansCN-Bold;
-            text-align: left;
-            line-height: 8vw;
-
-            .item {
-                display: block;
-                width: 100%;
-                text-align: center;
-                margin: 1.2vw 0;
-            }
-
-            &.active, .active {
-                color: rgba(221, 120, 22, 1);
-                font-weight: 700;
-            }
-
-            &.grey {
-                color: rgba(51, 51, 51, 1);
-                font-family: SourceHanSansCN-Regular;
-                font-weight: normal;
-            }
-        }
-    }
-}
-
-.full-screen-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  display: block;
-  overflow: hidden;
-}
 </style>
