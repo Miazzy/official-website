@@ -1,6 +1,6 @@
 <template>
     <!-- header-container -->
-    <div class="header-container" :class="headClassName">
+    <div class="header-container" :class="headClassName + headClassOpacity">
         <div class="header-wrapper flex-row justify-between">
             <img class="image logo-image logo" src="../assets/images/logo.png" />
             <div class="label setup-image" @click="handleClick" ></div> 
@@ -38,12 +38,22 @@ const isMenuShow = ref(false);
 const emit = defineEmits(['popup']);
 const cpath = ref('/mobile/home');
 const headClassName = ref('');
+const headClassOpacity = ref('');
 const lastScrollTop = ref(0);
 
 const handleClick = () => {
     isMenuShow.value = !isMenuShow.value;
+    handleHeaderOpacity();
     emit('popup');
 }
+
+const handleHeaderOpacity = () => {
+    if (isMenuShow.value) {
+        headClassOpacity.value = ' opacity';
+    } else {
+        headClassOpacity.value = '';
+    }
+};
 
 const handleRoutePush = (path, y = 0) => {
     window.scrollTo(0, y);
@@ -63,6 +73,7 @@ onMounted(() => {
         } else {
             nextTick(() => {
                 isMenuShow.value = false;
+                handleHeaderOpacity();
             });
         }
     });
@@ -79,11 +90,14 @@ onMounted(() => {
             headClassName.value = 'mini leave';
         } else if (scrollTop > 15 && scrollTop < 150 && isDownFlag){
             headClassName.value = 'mini';
-        } else if (scrollTop >= 150) {
+        } else if (scrollTop >= 150 && isDownFlag) {
             headClassName.value = 'mini leave';
+        } else if (!isDownFlag) {
+            headClassName.value = 'mini';
         }
         nextTick(() => {
             isMenuShow.value = false;
+            handleHeaderOpacity();
         });
     });
 });
