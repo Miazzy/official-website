@@ -114,7 +114,7 @@ const subTitle = ref('INTELLIGENT AQUACULTURE SYSTEM');
     background-color: rgba(255, 255, 255, 1);
     position: relative;
     width: 100vw;
-    height: 387.2vw;
+    height: 387vw;
     overflow: hidden;
 }
 
