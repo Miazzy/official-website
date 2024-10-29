@@ -62,6 +62,11 @@ onMounted(() => {
             });
         }
     });
+    MsgManager.getInstance().listen('mobilemove', (message) => {
+        nextTick(() => {
+            isMenuShow.value = false;
+        });
+    });
 });
 </script>
 <style lang="less" scoped>
@@ -123,7 +128,7 @@ onMounted(() => {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
   display: block;
   overflow: hidden;
