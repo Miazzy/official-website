@@ -1,4 +1,17 @@
 import {createRouter, createWebHashHistory} from "vue-router";
+import { isMobileDevice } from '../utils/common';
+
+const handleMobile = () => {
+    try {
+      if (!isMobileDevice()) {
+          if (window.location.hash.replace('#/', '/').startsWith('/mobile/')) {
+            window.location.href = '/';
+          }
+      }
+    } catch (error) {
+      console.error('[HandleMobile]Route:', error);
+    }
+  }
 
 const routes = [
     {
@@ -100,6 +113,13 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes: [...routes, ...mobileRoutes],
 })
+
+// 使用 router.afterEach 钩子在路由跳转后执行检测函数
+router.afterEach((to, from) => {
+    setTimeout(() => {
+        handleMobile();
+    }, 10);
+});
 
 export default router;
 

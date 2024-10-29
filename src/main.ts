@@ -8,13 +8,13 @@ import Loading from "./components/Loading/index";
 import "./assets/style/reset.css";
 import "./assets/style/global.css";
 
-const app = createApp(App)
-app.use(router).use(store)
-app.use(Loading)
-app.config.globalProperties.$api = api
+const app = createApp(App);
+app.use(router).use(store);
+app.use(Loading);
+app.config.globalProperties.$api = api;
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-    app.component(key, component)
+    app.component(key, component);
 }
 
-app.mount('#app')
+app.mount('#app');
