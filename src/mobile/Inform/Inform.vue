@@ -101,10 +101,8 @@
             <div class="space-curve-line flex-col"></div>
 
             <div class="pagination-wrapper flex-row justify-between">
-                <img class="pagination-arrow-left"
-                    src="https://lanhu-oss.lanhuapp.com/psfdtbzcrnxvjkuq62tws1b016g4932qt23dce9243ac-581e-4e1c-804b-430ec5e30bcc" />
-                <img class="pagination-arrow-right"
-                    src="https://lanhu-oss.lanhuapp.com/pswjmtwfjxmgqf7674j59vx4ncdjlg6cht21a759c1-d56d-467d-9116-0ea0ee285a52" />
+                <img class="pagination-arrow-left" src="@/assets/images/arrow-circle-left.png" />
+                <img class="pagination-arrow-right" src="@/assets/images/arrow-circle-right.png" />
             </div>
         </div>
 
