@@ -200,12 +200,12 @@ onBeforeUnmount(() => {
 
     &.index-1-bg {
         background: url('../../assets/images/home_mobile_01.png') 0 0 no-repeat;
-        background-size: 115% 100%;
+        background-size: auto 100%;
     }
 
     &.index-2-bg {
         background: url('../../assets/images/home_mobile_02.png') 0 0 no-repeat;
-        background-size: 115% 100%;
+        background-size: auto 100%;
 
         .index-container {
             margin: 5vh 0 0 0;
@@ -295,12 +295,12 @@ onBeforeUnmount(() => {
 
     &.index-3-bg {
         background: url(../../assets/images/home_mobile_03.png) 0 0 no-repeat;
-        background-size: 102% 100%;
+        background-size: auto 100%;
     }
 
     &.index-0-bg {
         background: url('../../assets/images/home_mobile_04.png') 0 0 no-repeat;
-        background-size: 115% auto;
+        background-size: auto 100%;
     }
 
     .title-container {
