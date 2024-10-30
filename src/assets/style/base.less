@@ -15,17 +15,25 @@
   &.leave,
   &.mini {
     background: #fefefe !important;
-    box-shadow: -1px 7px 13px 0px rgba(50, 50, 50, 0.05);
+    box-shadow: -1px 7px 13px 0px rgba(50, 50, 50, 0.15);
 
     &.opacity {
-        opacity: 0.75 !important;
-        background: transparent !important;
-        transition: none !important;
+      opacity: 0.75 !important;
+      background: transparent !important;
+      transition: none !important;
+
+      .header-wrapper {
+        .logo-image {
+          background: url(@/assets/images/logo.png) 0 0 no-repeat !important;
+          background-size: 100% 100% !important;
+        }
       }
+    }
 
     .header-wrapper {
       .logo-image {
-        /** 浅色模式图片 **/
+        background: url(@/assets/images/logo-black.png) 0 0 no-repeat !important;
+        background-size: 100% 100% !important;
       }
 
       .setup-image {
@@ -47,14 +55,16 @@
     .logo-image {
       width: 27.47vw;
       height: 8.4vw;
-      background: transparent;
+      display: block;
+      background: url(@/assets/images/logo.png) 0 0 no-repeat;
+      background-size: 100% 100%;
     }
 
     .setup-image {
       width: 5.87vw;
       height: 4vw;
       margin-top: 2.27vw;
-      background: url(/src/assets/images/label.png) 0 0 no-repeat;
+      background: url(@/assets/images/label.png) 0 0 no-repeat;
       background-size: 100% 100%;
     }
   }

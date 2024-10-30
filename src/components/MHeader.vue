@@ -2,7 +2,7 @@
     <!-- header-container -->
     <div class="header-container" :class="headClassName + headClassOpacity">
         <div class="header-wrapper flex-row justify-between">
-            <img class="image logo-image logo" src="../assets/images/logo.png" />
+            <div class="image logo-image logo"></div>
             <div class="label setup-image" @click="handleClick" ></div> 
         </div>
     </div>
@@ -88,9 +88,9 @@ onMounted(() => {
             headClassName.value = '';
         } else if (scrollTop <= 15 && !isDownFlag) {
             headClassName.value = 'mini leave';
-        } else if (scrollTop > 15 && scrollTop < 150 && isDownFlag){
+        } else if (scrollTop > 15 && scrollTop < 225 && isDownFlag){
             headClassName.value = 'mini';
-        } else if (scrollTop >= 150 && isDownFlag) {
+        } else if (scrollTop >= 225 && isDownFlag) {
             headClassName.value = 'mini leave';
         } else if (!isDownFlag) {
             headClassName.value = 'mini';
