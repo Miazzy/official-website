@@ -16,9 +16,6 @@
               </div>
             </div>
           </div>
-          <div class="tooltip">
-            <span>首页</span>
-          </div>
         </div>
       </template>
       <template #two>
@@ -44,9 +41,6 @@
             <div class="segment"></div>
             <div class="segment" style=""></div>
           </div>
-          <div class="tooltip">
-            <span>智能运营</span>
-          </div>
         </div>
       </template>
       <template #three>
@@ -64,9 +58,6 @@
               </div>
             </div>
           </div>
-          <div class="tooltip" style="top: calc(50vh + 6px)">
-            <span>智慧农业</span>
-          </div>
         </div>
       </template>
       <template #four>
@@ -83,9 +74,6 @@
                 <span class="icon">></span>
               </div>
             </div>
-          </div>
-          <div class="tooltip" style="top: calc(50vh +  68px)">
-            <span>信息化</span>
           </div>
         </div>
       </template>
@@ -241,12 +229,12 @@ onBeforeUnmount(() => {
     color: #fefefe;
     bottom: 10px;
     right: 140px;
-
     font-family: Microsoft YaHei;
     font-weight: 400;
     font-size: 15px;
     color: #FFFFFF;
     line-height: 52px;
+    z-index: 1000 !important;
   }
 }
 
@@ -356,6 +344,7 @@ onBeforeUnmount(() => {
     color: #fefefe;
     right: 62px;
     top: calc(50vh - 52px);
+    opacity: 0;
   }
 
   .search {

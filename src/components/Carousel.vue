@@ -42,7 +42,9 @@
     </div>
     <div class="indicator" v-show="isIndicatorShow">
       <div v-for="(segment, index) in 4" :key="index" :class="{ active: activeIndex === index }" class="segment"
-        @click="handleClick(index)"></div>
+        @click="handleClick(index)">
+        <span class="segment-text" :class="{ active: activeIndex === index }" >{{ idcArray[index] }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -60,6 +62,7 @@ const isRefresh = ref(true);
 const isRestatus = ref(true);
 const direct = ref(false);
 const isIndicatorShow = ref(true);
+const idcArray = ref(['首页', '智能运营', '智慧农业', '信息化']);
 
 const emit = defineEmits(['change']);
 
@@ -72,7 +75,7 @@ const task = () => {
 };
 
 const startAutoScroll = () => {
-  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND);
+  TaskExecutor.getInstance().pushListTask('CAROUSEL_TASK', task, TimeInterval.FIVE_SECOND * 100);
 };
 
 const stopAutoScroll = () => {
@@ -263,6 +266,10 @@ onBeforeUnmount(() => {
       background-color: rgba(255, 255, 255, 0.4);
       transition: background-color 0.3s, width 0.3s;
 
+      .segment-text {
+        opacity: 0;
+      }
+
       &:before {
         width: 65px;
         height: 58px;
@@ -277,6 +284,40 @@ onBeforeUnmount(() => {
       &.active {
         background-color: #fefefe;
         width: 2px;
+
+        .segment-text {
+          opacity: 1;
+          color: #fefefe;
+          display: block;
+          width: 8px;
+          font-size: 8px;
+          margin-left: 15px;
+          line-height: 1.1;
+        }
+
+        &:nth-child(1) {
+          .segment-text {
+            margin-top: -4.2vh;
+          }
+        }
+
+        &:nth-child(2) {
+          .segment-text {
+            margin-top: -5.0vh;
+          }
+        }
+
+        &:nth-child(3) {
+          .segment-text {
+            margin-top: -5.0vh;
+          }
+        }
+
+        &:nth-child(4) {
+          .segment-text {
+            margin-top: -4.6vh;
+          }
+        }
       }
 
       &:hover {
