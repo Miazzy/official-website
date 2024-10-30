@@ -58,6 +58,7 @@
             <div class="description-content flex-col justify-between">
               <div class="text-wrapper">
                 <span class="text">3170</span>
+                <span class="text"></span>
                 <span class="text">+天</span>
               </div>
               <span class="text-title">安全生产天数</span>
@@ -87,7 +88,6 @@
                   </div>
                 </div>
               </template>
-              
             </div>
           </div>
         </div>
