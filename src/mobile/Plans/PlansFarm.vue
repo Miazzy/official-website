@@ -68,7 +68,7 @@
                   <span class="service-title">设施化养殖系统</span>
                   <span class="service-description"
                     style="margin-top: 8px;">池塘内循环养殖系统<br />陆基高位池养殖系统<br />工厂化车间养殖系统</span>
-                  <span class="service-btn" style @click="handleClick('/mobile/plans/farm/intel')">了解详情</span>
+                  <span class="service-btn" style @click="handleClick('/mobile/plans/farm/equipment')">了解详情</span>
                 </div>
               </div>
             </div>
