@@ -74,32 +74,26 @@
             <span class="operation-secondary-text">{{ description }}</span>
             <span class="operation-link">{{ opLink }}&gt;&gt;</span>
             <div class="operation-box">
-              <div class="operation-services flex-col">
-                <div class="service-image-wrapper flex-col">
-                  <span class="icon iconfont service-image iconyunyingfuwu" ></span>
+              <template v-for="(item, index) in business" :key="`business-${index}`">
+                <div class="operation-services flex-col">
+                  <div class="service-image-wrapper flex-col">
+                    <span class="icon iconfont service-image" :class="item.icon" ></span>
+                  </div>
+                  <div class="service-details flex-col justify-between">
+                    <span class="service-title">{{ item.title }}</span>
+                    <span class="service-description">
+                      <span class="element" v-for="(element, index) in item.elements" :key="`element-${index}`">{{ element }}</span>
+                    </span>
+                  </div>
                 </div>
-                <div class="service-details flex-col justify-between">
-                  <span class="service-title">运行维护</span>
-                  <span class="service-description">安全管理<br />电站巡检<br />设备运行监控<br />维护消缺<br />台账管理<br />除草清洗</span>
-                </div>
-              </div>
-              <div class="operation-services flex-col">
-                <div class="service-image-wrapper flex-col">
-                  <span class="icon iconfont service-image icondashuju" ></span>
-                </div>
-                <div class="service-details flex-col justify-between">
-                  <span class="service-title">专项服务</span>
-
-                  <span
-                    class="service-description">设备抢检修技改<br />电气试验<br />设备专项排查与分析<br />技术监督<br />电站性能检测与质量评估<br />防雷检测<br />电力设备安装</span>
-                </div>
-              </div>
+              </template>
+              
             </div>
           </div>
         </div>
         <div class="operation-icon-wrapper flex-row justify-between">
-          <img class="arrow-circle-left" src="../../assets/images/arrow-circle-left.png" />
-          <img class="arrow-circle-right" src="../../assets/images/arrow-circle-right.png" />
+          <img class="arrow-circle-left" src="../../assets/images/arrow-circle-left.png" @click="handleClickLeft" />
+          <img class="arrow-circle-right" src="../../assets/images/arrow-circle-right.png" @click="handleClickRight" />
         </div>
       </div>
     </div>
@@ -123,11 +117,42 @@ const opLink = ref('业务范围');
 const opTextEn = ref('INTELLIGENT');
 const opTextTitle = ref('渔光一体智能运营专家');
 const opTextDescription = ref('OPERATION');
+const bIndex = ref(0);
+const bList = [
+  {
+    icon: 'iconyunyingfuwu',
+    title: '运行维护',
+    elements: ['安全管理', '电站巡检', '设备运行监控', '维护消缺', '台账管理', '除草清洗'],
+  },
+  {
+    icon: 'icondashuju',
+    title: '专项服务',
+    elements: ['设备抢检修技改', '电气试验', '设备专项排查与分析', '技术监督', '电站性能检测与质量评估', '防雷检测', '电力设备安装'],
+  },
+  {
+    icon: 'iconlianghaoderuanyingjianjianrongxing',
+    title: '增值服务',
+    elements: ['生产前准备', '电费结算', '关系协调', 'AI巡检', '智能光伏集中运营系统'],
+  },
+]
 
+const business = ref([...bList.slice(bIndex.value, bIndex.value + 2)]);
 const opParagraph = ref([
   '秉承“以人为本、安全运维、高效协同”的基本思想，集现代数字智能化手段，提供各类新能源电站运服务。',
   '线上依托自主研发新能源云管理系统、渔光一体智慧云平台、智能水产养殖系统，融合视频监控等各种电站资源，形成电站的渔光一体产业化、安全生产模式化、电站生产标准化、运营管理智能化、发电目标最大化的五大核心能力。'
 ]);
+
+const handleClickLeft = () => {
+  const aList = [...bList,...bList];
+  bIndex.value = (bIndex.value + 1) % 3;
+  business.value = [...aList.slice(bIndex.value, bIndex.value + 2)];
+};
+
+const handleClickRight = () => {
+  const aList = [...bList,...bList];
+  bIndex.value = (bIndex.value + 2) % 3;
+  business.value = [...aList.slice(bIndex.value, bIndex.value + 2)];
+};
 
 onMounted(() => {
   //
@@ -328,6 +353,10 @@ onBeforeUnmount(() => {
             text-align: center;
             line-height: 2.94vw;
             margin: 1.73vw auto 0 auto;
+
+            .element {
+              display: block;
+            }
           }
         }
       }
