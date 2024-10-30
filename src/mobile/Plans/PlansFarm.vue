@@ -49,34 +49,27 @@
             <span class="operation-secondary-text">{{ description }}</span>
             <span class="operation-link">{{ opLink }}&gt;&gt;</span>
             <div class="operation-box">
-              <div class="operation-services flex-col">
-                <div class="service-image-wrapper flex-col">
-                  <span class="icon iconfont service-image iconzhiwuzhongzhi"></span>
+
+              <template v-for="(item, index) in business" :key="`business-${index}`">
+                <div class="operation-services flex-col">
+                  <div class="service-image-wrapper flex-col">
+                    <span class="icon iconfont service-image" :class="item.icon" ></span>
+                  </div>
+                  <div class="service-details flex-col justify-between">
+                    <span class="service-title" v-for="(title, idx) in item.title" :key="`title-${idx}`">{{ title }} </span>
+                    <span class="service-description">
+                      <span class="element" v-for="(element, idx) in item.elements" :key="`element-${idx}`">{{ element }}</span>
+                    </span>
+                    <span class="service-btn" v-if="item.btn" style @click="handleClick(item.routePath)">了解详情</span>
+                  </div>
                 </div>
-                <div class="service-details flex-col justify-between">
-                  <span class="service-title">现代化农业园区 </span>
-                  <span class="service-title" style="margin-top: 5px;">整体解决方案</span>
-                  <span class="service-description">现代化水产产业园规划建设<br />光伏农业园区规划建设<br />园区智能化运营服务<br />渔光一体整体解决方案</span>
-                </div>
-              </div>
-              <div class="operation-services flex-col">
-                <div class="service-image-wrapper flex-col">
-                  <span class="icon iconfont service-image iconyangzhishebei"
-                    style="font-size: 8.2vw; margin: 4.35vw auto;"></span>
-                </div>
-                <div class="service-details flex-col justify-between">
-                  <span class="service-title">设施化养殖系统</span>
-                  <span class="service-description"
-                    style="margin-top: 8px;">池塘内循环养殖系统<br />陆基高位池养殖系统<br />工厂化车间养殖系统</span>
-                  <span class="service-btn" style @click="handleClick('/mobile/plans/farm/equipment')">了解详情</span>
-                </div>
-              </div>
+              </template>
             </div>
           </div>
         </div>
         <div class="operation-icon-wrapper flex-row justify-between">
-          <img class="arrow-circle-left" src="../../assets/images/arrow-circle-left.png" />
-          <img class="arrow-circle-right" src="../../assets/images/arrow-circle-right.png" />
+          <img class="arrow-circle-left" src="../../assets/images/arrow-circle-left.png" @click="handleClickLeft"/>
+          <img class="arrow-circle-right" src="../../assets/images/arrow-circle-right.png" @click="handleClickRight"/>
         </div>
       </div>
     </div>
@@ -107,6 +100,39 @@ const opParagraph = ref([
   '运用物联网技术来解决现代农业生产中的问题，将现代智慧农业和光伏产业科学、专业、有机结合，推动农业生产、农产品经营、农业信息服务三大领域改造升级，实现数字化、科学化、智能化、生态化的现代化养殖，助推农业产业高效可持续发展。'
 ]);
 
+const bIndex = ref(0);
+const bList = [
+  {
+    icon: 'iconzhiwuzhongzhi',
+    title: ['现代化农业园区', '整体解决方案'],
+    elements: ['现代化水产产业园规划建设', '光伏农业园区规划建设', '园区智能化运营服务', '渔光一体整体解决方案'],
+    btn: false,
+    routePath: '',
+  },
+  {
+    icon: 'iconyangzhishebei',
+    title: ['设施化养殖系统'],
+    elements: ['池塘内循环养殖系统', '陆基高位池养殖系统', '工厂化车间养殖系统'],
+    btn: true,
+    routePath: '/mobile/plans/farm/equipment',
+  },
+  {
+    icon: 'iconzhinengyangzhi',
+    title: ['智能化养殖系统'],
+    elements: ['智能塔料投喂系统', '智能机器人投喂系统', '多级运维系统', '养殖ERP系统'],
+    btn: true,
+    routePath: '/mobile/plans/farm/intel',
+  },
+  {
+    icon: 'iconchitangweishuichuli',
+    title: ['生态化尾水处理'],
+    elements: ['通威底排污技术', '模块化底排污设备', '尾水处理解决方案 '],
+    btn: false,
+    routePath: '',
+  },
+]
+
+const business = ref([...bList.slice(bIndex.value, bIndex.value + 2)]);
 const router = useRouter();
 
 const handleClick = (path, y = 0) => {
@@ -116,6 +142,18 @@ const handleClick = (path, y = 0) => {
         window.scrollTo(0, y);
     }, [0, 50, 100]);
 }
+
+const handleClickLeft = () => {
+  const aList = [...bList,...bList];
+  bIndex.value = (bIndex.value + 1) % 4;
+  business.value = [...aList.slice(bIndex.value, bIndex.value + 2)];
+};
+
+const handleClickRight = () => {
+  const aList = [...bList,...bList];
+  bIndex.value = (bIndex.value + 3) % 4;
+  business.value = [...aList.slice(bIndex.value, bIndex.value + 2)];
+};
 
 onMounted(() => {
   //
@@ -303,6 +341,9 @@ onBeforeUnmount(() => {
             text-align: center;
             white-space: nowrap;
             line-height: 2.94vw;
+            &:nth-child(2) {
+              margin-top: 5px;
+            }
           }
 
           .service-description {
@@ -316,6 +357,10 @@ onBeforeUnmount(() => {
             text-align: center;
             line-height: 2.94vw;
             margin: 1.73vw auto 0 auto;
+
+            .element {
+              display: block;
+            }
           }
 
           .service-btn {
