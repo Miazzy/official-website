@@ -378,18 +378,18 @@ onBeforeUnmount(() => {
         .box-wrapper {
             background-color: rgba(221, 120, 22, 1);
             width: 22.4vw;
-            height: 6.67vw;
+            height: 6.66vw;
             z-index: 10000;
 
             .button {
                 width: 14.27vw;
-                height: 2.8vw;
-                margin: 1.86vw 0 0 4vw;
+                height: 6.66vw;
+                margin: 0 0 0 4vw;
             }
 
             .button-text {
                 width: 11.2vw;
-                height: 3vw;
+                height: 6.66vw;
                 overflow-wrap: break-word;
                 color: #ffffff;
                 font-size: 2.8vw;
@@ -397,13 +397,13 @@ onBeforeUnmount(() => {
                 font-weight: normal;
                 text-align: left;
                 white-space: nowrap;
-                line-height: 3vw;
+                line-height: 6.66vw;
             }
 
             .arrow-right {
-                width: 1.47vw;
-                height: 2.14vw;
-                margin-top: 0.27vw;
+                width: 1.45vw;
+                height: 2.2vw;
+                margin-top: 2.2vw;
             }
         }
     }
