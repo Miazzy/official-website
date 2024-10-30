@@ -17,10 +17,10 @@
         <div class="main-container flex-col">
 
             <div class="tabs-wrapper flex-row justify-between">
-                <span class="tab-text">最新资讯&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <span class="tab-text">公司动态</span>
+                <span class="tab-text" @click="handleTabClick('')">最新资讯&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="tab-text" @click="handleTabClick('company')">公司动态</span>
             </div>
-            <div class="tabs-active-item flex-col"></div>
+            <div class="tabs-active-item flex-col" :class="className"></div>
             <div class="blog-section-wrapper flex-col">
                 <div class="blog-image-box flex-col"></div>
                 <span class="blog-text">运维一线｜那天，我在水库救起来一只“水晃晃”</span>
@@ -118,6 +118,7 @@ import { useRouter } from 'vue-router';
 import { setTimexec } from '@/utils/common';
 
 const router = useRouter();
+const className = ref('');
 
 const handleClick = (path, y = 0) => {
     window.scrollTo(0, y);
@@ -125,6 +126,10 @@ const handleClick = (path, y = 0) => {
     setTimexec(() => {
         window.scrollTo(0, y);
     }, [0, 50, 100]);
+}
+
+const handleTabClick = (name) => {
+    className.value = name;
 }
 
 </script>
@@ -213,6 +218,10 @@ const handleClick = (path, y = 0) => {
         width: 14.8vw;
         height: 0.54vw;
         margin: 2.26vw 0 0 5.33vw;
+
+        &.company {
+            margin: 2.26vw 0 0 25.33vw;
+        }
     }
 
     .blog-section-wrapper {
