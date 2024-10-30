@@ -3,138 +3,171 @@
         <!-- mobile-header -->
         <MHeader></MHeader>
         <!-- main-container -->
-        <div class="main-container flex-col" :class="bgClassName">
-            <template v-if="indexRef === 1">
-                <!-- title-container -->
-                <div class="title-container flex-row">
-                    <div class="text-wrapper flex-col justify-between">
-                        <span class="title">{{ title[(indexRef + 3) % 4] }}</span>
-                        <span class="subtitle">{{ subTitle[(indexRef + 3) % 4] }}</span>
-                    </div>
-                </div>
-
-                <!-- line-container -->
-                <div class="line-container flex-row">
-                    <div class="line flex-col"></div>
-                </div>
-
-                <!-- content-container -->
-                <div class="content-container flex-row" style="z-index: 10000;">
-                    <div class="box-wrapper flex-row">
-                        <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/aboutus')">
-                            <span class="button-text" >了解更多</span>
-                            <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
-                        </div>
-                    </div>
-                </div>
-            </template>
-            <template v-if="indexRef === 2">
-                <!-- title-container -->
-                <div class="title-container flex-row">
-                    <div class="text-wrapper flex-col justify-between">
-                        <span class="title">{{ title[(indexRef + 3) % 4] }}</span>
-                        <span class="subtitle">{{ subTitle[(indexRef + 3) % 4] }}</span>
-                    </div>
-                </div>
-
-                <!-- content-container -->
-                <div class="content-container flex-row">
-                    <div class="box-wrapper flex-row">
-                        <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/plans/operate')">
-                            <span class="button-text" >了解更多</span>
-                            <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- index-container -->
-                <div class="index-container">
-                    <div class="index-wrapper flex-row">
-                        <div class="index-text-wrapper  flex-col justify-between">
-                            <div class="index-text-box">
-                                <span class="text">40</span>
-                                <span class="text middle"></span>
-                                <span class="text mini">+个</span>
-                            </div>
-                            <span class="text-title">在运城市</span>
-                        </div>
-                        <div class="block-partition flex-col"></div>
-                        <div class="index-text-wrapper flex-col justify-between">
-                            <div class="index-text-box right">
-                                <span class="text">40</span>
-                                <span class="text middle"></span>
-                                <span class="text mini">+座</span>
-                            </div>
-                            <span class="text-title">在运电站</span>
-                        </div>
-                    </div>
-                    <div class="index-wrapper flex-row">
-                        <div class="index-text-wrapper flex-col justify-between">
-                            <div class="index-text-box">
-                                <span class="text">4.27</span>
-                                <span class="text middle"></span>
-                                <span class="text mini">Gw+</span>
-                            </div>
-                            <span class="text-title">在运维总容量</span>
-                        </div>
-                        <div class="block-partition flex-col"></div>
-                        <div class="index-text-wrapper flex-col justify-between">
-                            <div class="index-text-box">
-                                <span class="text">3032</span>
-                                <span class="text middle"></span>
-                                <span class="text mini">+天</span>
-                            </div>
-                            <span class="text-title">安全生产天数</span>
-                        </div>
-                    </div>
-                </div>
-            </template>
-            <template v-if="indexRef === 3">
-                <!-- title-container -->
-                <div class="title-container flex-row">
-                    <div class="text-wrapper flex-col justify-between">
-                        <span class="title">{{ title[(indexRef + 3) % 4] }}</span>
-                        <span class="subtitle">{{ subTitle[(indexRef + 3) % 4] }}</span>
-                    </div>
-                </div>
-
-                <!-- content-container -->
-                <div class="content-container flex-row">
-                    <div class="box-wrapper flex-row">
-                        <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/plans/farm')">
-                            <span class="button-text" >了解更多</span>
-                            <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
-                        </div>
-                    </div>
-                </div>
-            </template>
-            <template v-if="indexRef === 0">
-                <!-- title-container -->
-                <div class="title-container flex-row">
-                    <div class="text-wrapper flex-col justify-between">
-                        <span class="title">{{ title[indexRef + 3] }}</span>
-                        <span class="subtitle">{{ subTitle[indexRef + 3] }}</span>
-                    </div>
-                </div>
-
-                <!-- content-container -->
-                <div class="content-container flex-row">
-                    <div class="box-wrapper flex-row">
-                        <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/plans/farm/intel')">
-                            <span class="button-text" >了解更多</span>
-                            <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
-                        </div>
-                    </div>
-                </div>
-            </template>
-        </div>
+         <div class="max-content-container" :style="{ transform: contentTransform, transition: contentTransition }">
+             <div class="main-container flex-col" :class="[
+                 isMoveUp && indexRef === 1 ? 'move-up' : !isMoveUp && indexRef === 1 ? 'move-down' : '',
+                 isMoveUp && indexRef !== 1 ? 'move-up-disactive' : !isMoveUp && indexRef !== 1 ? 'move-down-disactive' : '',
+             ]">
+                 <div class="bg-wrapper">
+                     <img src="@/assets/images/home_mobile_01.png" />
+                 </div>
+                 <div class="page p01">
+                     <!-- title-container -->
+                     <div class="title-container flex-row">
+                         <div class="text-wrapper flex-col justify-between">
+                             <span class="title">{{ title[0] }}</span>
+                             <span class="subtitle">{{ subTitle[0] }}</span>
+                         </div>
+                     </div>
+     
+                     <!-- line-container -->
+                     <div class="line-container flex-row">
+                         <div class="line flex-col"></div>
+                     </div>
+     
+                     <!-- content-container -->
+                     <div class="content-container flex-row" style="z-index: 10000;">
+                         <div class="box-wrapper flex-row">
+                             <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/aboutus')">
+                                 <span class="button-text">了解更多</span>
+                                 <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="main-container flex-col" :class="[
+                 isMoveUp && indexRef === 2 ? 'move-up' : !isMoveUp && indexRef === 2 ? 'move-down' : '',
+                 isMoveUp && indexRef !== 2 ? 'move-up-disactive' : !isMoveUp && indexRef !== 2 ? 'move-down-disactive' : '',
+             ]">
+                 <div class="bg-wrapper">
+                     <img src="@/assets/images/home_mobile_02.png" />
+                 </div>
+                 <div class="page p02">
+                     <!-- title-container -->
+                     <div class="title-container flex-row">
+                         <div class="text-wrapper flex-col justify-between">
+                             <span class="title">{{ title[1] }}</span>
+                             <span class="subtitle">{{ subTitle[1] }}</span>
+                         </div>
+                     </div>
+     
+                     <!-- content-container -->
+                     <div class="content-container flex-row">
+                         <div class="box-wrapper flex-row">
+                             <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/plans/operate')">
+                                 <span class="button-text">了解更多</span>
+                                 <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
+                             </div>
+                         </div>
+                     </div>
+     
+                     <!-- index-container -->
+                     <div class="index-container">
+                         <div class="index-wrapper flex-row">
+                             <div class="index-text-wrapper  flex-col justify-between">
+                                 <div class="index-text-box">
+                                     <span class="text">40</span>
+                                     <span class="text middle"></span>
+                                     <span class="text mini">+个</span>
+                                 </div>
+                                 <span class="text-title">在运城市</span>
+                             </div>
+                             <div class="block-partition flex-col"></div>
+                             <div class="index-text-wrapper flex-col justify-between">
+                                 <div class="index-text-box right">
+                                     <span class="text">40</span>
+                                     <span class="text middle"></span>
+                                     <span class="text mini">+座</span>
+                                 </div>
+                                 <span class="text-title">在运电站</span>
+                             </div>
+                         </div>
+                         <div class="index-wrapper flex-row">
+                             <div class="index-text-wrapper flex-col justify-between">
+                                 <div class="index-text-box">
+                                     <span class="text">4.27</span>
+                                     <span class="text middle"></span>
+                                     <span class="text mini">Gw+</span>
+                                 </div>
+                                 <span class="text-title">在运维总容量</span>
+                             </div>
+                             <div class="block-partition flex-col"></div>
+                             <div class="index-text-wrapper flex-col justify-between">
+                                 <div class="index-text-box">
+                                     <span class="text">3032</span>
+                                     <span class="text middle"></span>
+                                     <span class="text mini">+天</span>
+                                 </div>
+                                 <span class="text-title">安全生产天数</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="main-container flex-col" :class="[
+                 isMoveUp && indexRef === 3 ? 'move-up' : !isMoveUp && indexRef === 3 ? 'move-down' : '',
+                 isMoveUp && indexRef !== 3 ? 'move-up-disactive' : !isMoveUp && indexRef !== 3 ? 'move-down-disactive' : '',
+             ]">
+                 <div class="bg-wrapper">
+                     <img src="@/assets/images/home_mobile_03.png" />
+                 </div>
+                 <div class="page p03">
+                     <!-- title-container -->
+                     <div class="title-container flex-row">
+                         <div class="text-wrapper flex-col justify-between">
+                             <span class="title">{{ title[2] }}</span>
+                             <span class="subtitle">{{ subTitle[2] }}</span>
+                         </div>
+                     </div>
+     
+                     <!-- content-container -->
+                     <div class="content-container flex-row">
+                         <div class="box-wrapper flex-row">
+                             <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/plans/farm')">
+                                 <span class="button-text">了解更多</span>
+                                 <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="main-container flex-col" :class="[
+                 isMoveUp && indexRef === 0 ? 'move-up' : !isMoveUp && indexRef === 0 ? 'move-down' : '',
+                 isMoveUp && indexRef !== 0 ? 'move-up-disactive' : !isMoveUp && indexRef !== 0 ? 'move-down-disactive' : '',
+             ]">
+                 <div class="bg-wrapper">
+                     <img src="@/assets/images/home_mobile_04.png" />
+                 </div>
+                 <div class="page p04">
+                     <!-- title-container -->
+                     <div class="title-container flex-row">
+                         <div class="text-wrapper flex-col justify-between">
+                             <span class="title">{{ title[3] }}</span>
+                             <span class="subtitle">{{ subTitle[3] }}</span>
+                         </div>
+                     </div>
+     
+                     <!-- content-container -->
+                     <div class="content-container flex-row">
+                         <div class="box-wrapper flex-row">
+                             <div class="button flex-row justify-between"
+                                 @click="handleRoutePush('/mobile/plans/farm/intel')">
+                                 <span class="button-text">了解更多</span>
+                                 <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
         <!-- mobile-copyright -->
         <MCopyright @click="handleClickDown"></MCopyright>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, nextTick, computed } from "vue";
 import MHeader from "@/components/MHeader.vue";
 import MCopyright from "@/components/MCopyright.vue";
 import { useRouter } from 'vue-router'
@@ -157,10 +190,22 @@ const subTitle = ref([
 
 const indexRef = ref(1);
 const bgClassName = ref(`index-${indexRef.value}-bg`);
+const bgAnimate = ref('animate-background');
+const isMoveUp = ref(false);
+
+const contentTransform = computed(() => `translateY(-${(indexRef.value + 3) % 4 * 100}vh)`);
+const contentTransition = computed(() => `${ (indexRef.value + 3) % 4 != 0 ? 'transform 0.8s ease-in-out' : 'none'}`);
 
 const handleClickDown = () => {
+    isMoveUp.value = false;
     indexRef.value = (indexRef.value + 1) % 4;
     bgClassName.value = indexRef.value === 1 ? `index-${indexRef.value}-bg` : `index-${indexRef.value}-bg normal-bg`;
+}
+
+const handleClickUp = () => {
+    isMoveUp.value = true;
+    indexRef.value = (indexRef.value - 1 + 4) % 4;
+    bgClassName.value = `index-${indexRef.value}-bg`;
 }
 
 const handleRoutePush = (path, y = 0) => {
@@ -188,6 +233,20 @@ onBeforeUnmount(() => {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+}
+
+.max-content-container {
+    height: 400vh;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
 }
 
 .main-container {
@@ -406,6 +465,23 @@ onBeforeUnmount(() => {
                 margin-top: 2.2vw;
             }
         }
+    }
+}
+
+.bg-wrapper {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+
+    &.down {
+        top: 100vh;
+    }
+
+    img {
+        width: auto;
+        height: 100vh;
+        object-fit: cover;
     }
 }
 </style>
