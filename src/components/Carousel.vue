@@ -287,4 +287,10 @@ onBeforeUnmount(() => {
     }
   }
 }
+
+.carousel-container .carousel-slide.active, 
+.carousel-container .carousel-slide.activeUp, 
+.carousel-container .indicator {
+  z-index: 1 !important;
+}
 </style>

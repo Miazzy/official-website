@@ -229,8 +229,10 @@ onBeforeUnmount(() => {
   }
 
   :deep(.carousel-slide.active) {
+    z-index: 1 !important;
     .bg-button {
-      z-index: 1;
+      z-index: 1 !important;
+      cursor: pointer !important;
     }
   }
 
@@ -304,8 +306,13 @@ onBeforeUnmount(() => {
     height: 2.3vw !important;
     top: calc(18.75vh) !important;
     left: calc(0.25vw) !important;
-    cursor: pointer;
+    z-index: 1 !important;
+    cursor: pointer !important;
     opacity: 1;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     .content {
       margin: 0.5vw 0.88vw !important;
@@ -418,6 +425,8 @@ onBeforeUnmount(() => {
         .bg-button {
           top: calc(16.5vh) !important;
           left: calc(0.25vw) !important;
+          z-index: 1 !important;
+          cursor: pointer !important;
         }
       }
     }
@@ -442,6 +451,8 @@ onBeforeUnmount(() => {
         .bg-button {
           top: calc(16.5vh) !important;
           left: calc(0.12vw) !important;
+          z-index: 1 !important;
+          cursor: pointer !important;
         }
       }
     }
@@ -466,6 +477,8 @@ onBeforeUnmount(() => {
         .bg-button {
           top: calc(16.5vh) !important;
           left: calc(0.12vw) !important;
+          cursor: pointer !important;
+          z-index: 1 !important;
         }
       }
     }
@@ -486,6 +499,8 @@ onBeforeUnmount(() => {
   height: 45px;
   left: 264px;
   top: calc(50vh + 80px);
+  cursor: pointer !important;
+  z-index: 1 !important;
 
   .content {
     margin: 10px 22px;

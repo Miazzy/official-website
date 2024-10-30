@@ -19,10 +19,10 @@
                 </div>
 
                 <!-- content-container -->
-                <div class="content-container flex-row">
+                <div class="content-container flex-row" style="z-index: 10000;">
                     <div class="box-wrapper flex-row">
-                        <div class="button flex-row justify-between">
-                            <span class="button-text">了解更多</span>
+                        <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/aboutus')">
+                            <span class="button-text" >了解更多</span>
                             <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
                         </div>
                     </div>
@@ -40,8 +40,8 @@
                 <!-- content-container -->
                 <div class="content-container flex-row">
                     <div class="box-wrapper flex-row">
-                        <div class="button flex-row justify-between">
-                            <span class="button-text">了解更多</span>
+                        <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/plans/operate')">
+                            <span class="button-text" >了解更多</span>
                             <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
                         </div>
                     </div>
@@ -101,8 +101,8 @@
                 <!-- content-container -->
                 <div class="content-container flex-row">
                     <div class="box-wrapper flex-row">
-                        <div class="button flex-row justify-between">
-                            <span class="button-text">了解更多</span>
+                        <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/plans/farm')">
+                            <span class="button-text" >了解更多</span>
                             <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
                         </div>
                     </div>
@@ -120,8 +120,8 @@
                 <!-- content-container -->
                 <div class="content-container flex-row">
                     <div class="box-wrapper flex-row">
-                        <div class="button flex-row justify-between">
-                            <span class="button-text">了解更多</span>
+                        <div class="button flex-row justify-between" @click="handleRoutePush('/mobile/plans/farm/intel')">
+                            <span class="button-text" >了解更多</span>
                             <img class="arrow arrow-right" src="../../assets/images/arrow_right_mobile.png" />
                         </div>
                     </div>
@@ -137,6 +137,10 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import MHeader from "@/components/MHeader.vue";
 import MCopyright from "@/components/MCopyright.vue";
+import { useRouter } from 'vue-router'
+import { setTimexec } from '@/utils/common';
+
+const router = useRouter();
 
 const title = ref([
     '渔光一体智能运营专家',
@@ -157,6 +161,14 @@ const bgClassName = ref(`index-${indexRef.value}-bg`);
 const handleClickDown = () => {
     indexRef.value = (indexRef.value + 1) % 4;
     bgClassName.value = indexRef.value === 1 ? `index-${indexRef.value}-bg` : `index-${indexRef.value}-bg normal-bg`;
+}
+
+const handleRoutePush = (path, y = 0) => {
+    window.scrollTo(0, y);
+    router.push(path);
+    setTimexec(() => {
+        window.scrollTo(0, y);
+    }, [0, 50, 100]);
 }
 
 onMounted(() => {
@@ -367,6 +379,7 @@ onBeforeUnmount(() => {
             background-color: rgba(221, 120, 22, 1);
             width: 22.4vw;
             height: 6.67vw;
+            z-index: 10000;
 
             .button {
                 width: 14.27vw;
