@@ -10,7 +10,7 @@
             <div class="contact-wrapper flex-row">
                 <div class="contact-content flex-row justify-between">
                     <span
-                        class="contact-content-paragraph">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道中段588号通威国际中心</span>
+                        class="contact-content-paragraph">Tel：028-86168758<br />E-mail：WEIH02&#64;tongwei.com<br />Addr.：四川省成都市高新区天府大道588号通威国际中心</span>
                 </div>
             </div>
         </div>

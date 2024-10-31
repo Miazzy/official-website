@@ -145,13 +145,13 @@ const handleClick = (path, y = 0) => {
 
 const handleClickLeft = () => {
   const aList = [...bList,...bList];
-  bIndex.value = (bIndex.value + 1) % 4;
+  bIndex.value = (bIndex.value + 3) % 4;
   business.value = [...aList.slice(bIndex.value, bIndex.value + 2)];
 };
 
 const handleClickRight = () => {
   const aList = [...bList,...bList];
-  bIndex.value = (bIndex.value + 3) % 4;
+  bIndex.value = (bIndex.value + 1) % 4;
   business.value = [...aList.slice(bIndex.value, bIndex.value + 2)];
 };
 

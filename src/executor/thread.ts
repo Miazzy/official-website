@@ -66,6 +66,13 @@ export class Thread {
     }
   }
 
+  public startNoLock() {
+    if (!this.running) {
+      this.running = true;
+      this.runLoopNoLock();
+    }
+  }
+
   public stop() {
     if (this.running) {
       this.running = false;
@@ -124,5 +131,23 @@ export class Thread {
         }
       }
     }, this.interval + tinterval);
+  }
+
+  public runLoopNoLock() {
+    this.timer = setInterval(() => {
+      if (this.running) {
+        try {
+          // 执行循环任务
+          if (this.listTask.length > 0) {
+            for (const element of this.listTask) {
+              const { callback } = element;
+              callback();
+            }
+          }
+        } catch {
+          //
+        }
+      }
+    }, this.interval);
   }
 }

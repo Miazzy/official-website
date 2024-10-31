@@ -42,7 +42,7 @@
       <div class="margin" style="margin-top: 50px;"></div>
       <div class="title text">Tel: 028-86168758</div>
       <div class="title text">E-mail: WEIH02@tongwei.com</div>
-      <div class="title text">Addr: 四川省成都市高新区天府大道中段588号通威国际中心</div>
+      <div class="title text">Addr: 四川省成都市高新区天府大道588号通威国际中心</div>
     </div>
   </div>
 </template>

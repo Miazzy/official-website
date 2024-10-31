@@ -30,24 +30,34 @@
         </div>
 
         <!-- honor-container -->
-        <div class="honor-container flex-col">
-            <div class="honor-wrapper flex-col">
+        <div class="honor-container">
+            <div class="honor-wrapper">
                 <!-- title-wrapper -->
-                <div class="honor-title-wrapper flex-col justify-between">
+                <div class="honor-title-wrapper">
                     <span class="htext-title">资质荣誉</span>
                     <span class="htext-title mini">QUALIFICATION HONOR</span>
                 </div>
                 <!-- image-wrapper -->
-                <div class="honor-image-wrapper flex-row">
-                    <div class="image-wrapper flex-col">
-                        <img class="image" src="@/assets/images/honor-15.png" />
-                        <img class="image other" src="@/assets/images/honor-9.png" />
+                <div class="honor-image-wrapper">
+                    <div class="image-wrapper flex-col" :style="`transform: translateX(${initX}vw);`">
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
+                        <img class="image" v-for="i in 14" :key="i" :src="getImgUrl(`honor-${i}.png`)" />
                     </div>
                 </div>
                 <!-- arrow-wrapper -->
                 <div class="honor-arrow-wrapper flex-row justify-between">
-                    <img class="honor-arrow-left" src="../../assets/images/arrow-circle-left.png" />
-                    <img class="honor-arrow-right" src="../../assets/images/arrow-circle-right.png" />
+                    <img class="honor-arrow-left" src="../../assets/images/arrow-circle-left.png"
+                        @click="handleTranslateX(25, true)" />
+                    <img class="honor-arrow-right" src="../../assets/images/arrow-circle-right.png"
+                        @click="handleTranslateX(-25, true)" />
                 </div>
             </div>
         </div>
@@ -61,13 +71,13 @@
             <div class="image-htext-title flex-row">
                 <div class="contact-image-text-wrapper flex-row">
                     <div class="contact-image-text flex-row justify-between">
-                        <span class="icon iconfont image tel icondianhua" ></span>
-                        <span class="icon iconfont image email iconyouxiang" ></span>
-                        <span class="icon iconfont image addr iconzhengqimenhu_dizhixinxi1" ></span>
+                        <span class="icon iconfont image tel icondianhua"></span>
+                        <span class="icon iconfont image email iconyouxiang"></span>
+                        <span class="icon iconfont image addr iconzhengqimenhu_dizhixinxi1"></span>
                         <span class="contact-image-text-paragraph">
                             Tel： 028-86168758<br />
                             E-mail： WEIH02@tongwei.com<br />
-                            Addr： 四川省成都市高新区天府大道中段588号通威国际中心
+                            Addr： 四川省成都市高新区天府大道588号通威国际中心
                         </span>
                     </div>
                 </div>
@@ -82,24 +92,63 @@
 import { ref, onMounted } from 'vue';
 import MHeader from "@/components/MHeader.vue";
 import MFooter from "@/components/MFooter.vue";
+import { getImgUrl } from '@/utils/common';
+import { TaskExecutor } from '@/executor/executor';
 
 const title = ref('关于我们');
 const subTitle = ref('ABOUT US');
 const mapObject = ref();
+const initX = ref(0);
+const task = ref(null);
+let timeoutFlag = null
 
 // 初始化地图
 const initMap = () => {
-  mapObject.value = new BMapGL.Map('map-container'); // 创建Map实例
-  mapObject.value.setMapType(BMAP_NORMAL_MAP); // 设置地图类型为地球模式
-  mapObject.value.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
-  mapObject.value.centerAndZoom(new BMapGL.Point(104.074384, 30.556542), 16); // 初始化地图,设置中心点坐标和地图级别
-  let marker = new BMapGL.Marker(new BMapGL.Point(104.074384, 30.556542));
-  mapObject.value.addOverlay(marker);
+    mapObject.value = new BMapGL.Map('map-container'); // 创建Map实例
+    mapObject.value.setMapType(BMAP_NORMAL_MAP); // 设置地图类型为地球模式
+    mapObject.value.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+    mapObject.value.centerAndZoom(new BMapGL.Point(104.074384, 30.556542), 16); // 初始化地图,设置中心点坐标和地图级别
+    let marker = new BMapGL.Marker(new BMapGL.Point(104.074384, 30.556542));
+    mapObject.value.addOverlay(marker);
+};
+
+const handleTranslateX = (value, flag) => {
+    if (flag) {
+        task.value = null;
+        if (timeoutFlag) {
+            clearTimeout(timeoutFlag);
+            timeoutFlag = null;
+        }
+        timeoutFlag = setTimeout(() => {
+            task.value = handleScrollTask;
+            timeoutFlag = null;
+        }, 1000);
+    }
+    if (initX.value >= 0 && value > 0) {
+        initX.value = -5850;
+    }
+    if (initX.value <= -6400 && value < 0) {
+        initX.value = -560;
+    }
+    initX.value = initX.value + value;
+    if (initX.value >= 0 && initX.value <= 30) {
+        initX.value = -5850 + initX.value;
+    }
+};
+
+const handleScrollTask = () => {
+    handleTranslateX(-0.15, false);
 };
 
 // 挂载函数
 onMounted(() => {
     initMap();
+    task.value = handleScrollTask;
+    setInterval(() => {
+        if (task.value != null) {
+            task.value();
+        }
+    }, 10);
 });
 
 </script>
@@ -339,21 +388,24 @@ onMounted(() => {
 .honor-container {
     background-color: rgba(233, 233, 234, 0.1);
     height: 105vw;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
     background: url('../../assets/images/mobile_aboutus_bg.png');
     background-size: 100% 100%;
     z-index: 1000;
+    padding: 0 5vw 0 5vw;
+    overflow: hidden;
 
     .honor-wrapper {
         background-color: rgba(238, 238, 238, 0.1);
-        width: 100vw;
+        width: 100%;
         height: 112.14vw;
+        overflow: hidden;
 
         .honor-title-wrapper {
             width: 29.6vw;
             height: 10.67vw;
-            margin: 7.6vw 0 0 5.2vw;
+            margin: 7.6vw 0 0 calc(5.2vw - 5vw);
 
             .htext-title {
                 width: 22vw;
@@ -383,21 +435,21 @@ onMounted(() => {
             }
         }
 
-
-
         .honor-image-wrapper {
-            width: 99.74vw;
+            width: 100%;
             height: 63.07vw;
-            margin: 0vw 0 0 0.26vw;
+            padding: 0;
+            background-color: transparent;
 
             .image-wrapper {
                 background-color: transparent;
                 height: 63.07vw;
-                width: 100vw;
+                width: 90%;
                 display: flex;
                 flex-direction: row;
                 align-items: flex-end;
-                margin: 0 5vw;
+                padding: 0 0px;
+                // animation: scroll-x 60s linear infinite;
 
                 .image {
                     margin: 0;
@@ -420,7 +472,7 @@ onMounted(() => {
     .honor-arrow-wrapper {
         width: 19.87vw;
         height: 7.47vw;
-        margin: 8.53vw 0 9.6vw 5.8vw;
+        margin: 8.53vw 0 9.6vw 0;
 
         .honor-arrow-left {
             width: 7.47vw;
@@ -431,6 +483,16 @@ onMounted(() => {
             width: 7.47vw;
             height: 7.47vw;
         }
+    }
+}
+
+@keyframes scroll-x {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1000%);
     }
 }
 </style>

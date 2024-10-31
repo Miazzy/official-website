@@ -144,13 +144,13 @@ const opParagraph = ref([
 
 const handleClickLeft = () => {
   const aList = [...bList,...bList];
-  bIndex.value = (bIndex.value + 1) % 3;
+  bIndex.value = (bIndex.value + 2) % 3;
   business.value = [...aList.slice(bIndex.value, bIndex.value + 2)];
 };
 
 const handleClickRight = () => {
   const aList = [...bList,...bList];
-  bIndex.value = (bIndex.value + 2) % 3;
+  bIndex.value = (bIndex.value + 1) % 3;
   business.value = [...aList.slice(bIndex.value, bIndex.value + 2)];
 };
 

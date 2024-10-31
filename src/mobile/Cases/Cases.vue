@@ -152,7 +152,7 @@ import MFooter from "@/components/MFooter.vue";
     background-color: rgba(255, 255, 255, 1);
     position: relative;
     width: 100vw;
-    height: 412.6vw;
+    height: 422.6vw;
     overflow: hidden;
 }
 
@@ -200,7 +200,7 @@ import MFooter from "@/components/MFooter.vue";
 
 .operate-container {
     background-color: #f9fafc;
-    height: 162.8vw;
+    height: 168.8vw;
     width: 92vw;
     position: absolute;
     left: 4vw;
@@ -286,7 +286,7 @@ import MFooter from "@/components/MFooter.vue";
 
     .operate-box-container {
         width: 84vw;
-        height: 59.6vw;
+        height: 62.6vw;
         margin: 4.82vw 0 4.8vw 4vw;
 
         &:last-child {
@@ -297,7 +297,7 @@ import MFooter from "@/components/MFooter.vue";
             box-shadow: -1px 7px 13px 0px rgba(24, 24, 24, 0.11);
             background-color: rgba(255, 255, 255, 1);
             width: 40.8vw;
-            height: 67.5vw;
+            height: 70.5vw;
             margin-top: 1.07vw;
             border: 1px solid #f0f0f0;
 
@@ -446,11 +446,11 @@ import MFooter from "@/components/MFooter.vue";
 }
 
 .agriculture-container {
-    height: 162.8vw;
+    height: 166.8vw;
     overflow: hidden;
     width: 100vw;
     position: relative;
-    margin-top: 158.75vw;
+    margin-top: 164.75vw;
 
     .space-box {
         background-color: rgba(255, 255, 255, 1);
@@ -464,7 +464,7 @@ import MFooter from "@/components/MFooter.vue";
         left: 0;
         top: 0;
         width: 100vw;
-        height: 162.8vw;
+        height: 166.8vw;
         background: url('../../assets/images/mobile_plans_bg_02.png');
         background-size: 100% 100%;
 
@@ -510,7 +510,7 @@ import MFooter from "@/components/MFooter.vue";
 
     .agriculture-box-wrapper {
         width: 84vw;
-        height: 65.6vw;
+        height: 69.6vw;
         margin: 5vw 0 0 8vw;
 
         &:last-child {
@@ -538,7 +538,7 @@ import MFooter from "@/components/MFooter.vue";
             background-color: rgba(255, 255, 255, 1);
             position: relative;
             width: 40.8vw;
-            height: 65.6vw;
+            height: 69.6vw;
     
             &:last-child {
                 .agriculture-image-box {

@@ -78,19 +78,20 @@ onMounted(() => {
         }
     });
     MsgManager.getInstance().listen('mobilemove', (message) => {
+        const [minValue, maxValue] = [45, 225];
         const { scrollTop } = message;
         let isDownFlag = true;
         if (lastScrollTop.value - scrollTop > 0) {
             isDownFlag = false;
         }
         lastScrollTop.value = scrollTop;
-        if ((scrollTop <= 15 && isDownFlag) || scrollTop <= 0) {
+        if ((scrollTop <= minValue && isDownFlag) || scrollTop <= 0) {
             headClassName.value = '';
-        } else if (scrollTop <= 15 && !isDownFlag) {
+        } else if (scrollTop <= minValue && !isDownFlag) {
             headClassName.value = 'mini leave';
-        } else if (scrollTop > 15 && scrollTop < 225 && isDownFlag){
+        } else if (scrollTop > minValue && scrollTop < maxValue && isDownFlag){
             headClassName.value = 'mini';
-        } else if (scrollTop >= 225 && isDownFlag) {
+        } else if (scrollTop >= maxValue && isDownFlag) {
             headClassName.value = 'mini leave';
         } else if (!isDownFlag) {
             headClassName.value = 'mini';

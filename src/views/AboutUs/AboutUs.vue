@@ -116,7 +116,7 @@ const options = reactive(
       business: [
         { title: 'Tel：028-86168758', icon: 'icondianhua' },
         { title: 'E-mail：WEIH02@tongwei.com', icon: 'iconyouxiang' },
-        { title: 'Addr：四川省成都市高新区天府大道中段588号通威国际中心', icon: 'iconzhengqimenhu_dizhixinxi1' }
+        { title: 'Addr：四川省成都市高新区天府大道588号通威国际中心', icon: 'iconzhengqimenhu_dizhixinxi1' }
       ],
     }
   }
