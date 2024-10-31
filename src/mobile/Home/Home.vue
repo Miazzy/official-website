@@ -164,7 +164,7 @@ import { ref, onMounted, onBeforeUnmount, nextTick, computed } from "vue";
 import MHeader from "@/components/MHeader.vue";
 import MCopyright from "@/components/MCopyright.vue";
 import { useRouter } from 'vue-router'
-import { setTimexec } from '@/utils/common';
+import { setTimexec, addMediaQuery } from '@/utils/common';
 
 const router = useRouter();
 
@@ -186,6 +186,7 @@ const bgClassName = ref(`index-${indexRef.value}-bg`);
 const bgAnimate = ref('animate-background');
 const isMoveUp = ref(false);
 const loopNum = 100;
+const maxRatio = 0.5624;
 
 const contentTransform = computed(() => `translateY(-${(indexRef.value + (loopNum * 4 - 1)) % (loopNum * 4) * 100}vh)`);
 const contentTransition = computed(() => `${(indexRef.value + (loopNum * 4 - 1)) % (loopNum * 4) != 0 ? 'transform 0.8s ease-in-out' : 'none'}`);
@@ -204,7 +205,37 @@ const handleRoutePush = (path, y = 0) => {
     }, [0, 50, 100]);
 }
 
+const handleCss = (index, event) => {
+  const interval = 1;
+  const minWidth = Math.ceil(Math.ceil(window.innerWidth / interval) * interval - interval);
+  const maxWidth = Math.ceil(minWidth + interval * 1);
+  const minHeight = Math.ceil(Math.ceil(window.innerHeight / interval) * interval - interval);
+  const maxHeight = Math.ceil(minHeight + interval * 1);
+
+  if (minWidth > 0) {
+    const cssContent = `
+      .bg-wrapper img[data-v-7bfb5e55] {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+      }
+      `;
+
+    // 将编译后的 CSS 内容设置到<style>元素中
+    less.render(cssContent, function (error, output) {
+      if (!error) {
+        // 追加媒体查询
+        addMediaQuery([maxWidth, minWidth], [maxHeight, minHeight], output.css);
+      }
+    });
+  }
+};
+
 onMounted(() => {
+    const ratio = parseFloat((window.innerWidth/window.innerHeight).toFixed(4));
+    if (ratio >= maxRatio) {
+        handleCss();
+    }
     //
 });
 
@@ -330,7 +361,7 @@ onBeforeUnmount(() => {
 
             .button-text {
                 width: 11.2vw;
-                height: 6.66vw;
+                height: 6.95vw;
                 overflow-wrap: break-word;
                 color: #ffffff;
                 font-size: 2.8vw;
@@ -338,7 +369,7 @@ onBeforeUnmount(() => {
                 font-weight: normal;
                 text-align: left;
                 white-space: nowrap;
-                line-height: 6.66vw;
+                line-height: 6.95vw;
             }
 
             .arrow-right {

@@ -34,7 +34,7 @@ onMounted(() => {
     }
 
     &:hover {
-        animation: none;
+        animation: flashing 0.5s ease infinite;
     }
 }
 
